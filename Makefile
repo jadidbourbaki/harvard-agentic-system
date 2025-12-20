@@ -93,6 +93,10 @@ install-plots:
 	@echo "Installing plot dependencies..."
 	cd plots && uv sync
 
+# Clean plots output directory
+clean-plots:
+	rm -rf plots/output
+
 # Generate plots from experiment results (requires plot dependencies)
 plots: install-plots
 	@echo "Generating plots from experiment results..."
