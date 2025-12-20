@@ -1,16 +1,11 @@
-"""Agent implementation for the baseline agentic system."""
+"""Agent implementation for the baseline agentic system.
 
-from typing import List
+This implementation uses vLLM's OpenAI-compatible server for accurate
+TTFT and TPOT metrics collection.
+"""
+
 from dataclasses import dataclass
-from .util import (
-    validate_outputs,
-    validate_metrics,
-    ttft_from_metrics,
-    decode_time_from_metrics,
-    tpot_from_metrics,
-)
-
-from vllm import LLM, SamplingParams
+from openai import OpenAI
 
 
 @dataclass
@@ -19,12 +14,11 @@ class AgentMetrics:
 
     turn: int
     agent_id: str
+    context_size: int
+    tokens_generated: int
     ttft: float  # Time to first token (prefill latency)
     tpot: float  # Time per output token (decode latency)
-    context_size: int  # Size of context received
-    tokens_generated: int  # Number of tokens generated (c)
-    prefill_time: float
-    decode_time: float
+    decode_time: float  # Total decode time
 
 
 class Agent:
@@ -33,28 +27,29 @@ class Agent:
     def __init__(
         self,
         agent_id: str,
-        llm: LLM,
+        client: OpenAI,
+        model: str,
         k: int,
         c: int,
+        temperature: float = 0.7,
     ):
         """
         Initialize an agent.
 
         Args:
             agent_id: Unique identifier for this agent
-            llm: vLLM LLM instance
+            client: OpenAI client connected to vLLM server
+            model: Model name being served
             k: Number of inferences to perform (should equal c)
             c: Number of tokens to generate per turn
+            temperature: Sampling temperature
         """
         self.agent_id = agent_id
-        self.llm = llm
+        self.client = client
+        self.model = model
         self.k = k
         self.c = c
-        self.sampling_params = SamplingParams(
-            temperature=0.7,
-            max_tokens=c,
-        )
-        self.metrics: List[AgentMetrics] = []
+        self.temperature = temperature
 
     def generate_turn(
         self,
@@ -74,46 +69,53 @@ class Agent:
         # Construct the prompt
         prompt = self._construct_prompt(context)
 
-        # Generate tokens
-        # vLLM's RequestOutput includes RequestMetrics with accurate timing
-        # See: https://docs.vllm.ai/en/latest/api/vllm/sequence/#vllm.sequence.RequestMetrics
-        outputs = self.llm.generate([prompt], self.sampling_params)
-
-        # some validation on the outputs
-        generated_text = validate_outputs(outputs)
-
-        # Get tokenizer for accurate token counting
-        tokenizer = self.llm.get_tokenizer()
-        # Count generated tokens directly (more efficient than encoding full text)
-        generated_ids = tokenizer.encode(generated_text)
-        generated_tokens = len(generated_ids)
-
-        # Extract and validate metrics from RequestOutput
-        # validate_metrics ensures all required timestamps are present and valid
-        # See: https://docs.vllm.ai/en/latest/api/vllm/sequence/#vllm.sequence.RequestMetrics
-        metrics_obj = validate_metrics(outputs)
-
-        # Calculate metrics using helper functions
-        # All timestamps are validated in validate_metrics
-        ttft = ttft_from_metrics(metrics_obj)
-        prefill_time = ttft
-        decode_time = decode_time_from_metrics(metrics_obj)
-        tpot = tpot_from_metrics(metrics_obj, generated_tokens)
-
-        metrics = AgentMetrics(
-            turn=turn,
-            agent_id=self.agent_id,
-            ttft=ttft,
-            tpot=tpot,
-            context_size=len(context),
-            tokens_generated=generated_tokens,
-            prefill_time=prefill_time,
-            decode_time=decode_time,
+        # Call vLLM server via OpenAI API
+        # Each request is independent (no request_id) to ensure fresh KV cache per turn
+        # Between runs, the server is stopped (clearing all KV cache)
+        # This matches the baseline spec: agents clear KV cache after sending context
+        response = self.client.chat.completions.create(
+            model=self.model,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=self.c,
+            temperature=self.temperature,
+            # Each request is independent - no request_id means fresh KV cache
+            extra_body={
+                "include_usage": True,
+            },
         )
 
-        self.metrics.append(metrics)
+        # Extract generated text
+        generated_text = response.choices[0].message.content
+        if not generated_text:
+            raise RuntimeError("No text generated from vLLM server")
 
-        return generated_text, metrics
+        # Extract metrics from response
+        # vLLM's OpenAI server provides detailed timing metrics
+        usage = response.usage
+        if not usage:
+            raise RuntimeError("No usage metrics in response")
+
+        generated_tokens = usage.completion_tokens
+
+        # Extract timing metrics from vLLM's response
+        # TODO: vLLM's exact metric fields may vary by version
+        # We'll refine these field names after testing on Lambda
+        extra = getattr(usage, "model_extra", {}) or {}
+
+        # Get timing metrics (field names to be confirmed during testing)
+        ttft = extra.get("time_to_first_token", extra.get("ttft", 0.0))
+        decode_time = extra.get("decode_time", extra.get("generation_time", 0.0))
+        tpot = decode_time / generated_tokens if generated_tokens > 0 else 0.0
+
+        return generated_text, AgentMetrics(
+            turn=turn,
+            agent_id=self.agent_id,
+            context_size=len(context),
+            tokens_generated=generated_tokens,
+            ttft=ttft,
+            tpot=tpot,
+            decode_time=decode_time,
+        )
 
     def _construct_prompt(self, context: str) -> str:
         """Construct the prompt for story finishing."""

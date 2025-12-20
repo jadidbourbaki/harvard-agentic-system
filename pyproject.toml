@@ -8,6 +8,8 @@ dependencies = [
     "numpy==2.2.6",  # Pinned for reproducibility
     "pydantic==2.12.5",  # Pinned for reproducibility
     "typer==0.20.1",  # Pinned for reproducibility
+    "openai==1.59.5",  # Pinned for reproducibility (OpenAI client for vLLM server)
+    "requests==2.32.3",  # Pinned for reproducibility (HTTP client for server health checks)
 ]
 
 [project.scripts]

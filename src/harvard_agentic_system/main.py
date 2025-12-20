@@ -58,14 +58,14 @@ def run(
         )
 
     # Create and run game
-    game = StoryFinishingGame(
+    # Use context manager to automatically start/stop vLLM server
+    with StoryFinishingGame(
         model_name=model,
         k=k,
         c=c,
         num_turns=turns,
-    )
-
-    results = game.run()
+    ) as game:
+        results = game.run()
 
     # Save results
     with open(output, "w") as f:

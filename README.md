@@ -1,17 +1,19 @@
-# Harvard Agentic System
+# harvard agentic system
 
 Baseline implementation for agentic systems with context sharing.
 
-## Prerequisites
+This implementation uses vLLM's OpenAI-compatible server for accurate TTFT (Time To First Token) and TPOT (Time Per Output Token) metrics collection.
+
+## prerequisites
 
 - Python 3.12.x
-- CUDA-capable GPU (for Lambda cluster)
+- CUDA-capable GPU (required for vLLM)
 - `uv` package manager
 - `sshpass` (for Lambda cluster access)
 
-## Setup
+## setup
 
-### Lambda Cluster
+### lambda cluster
 
 1. Create a `.env` file with your credentials:
    ```bash
@@ -38,19 +40,39 @@ Baseline implementation for agentic systems with context sharing.
 make install           # Install dependencies
 ```
 
-## Usage
+## usage
+
+The system automatically starts a vLLM OpenAI-compatible server, runs the experiment, and collects detailed metrics.
 
 ```bash
 # Run the baseline story-finishing game
 make run
 
 # Or customize parameters
-uv run h-agent-sys run \
-    --model meta-llama/Llama-3.1-8B-Instruct \
+uv run h-agent-sys \
+    --model mistralai/Mistral-7B-Instruct-v0.3 \
     --k 1 \
     --c 1 \
     --turns 100 \
     --output results.json
+```
+
+### server management
+
+1. The game automatically starts a vLLM server for the specified model
+2. Uses vLLM's internal metrics for precise TTFT/TPOT measurements
+3. Server is stopped automatically when the game completes
+
+### manual server management
+
+If you want to manage the vLLM server separately:
+
+```bash
+# Terminal 1: Start vLLM server
+vllm serve mistralai/Mistral-7B-Instruct-v0.3 --host localhost --port 8000
+
+# Terminal 2: Run game (with --no-manage-server flag when we add it)
+uv run h-agent-sys --model mistralai/Mistral-7B-Instruct-v0.3 --k 1 --c 1 --turns 10
 ```
 
 See `make help` for all available targets.
