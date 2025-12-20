@@ -1,6 +1,6 @@
 .ONESHELL:
 
-.PHONY: help install sync run connect setup-lambda sync-repo lint clean source-env
+.PHONY: help install sync run experiments connect setup-lambda sync-repo sync-experiments lint clean source-env
 
 # Set default LAMBDA_HOST if not provided
 LAMBDA_HOST ?= lambda1
@@ -102,6 +102,11 @@ setup-lambda: check-env
 sync-repo: check-env
 	@$(SOURCE_ENV_CMD); \
 	./infra/sync_repo.sh $(LAMBDA_HOST)
+
+# Sync experiments/output/ from Lambda cluster to local (requires LAMBDA_HOST, default: lambda1)
+sync-experiments: check-env
+	@$(SOURCE_ENV_CMD); \
+	./infra/sync_experiments.sh $(LAMBDA_HOST)
 
 # Lint Python code using ruff
 lint:

@@ -3,6 +3,10 @@
 
 import json
 import logging
+import os
+import platform
+import subprocess
+import sys
 from pathlib import Path
 from datetime import datetime
 
@@ -12,6 +16,83 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
+
+
+def get_machine_info() -> dict:
+    """
+    Collect machine information including GPU, CPU, and system details.
+
+    Returns:
+        Dictionary with machine information
+    """
+    info = {
+        "platform": platform.platform(),
+        "processor": platform.processor(),
+        "python_version": sys.version,
+        "cpu_count": os.cpu_count(),
+    }
+
+    # Get GPU information using nvidia-smi
+    try:
+        result = subprocess.run(
+            [
+                "nvidia-smi",
+                "--query-gpu=name,memory.total,driver_version,compute_cap",
+                "--format=csv,noheader",
+            ],
+            capture_output=True,
+            text=True,
+            timeout=5,
+        )
+        if result.returncode == 0:
+            gpu_lines = result.stdout.strip().split("\n")
+            info["gpus"] = []
+            for line in gpu_lines:
+                if line.strip():
+                    parts = [p.strip() for p in line.split(",")]
+                    if len(parts) >= 4:
+                        info["gpus"].append(
+                            {
+                                "name": parts[0],
+                                "memory_total": parts[1],
+                                "driver_version": parts[2],
+                                "compute_capability": parts[3],
+                            }
+                        )
+        else:
+            info["gpus"] = None
+            info["gpu_error"] = "nvidia-smi failed"
+    except FileNotFoundError:
+        info["gpus"] = None
+        info["gpu_error"] = "nvidia-smi not found"
+    except subprocess.TimeoutExpired:
+        info["gpus"] = None
+        info["gpu_error"] = "nvidia-smi timeout"
+    except Exception as e:
+        info["gpus"] = None
+        info["gpu_error"] = str(e)
+
+    # Get CUDA version if available
+    try:
+        result = subprocess.run(
+            ["nvcc", "--version"],
+            capture_output=True,
+            text=True,
+            timeout=5,
+        )
+        if result.returncode == 0:
+            # Parse CUDA version from output
+            for line in result.stdout.split("\n"):
+                if "release" in line.lower():
+                    parts = line.split()
+                    for i, part in enumerate(parts):
+                        if "release" in part.lower() and i + 1 < len(parts):
+                            info["cuda_version"] = parts[i + 1].rstrip(",")
+                            break
+    except (FileNotFoundError, subprocess.TimeoutExpired, Exception):
+        pass  # CUDA version not critical
+
+    return info
 
 
 def run_experiment(
@@ -53,6 +134,9 @@ def run_experiment(
         "model": model,
         "timestamp": datetime.now().isoformat(),
     }
+
+    # Add machine info
+    results["machine_info"] = get_machine_info()
 
     # Save results to file
     output_file = output_dir / f"results_k{k}.json"
@@ -107,6 +191,17 @@ def main():
     args.output_dir.mkdir(parents=True, exist_ok=True)
     logger.info(f"Output directory: {args.output_dir}")
 
+    # Collect machine info once at the start
+    machine_info = get_machine_info()
+    logger.info(f"Machine: {machine_info.get('platform', 'Unknown')}")
+    if machine_info.get("gpus"):
+        for i, gpu in enumerate(machine_info["gpus"]):
+            logger.info(
+                f"GPU {i}: {gpu.get('name', 'Unknown')} ({gpu.get('memory_total', 'Unknown')})"
+            )
+    elif machine_info.get("gpu_error"):
+        logger.warning(f"GPU info unavailable: {machine_info['gpu_error']}")
+
     # Run experiments
     all_results = []
     for k in args.k_values:
@@ -130,6 +225,7 @@ def main():
         "model": args.model,
         "turns": args.turns,
         "timestamp": datetime.now().isoformat(),
+        "machine_info": machine_info,
         "results": [
             {
                 "k": r["experiment_params"]["k"],

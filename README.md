@@ -75,4 +75,43 @@ vllm serve mistralai/Mistral-7B-Instruct-v0.3 --host localhost --port 8000
 uv run h-agent-sys --model mistralai/Mistral-7B-Instruct-v0.3 --k 1 --c 1 --turns 10
 ```
 
+## running experiments
+
+Run experiments for multiple k values:
+
+```bash
+make experiments
+```
+
+This runs experiments for k values: 1, 2, 4, 8, 16, 32, 64, 128 (default).
+
+Results are saved to `experiments/output/`:
+- Individual experiment results: `results_k{k}.json`
+- Summary with aggregated metrics: `summary.json`
+
+Each experiment result includes:
+- Per-turn metrics (TTFT, TPOT, percentiles)
+- Machine information (GPU, CPU, system details)
+- Experiment parameters (k, c, turns, model)
+
+Customize experiment parameters:
+
+```bash
+uv run python experiments/run_experiments.py \
+    --k-values 1 2 4 8 \
+    --turns 50 \
+    --model mistralai/Mistral-7B-Instruct-v0.3 \
+    --output-dir experiments/output
+```
+
+### syncing experiments from lambda
+
+If you run experiments on the Lambda cluster, sync the results back:
+
+```bash
+make sync-experiments
+```
+
+This syncs `experiments/output/` from the Lambda cluster to your local machine.
+
 See `make help` for all available targets.
