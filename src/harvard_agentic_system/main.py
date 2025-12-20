@@ -20,7 +20,7 @@ app = typer.Typer(
 @app.command()
 def run(
     model: str = typer.Option(
-        "meta-llama/Llama-3.1-8B-Instruct",
+        "mistralai/Mistral-7B-Instruct-v0.3",
         "--model",
         "-m",
         help="Model name to use",

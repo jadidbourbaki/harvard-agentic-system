@@ -77,7 +77,7 @@ run:
 	@echo "  uv run h-agent-sys --model <model> --k <k> --c <c> --turns <turns> --output <output>"
 	@echo ""
 	uv run h-agent-sys \
-		--model meta-llama/Llama-3.1-8B-Instruct \
+		--model mistralai/Mistral-7B-Instruct-v0.3 \
 		--k 1 \
 		--c 1 \
 		--turns 100 \
