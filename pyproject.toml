@@ -1,0 +1,18 @@
+[project]
+name = "h-agent-sys"
+version = "0.1.0"
+description = "Harvard Agentic System - Baseline implementation for agentic systems with context sharing"
+requires-python = "~=3.12.0"  # Pinned for reproducibility (Python 3.12.x, latest supported by vLLM 0.13.0)
+dependencies = [
+    "vllm==0.13.0",  # Pinned for reproducibility
+    "numpy==2.2.6",  # Pinned for reproducibility
+    "pydantic==2.12.5",  # Pinned for reproducibility
+    "typer==0.20.1",  # Pinned for reproducibility
+]
+
+[project.scripts]
+h-agent-sys = "harvard_agentic_system.main:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
