@@ -10,6 +10,7 @@ dependencies = [
     "typer==0.20.1",  # Pinned for reproducibility
     "openai>=1.99.1,<2.0.0",  # vLLM 0.13.0 requires OpenAI 1.x API (not 2.x). Let uv resolve exact version.
     "requests==2.32.3",  # Pinned for reproducibility (HTTP client for server health checks)
+    "prometheus-client==0.21.0",  # Pinned for reproducibility (Prometheus metrics parsing)
 ]
 
 [project.scripts]

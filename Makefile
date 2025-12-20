@@ -83,6 +83,11 @@ run:
 		--turns 100 \
 		--output results.json
 
+# Run experiments for multiple k values
+experiments:
+	@echo "Running experiments for multiple k values..."
+	uv run python experiments/run_experiments.py
+
 # Connect to Lambda cluster (requires LAMBDA_HOST, default: lambda1)
 connect: check-env
 	@$(SOURCE_ENV_CMD); \

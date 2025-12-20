@@ -73,7 +73,11 @@ def run(
 
     logger.info(f"Total time: {results['total_time']:.2f}s")
     logger.info(f"Average TTFT: {results['metrics']['avg_ttft']:.4f}s")
+    logger.info(f"TTFT p50 (median): {results['metrics']['ttft_p50']:.4f}s")
+    logger.info(f"TTFT p99: {results['metrics']['ttft_p99']:.4f}s")
     logger.info(f"Average TPOT: {results['metrics']['avg_tpot']:.4f}s")
+    logger.info(f"TPOT p50 (median): {results['metrics']['tpot_p50']:.4f}s")
+    logger.info(f"TPOT p99: {results['metrics']['tpot_p99']:.4f}s")
     logger.info(f"Results saved to: {output}")
     logger.info(f"Full story length: {len(results['full_story'])} characters")
     logger.info(f"Final context length: {results['final_context_length']} characters")

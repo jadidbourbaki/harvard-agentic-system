@@ -4,7 +4,6 @@ import subprocess
 import time
 import requests
 import logging
-from typing import Optional
 
 logger = logging.getLogger(__name__)
 
@@ -32,7 +31,7 @@ class VLLMServer:
         self.host = host
         self.port = port
         self.gpu_memory_utilization = gpu_memory_utilization
-        self.process: Optional[subprocess.Popen] = None
+        self.process: subprocess.Popen | None = None
         self.base_url = f"http://{host}:{port}"
 
     def start(self, timeout: int = 300) -> None:

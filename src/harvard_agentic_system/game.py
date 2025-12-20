@@ -1,6 +1,5 @@
 """Story-finishing game implementation."""
 
-from typing import List, Optional
 import time
 import logging
 
@@ -46,16 +45,16 @@ class StoryFinishingGame:
         self.manage_server = manage_server
 
         # Server and client
-        self.server: Optional[VLLMServer] = None
-        self.client: Optional[OpenAI] = None
+        self.server: VLLMServer | None = None
+        self.client: OpenAI | None = None
 
         # Agents (initialized in start())
-        self.agent_i: Optional[Agent] = None
-        self.agent_j: Optional[Agent] = None
+        self.agent_i: Agent | None = None
+        self.agent_j: Agent | None = None
 
         self.context = ""  # Accumulated story context
         self.full_story = ""  # Complete story
-        self.all_metrics: List[AgentMetrics] = []
+        self.all_metrics: list[AgentMetrics] = []
 
     def start(self) -> None:
         """Start the vLLM server and initialize agents."""
@@ -79,10 +78,25 @@ class StoryFinishingGame:
             api_key="dummy",  # vLLM doesn't require a real API key
         )
 
-        # Create agents
+        # Create agents with metrics URL
         # TODO(hayder): support separate server instances for each agent.
-        self.agent_i = Agent("agent_i", self.client, self.model_name, self.k, self.c)
-        self.agent_j = Agent("agent_j", self.client, self.model_name, self.k, self.c)
+        metrics_url = f"http://{self.server_host}:{self.server_port}/metrics"
+        self.agent_i = Agent(
+            "agent_i",
+            self.client,
+            self.model_name,
+            self.k,
+            self.c,
+            metrics_url=metrics_url,
+        )
+        self.agent_j = Agent(
+            "agent_j",
+            self.client,
+            self.model_name,
+            self.k,
+            self.c,
+            metrics_url=metrics_url,
+        )
 
         logger.info("Game initialized and ready")
 
@@ -144,6 +158,26 @@ class StoryFinishingGame:
         avg_ttft = sum(m.ttft for m in self.all_metrics) / len(self.all_metrics)
         avg_tpot = sum(m.tpot for m in self.all_metrics) / len(self.all_metrics)
 
+        # Calculate aggregate percentiles across all turns
+        ttft_values = sorted([m.ttft for m in self.all_metrics])
+        tpot_values = sorted([m.tpot for m in self.all_metrics])
+
+        def percentile(data: list[float], p: float) -> float:
+            """Calculate percentile from sorted data."""
+            if not data:
+                return 0.0
+            k = (len(data) - 1) * p
+            f = int(k)
+            c = k - f
+            if f + 1 < len(data):
+                return data[f] + c * (data[f + 1] - data[f])
+            return data[f]
+
+        ttft_p50 = percentile(ttft_values, 0.5)
+        ttft_p99 = percentile(ttft_values, 0.99)
+        tpot_p50 = percentile(tpot_values, 0.5)
+        tpot_p99 = percentile(tpot_values, 0.99)
+
         results = {
             "total_turns": self.num_turns,
             "total_time": total_time,
@@ -152,6 +186,10 @@ class StoryFinishingGame:
             "metrics": {
                 "avg_ttft": avg_ttft,
                 "avg_tpot": avg_tpot,
+                "ttft_p50": ttft_p50,
+                "ttft_p99": ttft_p99,
+                "tpot_p50": tpot_p50,
+                "tpot_p99": tpot_p99,
                 "per_turn_metrics": [
                     {
                         "turn": m.turn,
@@ -159,7 +197,11 @@ class StoryFinishingGame:
                         "context_size": m.context_size,
                         "tokens_generated": m.tokens_generated,
                         "ttft": m.ttft,
+                        "ttft_p50": m.ttft_p50,
+                        "ttft_p99": m.ttft_p99,
                         "tpot": m.tpot,
+                        "tpot_p50": m.tpot_p50,
+                        "tpot_p99": m.tpot_p99,
                         "decode_time": m.decode_time,
                     }
                     for m in self.all_metrics

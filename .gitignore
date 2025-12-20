@@ -37,6 +37,8 @@ env/
 results.json
 *.log
 .env
+experiments/output/
+results.json
 
 # Model cache (if using local models)
 models/

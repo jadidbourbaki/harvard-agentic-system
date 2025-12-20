@@ -1,11 +1,13 @@
 """Agent implementation for the baseline agentic system.
 
-This implementation uses vLLM's OpenAI-compatible server for accurate
-TTFT and TPOT metrics collection.
+This implementation uses vLLM's OpenAI-compatible server and queries
+Prometheus metrics for accurate TTFT and TPOT measurements.
 """
 
 from dataclasses import dataclass
 from openai import OpenAI
+
+from .metrics import MetricsManager
 
 
 @dataclass
@@ -16,9 +18,13 @@ class AgentMetrics:
     agent_id: str
     context_size: int
     tokens_generated: int
-    ttft: float  # Time to first token (prefill latency)
-    tpot: float  # Time per output token (decode latency)
-    decode_time: float  # Total decode time
+    ttft: float  # Average time to first token (prefill latency)
+    tpot: float  # Average time per output token (decode latency)
+    decode_time: float  # Average total decode time
+    ttft_p50: float  # Median TTFT
+    ttft_p99: float  # 99th percentile TTFT
+    tpot_p50: float  # Median TPOT
+    tpot_p99: float  # 99th percentile TPOT
 
 
 class Agent:
@@ -32,6 +38,7 @@ class Agent:
         k: int,
         c: int,
         temperature: float = 0.7,
+        metrics_url: str | None = None,
     ):
         """
         Initialize an agent.
@@ -43,6 +50,7 @@ class Agent:
             k: Number of inferences to perform (should equal c)
             c: Number of tokens to generate per turn
             temperature: Sampling temperature
+            metrics_url: URL to vLLM's Prometheus metrics endpoint (defaults to base_url/metrics)
         """
         self.agent_id = agent_id
         self.client = client
@@ -50,6 +58,19 @@ class Agent:
         self.k = k
         self.c = c
         self.temperature = temperature
+
+        # Initialize metrics manager
+        if metrics_url:
+            self.metrics_manager = MetricsManager(metrics_url)
+        else:
+            # Extract base URL from OpenAI client (e.g., "http://localhost:8000/v1" -> "http://localhost:8000/metrics")
+            base_url = (
+                str(client.base_url)
+                if hasattr(client, "base_url")
+                else "http://localhost:8000"
+            )
+            metrics_url = base_url.replace("/v1", "").rstrip("/") + "/metrics"
+            self.metrics_manager = MetricsManager(metrics_url)
 
     def generate_turn(
         self,
@@ -69,19 +90,17 @@ class Agent:
         # Construct the prompt
         prompt = self._construct_prompt(context)
 
-        # Call vLLM server via OpenAI API
-        # Each request is independent (no request_id) to ensure fresh KV cache per turn
-        # Between runs, the server is stopped (clearing all KV cache)
-        # This matches the baseline spec: agents clear KV cache after sending context
+        # Query Prometheus metrics before request
+        # vLLM exposes metrics at /metrics endpoint
+        # See: https://docs.vllm.ai/en/latest/usage/metrics/#general-metrics
+        metrics_before = self.metrics_manager.get_snapshot()
+
+        # Make the request (non-streaming for simplicity)
         response = self.client.chat.completions.create(
             model=self.model,
             messages=[{"role": "user", "content": prompt}],
             max_tokens=self.c,
             temperature=self.temperature,
-            # Each request is independent - no request_id means fresh KV cache
-            extra_body={
-                "include_usage": True,
-            },
         )
 
         # Extract generated text
@@ -89,23 +108,51 @@ class Agent:
         if not generated_text:
             raise RuntimeError("No text generated from vLLM server")
 
-        # Extract metrics from response
-        # vLLM's OpenAI server provides detailed timing metrics
+        # Get token count from usage
         usage = response.usage
         if not usage:
             raise RuntimeError("No usage metrics in response")
-
         generated_tokens = usage.completion_tokens
 
-        # Extract timing metrics from vLLM's response
-        # TODO: vLLM's exact metric fields may vary by version
-        # We'll refine these field names after testing on Lambda
-        extra = getattr(usage, "model_extra", {}) or {}
+        # Small delay to ensure Prometheus metrics have updated
+        import time
 
-        # Get timing metrics (field names to be confirmed during testing)
-        ttft = extra.get("time_to_first_token", extra.get("ttft", 0.0))
-        decode_time = extra.get("decode_time", extra.get("generation_time", 0.0))
-        tpot = decode_time / generated_tokens if generated_tokens > 0 else 0.0
+        time.sleep(0.1)  # 100ms delay for metrics to update
+
+        # Query Prometheus metrics after request and calculate delta
+        metrics_after = self.metrics_manager.get_snapshot()
+        delta = metrics_after.delta(metrics_before)
+
+        # Extract per-request metrics from delta
+        # If request_count delta is 0, metrics aren't updating - use fallback
+        if delta.request_count == 0:
+            # Metrics not updating - this can happen if vLLM hasn't processed the request yet
+            # or if metrics aren't being exposed. Log a warning and use zeros.
+            import logging
+
+            logger = logging.getLogger(__name__)
+            logger.warning(
+                f"Metrics delta is 0 (before: {metrics_before.request_count}, "
+                f"after: {metrics_after.request_count}). "
+                "Prometheus metrics may not be updating correctly."
+            )
+            ttft = 0.0
+            tpot = 0.0
+            decode_time = 0.0
+            ttft_p50 = 0.0
+            ttft_p99 = 0.0
+            tpot_p50 = 0.0
+            tpot_p99 = 0.0
+        else:
+            ttft = delta.get_ttft()
+            tpot = delta.get_tpot()
+            decode_time = delta.get_decode_time()
+
+            # Calculate percentiles (p50 = median, p99 = 99th percentile)
+            ttft_p50 = delta.get_ttft_percentile(0.5)
+            ttft_p99 = delta.get_ttft_percentile(0.99)
+            tpot_p50 = delta.get_tpot_percentile(0.5)
+            tpot_p99 = delta.get_tpot_percentile(0.99)
 
         return generated_text, AgentMetrics(
             turn=turn,
@@ -115,6 +162,10 @@ class Agent:
             ttft=ttft,
             tpot=tpot,
             decode_time=decode_time,
+            ttft_p50=ttft_p50,
+            ttft_p99=ttft_p99,
+            tpot_p50=tpot_p50,
+            tpot_p99=tpot_p99,
         )
 
     def _construct_prompt(self, context: str) -> str:
