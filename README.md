@@ -44,6 +44,8 @@ make install           # Install dependencies
 
 The system automatically starts a vLLM OpenAI-compatible server, runs the experiment, and collects detailed metrics.
 
+**Note:** Turn 1 (warm-up) is excluded from aggregate metrics to measure steady-state performance. The first request incurs cold start overhead (CUDA kernel initialization, memory allocation, etc.).
+
 ```bash
 # Run the baseline story-finishing game
 make run

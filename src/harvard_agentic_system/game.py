@@ -154,13 +154,34 @@ class StoryFinishingGame:
         game_end = time.time()
         total_time = game_end - game_start
 
-        # Aggregate metrics
-        avg_ttft = sum(m.ttft for m in self.all_metrics) / len(self.all_metrics)
-        avg_tpot = sum(m.tpot for m in self.all_metrics) / len(self.all_metrics)
+        # Exclude turn 1 (warm-up) from aggregate metrics to measure steady-state performance
+        # Turn 1 incurs cold start overhead (CUDA kernel init, memory allocation, etc.)
+        steady_state_metrics = [m for m in self.all_metrics if m.turn > 1]
 
-        # Calculate aggregate percentiles across all turns
-        ttft_values = sorted([m.ttft for m in self.all_metrics])
-        tpot_values = sorted([m.tpot for m in self.all_metrics])
+        # Aggregate metrics (excluding warm-up turn)
+        if steady_state_metrics:
+            avg_ttft = sum(m.ttft for m in steady_state_metrics) / len(
+                steady_state_metrics
+            )
+            avg_tpot = sum(m.tpot for m in steady_state_metrics) / len(
+                steady_state_metrics
+            )
+        else:
+            # Fallback if only 1 turn
+            avg_ttft = sum(m.ttft for m in self.all_metrics) / len(self.all_metrics)
+            avg_tpot = sum(m.tpot for m in self.all_metrics) / len(self.all_metrics)
+
+        # Calculate aggregate percentiles across all turns (excluding warm-up)
+        ttft_values = (
+            sorted([m.ttft for m in steady_state_metrics])
+            if steady_state_metrics
+            else sorted([m.ttft for m in self.all_metrics])
+        )
+        tpot_values = (
+            sorted([m.tpot for m in steady_state_metrics])
+            if steady_state_metrics
+            else sorted([m.tpot for m in self.all_metrics])
+        )
 
         def percentile(data: list[float], p: float) -> float:
             """Calculate percentile from sorted data."""
@@ -183,6 +204,7 @@ class StoryFinishingGame:
             "total_time": total_time,
             "full_story": self.full_story,
             "final_context_length": len(self.context),
+            "warmup_excluded": True,  # Turn 1 excluded from aggregate metrics
             "metrics": {
                 "avg_ttft": avg_ttft,
                 "avg_tpot": avg_tpot,

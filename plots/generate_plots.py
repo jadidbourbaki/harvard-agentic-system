@@ -226,10 +226,12 @@ def plot_tpot_vs_k(summary: dict, output_dir: Path):
 
 
 def plot_ttft_vs_turn(result: dict, k: int, output_dir: Path):
-    """Plot TTFT vs Turn for a given k value (average only)."""
+    """Plot TTFT vs Turn for a given k value (average only), excluding warm-up turn."""
     per_turn = result["metrics"]["per_turn_metrics"]
-    turns = [m["turn"] for m in per_turn]
-    avg_ttft = [m["ttft"] for m in per_turn]
+    # Exclude turn 1 (warm-up) to show steady-state performance
+    per_turn_filtered = [m for m in per_turn if m["turn"] > 1]
+    turns = [m["turn"] for m in per_turn_filtered]
+    avg_ttft = [m["ttft"] * 1000 for m in per_turn_filtered]  # Convert to milliseconds
 
     fig, ax = plt.subplots(figsize=(8, 5))
 
@@ -249,26 +251,30 @@ def plot_ttft_vs_turn(result: dict, k: int, output_dir: Path):
     )
 
     ax.set_xlabel("Turn", fontweight="bold")
-    ax.set_ylabel("TTFT (seconds)", fontweight="bold")
+    ax.set_ylabel("TTFT (milliseconds)", fontweight="bold")
     ax.legend(frameon=True, fancybox=False, shadow=False)
     ax.grid(True, alpha=0.3, linestyle="--")
     ax.set_ylim(bottom=0)  # Start y-axis from 0
 
     # Set custom x-ticks for turns (show every 10th turn or fewer ticks)
+    # Start from 2 since we exclude turn 1 (warm-up)
     max_turn = max(turns)
-    if max_turn <= 20:
-        x_ticks = list(range(1, max_turn + 1))
+    min_turn = min(turns)
+    if max_turn - min_turn <= 20:
+        x_ticks = list(range(min_turn, max_turn + 1))
     else:
         # Show every 10th turn, plus the last turn
-        x_ticks = list(range(1, max_turn + 1, max(1, max_turn // 10))) + [max_turn]
+        x_ticks = list(
+            range(min_turn, max_turn + 1, max(1, (max_turn - min_turn) // 10))
+        ) + [max_turn]
         x_ticks = sorted(set(x_ticks))
     ax.set_xticks(x_ticks)
 
-    # Set custom y-ticks for better readability
+    # Set custom y-ticks for better readability (in milliseconds)
     y_max = max(avg_ttft)
     y_ticks = np.linspace(0, y_max * 1.1, 6)
     ax.set_yticks(y_ticks)
-    ax.set_yticklabels([f"{y:.3f}" for y in y_ticks])
+    ax.set_yticklabels([f"{y:.1f}" for y in y_ticks])
 
     plt.tight_layout()
     plt.savefig(output_dir / f"ttft_vs_turn_k{k}.pdf")
@@ -278,10 +284,12 @@ def plot_ttft_vs_turn(result: dict, k: int, output_dir: Path):
 
 
 def plot_tpot_vs_turn(result: dict, k: int, output_dir: Path):
-    """Plot TPOT vs Turn for a given k value (average only)."""
+    """Plot TPOT vs Turn for a given k value (average only), excluding warm-up turn."""
     per_turn = result["metrics"]["per_turn_metrics"]
-    turns = [m["turn"] for m in per_turn]
-    avg_tpot = [m["tpot"] for m in per_turn]
+    # Exclude turn 1 (warm-up) to show steady-state performance
+    per_turn_filtered = [m for m in per_turn if m["turn"] > 1]
+    turns = [m["turn"] for m in per_turn_filtered]
+    avg_tpot = [m["tpot"] * 1000 for m in per_turn_filtered]  # Convert to milliseconds
 
     fig, ax = plt.subplots(figsize=(8, 5))
 
@@ -301,26 +309,30 @@ def plot_tpot_vs_turn(result: dict, k: int, output_dir: Path):
     )
 
     ax.set_xlabel("Turn", fontweight="bold")
-    ax.set_ylabel("TPOT (seconds)", fontweight="bold")
+    ax.set_ylabel("TPOT (milliseconds)", fontweight="bold")
     ax.legend(frameon=True, fancybox=False, shadow=False)
     ax.grid(True, alpha=0.3, linestyle="--")
     ax.set_ylim(bottom=0)  # Start y-axis from 0
 
     # Set custom x-ticks for turns (show every 10th turn or fewer ticks)
+    # Start from 2 since we exclude turn 1 (warm-up)
     max_turn = max(turns)
-    if max_turn <= 20:
-        x_ticks = list(range(1, max_turn + 1))
+    min_turn = min(turns)
+    if max_turn - min_turn <= 20:
+        x_ticks = list(range(min_turn, max_turn + 1))
     else:
         # Show every 10th turn, plus the last turn
-        x_ticks = list(range(1, max_turn + 1, max(1, max_turn // 10))) + [max_turn]
+        x_ticks = list(
+            range(min_turn, max_turn + 1, max(1, (max_turn - min_turn) // 10))
+        ) + [max_turn]
         x_ticks = sorted(set(x_ticks))
     ax.set_xticks(x_ticks)
 
-    # Set custom y-ticks for better readability
+    # Set custom y-ticks for better readability (in milliseconds)
     y_max = max(avg_tpot)
     y_ticks = np.linspace(0, y_max * 1.1, 6)
     ax.set_yticks(y_ticks)
-    ax.set_yticklabels([f"{y:.3f}" for y in y_ticks])
+    ax.set_yticklabels([f"{y:.1f}" for y in y_ticks])
 
     plt.tight_layout()
     plt.savefig(output_dir / f"tpot_vs_turn_k{k}.pdf")
