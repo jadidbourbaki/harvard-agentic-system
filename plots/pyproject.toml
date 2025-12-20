@@ -1,0 +1,13 @@
+[project]
+name = "h-agent-sys-plots"
+version = "0.1.0"
+description = "Plotting utilities for Harvard Agentic System experiments"
+requires-python = ">=3.9"
+dependencies = [
+    "matplotlib==3.9.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+

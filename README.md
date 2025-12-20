@@ -114,4 +114,24 @@ make sync-experiments
 
 This syncs `experiments/output/` from the Lambda cluster to your local machine.
 
+## generating plots
+
+Generate publication-quality plots from experiment results:
+
+```bash
+make plots
+```
+
+This will:
+1. Install plot dependencies (matplotlib, numpy) - no GPU required
+2. Generate all plots from `experiments/output/`
+
+Plots are saved to `plots/output/` in both PDF and PNG formats:
+- `ttft_vs_k.pdf/png` - TTFT vs k (average, median, p99)
+- `tpot_vs_k.pdf/png` - TPOT vs k (average, median, p99)
+- `ttft_vs_turn_k{k}.pdf/png` - TTFT vs Turn for each k value
+- `tpot_vs_turn_k{k}.pdf/png` - TPOT vs Turn for each k value
+
+**Note:** Plot dependencies are in a separate `pyproject.toml` in the `plots/` directory, so you can generate plots on a machine without GPU/CUDA. The plotting module uses `uv` to manage its own isolated dependencies.
+
 See `make help` for all available targets.

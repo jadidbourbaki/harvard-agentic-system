@@ -1,6 +1,6 @@
 .ONESHELL:
 
-.PHONY: help install sync run experiments connect setup-lambda sync-repo sync-experiments lint clean source-env
+.PHONY: help install sync run experiments plots connect setup-lambda sync-repo sync-experiments lint clean source-env
 
 # Set default LAMBDA_HOST if not provided
 LAMBDA_HOST ?= lambda1
@@ -87,6 +87,16 @@ run:
 experiments:
 	@echo "Running experiments for multiple k values..."
 	uv run python experiments/run_experiments.py
+
+# Install plot dependencies (separate from main dependencies, no GPU required)
+install-plots:
+	@echo "Installing plot dependencies..."
+	cd plots && uv sync
+
+# Generate plots from experiment results (requires plot dependencies)
+plots: install-plots
+	@echo "Generating plots from experiment results..."
+	cd plots && uv run python generate_plots.py
 
 # Connect to Lambda cluster (requires LAMBDA_HOST, default: lambda1)
 connect: check-env
