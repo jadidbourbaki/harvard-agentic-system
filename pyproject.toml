@@ -1,6 +1,6 @@
 [project]
 name = "h-agent-sys"
-version = "0.1.0"
+version = "1.0.0"
 description = "Harvard Agentic System - Baseline implementation for agentic systems with context sharing"
 requires-python = "~=3.12.0"  # Pinned for reproducibility (Python 3.12.x, latest supported by vLLM 0.13.0)
 dependencies = [
