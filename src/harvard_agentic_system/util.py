@@ -1,5 +1,6 @@
 from typing import List
-from vllm import RequestOutput, RequestMetrics
+from vllm import RequestOutput
+from vllm.sequence import RequestMetrics
 
 
 def validate_outputs(outputs: List[RequestOutput]) -> str:

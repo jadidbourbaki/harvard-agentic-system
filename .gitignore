@@ -36,6 +36,7 @@ env/
 # Project specific
 results.json
 *.log
+.env
 
 # Model cache (if using local models)
 models/

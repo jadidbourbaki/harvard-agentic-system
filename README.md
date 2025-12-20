@@ -1,27 +1,51 @@
 # Harvard Agentic System
 
-## Setup
+Baseline implementation for agentic systems with context sharing.
 
-This project requires a Linux environment with CUDA support (e.g., Harvard Lambda clusters) as vLLM requires GPU support.
-
-### Prerequisites
+## Prerequisites
 
 - Python 3.12.x
-- CUDA-capable GPU
+- CUDA-capable GPU (for Lambda cluster)
 - `uv` package manager
+- `sshpass` (for Lambda cluster access)
 
-### Installation
+## Setup
+
+### Lambda Cluster
+
+1. Create a `.env` file with your credentials:
+   ```bash
+   SSH_KEY=~/.ssh/id_rsa
+   JUMPER_PASSWORD=your-zu-password
+   LAMBDA_PASSWORD=your-lambda-password
+   LAMBDA_HOST=lambda1  # optional
+   ```
+
+2. Sync and setup:
+   ```bash
+   make sync-repo       # Sync your code to Lambda
+   make setup-lambda    # Install dependencies on Lambda
+   ```
+
+3. Connect:
+   ```bash
+   make connect        # Interactive shell
+   ```
+
+### Local Development
 
 ```bash
-# Install dependencies
-uv sync
+make install           # Install dependencies
 ```
 
 ## Usage
 
 ```bash
 # Run the baseline story-finishing game
-h-agent-sys run \
+make run
+
+# Or customize parameters
+uv run h-agent-sys run \
     --model meta-llama/Llama-3.1-8B-Instruct \
     --k 1 \
     --c 1 \
@@ -29,4 +53,4 @@ h-agent-sys run \
     --output results.json
 ```
 
-Use `h-agent-sys run --help` for all available options.
+See `make help` for all available targets.
