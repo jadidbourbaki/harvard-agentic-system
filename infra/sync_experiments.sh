@@ -9,48 +9,9 @@
 
 set -e
 
-# Configuration
-JUMPER_HOST="guest@ec2-3-84-159-179.compute-1.amazonaws.com"
-JUMPER_PORT=23219
-ZU_PORT=23218
-LAMBDA_HOST="${1:-lambda1}"
-LAMBDA_USER="hayder"
-
-# Get the project root directory (parent of infra/)
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-
-# Check for required environment variables
-if [ -z "$SSH_KEY" ]; then
-    echo "Error: SSH_KEY environment variable is not set"
-    echo "Usage: SSH_KEY=~/.ssh/id_rsa ./infra/sync_experiments.sh"
-    exit 1
-fi
-
-if [ ! -f "$SSH_KEY" ]; then
-    echo "Error: SSH key file not found: $SSH_KEY"
-    exit 1
-fi
-
-if [ -z "$JUMPER_PASSWORD" ]; then
-    echo "Error: JUMPER_PASSWORD environment variable is not set"
-    echo "Usage: export JUMPER_PASSWORD='your-password' && ./infra/sync_experiments.sh"
-    exit 1
-fi
-
-if [ -z "$LAMBDA_PASSWORD" ]; then
-    echo "Error: LAMBDA_PASSWORD environment variable is not set"
-    echo "Usage: export LAMBDA_PASSWORD='your-password' && ./infra/sync_experiments.sh"
-    exit 1
-fi
-
-# Check if sshpass is installed locally (needed for password authentication)
-if ! command -v sshpass &>/dev/null; then
-    echo "Error: sshpass is required locally but not installed."
-    echo "Install with: brew install hudochenkov/sshpass/sshpass (macOS)"
-    echo "              or: apt-get install sshpass (Linux)"
-    exit 1
-fi
+# Source common setup code
+SCRIPT_NAME="$(basename "$0")"
+source "$(dirname "$0")/common.sh"
 
 # Check if rsync is installed
 if ! command -v rsync &>/dev/null; then

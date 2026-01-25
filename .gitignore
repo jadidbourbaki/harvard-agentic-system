@@ -1,4 +1,4 @@
-# Python
+# Python (for plots only)
 __pycache__/
 *.py[cod]
 *$py.class
@@ -38,8 +38,19 @@ results.json
 *.log
 .env
 
-# Model cache (if using local models)
+# Model cache
 models/
 .cache/
 
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+.DS_Store
 .agent-context/

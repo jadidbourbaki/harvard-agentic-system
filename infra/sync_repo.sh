@@ -9,48 +9,9 @@
 
 set -e
 
-# Configuration
-JUMPER_HOST="guest@ec2-3-84-159-179.compute-1.amazonaws.com"
-JUMPER_PORT=23219
-ZU_PORT=23218
-LAMBDA_HOST="${1:-lambda1}"
-LAMBDA_USER="hayder"
-
-# Get the project root directory (parent of infra/)
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-
-# Check for required environment variables
-if [ -z "$SSH_KEY" ]; then
-    echo "Error: SSH_KEY environment variable is not set"
-    echo "Usage: SSH_KEY=~/.ssh/id_rsa ./infra/sync_repo.sh"
-    exit 1
-fi
-
-if [ ! -f "$SSH_KEY" ]; then
-    echo "Error: SSH key file not found: $SSH_KEY"
-    exit 1
-fi
-
-if [ -z "$JUMPER_PASSWORD" ]; then
-    echo "Error: JUMPER_PASSWORD environment variable is not set"
-    echo "Usage: export JUMPER_PASSWORD='your-password' && ./infra/sync_repo.sh"
-    exit 1
-fi
-
-if [ -z "$LAMBDA_PASSWORD" ]; then
-    echo "Error: LAMBDA_PASSWORD environment variable is not set"
-    echo "Usage: export LAMBDA_PASSWORD='your-password' && ./infra/sync_repo.sh"
-    exit 1
-fi
-
-# Check if sshpass is installed locally (needed for password authentication)
-if ! command -v sshpass &>/dev/null; then
-    echo "Error: sshpass is required locally but not installed."
-    echo "Install with: brew install hudochenkov/sshpass/sshpass (macOS)"
-    echo "              or: apt-get install sshpass (Linux)"
-    exit 1
-fi
+# Source common setup code
+SCRIPT_NAME="$(basename "$0")"
+source "$(dirname "$0")/common.sh"
 
 echo "Syncing repository to Lambda cluster: ${LAMBDA_HOST}"
 echo "=================================================="
@@ -65,7 +26,7 @@ rm -f "$TEMP_TAR" 2>/dev/null || true
 ZU_TUNNEL_PORT=${ZU_TUNNEL_PORT:-$(python3 -c "import socket; s=socket.socket(); s.bind(('', 0)); print(s.getsockname()[1]); s.close()" 2>/dev/null || echo "10001")}
 LAMBDA_TUNNEL_PORT=${LAMBDA_TUNNEL_PORT:-$(python3 -c "import socket; s=socket.socket(); s.bind(('', 0)); print(s.getsockname()[1]); s.close()" 2>/dev/null || echo "10002")}
 
-# Cleanup function - handles both temp file and tunnels
+# Cleanup function - handles temp file and tunnels
 cleanup() {
     rm -f "$TEMP_TAR" 2>/dev/null || true
     lsof -ti:"${ZU_TUNNEL_PORT}" | xargs kill -9 2>/dev/null || true
@@ -75,6 +36,8 @@ trap cleanup EXIT INT TERM
 
 echo "Creating archive..."
 cd "$PROJECT_ROOT"
+
+# Create archive with repository files
 # Use --no-xattrs to exclude macOS extended attributes (avoids warnings on Linux)
 tar -czf "$TEMP_TAR" \
     --no-xattrs \
@@ -113,7 +76,9 @@ sleep 2
 # Pipe the tar directly through stdin instead of base64 encoding (avoids argument length limits)
 echo "Transferring and extracting on Lambda cluster..."
 cat "$TEMP_TAR" | sshpass -p "$LAMBDA_PASSWORD" ssh -o StrictHostKeyChecking=no -p "${LAMBDA_TUNNEL_PORT}" $LAMBDA_USER@localhost \
-    "mkdir -p ~/harvard-agentic-system && cd ~/harvard-agentic-system && tar -xzf -"
+    "mkdir -p ~/harvard-agentic-system && \
+     cd ~/harvard-agentic-system && \
+     tar -xzf -"
 
 echo ""
 echo "Repository sync complete!"

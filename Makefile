@@ -1,9 +1,14 @@
 .ONESHELL:
 
-.PHONY: help install sync run experiments plots connect setup-lambda sync-repo sync-experiments lint clean source-env
+.PHONY: help experiments baseline preserve all-experiments plots connect setup-lambda sync-repo sync-experiments run-sglang clean source-env check-env print-env
 
 # Set default LAMBDA_HOST if not provided
 LAMBDA_HOST ?= lambda1
+
+# Experiment configuration
+K_VALUES := 1 2 4 8 16 32 64 128
+TURNS := 100
+BACKEND := http://localhost:30000
 
 # Command to source .env file if it exists
 SOURCE_ENV_CMD = if [ -f .env ]; then set -a && source .env && set +a; fi
@@ -66,27 +71,38 @@ print-env:
 	echo "LAMBDA_PASSWORD: $${LAMBDA_PASSWORD:-not set}"; \
 	echo "LAMBDA_HOST: $${LAMBDA_HOST:-$(LAMBDA_HOST)}"
 
-# Install/sync dependencies with uv
-install sync:
-	uv sync
-
-# Run the baseline story-finishing game (example - users should customize parameters)
-run:
-	@echo "Running baseline story-finishing game..."
-	@echo "Customize parameters as needed:"
-	@echo "  uv run h-agent-sys --model <model> --k <k> --c <c> --turns <turns> --output <output>"
-	@echo ""
-	uv run h-agent-sys \
-		--model mistralai/Mistral-7B-Instruct-v0.3 \
-		--k 1 \
-		--c 1 \
-		--turns 100 \
-		--output results.json
-
-# Run experiments for multiple k values
+# Run Orla experiments (see experiments/README.md)
 experiments:
-	@echo "Running experiments for multiple k values..."
-	uv run python experiments/run_experiments.py
+	@echo "Orla experiments are in experiments/"
+	@echo "See experiments/README.md for instructions"
+	@echo ""
+	@echo "Available experiment targets:"
+	@echo "  make baseline        - Run aggressive_flush (baseline) for all k values"
+	@echo "  make preserve        - Run preserve (optimized) for all k values"
+	@echo "  make all-experiments - Run both policies"
+
+# Run baseline experiments (aggressive_flush) for all k values
+baseline:
+	@mkdir -p experiments/output/aggressive_flush
+	@cd experiments && \
+	for k in $(K_VALUES); do \
+		echo "Running baseline k=$$k..."; \
+		go run . --policy aggressive_flush --turns $(TURNS) --k $$k --backend $(BACKEND) \
+			--output output/aggressive_flush/results_k$$k.json; \
+	done
+
+# Run preserve experiments (optimized) for all k values
+preserve:
+	@mkdir -p experiments/output/preserve
+	@cd experiments && \
+	for k in $(K_VALUES); do \
+		echo "Running preserve k=$$k..."; \
+		go run . --policy preserve --turns $(TURNS) --k $$k --backend $(BACKEND) \
+			--output output/preserve/results_k$$k.json; \
+	done
+
+# Run both baseline and preserve experiments
+all-experiments: baseline preserve
 
 # Install plot dependencies (separate from main dependencies, no GPU required)
 install-plots:
@@ -122,23 +138,20 @@ sync-experiments: check-env
 	@$(SOURCE_ENV_CMD); \
 	./infra/sync_experiments.sh $(LAMBDA_HOST)
 
-# Lint Python code using ruff
-lint:
-	@if ! command -v ruff &> /dev/null; then \
-		echo "Installing ruff..."; \
-		uv pip install ruff; \
-	fi
-	ruff check src/
-	@echo "Linting complete"
+# Start SGLang server using Docker (required before running experiments)
+run-sglang:
+	@echo "Starting SGLang server with Docker..."
+	@echo "Model will be downloaded automatically on first run"
+	@echo "Press Ctrl+C to stop the server"
+	@echo ""
+	sudo docker run --gpus all --shm-size 32g -p 30000:30000 \
+		-v ~/.cache/huggingface:/root/.cache/huggingface \
+		--ipc=host \
+		lmsysorg/sglang:latest python -m sglang.launch_server \
+		--model-path mistralai/Mistral-7B-Instruct-v0.3 --port 30000 --host 0.0.0.0
 
 # Clean build artifacts and cache
 clean:
-	rm -rf .venv
-	rm -rf __pycache__
-	rm -rf .pytest_cache
-	rm -rf .mypy_cache
-	find . -type d -name "__pycache__" -exec rm -r {} + 2>/dev/null || true
-	find . -type f -name "*.pyc" -delete
-	find . -type f -name "*.pyo" -delete
+	@rm -rf experiments/output/
 	@echo "Clean complete"
 
