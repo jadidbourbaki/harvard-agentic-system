@@ -3,10 +3,12 @@
 // Usage:
 //
 //	go run . --policy preserve --turns 100 --k 8
+//
+// Supported policies: aggressive_flush, preserve, preserve_on_small_turns
 package main
 
 import (
-	"bytes"
+	"context"
 	"encoding/json"
 	"flag"
 	"fmt"
@@ -18,7 +20,14 @@ import (
 	"runtime"
 	"strings"
 	"time"
+
+	orla "github.com/dorcha-inc/orla/pkg/api"
 )
+
+func init() {
+	log.SetOutput(os.Stderr)
+	log.SetFlags(log.LstdFlags | log.Lmicroseconds)
+}
 
 func main() {
 	// kill all orla processes
@@ -34,6 +43,7 @@ func main() {
 	backend := flag.String("backend", "http://localhost:30000", "SGLang URL")
 	model := flag.String("model", "mistralai/Mistral-7B-Instruct-v0.3", "Model name (will be prefixed with 'sglang:')")
 	output := flag.String("output", "", "Output file (default: stdout)")
+	smallTurnThreshold := flag.Int("small-turn-threshold", 100, "Token threshold for preserve_on_small_turns policy (default: 100)")
 	flag.Parse()
 
 	if *output != "" {
@@ -51,16 +61,22 @@ func main() {
 
 	log.Printf("Running story finishing experiment with policy %s, turns %d, k %d, backend %s, model %s", *policy, *turns, *k, *backend, *model)
 	log.Printf("Output will be saved to %s", *output)
-
-	configFile := filepath.Join(os.TempDir(), fmt.Sprintf("orla_exp_%d.yaml", time.Now().Unix()))
+	// Determine config file location - use outputs directory if output is specified, otherwise current directory
+	var configFile string
+	if *output != "" {
+		outputDir := filepath.Dir(*output)
+		configFile = filepath.Join(outputDir, fmt.Sprintf("orla_exp_%d.yaml", time.Now().Unix()))
+	} else {
+		configFile = fmt.Sprintf("orla_exp_%d.yaml", time.Now().Unix())
+	}
 
 	log.Printf("Creating config file %s", configFile)
 
-	configErr := createConfig(configFile, *policy, *turns, *backend, modelID)
+	configErr := createConfig(configFile, *policy, *turns, *backend, modelID, *smallTurnThreshold)
 	if configErr != nil {
 		log.Fatalf("Failed to create config: %v", configErr)
 	}
-	defer os.Remove(configFile)
+	// Keep the config file for debugging/reference
 
 	log.Printf("Config file created")
 
@@ -75,10 +91,27 @@ func main() {
 	log.Printf("SGLang server is running")
 
 	log.Printf("Starting Orla daemon...")
+	// Create log file for daemon output - use outputs directory if output is specified
+	var logFile string
+	if *output != "" {
+		outputDir := filepath.Dir(*output)
+		logFile = filepath.Join(outputDir, fmt.Sprintf("orla_exp_%d_daemon.log", time.Now().Unix()))
+	} else {
+		logFile = fmt.Sprintf("orla_exp_%d_daemon.log", time.Now().Unix())
+	}
+
+	daemonLog, err := os.Create(logFile)
+	if err != nil {
+		log.Fatalf("Failed to create daemon log file: %v", err)
+	}
+	defer daemonLog.Close()
+
+	log.Printf("Orla daemon logs will be written to %s", logFile)
+
 	// Start Orla daemon
 	cmd := exec.Command("orla", "daemon", "--config", configFile)
-	cmd.Stdout = os.Stderr
-	cmd.Stderr = os.Stderr
+	cmd.Stdout = daemonLog
+	cmd.Stderr = daemonLog
 	startErr := cmd.Start()
 	if startErr != nil {
 		log.Fatalf("Failed to start Orla: %v", startErr)
@@ -92,7 +125,8 @@ func main() {
 
 	log.Printf("Running experiment...")
 	// Run experiment
-	results, err := runExperiment("http://localhost:8081", "story_finishing_game", *turns, *k)
+	ctx := context.Background()
+	results, err := runExperiment(ctx, "http://localhost:8081", "story_finishing_game", *turns, *k)
 	if err != nil {
 		log.Fatalf("Experiment failed: %v", err)
 	}
@@ -117,33 +151,42 @@ func main() {
 	log.Printf("Results: %v", results)
 }
 
-func createConfig(path, policy string, turns int, backend, model string) error {
+func createConfig(path string, policy string, turns int, backend string, model string, smallTurnThreshold int) error {
 	var config strings.Builder
-	fmt.Fprintf(&config, `agentic_serving:
-  mode: daemon
-  daemon:
-    listen_address: "localhost:8081"
-  llm_servers:
-    - name: "sglang_shared"
-      backend:
-        type: "sglang"
-        endpoint: "%s"
-      model: "%s"
-      context:
-        shared: true
-      cache:
-        policy: "%s"
-  agent_profiles:
-    - name: "story_agent_a"
-      llm_server: "sglang_shared"
-    - name: "story_agent_b"
-      llm_server: "sglang_shared"
-  workflows:
-    - name: "story_finishing_game"
-      tasks:
+	fmt.Fprintf(&config, `log_format: pretty
+log_level: debug
+agentic_serving:
+mode: daemon
+daemon:
+listen_address: "localhost:8081"
+llm_servers:
+- name: "sglang_shared"
+  backend:
+	type: "sglang"
+	endpoint: "%s"
+  model: "%s"
+  context:
+	shared: true
+  cache:
+	policy: "%s"
 `, backend, model, policy)
 
-	for i := range turns {
+	// Add small_turn_threshold if using preserve_on_small_turns policy
+	if policy == "preserve_on_small_turns" {
+		fmt.Fprintf(&config, "        small_turn_threshold: %d\n", smallTurnThreshold)
+	}
+
+	fmt.Fprintf(&config, `  agent_profiles:
+- name: "story_agent_a"
+  llm_server: "sglang_shared"
+- name: "story_agent_b"
+  llm_server: "sglang_shared"
+workflows:
+- name: "story_finishing_game"
+  tasks:
+`)
+
+	for i := 0; i < turns; i++ {
 		agent := "story_agent_a"
 
 		if i%2 == 1 {
@@ -184,88 +227,69 @@ func checkSGLangReady(backendURL string) error {
 	return fmt.Errorf("SGLang server at %s is not responding", backendURL)
 }
 
-func runExperiment(orlaURL, workflow string, turns, k int) (map[string]interface{}, error) {
-	// Start workflow
-	execID, err := httpPost(orlaURL+"/api/v1/workflow/start", map[string]string{"workflow_name": workflow})
-	if err != nil {
-		return nil, err
-	}
-	execIDStr := execID["execution_id"].(string)
+// runExperiment executes the story finishing workflow using the Orla public API.
+// It uses the low-level Client API directly since we need custom prompt construction
+// that builds up the story context incrementally each turn.
+func runExperiment(ctx context.Context, orlaURL, workflow string, turns, k int) (map[string]interface{}, error) {
+	// Create client using the public API
+	client := orla.NewClient(orlaURL)
 
-	var context string
+	// Start workflow
+	execID, err := client.StartWorkflow(ctx, workflow)
+	if err != nil {
+		return nil, fmt.Errorf("failed to start workflow: %w", err)
+	}
+
+	var storyContext string
 	var metrics []map[string]any
 	start := time.Now()
 
-	for turnIterator := range turns {
-		turn := turnIterator + 1
-
+	for turn := 1; turn <= turns; turn++ {
 		// Get next task
-		task, err := httpGet(fmt.Sprintf("%s/api/v1/workflow/task/next?execution_id=%s", orlaURL, execIDStr))
+		_, taskIndex, complete, _, err := client.GetNextTask(ctx, execID)
 		if err != nil {
 			return nil, fmt.Errorf("failed to get next task: %w", err)
 		}
 
-		if task["complete"].(bool) {
+		if complete {
 			break
 		}
 
-		taskIndex := int(task["task_index"].(float64))
+		// Construct prompt for this turn with accumulated context
+		prompt := constructPrompt(storyContext, k)
 
-		// Execute task
-		prompt := constructPrompt(context, k)
-
+		// Execute task (this advances CurrentTaskIndex internally)
 		turnStart := time.Now()
-		resp, err := httpPost(orlaURL+"/api/v1/workflow/task/execute", map[string]any{
-			"execution_id": execIDStr,
-			"task_index":   taskIndex,
-			"prompt":       prompt,
-		})
-
+		response, err := client.ExecuteTask(ctx, execID, taskIndex, prompt, k)
 		if err != nil {
 			return nil, fmt.Errorf("failed to execute task %d: %w", taskIndex, err)
 		}
 		duration := time.Since(turnStart)
 
-		// Check API response structure: {success: bool, response: {content: string}, error: string}
-		success, ok := resp["success"].(bool)
-		if !ok || !success {
-			errorMsg, ok := resp["error"].(string)
-			if !ok {
-				return nil, fmt.Errorf("invalid API response for task %d: missing 'error' field. Full response: %+v", taskIndex, resp)
-			}
-			return nil, fmt.Errorf("task %d execution failed: %s", taskIndex, errorMsg)
-		}
+		content := response.Content
+		storyContext += " " + content
 
-		responseObj, ok := resp["response"]
-		if !ok || responseObj == nil {
-			return nil, fmt.Errorf("invalid API response for task %d: missing 'response' field. Full response: %+v", taskIndex, resp)
-		}
-
-		responseMap, ok := responseObj.(map[string]interface{})
-		if !ok {
-			return nil, fmt.Errorf("invalid API response for task %d: 'response' is not a map. Got: %T, Value: %+v", taskIndex, responseObj, responseObj)
-		}
-
-		contentObj, ok := responseMap["content"]
-		if !ok || contentObj == nil {
-			return nil, fmt.Errorf("invalid API response for task %d: missing 'content' field. Response: %+v", taskIndex, responseMap)
-		}
-
-		content, ok := contentObj.(string)
-		if !ok {
-			return nil, fmt.Errorf("invalid API response for task %d: 'content' is not a string. Got: %T, Value: %+v", taskIndex, contentObj, contentObj)
-		}
-
-		context += " " + content
+		// Log the story continuation for this turn
+		log.Printf("Turn %d: %.1fms - Story continuation: %s", turn, float64(duration.Milliseconds()), content)
 
 		metrics = append(metrics, map[string]any{
 			"turn":             turn,
 			"total_time_ms":    float64(duration.Milliseconds()),
-			"context_size":     len(context),
+			"context_size":     len(storyContext),
 			"tokens_generated": len(content) / 4,
+			"content":          content,
 		})
 
-		log.Printf("Turn %d: %.1fms", turn, float64(duration.Milliseconds()))
+		// Get the updated task index after ExecuteTask (which advances CurrentTaskIndex)
+		_, updatedTaskIndex, _, _, err := client.GetNextTask(ctx, execID)
+		if err != nil {
+			return nil, fmt.Errorf("failed to get updated task index: %w", err)
+		}
+
+		// Complete task with the updated index
+		if err := client.CompleteTask(ctx, execID, updatedTaskIndex, response); err != nil {
+			return nil, fmt.Errorf("failed to complete task %d: %w", updatedTaskIndex, err)
+		}
 	}
 
 	var avgTime float64
@@ -283,53 +307,13 @@ func runExperiment(orlaURL, workflow string, turns, k int) (map[string]interface
 		"total_time_seconds": time.Since(start).Seconds(),
 		"avg_turn_time_ms":   avgTime,
 		"per_turn_metrics":   metrics,
+		"final_story":        storyContext,
 		"machine_info": map[string]any{
 			"os":      runtime.GOOS,
 			"arch":    runtime.GOARCH,
 			"num_cpu": runtime.NumCPU(),
 		},
 	}, nil
-}
-
-func httpPost(url string, body any) (map[string]any, error) {
-	jsonData, _ := json.Marshal(body)
-	resp, err := http.Post(url, "application/json", bytes.NewReader(jsonData))
-	if err != nil {
-		return nil, fmt.Errorf("HTTP POST failed: %w", err)
-	}
-	defer resp.Body.Close()
-
-	bodyBytes := &bytes.Buffer{}
-	bodyBytes.ReadFrom(resp.Body)
-	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("HTTP error %d: %s", resp.StatusCode, bodyBytes.String())
-	}
-
-	var result map[string]any
-	if err := json.Unmarshal(bodyBytes.Bytes(), &result); err != nil {
-		return nil, fmt.Errorf("failed to decode JSON response: %w", err)
-	}
-	return result, nil
-}
-
-func httpGet(url string) (map[string]any, error) {
-	resp, err := http.Get(url)
-	if err != nil {
-		return nil, fmt.Errorf("HTTP GET failed: %w", err)
-	}
-	defer resp.Body.Close()
-
-	bodyBytes := &bytes.Buffer{}
-	bodyBytes.ReadFrom(resp.Body)
-	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("HTTP error %d: %s", resp.StatusCode, bodyBytes.String())
-	}
-
-	var result map[string]any
-	if err := json.Unmarshal(bodyBytes.Bytes(), &result); err != nil {
-		return nil, fmt.Errorf("failed to decode JSON response: %w", err)
-	}
-	return result, nil
 }
 
 func constructPrompt(context string, c int) string {

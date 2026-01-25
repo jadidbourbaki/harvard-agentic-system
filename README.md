@@ -48,25 +48,64 @@ if running anywhere else.
 
 ## Running Experiments
 
-Use the following to start SGLang:
+
+The Makefile automatically handles SGLang restarts between experiments to ensure clean cache state. **SGLang runs in a separate tmux window so you can monitor its output in parallel.**
 
 ```bash
-make sglang-run
+# Start a tmux session (if not already in one)
+tmux new-session -d -s experiments
+tmux attach-session -t experiments
+
+# Build the experiment binaries
+make build-experiments
+
+# Run experiments for all k values (automatically restarts SGLang in tmux between each)
+make baseline              # Run aggressive_flush for all k values
+make preserve              # Run preserve for all k values
+make preserve-on-small-turns  # Run preserve_on_small_turns for all k values (threshold=32)
+make all-experiments       # Run all three policies
 ```
 
-Then you can run the experiments in the `experiments/` directory using Go:
+**Important**: 
+- The automated targets restart SGLang between each k value to ensure fair comparisons with clean cache state
+- SGLang runs in a tmux window named `sglang` - switch to it with `tmux select-window -t sglang` to view its output
+- You must be running inside a tmux session for automated experiments to work
 
-Run with cache flushed each turn:
+### Background Noise (Realistic Load Simulation)
+
+To simulate a real-world agentic serving environment with concurrent load, you can enable background noise:
 
 ```bash
-go run . --policy aggressive_flush --turns 5 --k 8 --output outputs/results.json
+# Run with 2 requests/second background noise
+BACKGROUND_NOISE_RATE=2 make baseline
+
+# Run with 5 requests/second background noise
+BACKGROUND_NOISE_RATE=5 make preserve
 ```
 
-Run with cache preserved:
+The background noise generator sends concurrent requests to SGLang to simulate cache contention and realistic serving conditions. By default, all experiment targets use 2 req/s background noise. Set `BACKGROUND_NOISE_RATE=0` to disable.
+
+### Manual Experiment Execution
+
+For manual control, you can start SGLang and run individual experiments:
 
 ```bash
-go run . --policy preserve --turns 5 --k 8 --output outputs/results.json
+# Start SGLang (in a separate terminal)
+make run-sglang
+
+# Build experiments
+make build-experiments
+
+# Run a single experiment
+./bin/story_finishing --policy aggressive_flush --turns 50 --k 1 --output outputs/flush_results.json
+./bin/story_finishing --policy preserve --turns 50 --k 1 --output outputs/preserve_results.json
+./bin/story_finishing --policy preserve_on_small_turns --turns 50 --k 1 --small-turn-threshold 32 --output outputs/preserve_small_results.json
+
+# Stop SGLang when done
+make stop-sglang
 ```
+
+**Note**: For accurate comparisons, restart SGLang between different policy experiments to ensure clean cache state.
 
 Some notes:
 
@@ -74,12 +113,16 @@ Some notes:
 - The model will be downloaded automatically from HuggingFace on first run and cached in `~/.cache/huggingface`
 - The `--shm-size 32g` and `--ipc=host` flags improve performance
 - The experiment automatically starts the Orla daemon, but you can also run it manually for debugging
+- The binary is built for Linux (amd64) - use `make build-experiments` to rebuild
+- **For accurate experiments**: The automated Makefile targets restart SGLang between each k value to ensure clean cache state
+- **For realistic load**: Use `BACKGROUND_NOISE_RATE` to simulate concurrent requests and cache contention
+- **tmux integration**: SGLang runs in a separate tmux window (`sglang`) so you can monitor its output in parallel - use `tmux select-window -t sglang` to view it
 
 ## Cache Policies
 
 - `aggressive_flush` - Flush cache every turn (baseline)
 - `preserve` - Keep cache across turns (optimized)
-- `preserve_on_small_turns` - Conditional preservation
+- `preserve_on_small_turns` - Conditional preservation: preserves cache when turn size (tokens) ≤ threshold, flushes when > threshold. Default threshold is 100 tokens. Use `--small-turn-threshold` to customize (Makefile uses 32 for experiments).
 - `flush_under_pressure` - Memory-aware flushing
 
 ## Output Format
@@ -119,6 +162,15 @@ Plots are saved to `plots/output/` in both PDF and PNG formats.
 
 See `make help` for all available targets:
 
+- `make build-experiments` - Build experiment binaries for Linux
+- `make run-sglang` - Start SGLang server (interactive, blocks)
+- `make run-sglang-tmux` - Start SGLang server in tmux window (for automated experiments)
+- `make stop-sglang` - Stop SGLang server and close tmux window
+- `make restart-sglang` - Restart SGLang server in tmux (clears cache state)
+- `make baseline` - Run aggressive_flush experiments for all k values (auto-restarts SGLang)
+- `make preserve` - Run preserve experiments for all k values (auto-restarts SGLang)
+- `make preserve-on-small-turns` - Run preserve_on_small_turns experiments for all k values (threshold=32, auto-restarts SGLang)
+- `make all-experiments` - Run all three policies (baseline, preserve, preserve-on-small-turns)
 - `make sync-repo` - Build orla for Linux and sync code to Lambda
 - `make setup-lambda` - Install dependencies on Lambda
 - `make connect` - Connect to Lambda cluster
