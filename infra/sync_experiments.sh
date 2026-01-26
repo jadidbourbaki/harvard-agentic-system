@@ -1,5 +1,5 @@
 #!/bin/bash
-# Sync experiments/output/ directory from Lambda cluster to local machine
+# Sync output/ directory from Lambda cluster to local machine
 #
 # Usage:
 #   SSH_KEY=~/.ssh/id_rsa JUMPER_PASSWORD=... LAMBDA_PASSWORD=... ./infra/sync_experiments.sh [lambda_host]
@@ -21,7 +21,7 @@ if ! command -v rsync &>/dev/null; then
     exit 1
 fi
 
-echo "Syncing experiments/output/ from Lambda cluster: ${LAMBDA_HOST}"
+echo "Syncing output/ from Lambda cluster: ${LAMBDA_HOST}"
 echo "=================================================="
 
 # Use SSH port forwarding with local sshpass to create tunnels
@@ -51,15 +51,15 @@ sshpass -p "$JUMPER_PASSWORD" ssh \
     -p "${ZU_TUNNEL_PORT}" guest@localhost
 sleep 2
 
-# Create local experiments/output directory if it doesn't exist
-mkdir -p "$PROJECT_ROOT/experiments/output"
+# Create local output directory if it doesn't exist
+mkdir -p "$PROJECT_ROOT/output"
 
-# Sync experiments/output/ from Lambda to local using rsync
-echo "Syncing experiments/output/..."
+# Sync output/ from Lambda to local using rsync
+echo "Syncing output/..."
 sshpass -p "$LAMBDA_PASSWORD" rsync -avz --progress \
     -e "ssh -o StrictHostKeyChecking=no -p ${LAMBDA_TUNNEL_PORT}" \
-    "${LAMBDA_USER}@localhost:~/harvard-agentic-system/experiments/output/" \
-    "$PROJECT_ROOT/experiments/output/"
+    "${LAMBDA_USER}@localhost:~/harvard-agentic-system/output/" \
+    "$PROJECT_ROOT/output/"
 
 echo ""
-echo "Experiments sync complete! Results are in experiments/output/"
+echo "Experiments sync complete! Results are in output/"

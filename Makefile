@@ -1,14 +1,15 @@
 .ONESHELL:
 
-.PHONY: help experiments baseline preserve preserve-on-small-turns all-experiments plots connect setup-lambda sync-repo sync-experiments run-sglang run-sglang-tmux stop-sglang restart-sglang clean source-env check-env print-env
+.PHONY: help build-experiments run-cascade-baseline run-cascade-orla connect setup-lambda sync-repo sync-experiments run-sglang run-sglang-tmux stop-sglang restart-sglang clean source-env check-env print-env
 
 # Set default LAMBDA_HOST if not provided
 LAMBDA_HOST ?= lambda1
 
-# Experiment configuration
-K_VALUES := 1 10 20 80 90 100
-TURNS := 20
-BACKEND := http://localhost:30000
+# Model cascade experiment configuration
+BACKEND_LARGE := http://localhost:30000
+BACKEND_SMALL := http://localhost:30001
+BACKEND_OLLAMA := http://localhost:11434
+NUM_TASKS := 20
 
 # Command to source .env file if it exists
 SOURCE_ENV_CMD = if [ -f .env ]; then set -a && source .env && set +a; fi
@@ -69,123 +70,167 @@ print-env:
 	echo "SSH_KEY: $${SSH_KEY:-not set}"; \
 	echo "JUMPER_PASSWORD: $${JUMPER_PASSWORD:-not set}"; \
 	echo "LAMBDA_PASSWORD: $${LAMBDA_PASSWORD:-not set}"; \
-	echo "LAMBDA_HOST: $${LAMBDA_HOST:-$(LAMBDA_HOST)}"
+	echo "LAMBDA_HOST: $${LAMBDA_HOST:-lambda1}"
 
-# Run Orla experiments (see experiments/README.md)
-experiments:
-	@echo "Orla experiments are in experiments/"
-	@echo "See experiments/README.md for instructions"
+# ==============================================================================
+# MODEL CASCADE EXPERIMENT
+# ==============================================================================
+# This experiment demonstrates Orla's unique value: agent-level model routing.
+# 
+# Baseline: SGLang always uses large model (Mistral-7B) for all tasks
+# Orla: Uses small model (Qwen2.5-0.5B) for routing, large model for synthesis
+#
+# Expected benefits:
+# - Cost: 40-60% reduction (small model for routing)
+# - Latency: 20-30% faster (fast routing decisions)
+# - Throughput: 2-3x higher
+
+# Build the model cascade experiment
+build-experiments:
+	@echo "Building model cascade experiment..."
+	@mkdir -p bin
+	@cd experiments/model_cascade && go build -o ../../bin/model_cascade .
+
+# Run baseline experiment (SGLang: always uses large model) - 4 runs (1 warmup + 3 for error bars)
+run-cascade-baseline:
+	@mkdir -p output/cascade
+	@echo "=============================================="
+	@echo "Running Baseline: SGLang (always large model)"
+	@echo "Running 4 times (1 warmup + 3 for error bars)..."
+	@echo "=============================================="
+	@for i in 1 2 3 4; do \
+		echo ""; \
+		if [ $$i -eq 1 ]; then \
+			echo "Run $$i/4 (WARMUP - will be discarded):"; \
+		else \
+			echo "Run $$i/4:"; \
+		fi; \
+		./bin/model_cascade --mode baseline \
+			--backend-large $(BACKEND_LARGE) \
+			--num-tasks $(NUM_TASKS) \
+			--output output/cascade/baseline_$$i.json; \
+		echo "Results saved to output/cascade/baseline_$$i.json"; \
+	done
 	@echo ""
-	@echo "Available experiment targets:"
-	@echo "  make baseline              - Run aggressive_flush (baseline) for all k values"
-	@echo "  make preserve              - Run preserve (optimized) for all k values"
-	@echo "  make preserve-on-small-turns - Run preserve_on_small_turns (conditional) for all k values"
-	@echo "  make all-experiments       - Run all three policies"
+	@echo "All 4 baseline runs complete! (Run 1 is warmup, runs 2-4 used for statistics)"
 
-# Run baseline experiments (aggressive_flush) for all k values
-# Restarts SGLang between each k value to ensure clean cache state
-# Set BACKGROUND_NOISE_RATE to override default (default: 2 req/s, set to 0 to disable)
-baseline:
-	@mkdir -p experiments/output/aggressive_flush
-	@BACKGROUND_NOISE_RATE=$${BACKGROUND_NOISE_RATE:-2}; \
-	if [ "$$BACKGROUND_NOISE_RATE" != "0" ]; then \
-		NOISE_LOG=experiments/output/background_noise_$$(date +%s).log; \
-		echo "Starting background noise at $$BACKGROUND_NOISE_RATE req/s (logs: $$NOISE_LOG)..."; \
-		./bin/background_noise --backend $(BACKEND) --rate $$BACKGROUND_NOISE_RATE > $$NOISE_LOG 2>&1 & \
-		NOISE_PID=$$!; \
-		sleep 2; \
-	fi; \
-	for k in $(K_VALUES); do \
-		echo "========================================="; \
-		echo "Running baseline k=$$k..."; \
-		echo "========================================="; \
-		$(MAKE) restart-sglang; \
-		./bin/story_finishing --policy aggressive_flush --turns $(TURNS) --k $$k --backend $(BACKEND) \
-			--output output/aggressive_flush/results_k$$k.json; \
-		$(MAKE) stop-sglang; \
-		echo "Completed k=$$k, restarting SGLang for next experiment..."; \
-		sleep 2; \
-	done; \
-	if [ "$$BACKGROUND_NOISE_RATE" != "0" ]; then \
-		kill $$NOISE_PID 2>/dev/null || true; \
-		echo "Stopped background noise generator"; \
-	fi
+# Run Orla cascade experiment (small model for routing, large for synthesis) - 4 runs (1 warmup + 3 for error bars)
+run-cascade-orla:
+	@mkdir -p output/cascade
+	@echo "=============================================="
+	@echo "Running Orla: Model Cascade (small + large)"
+	@echo "Running 4 times (1 warmup + 3 for error bars)..."
+	@echo "=============================================="
+	@for i in 1 2 3 4; do \
+		echo ""; \
+		if [ $$i -eq 1 ]; then \
+			echo "Run $$i/4 (WARMUP - will be discarded):"; \
+		else \
+			echo "Run $$i/4:"; \
+		fi; \
+		./bin/model_cascade --mode cascade \
+			--backend-small $(BACKEND_SMALL) \
+			--backend-large $(BACKEND_LARGE) \
+			--num-tasks $(NUM_TASKS) \
+			--output output/cascade/orla_$$i.json; \
+		echo "Results saved to output/cascade/orla_$$i.json"; \
+	done
+	@echo ""
+	@echo "All 4 Orla cascade runs complete! (Run 1 is warmup, runs 2-4 used for statistics)"
 
-# Run preserve experiments (optimized) for all k values
-# Restarts SGLang between each k value to ensure clean cache state
-# Set BACKGROUND_NOISE_RATE to override default (default: 2 req/s, set to 0 to disable)
-preserve:
-	@mkdir -p experiments/output/preserve
-	@BACKGROUND_NOISE_RATE=$${BACKGROUND_NOISE_RATE:-2}; \
-	if [ "$$BACKGROUND_NOISE_RATE" != "0" ]; then \
-		NOISE_LOG=experiments/output/background_noise_$$(date +%s).log; \
-		echo "Starting background noise at $$BACKGROUND_NOISE_RATE req/s (logs: $$NOISE_LOG)..."; \
-		./bin/background_noise --backend $(BACKEND) --rate $$BACKGROUND_NOISE_RATE > $$NOISE_LOG 2>&1 & \
-		NOISE_PID=$$!; \
-		sleep 2; \
-	fi; \
-	for k in $(K_VALUES); do \
-		echo "========================================="; \
-		echo "Running preserve k=$$k..."; \
-		echo "========================================="; \
-		$(MAKE) restart-sglang; \
-		./bin/story_finishing --policy preserve --turns $(TURNS) --k $$k --backend $(BACKEND) \
-			--output output/preserve/results_k$$k.json; \
-		$(MAKE) stop-sglang; \
-		echo "Completed k=$$k, restarting SGLang for next experiment..."; \
-		sleep 2; \
-	done; \
-	if [ "$$BACKGROUND_NOISE_RATE" != "0" ]; then \
-		kill $$NOISE_PID 2>/dev/null || true; \
-		echo "Stopped background noise generator"; \
-	fi
+# Run Ollama baseline experiment (all tasks use Mistral via Ollama) - 4 runs (1 warmup + 3 for error bars)
+run-cascade-ollama-baseline:
+	@mkdir -p output/cascade
+	@echo "=============================================="
+	@echo "Running Ollama Baseline: All tasks use Mistral-7B"
+	@echo "Running 4 times (1 warmup + 3 for error bars)..."
+	@echo "=============================================="
+	@for i in 1 2 3 4; do \
+		echo ""; \
+		if [ $$i -eq 1 ]; then \
+			echo "Run $$i/4 (WARMUP - will be discarded):"; \
+		else \
+			echo "Run $$i/4:"; \
+		fi; \
+		./bin/model_cascade --mode baseline-ollama \
+			--backend-ollama $(BACKEND_OLLAMA) \
+			--num-tasks $(NUM_TASKS) \
+			--output output/cascade/ollama_baseline_$$i.json; \
+		echo "Results saved to output/cascade/ollama_baseline_$$i.json"; \
+	done
+	@echo ""
+	@echo "All 4 Ollama baseline runs complete! (Run 1 is warmup, runs 2-4 used for statistics)"
 
-# Run preserve_on_small_turns experiments (conditional preservation) for all k values
-# Restarts SGLang between each k value to ensure clean cache state
-# Uses small-turn-threshold=32 (k <= 32 preserves cache, k > 32 flushes)
-# Set BACKGROUND_NOISE_RATE to override default (default: 2 req/s, set to 0 to disable)
-preserve-on-small-turns:
-	@mkdir -p experiments/output/preserve_on_small_turns
-	@BACKGROUND_NOISE_RATE=$${BACKGROUND_NOISE_RATE:-2}; \
-	if [ "$$BACKGROUND_NOISE_RATE" != "0" ]; then \
-		NOISE_LOG=experiments/output/background_noise_$$(date +%s).log; \
-		echo "Starting background noise at $$BACKGROUND_NOISE_RATE req/s (logs: $$NOISE_LOG)..."; \
-		./bin/background_noise --backend $(BACKEND) --rate $$BACKGROUND_NOISE_RATE > $$NOISE_LOG 2>&1 & \
-		NOISE_PID=$$!; \
-		sleep 2; \
-	fi; \
-	for k in $(K_VALUES); do \
-		echo "========================================="; \
-		echo "Running preserve_on_small_turns k=$$k..."; \
-		echo "========================================="; \
-		$(MAKE) restart-sglang; \
-		./bin/story_finishing --policy preserve_on_small_turns --turns $(TURNS) --k $$k --backend $(BACKEND) \
-			--small-turn-threshold 32 --output output/preserve_on_small_turns/results_k$$k.json; \
-		$(MAKE) stop-sglang; \
-		echo "Completed k=$$k, restarting SGLang for next experiment..."; \
-		sleep 2; \
-	done; \
-	if [ "$$BACKGROUND_NOISE_RATE" != "0" ]; then \
-		kill $$NOISE_PID 2>/dev/null || true; \
-		echo "Stopped background noise generator"; \
-	fi
+# Run Ollama cascade experiment (Qwen for analysis/summary, Mistral for code generation) - 4 runs (1 warmup + 3 for error bars)
+run-cascade-ollama:
+	@mkdir -p output/cascade
+	@echo "=============================================="
+	@echo "Running Ollama Cascade: Qwen (small) + Mistral (large)"
+	@echo "Running 4 times (1 warmup + 3 for error bars)..."
+	@echo "=============================================="
+	@for i in 1 2 3 4; do \
+		echo ""; \
+		if [ $$i -eq 1 ]; then \
+			echo "Run $$i/4 (WARMUP - will be discarded):"; \
+		else \
+			echo "Run $$i/4:"; \
+		fi; \
+		./bin/model_cascade --mode cascade-ollama \
+			--backend-ollama $(BACKEND_OLLAMA) \
+			--num-tasks $(NUM_TASKS) \
+			--output output/cascade/ollama_$$i.json; \
+		echo "Results saved to output/cascade/ollama_$$i.json"; \
+	done
+	@echo ""
+	@echo "All 4 Ollama cascade runs complete! (Run 1 is warmup, runs 2-4 used for statistics)"
 
-# Run both baseline and preserve experiments
-all-experiments: baseline preserve preserve-on-small-turns
+compare-cascade-results:
+	@echo "Comparing cascade results..."
+	@python3 scripts/compare_cascade_results.py
 
-# Install plot dependencies (separate from main dependencies, no GPU required)
-install-plots:
-	@echo "Installing plot dependencies..."
-	cd plots && uv sync
+# ==============================================================================
+# SGLANG SERVER MANAGEMENT
+# ==============================================================================
 
-# Clean plots output directory
-clean-plots:
-	rm -rf plots/output
+# Start SGLang server with large model (Mistral-7B) on port 30000
+run-sglang-large:
+	@echo "Starting SGLang server with Mistral-7B on port 30000..."
+	@echo "Model will be downloaded automatically on first run"
+	@echo "Press Ctrl+C to stop the server"
+	@echo ""
+	@echo "$$SUDO_PASSWORD" | sudo -S docker run --rm --name sglang-large --gpus all --shm-size 32g -p 30000:30000 \
+		-v ~/.cache/huggingface:/root/.cache/huggingface \
+		--ipc=host \
+		lmsysorg/sglang:latest python -m sglang.launch_server \
+		--model-path mistralai/Mistral-7B-Instruct-v0.3 --port 30000 --host 0.0.0.0 \
+		--mem-fraction-static 0.5
 
-# Generate plots from experiment results (requires plot dependencies)
-plots: install-plots
-	@echo "Generating plots from experiment results..."
-	cd plots && uv run python generate_plots.py
+# Start SGLang server with small model (Qwen2.5-0.5B) on port 30001
+run-sglang-small:
+	@echo "Starting SGLang server with Qwen2.5-0.5B on port 30001..."
+	@echo "Model will be downloaded automatically on first run"
+	@echo "Press Ctrl+C to stop the server"
+	@echo ""
+	@echo "$$SUDO_PASSWORD" | sudo -S docker run --rm --name sglang-small --gpus all --shm-size 32g -p 30001:30000 \
+		-v ~/.cache/huggingface:/root/.cache/huggingface \
+		--ipc=host \
+		lmsysorg/sglang:latest python -m sglang.launch_server \
+		--model-path Qwen/Qwen2.5-0.5B-Instruct --port 30000 --host 0.0.0.0 \
+		--mem-fraction-static 0.5
+
+# Stop SGLang servers
+stop-sglang:
+	@echo "Stopping SGLang servers..."
+	@echo "$$SUDO_PASSWORD" | sudo -S docker stop sglang-large sglang-small 2>/dev/null || true
+	@echo "$$SUDO_PASSWORD" | sudo -S docker rm sglang-large sglang-small 2>/dev/null || true
+	@echo "SGLang servers stopped"
+
+# Restart SGLang servers (stop then start in tmux)
+restart-sglang: stop-sglang run-sglang-tmux
+
+# ==============================================================================
+# LAMBDA CLUSTER MANAGEMENT
+# ==============================================================================
 
 # Connect to Lambda cluster (requires LAMBDA_HOST, default: lambda1)
 connect: check-env
@@ -207,86 +252,14 @@ sync-orla: check-env
 	@$(SOURCE_ENV_CMD); \
 	./infra/sync_orla.sh $(LAMBDA_HOST)
 
-# Sync experiments/output/ from Lambda cluster to local (requires LAMBDA_HOST, default: lambda1)
+# Sync output/ from Lambda cluster to local (requires LAMBDA_HOST, default: lambda1)
 sync-experiments: check-env
 	@$(SOURCE_ENV_CMD); \
 	./infra/sync_experiments.sh $(LAMBDA_HOST)
 
-# Start SGLang server using Docker (required before running experiments)
-# Use --rm to auto-remove container when stopped
-# Requires SUDO_PASSWORD environment variable
-run-sglang:
-	@echo "Starting SGLang server with Docker..."
-	@echo "Model will be downloaded automatically on first run"
-	@echo "Press Ctrl+C to stop the server"
-	@echo ""
-	@echo "$$SUDO_PASSWORD" | sudo -S docker run --rm --name sglang-server --gpus all --shm-size 32g -p 30000:30000 \
-		-v ~/.cache/huggingface:/root/.cache/huggingface \
-		--ipc=host \
-		lmsysorg/sglang:latest python -m sglang.launch_server \
-		--model-path mistralai/Mistral-7B-Instruct-v0.3 --port 30000 --host 0.0.0.0
-
-# Start SGLang server in a new tmux window (for automated experiments)
-# Assumes you're running inside a tmux session
-# Requires SUDO_PASSWORD environment variable
-run-sglang-tmux:
-	@echo "Starting SGLang server in tmux window 'sglang'..."
-	@if ! tmux has-session 2>/dev/null; then \
-		echo "Error: Not running inside a tmux session. Please start tmux first."; \
-		exit 1; \
-	fi
-	@tmux kill-window -t sglang 2>/dev/null || true
-	@tmux new-window -d -n sglang "echo '$$SUDO_PASSWORD' | sudo -S docker run --rm --name sglang-server --gpus all --shm-size 32g -p 30000:30000 -v ~/.cache/huggingface:/root/.cache/huggingface --ipc=host lmsysorg/sglang:latest python -m sglang.launch_server --model-path mistralai/Mistral-7B-Instruct-v0.3 --port 30000 --host 0.0.0.0"
-	@echo "Waiting for SGLang to be ready..."
-	@max_attempts=120; \
-	attempt=0; \
-	while [ $$attempt -lt $$max_attempts ]; do \
-		if curl -s -f http://localhost:30000/model_info >/dev/null 2>&1; then \
-			echo "SGLang server is ready!"; \
-			break; \
-		fi; \
-		attempt=$$((attempt + 1)); \
-		if [ $$((attempt % 10)) -eq 0 ]; then \
-			echo "Still waiting... ($$attempt/$$max_attempts attempts)"; \
-		fi; \
-		sleep 1; \
-	done; \
-	if [ $$attempt -eq $$max_attempts ]; then \
-		echo "Warning: SGLang may not be fully ready after $$max_attempts seconds"; \
-		exit 1; \
-	fi
-	@echo "SGLang server is ready! Sleeping for 15 seconds to ensure it's fully ready..."; \
-	sleep 15; \
-	echo "SGLang server started in tmux window 'sglang'"; \
-	echo "View it with: tmux select-window -t sglang"
-
-# Stop SGLang server (stops Docker container and tmux window)
-# Requires SUDO_PASSWORD environment variable
-stop-sglang:
-	@echo "Stopping SGLang server..."
-	@echo "$$SUDO_PASSWORD" | sudo -S docker stop sglang-server 2>/dev/null || echo "SGLang container not running"
-	@echo "$$SUDO_PASSWORD" | sudo -S docker rm sglang-server 2>/dev/null || echo "SGLang container not found"
-	@echo "SGLang server stopped"
-	@echo "Sleeping for 10 seconds to ensure the server is fully stopped..."; \
-	sleep 10; \
-	echo "SGLang server fully stopped"
-
-# Restart SGLang server (stops and starts fresh in tmux, clears cache state)
-restart-sglang: stop-sglang run-sglang-tmux
-
-# Clean build artifacts and cache
+# Clean build artifacts and output
 clean:
-	@rm -rf experiments/output/
-	@echo "Clean complete"
-
-# Build experiments for Linux
-build-experiments:
-	mkdir -p bin/
-	@echo "Building experiments..."
-	@(cd experiments/story_finishing && GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o ../../bin/story_finishing .)
-	@(cd experiments/background_noise && GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o ../../bin/background_noise .)
-
-# Clean build artifacts and cache
-clean-experiments:
+	@echo "Cleaning build artifacts..."
 	@rm -rf bin/
+	@rm -rf output/
 	@echo "Clean complete"
