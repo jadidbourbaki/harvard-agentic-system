@@ -1,0 +1,4136 @@
+{
+  "avg_turn_time_ms": 65.99591836734695,
+  "k": 4,
+  "machine_info": {
+    "arch": "amd64",
+    "num_cpu": 55,
+    "os": "linux"
+  },
+  "num_workflows": 10,
+  "per_workflow_avg_times": [
+    64.06122448979592,
+    64.20408163265306,
+    59.48979591836735,
+    64.44897959183673,
+    70.51020408163265,
+    67.26530612244898,
+    68.0204081632653,
+    67.44897959183673,
+    66.48979591836735,
+    68.0204081632653
+  ],
+  "total_time_seconds": 33.852749783,
+  "turns_per_workflow": 100,
+  "workflows": [
+    {
+      "avg_turn_time_ms": 64.06122448979592,
+      "final_story": "  In a faraway  land, there lived  a brave knight  named Sir Lancel  ot\n\nHe  ventured into the  dark forest, armed  with a shining sword  and a stur  dy heart. D  He encountered a fear  some beast, its  eyes glowed with  red, and its  roar echoed  through the dense fol  woods. The beast  challenged Sir Lancel  ot, demanding,  \"He replied with  courage and honor,  \"I shall not  fear you, for  I stand for truth  and justice,\n  and I will defend  the realm from your  terror, for I  am Sir Lancel  ot, the brave  knight of the  realm.\"\n\n  The beast, en  raged by his  defiance, lung  ed at Sir L  Lancelot,  parried the attack  with swift reflex  es, and with  a powerful strike,  he severed the  beast's men  ace, sending it  screeching into  the distance, the  forest quivered  The beast, how  languished in  its dying throes",
+      "k": 4,
+      "per_turn_metrics": [
+        {
+          "content": " In a faraway",
+          "context_size": 14,
+          "tokens_generated": 3,
+          "total_time_ms": 59,
+          "turn": 1,
+          "workflow": 1
+        },
+        {
+          "content": " land, there lived",
+          "context_size": 33,
+          "tokens_generated": 4,
+          "total_time_ms": 55,
+          "turn": 2,
+          "workflow": 1
+        },
+        {
+          "content": " a brave knight",
+          "context_size": 49,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 3,
+          "workflow": 1
+        },
+        {
+          "content": " named Sir Lancel",
+          "context_size": 67,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 4,
+          "workflow": 1
+        },
+        {
+          "content": " ot\n\nHe",
+          "context_size": 75,
+          "tokens_generated": 1,
+          "total_time_ms": 55,
+          "turn": 5,
+          "workflow": 1
+        },
+        {
+          "content": " ventured into the",
+          "context_size": 94,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 6,
+          "workflow": 1
+        },
+        {
+          "content": " dark forest, armed",
+          "context_size": 114,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 7,
+          "workflow": 1
+        },
+        {
+          "content": " with a shining sword",
+          "context_size": 136,
+          "tokens_generated": 5,
+          "total_time_ms": 55,
+          "turn": 8,
+          "workflow": 1
+        },
+        {
+          "content": " and a stur",
+          "context_size": 148,
+          "tokens_generated": 2,
+          "total_time_ms": 56,
+          "turn": 9,
+          "workflow": 1
+        },
+        {
+          "content": " dy heart. D",
+          "context_size": 161,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 10,
+          "workflow": 1
+        },
+        {
+          "content": " He encountered a fear",
+          "context_size": 184,
+          "tokens_generated": 5,
+          "total_time_ms": 56,
+          "turn": 11,
+          "workflow": 1
+        },
+        {
+          "content": " some beast, its",
+          "context_size": 201,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 12,
+          "workflow": 1
+        },
+        {
+          "content": " eyes glowed with",
+          "context_size": 219,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 13,
+          "workflow": 1
+        },
+        {
+          "content": " red, and its",
+          "context_size": 233,
+          "tokens_generated": 3,
+          "total_time_ms": 72,
+          "turn": 14,
+          "workflow": 1
+        },
+        {
+          "content": " roar echoed",
+          "context_size": 246,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 15,
+          "workflow": 1
+        },
+        {
+          "content": " through the dense fol",
+          "context_size": 269,
+          "tokens_generated": 5,
+          "total_time_ms": 65,
+          "turn": 16,
+          "workflow": 1
+        },
+        {
+          "content": " woods. The beast",
+          "context_size": 287,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 17,
+          "workflow": 1
+        },
+        {
+          "content": " challenged Sir Lancel",
+          "context_size": 310,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 18,
+          "workflow": 1
+        },
+        {
+          "content": " ot, demanding,",
+          "context_size": 326,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 19,
+          "workflow": 1
+        },
+        {
+          "content": " \"He replied with",
+          "context_size": 344,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 20,
+          "workflow": 1
+        },
+        {
+          "content": " courage and honor,",
+          "context_size": 364,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 21,
+          "workflow": 1
+        },
+        {
+          "content": " \"I shall not",
+          "context_size": 378,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 22,
+          "workflow": 1
+        },
+        {
+          "content": " fear you, for",
+          "context_size": 393,
+          "tokens_generated": 3,
+          "total_time_ms": 73,
+          "turn": 23,
+          "workflow": 1
+        },
+        {
+          "content": " I stand for truth",
+          "context_size": 412,
+          "tokens_generated": 4,
+          "total_time_ms": 82,
+          "turn": 24,
+          "workflow": 1
+        },
+        {
+          "content": " and justice,\n",
+          "context_size": 427,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 25,
+          "workflow": 1
+        },
+        {
+          "content": " and I will defend",
+          "context_size": 446,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 26,
+          "workflow": 1
+        },
+        {
+          "content": " the realm from your",
+          "context_size": 467,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 27,
+          "workflow": 1
+        },
+        {
+          "content": " terror, for I",
+          "context_size": 482,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 28,
+          "workflow": 1
+        },
+        {
+          "content": " am Sir Lancel",
+          "context_size": 497,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 29,
+          "workflow": 1
+        },
+        {
+          "content": " ot, the brave",
+          "context_size": 512,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 30,
+          "workflow": 1
+        },
+        {
+          "content": " knight of the",
+          "context_size": 527,
+          "tokens_generated": 3,
+          "total_time_ms": 72,
+          "turn": 31,
+          "workflow": 1
+        },
+        {
+          "content": " realm.\"\n\n",
+          "context_size": 538,
+          "tokens_generated": 2,
+          "total_time_ms": 74,
+          "turn": 32,
+          "workflow": 1
+        },
+        {
+          "content": " The beast, en",
+          "context_size": 553,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 33,
+          "workflow": 1
+        },
+        {
+          "content": " raged by his",
+          "context_size": 567,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 34,
+          "workflow": 1
+        },
+        {
+          "content": " defiance, lung",
+          "context_size": 583,
+          "tokens_generated": 3,
+          "total_time_ms": 72,
+          "turn": 35,
+          "workflow": 1
+        },
+        {
+          "content": " ed at Sir L",
+          "context_size": 596,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 36,
+          "workflow": 1
+        },
+        {
+          "content": " Lancelot,",
+          "context_size": 607,
+          "tokens_generated": 2,
+          "total_time_ms": 66,
+          "turn": 37,
+          "workflow": 1
+        },
+        {
+          "content": " parried the attack",
+          "context_size": 627,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 38,
+          "workflow": 1
+        },
+        {
+          "content": " with swift reflex",
+          "context_size": 646,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 39,
+          "workflow": 1
+        },
+        {
+          "content": " es, and with",
+          "context_size": 660,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 40,
+          "workflow": 1
+        },
+        {
+          "content": " a powerful strike,",
+          "context_size": 680,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 41,
+          "workflow": 1
+        },
+        {
+          "content": " he severed the",
+          "context_size": 696,
+          "tokens_generated": 3,
+          "total_time_ms": 82,
+          "turn": 42,
+          "workflow": 1
+        },
+        {
+          "content": " beast's men",
+          "context_size": 709,
+          "tokens_generated": 3,
+          "total_time_ms": 65,
+          "turn": 43,
+          "workflow": 1
+        },
+        {
+          "content": " ace, sending it",
+          "context_size": 726,
+          "tokens_generated": 4,
+          "total_time_ms": 82,
+          "turn": 44,
+          "workflow": 1
+        },
+        {
+          "content": " screeching into",
+          "context_size": 743,
+          "tokens_generated": 4,
+          "total_time_ms": 84,
+          "turn": 45,
+          "workflow": 1
+        },
+        {
+          "content": " the distance, the",
+          "context_size": 762,
+          "tokens_generated": 4,
+          "total_time_ms": 65,
+          "turn": 46,
+          "workflow": 1
+        },
+        {
+          "content": " forest quivered",
+          "context_size": 779,
+          "tokens_generated": 4,
+          "total_time_ms": 69,
+          "turn": 47,
+          "workflow": 1
+        },
+        {
+          "content": " The beast, how",
+          "context_size": 795,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 48,
+          "workflow": 1
+        },
+        {
+          "content": " languished in",
+          "context_size": 810,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 49,
+          "workflow": 1
+        },
+        {
+          "content": " its dying throes",
+          "context_size": 828,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 50,
+          "workflow": 1
+        }
+      ],
+      "total_time_seconds": 3.286859806,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_1",
+      "workflow_number": 1
+    },
+    {
+      "avg_turn_time_ms": 64.20408163265306,
+      "final_story": "  In a far-  off land, hidden  behind the veil  of the ench  ant forest, there  lived a young princess  named Isolde  who possessed a voice  so beautiful, it  could make the stars  weep with env  joy. One day  a mysterious stranger arrived  at the castle gates  Armed with an  enchanted fl  an sword and clo  cloaked in shadows  ...who claimed to  be a knight  seeking the heart of  the princess Isol  ...and a test  to prove his worth  ...\n\nThe  ...The knight  The knight,  1. challenge  2. presented  2. a  riddle\n\n  1. The  knight, presented  a riddle\n  The riddle was  this: \"What  has roots as nobody  Sees, yet  1. touches  everyone and can'  1. be  The knight,  presented a riddle  The riddle was  this: \"What  has roots as nobody  sees, yet touches  everyone and can be  1. pulled  up by the hair",
+      "k": 4,
+      "per_turn_metrics": [
+        {
+          "content": " In a far-",
+          "context_size": 11,
+          "tokens_generated": 2,
+          "total_time_ms": 63,
+          "turn": 1,
+          "workflow": 2
+        },
+        {
+          "content": " off land, hidden",
+          "context_size": 29,
+          "tokens_generated": 4,
+          "total_time_ms": 70,
+          "turn": 2,
+          "workflow": 2
+        },
+        {
+          "content": " behind the veil",
+          "context_size": 46,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 3,
+          "workflow": 2
+        },
+        {
+          "content": " of the ench",
+          "context_size": 59,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 4,
+          "workflow": 2
+        },
+        {
+          "content": " ant forest, there",
+          "context_size": 78,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 5,
+          "workflow": 2
+        },
+        {
+          "content": " lived a young princess",
+          "context_size": 102,
+          "tokens_generated": 5,
+          "total_time_ms": 65,
+          "turn": 6,
+          "workflow": 2
+        },
+        {
+          "content": " named Isolde",
+          "context_size": 116,
+          "tokens_generated": 3,
+          "total_time_ms": 72,
+          "turn": 7,
+          "workflow": 2
+        },
+        {
+          "content": " who possessed a voice",
+          "context_size": 139,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 8,
+          "workflow": 2
+        },
+        {
+          "content": " so beautiful, it",
+          "context_size": 157,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 9,
+          "workflow": 2
+        },
+        {
+          "content": " could make the stars",
+          "context_size": 179,
+          "tokens_generated": 5,
+          "total_time_ms": 99,
+          "turn": 10,
+          "workflow": 2
+        },
+        {
+          "content": " weep with env",
+          "context_size": 194,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 11,
+          "workflow": 2
+        },
+        {
+          "content": " joy. One day",
+          "context_size": 208,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 12,
+          "workflow": 2
+        },
+        {
+          "content": " a mysterious stranger arrived",
+          "context_size": 239,
+          "tokens_generated": 7,
+          "total_time_ms": 66,
+          "turn": 13,
+          "workflow": 2
+        },
+        {
+          "content": " at the castle gates",
+          "context_size": 260,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 14,
+          "workflow": 2
+        },
+        {
+          "content": " Armed with an",
+          "context_size": 275,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 15,
+          "workflow": 2
+        },
+        {
+          "content": " enchanted fl",
+          "context_size": 289,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 16,
+          "workflow": 2
+        },
+        {
+          "content": " an sword and clo",
+          "context_size": 307,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 17,
+          "workflow": 2
+        },
+        {
+          "content": " cloaked in shadows",
+          "context_size": 327,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 18,
+          "workflow": 2
+        },
+        {
+          "content": " ...who claimed to",
+          "context_size": 346,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 19,
+          "workflow": 2
+        },
+        {
+          "content": " be a knight",
+          "context_size": 359,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 20,
+          "workflow": 2
+        },
+        {
+          "content": " seeking the heart of",
+          "context_size": 381,
+          "tokens_generated": 5,
+          "total_time_ms": 57,
+          "turn": 21,
+          "workflow": 2
+        },
+        {
+          "content": " the princess Isol",
+          "context_size": 400,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 22,
+          "workflow": 2
+        },
+        {
+          "content": " ...and a test",
+          "context_size": 415,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 23,
+          "workflow": 2
+        },
+        {
+          "content": " to prove his worth",
+          "context_size": 435,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 24,
+          "workflow": 2
+        },
+        {
+          "content": " ...\n\nThe",
+          "context_size": 445,
+          "tokens_generated": 2,
+          "total_time_ms": 57,
+          "turn": 25,
+          "workflow": 2
+        },
+        {
+          "content": " ...The knight",
+          "context_size": 460,
+          "tokens_generated": 3,
+          "total_time_ms": 58,
+          "turn": 26,
+          "workflow": 2
+        },
+        {
+          "content": " The knight,",
+          "context_size": 473,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 27,
+          "workflow": 2
+        },
+        {
+          "content": " 1. challenge",
+          "context_size": 487,
+          "tokens_generated": 3,
+          "total_time_ms": 73,
+          "turn": 28,
+          "workflow": 2
+        },
+        {
+          "content": " 2. presented",
+          "context_size": 501,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 29,
+          "workflow": 2
+        },
+        {
+          "content": " 2. a",
+          "context_size": 507,
+          "tokens_generated": 1,
+          "total_time_ms": 67,
+          "turn": 30,
+          "workflow": 2
+        },
+        {
+          "content": " riddle\n\n",
+          "context_size": 517,
+          "tokens_generated": 2,
+          "total_time_ms": 73,
+          "turn": 31,
+          "workflow": 2
+        },
+        {
+          "content": " 1. The",
+          "context_size": 525,
+          "tokens_generated": 1,
+          "total_time_ms": 68,
+          "turn": 32,
+          "workflow": 2
+        },
+        {
+          "content": " knight, presented",
+          "context_size": 544,
+          "tokens_generated": 4,
+          "total_time_ms": 84,
+          "turn": 33,
+          "workflow": 2
+        },
+        {
+          "content": " a riddle\n",
+          "context_size": 555,
+          "tokens_generated": 2,
+          "total_time_ms": 83,
+          "turn": 34,
+          "workflow": 2
+        },
+        {
+          "content": " The riddle was",
+          "context_size": 571,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 35,
+          "workflow": 2
+        },
+        {
+          "content": " this: \"What",
+          "context_size": 584,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 36,
+          "workflow": 2
+        },
+        {
+          "content": " has roots as nobody",
+          "context_size": 605,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 37,
+          "workflow": 2
+        },
+        {
+          "content": " Sees, yet",
+          "context_size": 616,
+          "tokens_generated": 2,
+          "total_time_ms": 66,
+          "turn": 38,
+          "workflow": 2
+        },
+        {
+          "content": " 1. touches",
+          "context_size": 628,
+          "tokens_generated": 2,
+          "total_time_ms": 56,
+          "turn": 39,
+          "workflow": 2
+        },
+        {
+          "content": " everyone and can'",
+          "context_size": 647,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 40,
+          "workflow": 2
+        },
+        {
+          "content": " 1. be",
+          "context_size": 654,
+          "tokens_generated": 1,
+          "total_time_ms": 56,
+          "turn": 41,
+          "workflow": 2
+        },
+        {
+          "content": " The knight,",
+          "context_size": 667,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 42,
+          "workflow": 2
+        },
+        {
+          "content": " presented a riddle",
+          "context_size": 687,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 43,
+          "workflow": 2
+        },
+        {
+          "content": " The riddle was",
+          "context_size": 703,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 44,
+          "workflow": 2
+        },
+        {
+          "content": " this: \"What",
+          "context_size": 716,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 45,
+          "workflow": 2
+        },
+        {
+          "content": " has roots as nobody",
+          "context_size": 737,
+          "tokens_generated": 5,
+          "total_time_ms": 56,
+          "turn": 46,
+          "workflow": 2
+        },
+        {
+          "content": " sees, yet touches",
+          "context_size": 756,
+          "tokens_generated": 4,
+          "total_time_ms": 72,
+          "turn": 47,
+          "workflow": 2
+        },
+        {
+          "content": " everyone and can be",
+          "context_size": 777,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 48,
+          "workflow": 2
+        },
+        {
+          "content": " 1. pulled",
+          "context_size": 788,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 49,
+          "workflow": 2
+        },
+        {
+          "content": " up by the hair",
+          "context_size": 804,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 50,
+          "workflow": 2
+        }
+      ],
+      "total_time_seconds": 3.284762517,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_2",
+      "workflow_number": 2
+    },
+    {
+      "avg_turn_time_ms": 59.48979591836735,
+      "final_story": "  In a far-  away land, hidden  behind the Veil  lived a young princess  Named Isol  Once upon a time  In a far-  away kingdom, sh  veiled in darkness  Behind the Veil  lived a mysterious sor  Once upon a time  In a forgotten valley  Behind the Veil  Behind the Veil  Lived a wise  old man named Eld  Once upon a time  In a secret gro  ve, ensh  rined by v  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil  Behind the Veil",
+      "k": 4,
+      "per_turn_metrics": [
+        {
+          "content": " In a far-",
+          "context_size": 11,
+          "tokens_generated": 2,
+          "total_time_ms": 75,
+          "turn": 1,
+          "workflow": 3
+        },
+        {
+          "content": " away land, hidden",
+          "context_size": 30,
+          "tokens_generated": 4,
+          "total_time_ms": 52,
+          "turn": 2,
+          "workflow": 3
+        },
+        {
+          "content": " behind the Veil",
+          "context_size": 47,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 3,
+          "workflow": 3
+        },
+        {
+          "content": " lived a young princess",
+          "context_size": 71,
+          "tokens_generated": 5,
+          "total_time_ms": 56,
+          "turn": 4,
+          "workflow": 3
+        },
+        {
+          "content": " Named Isol",
+          "context_size": 83,
+          "tokens_generated": 2,
+          "total_time_ms": 57,
+          "turn": 5,
+          "workflow": 3
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 101,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 6,
+          "workflow": 3
+        },
+        {
+          "content": " In a far-",
+          "context_size": 112,
+          "tokens_generated": 2,
+          "total_time_ms": 56,
+          "turn": 7,
+          "workflow": 3
+        },
+        {
+          "content": " away kingdom, sh",
+          "context_size": 130,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 8,
+          "workflow": 3
+        },
+        {
+          "content": " veiled in darkness",
+          "context_size": 150,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 9,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 167,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 10,
+          "workflow": 3
+        },
+        {
+          "content": " lived a mysterious sor",
+          "context_size": 191,
+          "tokens_generated": 5,
+          "total_time_ms": 56,
+          "turn": 11,
+          "workflow": 3
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 209,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 12,
+          "workflow": 3
+        },
+        {
+          "content": " In a forgotten valley",
+          "context_size": 232,
+          "tokens_generated": 5,
+          "total_time_ms": 71,
+          "turn": 13,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 249,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 14,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 266,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 15,
+          "workflow": 3
+        },
+        {
+          "content": " Lived a wise",
+          "context_size": 280,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 16,
+          "workflow": 3
+        },
+        {
+          "content": " old man named Eld",
+          "context_size": 299,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 17,
+          "workflow": 3
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 317,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 18,
+          "workflow": 3
+        },
+        {
+          "content": " In a secret gro",
+          "context_size": 334,
+          "tokens_generated": 4,
+          "total_time_ms": 72,
+          "turn": 19,
+          "workflow": 3
+        },
+        {
+          "content": " ve, ensh",
+          "context_size": 344,
+          "tokens_generated": 2,
+          "total_time_ms": 66,
+          "turn": 20,
+          "workflow": 3
+        },
+        {
+          "content": " rined by v",
+          "context_size": 356,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 21,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 373,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 22,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 390,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 23,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 407,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 24,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 424,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 25,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 441,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 26,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 458,
+          "tokens_generated": 4,
+          "total_time_ms": 55,
+          "turn": 27,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 475,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 28,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 492,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 29,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 509,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 30,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 526,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 31,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 543,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 32,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 560,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 33,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 577,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 34,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 594,
+          "tokens_generated": 4,
+          "total_time_ms": 60,
+          "turn": 35,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 611,
+          "tokens_generated": 4,
+          "total_time_ms": 54,
+          "turn": 36,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 628,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 37,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 645,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 38,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 662,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 39,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 679,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 40,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 696,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 41,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 713,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 42,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 730,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 43,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 747,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 44,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 764,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 45,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 781,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 46,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 798,
+          "tokens_generated": 4,
+          "total_time_ms": 74,
+          "turn": 47,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 815,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 48,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 832,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 49,
+          "workflow": 3
+        },
+        {
+          "content": " Behind the Veil",
+          "context_size": 849,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 50,
+          "workflow": 3
+        }
+      ],
+      "total_time_seconds": 3.073594982,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_3",
+      "workflow_number": 3
+    },
+    {
+      "avg_turn_time_ms": 64.44897959183673,
+      "final_story": "  In a faraway  land, there lived  a brave young kn  princess named Isol  de. One day  she received a mysterious  letter from a stranger  who claimed to have  discovered a hidden treasure  map deep within the  Forest's Heart  One day, Is  Isolde,  ventured brav  Into the Forest'  deep, armed with  only her courage and  a rusty old  map, she emb  set off on a  journey to uncover  discover the treasure'  buried secrets,\n  and as she journey  entered the Forest'  Heart, she encountered  a cunning talking  fox who offered  to guide her through  the dense and tre  challenging woods. \"  Isolde accepted  the fox'  offer, and together  they navigated the  labyrinthine  paths of the Forest  Heart, overcoming  obstacles and r  encountering various  creatures along the way  1. \"  \"1. As  they continued their journey  \"journey,  \"1. As  \"1. As  \"1. As  \"1. As  \"1. As",
+      "k": 4,
+      "per_turn_metrics": [
+        {
+          "content": " In a faraway",
+          "context_size": 14,
+          "tokens_generated": 3,
+          "total_time_ms": 76,
+          "turn": 1,
+          "workflow": 4
+        },
+        {
+          "content": " land, there lived",
+          "context_size": 33,
+          "tokens_generated": 4,
+          "total_time_ms": 51,
+          "turn": 2,
+          "workflow": 4
+        },
+        {
+          "content": " a brave young kn",
+          "context_size": 51,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 3,
+          "workflow": 4
+        },
+        {
+          "content": " princess named Isol",
+          "context_size": 72,
+          "tokens_generated": 5,
+          "total_time_ms": 56,
+          "turn": 4,
+          "workflow": 4
+        },
+        {
+          "content": " de. One day",
+          "context_size": 85,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 5,
+          "workflow": 4
+        },
+        {
+          "content": " she received a mysterious",
+          "context_size": 112,
+          "tokens_generated": 6,
+          "total_time_ms": 56,
+          "turn": 6,
+          "workflow": 4
+        },
+        {
+          "content": " letter from a stranger",
+          "context_size": 136,
+          "tokens_generated": 5,
+          "total_time_ms": 57,
+          "turn": 7,
+          "workflow": 4
+        },
+        {
+          "content": " who claimed to have",
+          "context_size": 157,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 8,
+          "workflow": 4
+        },
+        {
+          "content": " discovered a hidden treasure",
+          "context_size": 187,
+          "tokens_generated": 7,
+          "total_time_ms": 67,
+          "turn": 9,
+          "workflow": 4
+        },
+        {
+          "content": " map deep within the",
+          "context_size": 208,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 10,
+          "workflow": 4
+        },
+        {
+          "content": " Forest's Heart",
+          "context_size": 224,
+          "tokens_generated": 3,
+          "total_time_ms": 65,
+          "turn": 11,
+          "workflow": 4
+        },
+        {
+          "content": " One day, Is",
+          "context_size": 237,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 12,
+          "workflow": 4
+        },
+        {
+          "content": " Isolde,",
+          "context_size": 246,
+          "tokens_generated": 2,
+          "total_time_ms": 56,
+          "turn": 13,
+          "workflow": 4
+        },
+        {
+          "content": " ventured brav",
+          "context_size": 261,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 14,
+          "workflow": 4
+        },
+        {
+          "content": " Into the Forest'",
+          "context_size": 279,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 15,
+          "workflow": 4
+        },
+        {
+          "content": " deep, armed with",
+          "context_size": 297,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 16,
+          "workflow": 4
+        },
+        {
+          "content": " only her courage and",
+          "context_size": 319,
+          "tokens_generated": 5,
+          "total_time_ms": 57,
+          "turn": 17,
+          "workflow": 4
+        },
+        {
+          "content": " a rusty old",
+          "context_size": 332,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 18,
+          "workflow": 4
+        },
+        {
+          "content": " map, she emb",
+          "context_size": 346,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 19,
+          "workflow": 4
+        },
+        {
+          "content": " set off on a",
+          "context_size": 360,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 20,
+          "workflow": 4
+        },
+        {
+          "content": " journey to uncover",
+          "context_size": 380,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 21,
+          "workflow": 4
+        },
+        {
+          "content": " discover the treasure'",
+          "context_size": 404,
+          "tokens_generated": 5,
+          "total_time_ms": 57,
+          "turn": 22,
+          "workflow": 4
+        },
+        {
+          "content": " buried secrets,\n",
+          "context_size": 422,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 23,
+          "workflow": 4
+        },
+        {
+          "content": " and as she journey",
+          "context_size": 442,
+          "tokens_generated": 4,
+          "total_time_ms": 73,
+          "turn": 24,
+          "workflow": 4
+        },
+        {
+          "content": " entered the Forest'",
+          "context_size": 463,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 25,
+          "workflow": 4
+        },
+        {
+          "content": " Heart, she encountered",
+          "context_size": 487,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 26,
+          "workflow": 4
+        },
+        {
+          "content": " a cunning talking",
+          "context_size": 506,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 27,
+          "workflow": 4
+        },
+        {
+          "content": " fox who offered",
+          "context_size": 523,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 28,
+          "workflow": 4
+        },
+        {
+          "content": " to guide her through",
+          "context_size": 545,
+          "tokens_generated": 5,
+          "total_time_ms": 57,
+          "turn": 29,
+          "workflow": 4
+        },
+        {
+          "content": " the dense and tre",
+          "context_size": 564,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 30,
+          "workflow": 4
+        },
+        {
+          "content": " challenging woods. \"",
+          "context_size": 586,
+          "tokens_generated": 5,
+          "total_time_ms": 57,
+          "turn": 31,
+          "workflow": 4
+        },
+        {
+          "content": " Isolde accepted",
+          "context_size": 603,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 32,
+          "workflow": 4
+        },
+        {
+          "content": " the fox'",
+          "context_size": 613,
+          "tokens_generated": 2,
+          "total_time_ms": 73,
+          "turn": 33,
+          "workflow": 4
+        },
+        {
+          "content": " offer, and together",
+          "context_size": 634,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 34,
+          "workflow": 4
+        },
+        {
+          "content": " they navigated the",
+          "context_size": 654,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 35,
+          "workflow": 4
+        },
+        {
+          "content": " labyrinthine",
+          "context_size": 668,
+          "tokens_generated": 3,
+          "total_time_ms": 99,
+          "turn": 36,
+          "workflow": 4
+        },
+        {
+          "content": " paths of the Forest",
+          "context_size": 689,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 37,
+          "workflow": 4
+        },
+        {
+          "content": " Heart, overcoming",
+          "context_size": 708,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 38,
+          "workflow": 4
+        },
+        {
+          "content": " obstacles and r",
+          "context_size": 725,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 39,
+          "workflow": 4
+        },
+        {
+          "content": " encountering various",
+          "context_size": 747,
+          "tokens_generated": 5,
+          "total_time_ms": 83,
+          "turn": 40,
+          "workflow": 4
+        },
+        {
+          "content": " creatures along the way",
+          "context_size": 772,
+          "tokens_generated": 6,
+          "total_time_ms": 66,
+          "turn": 41,
+          "workflow": 4
+        },
+        {
+          "content": " 1. \"",
+          "context_size": 778,
+          "tokens_generated": 1,
+          "total_time_ms": 81,
+          "turn": 42,
+          "workflow": 4
+        },
+        {
+          "content": " \"1. As",
+          "context_size": 786,
+          "tokens_generated": 1,
+          "total_time_ms": 67,
+          "turn": 43,
+          "workflow": 4
+        },
+        {
+          "content": " they continued their journey",
+          "context_size": 816,
+          "tokens_generated": 7,
+          "total_time_ms": 93,
+          "turn": 44,
+          "workflow": 4
+        },
+        {
+          "content": " \"journey,",
+          "context_size": 827,
+          "tokens_generated": 2,
+          "total_time_ms": 68,
+          "turn": 45,
+          "workflow": 4
+        },
+        {
+          "content": " \"1. As",
+          "context_size": 835,
+          "tokens_generated": 1,
+          "total_time_ms": 66,
+          "turn": 46,
+          "workflow": 4
+        },
+        {
+          "content": " \"1. As",
+          "context_size": 843,
+          "tokens_generated": 1,
+          "total_time_ms": 67,
+          "turn": 47,
+          "workflow": 4
+        },
+        {
+          "content": " \"1. As",
+          "context_size": 851,
+          "tokens_generated": 1,
+          "total_time_ms": 66,
+          "turn": 48,
+          "workflow": 4
+        },
+        {
+          "content": " \"1. As",
+          "context_size": 859,
+          "tokens_generated": 1,
+          "total_time_ms": 72,
+          "turn": 49,
+          "workflow": 4
+        },
+        {
+          "content": " \"1. As",
+          "context_size": 867,
+          "tokens_generated": 1,
+          "total_time_ms": 82,
+          "turn": 50,
+          "workflow": 4
+        }
+      ],
+      "total_time_seconds": 3.318234298,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_4",
+      "workflow_number": 4
+    },
+    {
+      "avg_turn_time_ms": 70.51020408163265,
+      "final_story": "  In a land far  beyond the reaches of  mortal eyes,  there lived a magical  creature of immense power  power and wisdom.  lived a creature,  In a hidden gro  ve, shrou  Once upon a time  In a land far  beyond the reaches of  mortal eyes,  there lived a creature  of unparalle  led beauty and  majesty, hidden  deep within a forgotten  grove, nest  shrouded by  ancient trees and ve  veiled by a  mystical mist that  guarded the gro  ve fiercely  Once upon a time  In this land far  beyond the reaches of   mortal eyes  lived this creature,  of ethereal  beauty and majesty  Once upon a time  In this land far  beyond the reaches of  mortal eyes,  lived this creature,  of myth and legend  Once upon a time  In this land far  Beyond the reaches of  mortal eyes,  lived this creature,  A creature,\n  of legends and  tales,\n   lived this creature,  In the heart of  a mystical realm  In the heart of",
+      "k": 4,
+      "per_turn_metrics": [
+        {
+          "content": " In a land far",
+          "context_size": 15,
+          "tokens_generated": 3,
+          "total_time_ms": 91,
+          "turn": 1,
+          "workflow": 5
+        },
+        {
+          "content": " beyond the reaches of",
+          "context_size": 38,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 2,
+          "workflow": 5
+        },
+        {
+          "content": " mortal eyes,",
+          "context_size": 52,
+          "tokens_generated": 3,
+          "total_time_ms": 87,
+          "turn": 3,
+          "workflow": 5
+        },
+        {
+          "content": " there lived a magical",
+          "context_size": 75,
+          "tokens_generated": 5,
+          "total_time_ms": 69,
+          "turn": 4,
+          "workflow": 5
+        },
+        {
+          "content": " creature of immense power",
+          "context_size": 102,
+          "tokens_generated": 6,
+          "total_time_ms": 81,
+          "turn": 5,
+          "workflow": 5
+        },
+        {
+          "content": " power and wisdom.",
+          "context_size": 121,
+          "tokens_generated": 4,
+          "total_time_ms": 64,
+          "turn": 6,
+          "workflow": 5
+        },
+        {
+          "content": " lived a creature,",
+          "context_size": 140,
+          "tokens_generated": 4,
+          "total_time_ms": 68,
+          "turn": 7,
+          "workflow": 5
+        },
+        {
+          "content": " In a hidden gro",
+          "context_size": 157,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 8,
+          "workflow": 5
+        },
+        {
+          "content": " ve, shrou",
+          "context_size": 168,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 9,
+          "workflow": 5
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 186,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 10,
+          "workflow": 5
+        },
+        {
+          "content": " In a land far",
+          "context_size": 201,
+          "tokens_generated": 3,
+          "total_time_ms": 71,
+          "turn": 11,
+          "workflow": 5
+        },
+        {
+          "content": " beyond the reaches of",
+          "context_size": 224,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 12,
+          "workflow": 5
+        },
+        {
+          "content": " mortal eyes,",
+          "context_size": 238,
+          "tokens_generated": 3,
+          "total_time_ms": 83,
+          "turn": 13,
+          "workflow": 5
+        },
+        {
+          "content": " there lived a creature",
+          "context_size": 262,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 14,
+          "workflow": 5
+        },
+        {
+          "content": " of unparalle",
+          "context_size": 276,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 15,
+          "workflow": 5
+        },
+        {
+          "content": " led beauty and",
+          "context_size": 292,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 16,
+          "workflow": 5
+        },
+        {
+          "content": " majesty, hidden",
+          "context_size": 309,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 17,
+          "workflow": 5
+        },
+        {
+          "content": " deep within a forgotten",
+          "context_size": 334,
+          "tokens_generated": 6,
+          "total_time_ms": 56,
+          "turn": 18,
+          "workflow": 5
+        },
+        {
+          "content": " grove, nest",
+          "context_size": 347,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 19,
+          "workflow": 5
+        },
+        {
+          "content": " shrouded by",
+          "context_size": 360,
+          "tokens_generated": 3,
+          "total_time_ms": 73,
+          "turn": 20,
+          "workflow": 5
+        },
+        {
+          "content": " ancient trees and ve",
+          "context_size": 382,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 21,
+          "workflow": 5
+        },
+        {
+          "content": " veiled by a",
+          "context_size": 395,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 22,
+          "workflow": 5
+        },
+        {
+          "content": " mystical mist that",
+          "context_size": 415,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 23,
+          "workflow": 5
+        },
+        {
+          "content": " guarded the gro",
+          "context_size": 432,
+          "tokens_generated": 4,
+          "total_time_ms": 83,
+          "turn": 24,
+          "workflow": 5
+        },
+        {
+          "content": " ve fiercely",
+          "context_size": 445,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 25,
+          "workflow": 5
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 463,
+          "tokens_generated": 4,
+          "total_time_ms": 99,
+          "turn": 26,
+          "workflow": 5
+        },
+        {
+          "content": " In this land far",
+          "context_size": 481,
+          "tokens_generated": 4,
+          "total_time_ms": 86,
+          "turn": 27,
+          "workflow": 5
+        },
+        {
+          "content": " beyond the reaches of",
+          "context_size": 504,
+          "tokens_generated": 5,
+          "total_time_ms": 68,
+          "turn": 28,
+          "workflow": 5
+        },
+        {
+          "content": "  mortal eyes",
+          "context_size": 518,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 29,
+          "workflow": 5
+        },
+        {
+          "content": " lived this creature,",
+          "context_size": 540,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 30,
+          "workflow": 5
+        },
+        {
+          "content": " of ethereal",
+          "context_size": 553,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 31,
+          "workflow": 5
+        },
+        {
+          "content": " beauty and majesty",
+          "context_size": 573,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 32,
+          "workflow": 5
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 591,
+          "tokens_generated": 4,
+          "total_time_ms": 58,
+          "turn": 33,
+          "workflow": 5
+        },
+        {
+          "content": " In this land far",
+          "context_size": 609,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 34,
+          "workflow": 5
+        },
+        {
+          "content": " beyond the reaches of",
+          "context_size": 632,
+          "tokens_generated": 5,
+          "total_time_ms": 61,
+          "turn": 35,
+          "workflow": 5
+        },
+        {
+          "content": " mortal eyes,",
+          "context_size": 646,
+          "tokens_generated": 3,
+          "total_time_ms": 58,
+          "turn": 36,
+          "workflow": 5
+        },
+        {
+          "content": " lived this creature,",
+          "context_size": 668,
+          "tokens_generated": 5,
+          "total_time_ms": 108,
+          "turn": 37,
+          "workflow": 5
+        },
+        {
+          "content": " of myth and legend",
+          "context_size": 688,
+          "tokens_generated": 4,
+          "total_time_ms": 73,
+          "turn": 38,
+          "workflow": 5
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 706,
+          "tokens_generated": 4,
+          "total_time_ms": 71,
+          "turn": 39,
+          "workflow": 5
+        },
+        {
+          "content": " In this land far",
+          "context_size": 724,
+          "tokens_generated": 4,
+          "total_time_ms": 69,
+          "turn": 40,
+          "workflow": 5
+        },
+        {
+          "content": " Beyond the reaches of",
+          "context_size": 747,
+          "tokens_generated": 5,
+          "total_time_ms": 83,
+          "turn": 41,
+          "workflow": 5
+        },
+        {
+          "content": " mortal eyes,",
+          "context_size": 761,
+          "tokens_generated": 3,
+          "total_time_ms": 68,
+          "turn": 42,
+          "workflow": 5
+        },
+        {
+          "content": " lived this creature,",
+          "context_size": 783,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 43,
+          "workflow": 5
+        },
+        {
+          "content": " A creature,\n",
+          "context_size": 797,
+          "tokens_generated": 3,
+          "total_time_ms": 82,
+          "turn": 44,
+          "workflow": 5
+        },
+        {
+          "content": " of legends and",
+          "context_size": 813,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 45,
+          "workflow": 5
+        },
+        {
+          "content": " tales,\n ",
+          "context_size": 823,
+          "tokens_generated": 2,
+          "total_time_ms": 68,
+          "turn": 46,
+          "workflow": 5
+        },
+        {
+          "content": " lived this creature,",
+          "context_size": 845,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 47,
+          "workflow": 5
+        },
+        {
+          "content": " In the heart of",
+          "context_size": 862,
+          "tokens_generated": 4,
+          "total_time_ms": 82,
+          "turn": 48,
+          "workflow": 5
+        },
+        {
+          "content": " a mystical realm",
+          "context_size": 880,
+          "tokens_generated": 4,
+          "total_time_ms": 84,
+          "turn": 49,
+          "workflow": 5
+        },
+        {
+          "content": " In the heart of",
+          "context_size": 897,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 50,
+          "workflow": 5
+        }
+      ],
+      "total_time_seconds": 3.619276818,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_5",
+      "workflow_number": 5
+    },
+    {
+      "avg_turn_time_ms": 67.26530612244898,
+      "final_story": "  in a far-  off land, there  lived a brave and  wise king named Ald  who, despite his  power and wealth,  was deeply humble  and cherished the  happiness of his people  Once upon a time  In a grand palace  In a grand palace  In the heart of  the kingdom, there  lived a young,  princess named Isol  dearearnestly  sought the secrets of  love and wisdom,  seeking answers from ancient  texts and wise el  Once upon a time  Once upon a time  In the mystic  forest, a hidden  garden bloomed with  flowers of enchant  Once upon a time  In the hidden garden  Once upon a time  In the hidden garden  Once upon a time  In the hidden garden  In the hidden garden  Once upon a time  In the hidden garden  In the hidden garden  In the hidden garden  Once upon a time  In the hidden garden  In the hidden garden  In the hidden garden  In the hidden garden  Once upon a time  In the hidden garden  In the hidden garden  In the hidden garden  In the hidden garden  In the hidden garden  In the hidden garden",
+      "k": 4,
+      "per_turn_metrics": [
+        {
+          "content": " in a far-",
+          "context_size": 11,
+          "tokens_generated": 2,
+          "total_time_ms": 75,
+          "turn": 1,
+          "workflow": 6
+        },
+        {
+          "content": " off land, there",
+          "context_size": 28,
+          "tokens_generated": 4,
+          "total_time_ms": 69,
+          "turn": 2,
+          "workflow": 6
+        },
+        {
+          "content": " lived a brave and",
+          "context_size": 47,
+          "tokens_generated": 4,
+          "total_time_ms": 70,
+          "turn": 3,
+          "workflow": 6
+        },
+        {
+          "content": " wise king named Ald",
+          "context_size": 68,
+          "tokens_generated": 5,
+          "total_time_ms": 83,
+          "turn": 4,
+          "workflow": 6
+        },
+        {
+          "content": " who, despite his",
+          "context_size": 86,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 5,
+          "workflow": 6
+        },
+        {
+          "content": " power and wealth,",
+          "context_size": 105,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 6,
+          "workflow": 6
+        },
+        {
+          "content": " was deeply humble",
+          "context_size": 124,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 7,
+          "workflow": 6
+        },
+        {
+          "content": " and cherished the",
+          "context_size": 143,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 8,
+          "workflow": 6
+        },
+        {
+          "content": " happiness of his people",
+          "context_size": 168,
+          "tokens_generated": 6,
+          "total_time_ms": 57,
+          "turn": 9,
+          "workflow": 6
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 186,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 10,
+          "workflow": 6
+        },
+        {
+          "content": " In a grand palace",
+          "context_size": 205,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 11,
+          "workflow": 6
+        },
+        {
+          "content": " In a grand palace",
+          "context_size": 224,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 12,
+          "workflow": 6
+        },
+        {
+          "content": " In the heart of",
+          "context_size": 241,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 13,
+          "workflow": 6
+        },
+        {
+          "content": " the kingdom, there",
+          "context_size": 261,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 14,
+          "workflow": 6
+        },
+        {
+          "content": " lived a young,",
+          "context_size": 277,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 15,
+          "workflow": 6
+        },
+        {
+          "content": " princess named Isol",
+          "context_size": 298,
+          "tokens_generated": 5,
+          "total_time_ms": 59,
+          "turn": 16,
+          "workflow": 6
+        },
+        {
+          "content": " dearearnestly",
+          "context_size": 313,
+          "tokens_generated": 3,
+          "total_time_ms": 59,
+          "turn": 17,
+          "workflow": 6
+        },
+        {
+          "content": " sought the secrets of",
+          "context_size": 336,
+          "tokens_generated": 5,
+          "total_time_ms": 56,
+          "turn": 18,
+          "workflow": 6
+        },
+        {
+          "content": " love and wisdom,",
+          "context_size": 354,
+          "tokens_generated": 4,
+          "total_time_ms": 73,
+          "turn": 19,
+          "workflow": 6
+        },
+        {
+          "content": " seeking answers from ancient",
+          "context_size": 384,
+          "tokens_generated": 7,
+          "total_time_ms": 67,
+          "turn": 20,
+          "workflow": 6
+        },
+        {
+          "content": " texts and wise el",
+          "context_size": 403,
+          "tokens_generated": 4,
+          "total_time_ms": 82,
+          "turn": 21,
+          "workflow": 6
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 421,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 22,
+          "workflow": 6
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 439,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 23,
+          "workflow": 6
+        },
+        {
+          "content": " In the mystic",
+          "context_size": 454,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 24,
+          "workflow": 6
+        },
+        {
+          "content": " forest, a hidden",
+          "context_size": 472,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 25,
+          "workflow": 6
+        },
+        {
+          "content": " garden bloomed with",
+          "context_size": 493,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 26,
+          "workflow": 6
+        },
+        {
+          "content": " flowers of enchant",
+          "context_size": 513,
+          "tokens_generated": 4,
+          "total_time_ms": 74,
+          "turn": 27,
+          "workflow": 6
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 531,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 28,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 553,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 29,
+          "workflow": 6
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 571,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 30,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 593,
+          "tokens_generated": 5,
+          "total_time_ms": 82,
+          "turn": 31,
+          "workflow": 6
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 611,
+          "tokens_generated": 4,
+          "total_time_ms": 97,
+          "turn": 32,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 633,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 33,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 655,
+          "tokens_generated": 5,
+          "total_time_ms": 84,
+          "turn": 34,
+          "workflow": 6
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 673,
+          "tokens_generated": 4,
+          "total_time_ms": 68,
+          "turn": 35,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 695,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 36,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 717,
+          "tokens_generated": 5,
+          "total_time_ms": 56,
+          "turn": 37,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 739,
+          "tokens_generated": 5,
+          "total_time_ms": 73,
+          "turn": 38,
+          "workflow": 6
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 757,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 39,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 779,
+          "tokens_generated": 5,
+          "total_time_ms": 77,
+          "turn": 40,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 801,
+          "tokens_generated": 5,
+          "total_time_ms": 68,
+          "turn": 41,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 823,
+          "tokens_generated": 5,
+          "total_time_ms": 72,
+          "turn": 42,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 845,
+          "tokens_generated": 5,
+          "total_time_ms": 70,
+          "turn": 43,
+          "workflow": 6
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 863,
+          "tokens_generated": 4,
+          "total_time_ms": 68,
+          "turn": 44,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 885,
+          "tokens_generated": 5,
+          "total_time_ms": 70,
+          "turn": 45,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 907,
+          "tokens_generated": 5,
+          "total_time_ms": 68,
+          "turn": 46,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 929,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 47,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 951,
+          "tokens_generated": 5,
+          "total_time_ms": 57,
+          "turn": 48,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 973,
+          "tokens_generated": 5,
+          "total_time_ms": 57,
+          "turn": 49,
+          "workflow": 6
+        },
+        {
+          "content": " In the hidden garden",
+          "context_size": 995,
+          "tokens_generated": 5,
+          "total_time_ms": 74,
+          "turn": 50,
+          "workflow": 6
+        }
+      ],
+      "total_time_seconds": 3.4399658300000002,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_6",
+      "workflow_number": 6
+    },
+    {
+      "avg_turn_time_ms": 68.0204081632653,
+      "final_story": "  in a faraway  land, there lived  a brave kn  knight named Sir  Galahad,  who embarked  on a quest to  find the Holy Gra  Grail, hidden  deep within the myst  forest of Ench  enchantment.  ...Sir Galah  ...Galah  ...Sir Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  ...Galah  Once upon a time  in a faraway  land, there lived  a cunning sor  ceress named Morgan  Le Fay,  who possessed great knowledge  of the ancient mag  ...Le Fay  ...who possessed great  knowledge of the ancient  magicks and the",
+      "k": 4,
+      "per_turn_metrics": [
+        {
+          "content": " in a faraway",
+          "context_size": 14,
+          "tokens_generated": 3,
+          "total_time_ms": 75,
+          "turn": 1,
+          "workflow": 7
+        },
+        {
+          "content": " land, there lived",
+          "context_size": 33,
+          "tokens_generated": 4,
+          "total_time_ms": 81,
+          "turn": 2,
+          "workflow": 7
+        },
+        {
+          "content": " a brave kn",
+          "context_size": 45,
+          "tokens_generated": 2,
+          "total_time_ms": 70,
+          "turn": 3,
+          "workflow": 7
+        },
+        {
+          "content": " knight named Sir",
+          "context_size": 63,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 4,
+          "workflow": 7
+        },
+        {
+          "content": " Galahad,",
+          "context_size": 73,
+          "tokens_generated": 2,
+          "total_time_ms": 66,
+          "turn": 5,
+          "workflow": 7
+        },
+        {
+          "content": " who embarked",
+          "context_size": 87,
+          "tokens_generated": 3,
+          "total_time_ms": 82,
+          "turn": 6,
+          "workflow": 7
+        },
+        {
+          "content": " on a quest to",
+          "context_size": 102,
+          "tokens_generated": 3,
+          "total_time_ms": 80,
+          "turn": 7,
+          "workflow": 7
+        },
+        {
+          "content": " find the Holy Gra",
+          "context_size": 121,
+          "tokens_generated": 4,
+          "total_time_ms": 72,
+          "turn": 8,
+          "workflow": 7
+        },
+        {
+          "content": " Grail, hidden",
+          "context_size": 136,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 9,
+          "workflow": 7
+        },
+        {
+          "content": " deep within the myst",
+          "context_size": 158,
+          "tokens_generated": 5,
+          "total_time_ms": 65,
+          "turn": 10,
+          "workflow": 7
+        },
+        {
+          "content": " forest of Ench",
+          "context_size": 174,
+          "tokens_generated": 3,
+          "total_time_ms": 92,
+          "turn": 11,
+          "workflow": 7
+        },
+        {
+          "content": " enchantment.",
+          "context_size": 188,
+          "tokens_generated": 3,
+          "total_time_ms": 70,
+          "turn": 12,
+          "workflow": 7
+        },
+        {
+          "content": " ...Sir Galah",
+          "context_size": 202,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 13,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 212,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 14,
+          "workflow": 7
+        },
+        {
+          "content": " ...Sir Galah",
+          "context_size": 226,
+          "tokens_generated": 3,
+          "total_time_ms": 65,
+          "turn": 15,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 236,
+          "tokens_generated": 2,
+          "total_time_ms": 72,
+          "turn": 16,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 246,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 17,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 256,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 18,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 266,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 19,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 276,
+          "tokens_generated": 2,
+          "total_time_ms": 66,
+          "turn": 20,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 286,
+          "tokens_generated": 2,
+          "total_time_ms": 56,
+          "turn": 21,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 296,
+          "tokens_generated": 2,
+          "total_time_ms": 88,
+          "turn": 22,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 306,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 23,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 316,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 24,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 326,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 25,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 336,
+          "tokens_generated": 2,
+          "total_time_ms": 81,
+          "turn": 26,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 346,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 27,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 356,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 28,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 366,
+          "tokens_generated": 2,
+          "total_time_ms": 68,
+          "turn": 29,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 376,
+          "tokens_generated": 2,
+          "total_time_ms": 68,
+          "turn": 30,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 386,
+          "tokens_generated": 2,
+          "total_time_ms": 68,
+          "turn": 31,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 396,
+          "tokens_generated": 2,
+          "total_time_ms": 65,
+          "turn": 32,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 406,
+          "tokens_generated": 2,
+          "total_time_ms": 57,
+          "turn": 33,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 416,
+          "tokens_generated": 2,
+          "total_time_ms": 58,
+          "turn": 34,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 426,
+          "tokens_generated": 2,
+          "total_time_ms": 73,
+          "turn": 35,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 436,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 36,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 446,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 37,
+          "workflow": 7
+        },
+        {
+          "content": " ...Galah",
+          "context_size": 456,
+          "tokens_generated": 2,
+          "total_time_ms": 69,
+          "turn": 38,
+          "workflow": 7
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 474,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 39,
+          "workflow": 7
+        },
+        {
+          "content": " in a faraway",
+          "context_size": 488,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 40,
+          "workflow": 7
+        },
+        {
+          "content": " land, there lived",
+          "context_size": 507,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 41,
+          "workflow": 7
+        },
+        {
+          "content": " a cunning sor",
+          "context_size": 522,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 42,
+          "workflow": 7
+        },
+        {
+          "content": " ceress named Morgan",
+          "context_size": 543,
+          "tokens_generated": 5,
+          "total_time_ms": 61,
+          "turn": 43,
+          "workflow": 7
+        },
+        {
+          "content": " Le Fay,",
+          "context_size": 552,
+          "tokens_generated": 2,
+          "total_time_ms": 57,
+          "turn": 44,
+          "workflow": 7
+        },
+        {
+          "content": " who possessed great knowledge",
+          "context_size": 583,
+          "tokens_generated": 7,
+          "total_time_ms": 56,
+          "turn": 45,
+          "workflow": 7
+        },
+        {
+          "content": " of the ancient mag",
+          "context_size": 603,
+          "tokens_generated": 4,
+          "total_time_ms": 72,
+          "turn": 46,
+          "workflow": 7
+        },
+        {
+          "content": " ...Le Fay",
+          "context_size": 614,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 47,
+          "workflow": 7
+        },
+        {
+          "content": " ...who possessed great",
+          "context_size": 638,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 48,
+          "workflow": 7
+        },
+        {
+          "content": " knowledge of the ancient",
+          "context_size": 664,
+          "tokens_generated": 6,
+          "total_time_ms": 67,
+          "turn": 49,
+          "workflow": 7
+        },
+        {
+          "content": " magicks and the",
+          "context_size": 681,
+          "tokens_generated": 4,
+          "total_time_ms": 81,
+          "turn": 50,
+          "workflow": 7
+        }
+      ],
+      "total_time_seconds": 3.478233971,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_7",
+      "workflow_number": 7
+    },
+    {
+      "avg_turn_time_ms": 67.44897959183673,
+      "final_story": "  in a far-  away land, there  lived a young princess  named Isabella  who possessed a heart  of gold and a  spirit of adventure.  One day, while  exploring the castle'  gardens, she discovered  a hidden door,  behind which lay a  mysterious enchanted  forest filled with magical  creatures and shimmer  ing waterfalls.  In the heart of  the enchanted  forest, Isab  lived a wise old  dragon named Ignis  who, despite his  ferocious appearance  and fire-bre  With a gentle smile  and kind heart,  Ignis welcomed Is  abella into his  home, and shared  tales of the en  magic land'  In the heart of  the enchanted  forest, there existed  a secret prophe  cy that foret  told of a great  calamity that  would befall the  land, and a  young hero who would  rise to save it  Once upon a time  in the ench  ant forest, there  lived a powerful sor  cerer named  Malefica,  who sought the power  to fulfill her own",
+      "k": 4,
+      "per_turn_metrics": [
+        {
+          "content": " in a far-",
+          "context_size": 11,
+          "tokens_generated": 2,
+          "total_time_ms": 75,
+          "turn": 1,
+          "workflow": 8
+        },
+        {
+          "content": " away land, there",
+          "context_size": 29,
+          "tokens_generated": 4,
+          "total_time_ms": 81,
+          "turn": 2,
+          "workflow": 8
+        },
+        {
+          "content": " lived a young princess",
+          "context_size": 53,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 3,
+          "workflow": 8
+        },
+        {
+          "content": " named Isabella",
+          "context_size": 69,
+          "tokens_generated": 3,
+          "total_time_ms": 84,
+          "turn": 4,
+          "workflow": 8
+        },
+        {
+          "content": " who possessed a heart",
+          "context_size": 92,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 5,
+          "workflow": 8
+        },
+        {
+          "content": " of gold and a",
+          "context_size": 107,
+          "tokens_generated": 3,
+          "total_time_ms": 82,
+          "turn": 6,
+          "workflow": 8
+        },
+        {
+          "content": " spirit of adventure.",
+          "context_size": 129,
+          "tokens_generated": 5,
+          "total_time_ms": 100,
+          "turn": 7,
+          "workflow": 8
+        },
+        {
+          "content": " One day, while",
+          "context_size": 145,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 8,
+          "workflow": 8
+        },
+        {
+          "content": " exploring the castle'",
+          "context_size": 168,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 9,
+          "workflow": 8
+        },
+        {
+          "content": " gardens, she discovered",
+          "context_size": 193,
+          "tokens_generated": 6,
+          "total_time_ms": 66,
+          "turn": 10,
+          "workflow": 8
+        },
+        {
+          "content": " a hidden door,",
+          "context_size": 209,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 11,
+          "workflow": 8
+        },
+        {
+          "content": " behind which lay a",
+          "context_size": 229,
+          "tokens_generated": 4,
+          "total_time_ms": 71,
+          "turn": 12,
+          "workflow": 8
+        },
+        {
+          "content": " mysterious enchanted",
+          "context_size": 251,
+          "tokens_generated": 5,
+          "total_time_ms": 70,
+          "turn": 13,
+          "workflow": 8
+        },
+        {
+          "content": " forest filled with magical",
+          "context_size": 279,
+          "tokens_generated": 6,
+          "total_time_ms": 67,
+          "turn": 14,
+          "workflow": 8
+        },
+        {
+          "content": " creatures and shimmer",
+          "context_size": 302,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 15,
+          "workflow": 8
+        },
+        {
+          "content": " ing waterfalls.",
+          "context_size": 319,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 16,
+          "workflow": 8
+        },
+        {
+          "content": " In the heart of",
+          "context_size": 336,
+          "tokens_generated": 4,
+          "total_time_ms": 73,
+          "turn": 17,
+          "workflow": 8
+        },
+        {
+          "content": " the enchanted",
+          "context_size": 351,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 18,
+          "workflow": 8
+        },
+        {
+          "content": " forest, Isab",
+          "context_size": 365,
+          "tokens_generated": 3,
+          "total_time_ms": 72,
+          "turn": 19,
+          "workflow": 8
+        },
+        {
+          "content": " lived a wise old",
+          "context_size": 383,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 20,
+          "workflow": 8
+        },
+        {
+          "content": " dragon named Ignis",
+          "context_size": 403,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 21,
+          "workflow": 8
+        },
+        {
+          "content": " who, despite his",
+          "context_size": 421,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 22,
+          "workflow": 8
+        },
+        {
+          "content": " ferocious appearance",
+          "context_size": 443,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 23,
+          "workflow": 8
+        },
+        {
+          "content": " and fire-bre",
+          "context_size": 457,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 24,
+          "workflow": 8
+        },
+        {
+          "content": " With a gentle smile",
+          "context_size": 478,
+          "tokens_generated": 5,
+          "total_time_ms": 57,
+          "turn": 25,
+          "workflow": 8
+        },
+        {
+          "content": " and kind heart,",
+          "context_size": 495,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 26,
+          "workflow": 8
+        },
+        {
+          "content": " Ignis welcomed Is",
+          "context_size": 514,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 27,
+          "workflow": 8
+        },
+        {
+          "content": " abella into his",
+          "context_size": 531,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 28,
+          "workflow": 8
+        },
+        {
+          "content": " home, and shared",
+          "context_size": 549,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 29,
+          "workflow": 8
+        },
+        {
+          "content": " tales of the en",
+          "context_size": 566,
+          "tokens_generated": 4,
+          "total_time_ms": 88,
+          "turn": 30,
+          "workflow": 8
+        },
+        {
+          "content": " magic land'",
+          "context_size": 579,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 31,
+          "workflow": 8
+        },
+        {
+          "content": " In the heart of",
+          "context_size": 596,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 32,
+          "workflow": 8
+        },
+        {
+          "content": " the enchanted",
+          "context_size": 611,
+          "tokens_generated": 3,
+          "total_time_ms": 78,
+          "turn": 33,
+          "workflow": 8
+        },
+        {
+          "content": " forest, there existed",
+          "context_size": 634,
+          "tokens_generated": 5,
+          "total_time_ms": 65,
+          "turn": 34,
+          "workflow": 8
+        },
+        {
+          "content": " a secret prophe",
+          "context_size": 651,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 35,
+          "workflow": 8
+        },
+        {
+          "content": " cy that foret",
+          "context_size": 666,
+          "tokens_generated": 3,
+          "total_time_ms": 87,
+          "turn": 36,
+          "workflow": 8
+        },
+        {
+          "content": " told of a great",
+          "context_size": 683,
+          "tokens_generated": 4,
+          "total_time_ms": 69,
+          "turn": 37,
+          "workflow": 8
+        },
+        {
+          "content": " calamity that",
+          "context_size": 698,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 38,
+          "workflow": 8
+        },
+        {
+          "content": " would befall the",
+          "context_size": 716,
+          "tokens_generated": 4,
+          "total_time_ms": 86,
+          "turn": 39,
+          "workflow": 8
+        },
+        {
+          "content": " land, and a",
+          "context_size": 729,
+          "tokens_generated": 3,
+          "total_time_ms": 68,
+          "turn": 40,
+          "workflow": 8
+        },
+        {
+          "content": " young hero who would",
+          "context_size": 751,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 41,
+          "workflow": 8
+        },
+        {
+          "content": " rise to save it",
+          "context_size": 768,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 42,
+          "workflow": 8
+        },
+        {
+          "content": " Once upon a time",
+          "context_size": 786,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 43,
+          "workflow": 8
+        },
+        {
+          "content": " in the ench",
+          "context_size": 799,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 44,
+          "workflow": 8
+        },
+        {
+          "content": " ant forest, there",
+          "context_size": 818,
+          "tokens_generated": 4,
+          "total_time_ms": 58,
+          "turn": 45,
+          "workflow": 8
+        },
+        {
+          "content": " lived a powerful sor",
+          "context_size": 840,
+          "tokens_generated": 5,
+          "total_time_ms": 56,
+          "turn": 46,
+          "workflow": 8
+        },
+        {
+          "content": " cerer named",
+          "context_size": 853,
+          "tokens_generated": 3,
+          "total_time_ms": 58,
+          "turn": 47,
+          "workflow": 8
+        },
+        {
+          "content": " Malefica,",
+          "context_size": 864,
+          "tokens_generated": 2,
+          "total_time_ms": 56,
+          "turn": 48,
+          "workflow": 8
+        },
+        {
+          "content": " who sought the power",
+          "context_size": 886,
+          "tokens_generated": 5,
+          "total_time_ms": 57,
+          "turn": 49,
+          "workflow": 8
+        },
+        {
+          "content": " to fulfill her own",
+          "context_size": 906,
+          "tokens_generated": 4,
+          "total_time_ms": 59,
+          "turn": 50,
+          "workflow": 8
+        }
+      ],
+      "total_time_seconds": 3.452634221,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_8",
+      "workflow_number": 8
+    },
+    {
+      "avg_turn_time_ms": 66.48979591836735,
+      "final_story": "  in a land far  away, nestled  between the towering  mountains, there was  a hidden village,  shrouded in  mystery and enchant  magic. The vill  ages lived in harmony  with the mystical  creatures that roamed  the forest, sharing  knowledge and resources,  lived in a sym  biosphere of  cooperation and respect.  The villagers discovered  a prophecy  that foretold  the arrival of a  young hero, chosen  by destiny,  who would bring balance  to the realm and  save the village from  an imminent  doom. The  young hero, end  was born in the  outskirts of  the village, to  a humble family  lived in a hum  blessed cottage, n  with a heart of  gold, a mind  of unyield  and a spirit of  courage and determination.  The young hero,  embarked on  a perilous  journey through the en  magic forest,  encountering strange and  wondrous creatures  The young hero,  met a wise old  mentor, a  who revealed ancient secrets",
+      "k": 4,
+      "per_turn_metrics": [
+        {
+          "content": " in a land far",
+          "context_size": 15,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 1,
+          "workflow": 9
+        },
+        {
+          "content": " away, nestled",
+          "context_size": 30,
+          "tokens_generated": 3,
+          "total_time_ms": 51,
+          "turn": 2,
+          "workflow": 9
+        },
+        {
+          "content": " between the towering",
+          "context_size": 52,
+          "tokens_generated": 5,
+          "total_time_ms": 78,
+          "turn": 3,
+          "workflow": 9
+        },
+        {
+          "content": " mountains, there was",
+          "context_size": 74,
+          "tokens_generated": 5,
+          "total_time_ms": 65,
+          "turn": 4,
+          "workflow": 9
+        },
+        {
+          "content": " a hidden village,",
+          "context_size": 93,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 5,
+          "workflow": 9
+        },
+        {
+          "content": " shrouded in",
+          "context_size": 106,
+          "tokens_generated": 3,
+          "total_time_ms": 75,
+          "turn": 6,
+          "workflow": 9
+        },
+        {
+          "content": " mystery and enchant",
+          "context_size": 127,
+          "tokens_generated": 5,
+          "total_time_ms": 73,
+          "turn": 7,
+          "workflow": 9
+        },
+        {
+          "content": " magic. The vill",
+          "context_size": 144,
+          "tokens_generated": 4,
+          "total_time_ms": 76,
+          "turn": 8,
+          "workflow": 9
+        },
+        {
+          "content": " ages lived in harmony",
+          "context_size": 167,
+          "tokens_generated": 5,
+          "total_time_ms": 85,
+          "turn": 9,
+          "workflow": 9
+        },
+        {
+          "content": " with the mystical",
+          "context_size": 186,
+          "tokens_generated": 4,
+          "total_time_ms": 69,
+          "turn": 10,
+          "workflow": 9
+        },
+        {
+          "content": " creatures that roamed",
+          "context_size": 209,
+          "tokens_generated": 5,
+          "total_time_ms": 82,
+          "turn": 11,
+          "workflow": 9
+        },
+        {
+          "content": " the forest, sharing",
+          "context_size": 230,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 12,
+          "workflow": 9
+        },
+        {
+          "content": " knowledge and resources,",
+          "context_size": 256,
+          "tokens_generated": 6,
+          "total_time_ms": 68,
+          "turn": 13,
+          "workflow": 9
+        },
+        {
+          "content": " lived in a sym",
+          "context_size": 272,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 14,
+          "workflow": 9
+        },
+        {
+          "content": " biosphere of",
+          "context_size": 286,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 15,
+          "workflow": 9
+        },
+        {
+          "content": " cooperation and respect.",
+          "context_size": 312,
+          "tokens_generated": 6,
+          "total_time_ms": 56,
+          "turn": 16,
+          "workflow": 9
+        },
+        {
+          "content": " The villagers discovered",
+          "context_size": 338,
+          "tokens_generated": 6,
+          "total_time_ms": 56,
+          "turn": 17,
+          "workflow": 9
+        },
+        {
+          "content": " a prophecy",
+          "context_size": 350,
+          "tokens_generated": 2,
+          "total_time_ms": 56,
+          "turn": 18,
+          "workflow": 9
+        },
+        {
+          "content": " that foretold",
+          "context_size": 365,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 19,
+          "workflow": 9
+        },
+        {
+          "content": " the arrival of a",
+          "context_size": 383,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 20,
+          "workflow": 9
+        },
+        {
+          "content": " young hero, chosen",
+          "context_size": 403,
+          "tokens_generated": 4,
+          "total_time_ms": 89,
+          "turn": 21,
+          "workflow": 9
+        },
+        {
+          "content": " by destiny,",
+          "context_size": 416,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 22,
+          "workflow": 9
+        },
+        {
+          "content": " who would bring balance",
+          "context_size": 441,
+          "tokens_generated": 6,
+          "total_time_ms": 67,
+          "turn": 23,
+          "workflow": 9
+        },
+        {
+          "content": " to the realm and",
+          "context_size": 459,
+          "tokens_generated": 4,
+          "total_time_ms": 82,
+          "turn": 24,
+          "workflow": 9
+        },
+        {
+          "content": " save the village from",
+          "context_size": 482,
+          "tokens_generated": 5,
+          "total_time_ms": 67,
+          "turn": 25,
+          "workflow": 9
+        },
+        {
+          "content": " an imminent",
+          "context_size": 495,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 26,
+          "workflow": 9
+        },
+        {
+          "content": " doom. The",
+          "context_size": 506,
+          "tokens_generated": 2,
+          "total_time_ms": 66,
+          "turn": 27,
+          "workflow": 9
+        },
+        {
+          "content": " young hero, end",
+          "context_size": 523,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 28,
+          "workflow": 9
+        },
+        {
+          "content": " was born in the",
+          "context_size": 540,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 29,
+          "workflow": 9
+        },
+        {
+          "content": " outskirts of",
+          "context_size": 554,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 30,
+          "workflow": 9
+        },
+        {
+          "content": " the village, to",
+          "context_size": 571,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 31,
+          "workflow": 9
+        },
+        {
+          "content": " a humble family",
+          "context_size": 588,
+          "tokens_generated": 4,
+          "total_time_ms": 72,
+          "turn": 32,
+          "workflow": 9
+        },
+        {
+          "content": " lived in a hum",
+          "context_size": 604,
+          "tokens_generated": 3,
+          "total_time_ms": 63,
+          "turn": 33,
+          "workflow": 9
+        },
+        {
+          "content": " blessed cottage, n",
+          "context_size": 624,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 34,
+          "workflow": 9
+        },
+        {
+          "content": " with a heart of",
+          "context_size": 641,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 35,
+          "workflow": 9
+        },
+        {
+          "content": " gold, a mind",
+          "context_size": 655,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 36,
+          "workflow": 9
+        },
+        {
+          "content": " of unyield",
+          "context_size": 667,
+          "tokens_generated": 2,
+          "total_time_ms": 66,
+          "turn": 37,
+          "workflow": 9
+        },
+        {
+          "content": " and a spirit of",
+          "context_size": 684,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 38,
+          "workflow": 9
+        },
+        {
+          "content": " courage and determination.",
+          "context_size": 712,
+          "tokens_generated": 6,
+          "total_time_ms": 57,
+          "turn": 39,
+          "workflow": 9
+        },
+        {
+          "content": " The young hero,",
+          "context_size": 729,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 40,
+          "workflow": 9
+        },
+        {
+          "content": " embarked on",
+          "context_size": 742,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 41,
+          "workflow": 9
+        },
+        {
+          "content": " a perilous",
+          "context_size": 754,
+          "tokens_generated": 2,
+          "total_time_ms": 57,
+          "turn": 42,
+          "workflow": 9
+        },
+        {
+          "content": " journey through the en",
+          "context_size": 778,
+          "tokens_generated": 5,
+          "total_time_ms": 57,
+          "turn": 43,
+          "workflow": 9
+        },
+        {
+          "content": " magic forest,",
+          "context_size": 793,
+          "tokens_generated": 3,
+          "total_time_ms": 71,
+          "turn": 44,
+          "workflow": 9
+        },
+        {
+          "content": " encountering strange and",
+          "context_size": 819,
+          "tokens_generated": 6,
+          "total_time_ms": 68,
+          "turn": 45,
+          "workflow": 9
+        },
+        {
+          "content": " wondrous creatures",
+          "context_size": 839,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 46,
+          "workflow": 9
+        },
+        {
+          "content": " The young hero,",
+          "context_size": 856,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 47,
+          "workflow": 9
+        },
+        {
+          "content": " met a wise old",
+          "context_size": 872,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 48,
+          "workflow": 9
+        },
+        {
+          "content": " mentor, a",
+          "context_size": 883,
+          "tokens_generated": 2,
+          "total_time_ms": 72,
+          "turn": 49,
+          "workflow": 9
+        },
+        {
+          "content": " who revealed ancient secrets",
+          "context_size": 913,
+          "tokens_generated": 7,
+          "total_time_ms": 67,
+          "turn": 50,
+          "workflow": 9
+        }
+      ],
+      "total_time_seconds": 3.405292214,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_9",
+      "workflow_number": 9
+    },
+    {
+      "avg_turn_time_ms": 68.0204081632653,
+      "final_story": "  in a land far  away, there lived  a brave knight  named Sir Galah  ad, who emb arked on a  quest to rescue the  princess trapped in the  Tower of Whis  peril. With  his trusty ste  ed Braveheart  and a magical sword  and a wise old  mentor named Mer  Lord Meridell  The fourth token for  \"One moonlit  night, Sir Gal  Galahad reached  the foot of the  Tower of Whis  Perch'd  \"He gazed  up at the tow  er, \"t  \"its imposing  towers glowing  \"dancing,\"  \"under the sil  vemoonlight  \"He climbed the  towers, one  \"rung at  a time, \"  \"as the winds  howled around him  \"reaching the  \"top, where  he found the princess  \"chained to  a throne, \"  \"crying for  help. As Sir  Galahad approached  \"The princess looked  up at Sir Gal  Galahad,  \"surprised  \"She thanked",
+      "k": 4,
+      "per_turn_metrics": [
+        {
+          "content": " in a land far",
+          "context_size": 15,
+          "tokens_generated": 3,
+          "total_time_ms": 75,
+          "turn": 1,
+          "workflow": 10
+        },
+        {
+          "content": " away, there lived",
+          "context_size": 34,
+          "tokens_generated": 4,
+          "total_time_ms": 65,
+          "turn": 2,
+          "workflow": 10
+        },
+        {
+          "content": " a brave knight",
+          "context_size": 50,
+          "tokens_generated": 3,
+          "total_time_ms": 96,
+          "turn": 3,
+          "workflow": 10
+        },
+        {
+          "content": " named Sir Galah",
+          "context_size": 67,
+          "tokens_generated": 4,
+          "total_time_ms": 66,
+          "turn": 4,
+          "workflow": 10
+        },
+        {
+          "content": " ad, who emb",
+          "context_size": 80,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 5,
+          "workflow": 10
+        },
+        {
+          "content": "arked on a",
+          "context_size": 91,
+          "tokens_generated": 2,
+          "total_time_ms": 66,
+          "turn": 6,
+          "workflow": 10
+        },
+        {
+          "content": " quest to rescue the",
+          "context_size": 112,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 7,
+          "workflow": 10
+        },
+        {
+          "content": " princess trapped in the",
+          "context_size": 137,
+          "tokens_generated": 6,
+          "total_time_ms": 72,
+          "turn": 8,
+          "workflow": 10
+        },
+        {
+          "content": " Tower of Whis",
+          "context_size": 152,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 9,
+          "workflow": 10
+        },
+        {
+          "content": " peril. With",
+          "context_size": 165,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 10,
+          "workflow": 10
+        },
+        {
+          "content": " his trusty ste",
+          "context_size": 181,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 11,
+          "workflow": 10
+        },
+        {
+          "content": " ed Braveheart",
+          "context_size": 196,
+          "tokens_generated": 3,
+          "total_time_ms": 65,
+          "turn": 12,
+          "workflow": 10
+        },
+        {
+          "content": " and a magical sword",
+          "context_size": 217,
+          "tokens_generated": 5,
+          "total_time_ms": 56,
+          "turn": 13,
+          "workflow": 10
+        },
+        {
+          "content": " and a wise old",
+          "context_size": 233,
+          "tokens_generated": 3,
+          "total_time_ms": 60,
+          "turn": 14,
+          "workflow": 10
+        },
+        {
+          "content": " mentor named Mer",
+          "context_size": 251,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 15,
+          "workflow": 10
+        },
+        {
+          "content": " Lord Meridell",
+          "context_size": 266,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 16,
+          "workflow": 10
+        },
+        {
+          "content": " The fourth token for",
+          "context_size": 288,
+          "tokens_generated": 5,
+          "total_time_ms": 57,
+          "turn": 17,
+          "workflow": 10
+        },
+        {
+          "content": " \"One moonlit",
+          "context_size": 302,
+          "tokens_generated": 3,
+          "total_time_ms": 59,
+          "turn": 18,
+          "workflow": 10
+        },
+        {
+          "content": " night, Sir Gal",
+          "context_size": 318,
+          "tokens_generated": 3,
+          "total_time_ms": 57,
+          "turn": 19,
+          "workflow": 10
+        },
+        {
+          "content": " Galahad reached",
+          "context_size": 335,
+          "tokens_generated": 4,
+          "total_time_ms": 57,
+          "turn": 20,
+          "workflow": 10
+        },
+        {
+          "content": " the foot of the",
+          "context_size": 352,
+          "tokens_generated": 4,
+          "total_time_ms": 73,
+          "turn": 21,
+          "workflow": 10
+        },
+        {
+          "content": " Tower of Whis",
+          "context_size": 367,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 22,
+          "workflow": 10
+        },
+        {
+          "content": " Perch'd",
+          "context_size": 376,
+          "tokens_generated": 2,
+          "total_time_ms": 84,
+          "turn": 23,
+          "workflow": 10
+        },
+        {
+          "content": " \"He gazed",
+          "context_size": 387,
+          "tokens_generated": 2,
+          "total_time_ms": 85,
+          "turn": 24,
+          "workflow": 10
+        },
+        {
+          "content": " up at the tow",
+          "context_size": 402,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 25,
+          "workflow": 10
+        },
+        {
+          "content": " er, \"t",
+          "context_size": 410,
+          "tokens_generated": 1,
+          "total_time_ms": 67,
+          "turn": 26,
+          "workflow": 10
+        },
+        {
+          "content": " \"its imposing",
+          "context_size": 425,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 27,
+          "workflow": 10
+        },
+        {
+          "content": " towers glowing",
+          "context_size": 441,
+          "tokens_generated": 3,
+          "total_time_ms": 83,
+          "turn": 28,
+          "workflow": 10
+        },
+        {
+          "content": " \"dancing,\"",
+          "context_size": 453,
+          "tokens_generated": 2,
+          "total_time_ms": 66,
+          "turn": 29,
+          "workflow": 10
+        },
+        {
+          "content": " \"under the sil",
+          "context_size": 469,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 30,
+          "workflow": 10
+        },
+        {
+          "content": " vemoonlight",
+          "context_size": 482,
+          "tokens_generated": 3,
+          "total_time_ms": 56,
+          "turn": 31,
+          "workflow": 10
+        },
+        {
+          "content": " \"He climbed the",
+          "context_size": 499,
+          "tokens_generated": 4,
+          "total_time_ms": 56,
+          "turn": 32,
+          "workflow": 10
+        },
+        {
+          "content": " towers, one",
+          "context_size": 512,
+          "tokens_generated": 3,
+          "total_time_ms": 73,
+          "turn": 33,
+          "workflow": 10
+        },
+        {
+          "content": " \"rung at",
+          "context_size": 522,
+          "tokens_generated": 2,
+          "total_time_ms": 82,
+          "turn": 34,
+          "workflow": 10
+        },
+        {
+          "content": " a time, \"",
+          "context_size": 533,
+          "tokens_generated": 2,
+          "total_time_ms": 67,
+          "turn": 35,
+          "workflow": 10
+        },
+        {
+          "content": " \"as the winds",
+          "context_size": 548,
+          "tokens_generated": 3,
+          "total_time_ms": 67,
+          "turn": 36,
+          "workflow": 10
+        },
+        {
+          "content": " howled around him",
+          "context_size": 567,
+          "tokens_generated": 4,
+          "total_time_ms": 67,
+          "turn": 37,
+          "workflow": 10
+        },
+        {
+          "content": " \"reaching the",
+          "context_size": 582,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 38,
+          "workflow": 10
+        },
+        {
+          "content": " \"top, where",
+          "context_size": 595,
+          "tokens_generated": 3,
+          "total_time_ms": 74,
+          "turn": 39,
+          "workflow": 10
+        },
+        {
+          "content": " he found the princess",
+          "context_size": 618,
+          "tokens_generated": 5,
+          "total_time_ms": 66,
+          "turn": 40,
+          "workflow": 10
+        },
+        {
+          "content": " \"chained to",
+          "context_size": 631,
+          "tokens_generated": 3,
+          "total_time_ms": 82,
+          "turn": 41,
+          "workflow": 10
+        },
+        {
+          "content": " a throne, \"",
+          "context_size": 644,
+          "tokens_generated": 3,
+          "total_time_ms": 83,
+          "turn": 42,
+          "workflow": 10
+        },
+        {
+          "content": " \"crying for",
+          "context_size": 657,
+          "tokens_generated": 3,
+          "total_time_ms": 64,
+          "turn": 43,
+          "workflow": 10
+        },
+        {
+          "content": " help. As Sir",
+          "context_size": 671,
+          "tokens_generated": 3,
+          "total_time_ms": 83,
+          "turn": 44,
+          "workflow": 10
+        },
+        {
+          "content": " Galahad approached",
+          "context_size": 691,
+          "tokens_generated": 4,
+          "total_time_ms": 68,
+          "turn": 45,
+          "workflow": 10
+        },
+        {
+          "content": " \"The princess looked",
+          "context_size": 713,
+          "tokens_generated": 5,
+          "total_time_ms": 75,
+          "turn": 46,
+          "workflow": 10
+        },
+        {
+          "content": " up at Sir Gal",
+          "context_size": 728,
+          "tokens_generated": 3,
+          "total_time_ms": 68,
+          "turn": 47,
+          "workflow": 10
+        },
+        {
+          "content": " Galahad,",
+          "context_size": 738,
+          "tokens_generated": 2,
+          "total_time_ms": 68,
+          "turn": 48,
+          "workflow": 10
+        },
+        {
+          "content": " \"surprised",
+          "context_size": 750,
+          "tokens_generated": 2,
+          "total_time_ms": 66,
+          "turn": 49,
+          "workflow": 10
+        },
+        {
+          "content": " \"She thanked",
+          "context_size": 764,
+          "tokens_generated": 3,
+          "total_time_ms": 66,
+          "turn": 50,
+          "workflow": 10
+        }
+      ],
+      "total_time_seconds": 3.489238817,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_10",
+      "workflow_number": 10
+    }
+  ]
+}

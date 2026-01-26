@@ -1,0 +1,84 @@
+{
+  "avg_turn_time_ms": 131.66666666666666,
+  "final_story": "  in a far-off land, there lived a  brave knight named Sir Galahad. He  embarked on a quest to find the Holy  Grail. He traveled through treacherous forests  and dangerous mountains, but continued on his journey despite  the obstacles in his path. He finally arrived  at the castle of the evil sorcerer,  where he must defeat the sorcerer's  minions before facing the sorcerer himself.  Sir Galahad fought fiercely, sl",
+  "k": 10,
+  "machine_info": {
+    "arch": "amd64",
+    "num_cpu": 55,
+    "os": "linux"
+  },
+  "per_turn_metrics": [
+    {
+      "content": " in a far-off land, there lived a",
+      "context_size": 34,
+      "tokens_generated": 8,
+      "total_time_ms": 120,
+      "turn": 1
+    },
+    {
+      "content": " brave knight named Sir Galahad. He",
+      "context_size": 70,
+      "tokens_generated": 8,
+      "total_time_ms": 119,
+      "turn": 2
+    },
+    {
+      "content": " embarked on a quest to find the Holy",
+      "context_size": 108,
+      "tokens_generated": 9,
+      "total_time_ms": 123,
+      "turn": 3
+    },
+    {
+      "content": " Grail. He traveled through treacherous forests",
+      "context_size": 156,
+      "tokens_generated": 11,
+      "total_time_ms": 152,
+      "turn": 4
+    },
+    {
+      "content": " and dangerous mountains, but continued on his journey despite",
+      "context_size": 219,
+      "tokens_generated": 15,
+      "total_time_ms": 147,
+      "turn": 5
+    },
+    {
+      "content": " the obstacles in his path. He finally arrived",
+      "context_size": 266,
+      "tokens_generated": 11,
+      "total_time_ms": 132,
+      "turn": 6
+    },
+    {
+      "content": " at the castle of the evil sorcerer,",
+      "context_size": 303,
+      "tokens_generated": 9,
+      "total_time_ms": 131,
+      "turn": 7
+    },
+    {
+      "content": " where he must defeat the sorcerer's",
+      "context_size": 340,
+      "tokens_generated": 9,
+      "total_time_ms": 123,
+      "turn": 8
+    },
+    {
+      "content": " minions before facing the sorcerer himself.",
+      "context_size": 385,
+      "tokens_generated": 11,
+      "total_time_ms": 128,
+      "turn": 9
+    },
+    {
+      "content": " Sir Galahad fought fiercely, sl",
+      "context_size": 418,
+      "tokens_generated": 8,
+      "total_time_ms": 130,
+      "turn": 10
+    }
+  ],
+  "total_time_seconds": 1.31849162,
+  "turns": 10
+}

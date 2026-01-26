@@ -1,0 +1,25 @@
+log_format: pretty
+log_level: info
+agentic_serving:
+  mode: daemon
+  daemon:
+    listen_address: "localhost:8081"
+  llm_servers:
+    - name: "large_model"
+      backend:
+        type: "ollama"
+        endpoint: "http://localhost:11434"
+      model: "ollama:mistral:7b-instruct"
+  agent_profiles:
+    - name: "router"
+      llm_server: "large_model"
+    - name: "synthesizer"
+      llm_server: "large_model"
+    - name: "summarizer"
+      llm_server: "large_model"
+  workflows:
+    - name: "task_processor"
+      tasks:
+        - agent_profile: "router"
+        - agent_profile: "synthesizer"
+        - agent_profile: "summarizer"

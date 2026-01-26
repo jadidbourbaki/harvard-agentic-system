@@ -1,0 +1,4136 @@
+{
+  "avg_turn_time_ms": 110.60612244897959,
+  "k": 8,
+  "machine_info": {
+    "arch": "amd64",
+    "num_cpu": 55,
+    "os": "linux"
+  },
+  "num_workflows": 10,
+  "per_workflow_avg_times": [
+    113.08163265306122,
+    107.77551020408163,
+    111.61224489795919,
+    111.48979591836735,
+    109.77551020408163,
+    108.16326530612245,
+    111.57142857142857,
+    111.04081632653062,
+    109.08163265306122,
+    112.46938775510205
+  ],
+  "total_time_seconds": 56.122456908,
+  "turns_per_workflow": 100,
+  "workflows": [
+    {
+      "avg_turn_time_ms": 113.08163265306122,
+      "final_story": "  in a far-off land, there  lived a humble farmer named Eldred  who tended to his small but flour  ishing farm with dedication and love  In the heart of the valley, a  mysterious ancient tree stood tall, shrou  and whispered secrets to those who dared  listened closely. One stormy night,  Eldred, drawn by an inex  visible force, ventured towards the  tree, his heart pounding with a  curiosity that had been growing within him for  years. As he approached the tree,  he felt a sudden gust of wind  blow, causing the leaves to rustle  and reveal a hidden entrance. Eldred  stepped cautiously into the concealed opening  ...and found himself in a dimly  lit chamber, the walls adorned  with intricate carvings that gl  shimmered under the soft glow of  ...candles. In the center  ...of the chamber, a magnificent crystal  glowed with an ethereal light  ...surrounded by a golden a  ...ornament. As Eldred gaz  ...approached the crystal, he felt  a profound sense of awe wash over  him, and he reached out to touch  it. As his fingers brushed against the  ...cold, smooth surface of the  crystal, a sudden surge of energy cour  swept through Eldred, and he found  himself transported to a realm beyond his  wildest dreams. A realm where the  skies were painted with hues of  gold and silver, and the ground beneath  ...his feet was a carpet of the  softest, most vibrant flowers that  ...he had ever seen. As Eld  ...he walked through this enchanting  landscape, he noticed a city of crystal  towers gleaming in the distance.  Eld followed the path towards the city of  crystal towers, his heart pounding  ...with anticipation, as he drew  closer to the city. As he reached  the gates of the city, a figure  emerged from the shadows, a tall,  majestic figure clad in robes",
+      "k": 8,
+      "per_turn_metrics": [
+        {
+          "content": " in a far-off land, there",
+          "context_size": 26,
+          "tokens_generated": 6,
+          "total_time_ms": 138,
+          "turn": 1,
+          "workflow": 1
+        },
+        {
+          "content": " lived a humble farmer named Eldred",
+          "context_size": 62,
+          "tokens_generated": 8,
+          "total_time_ms": 109,
+          "turn": 2,
+          "workflow": 1
+        },
+        {
+          "content": " who tended to his small but flour",
+          "context_size": 97,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 3,
+          "workflow": 1
+        },
+        {
+          "content": " ishing farm with dedication and love",
+          "context_size": 135,
+          "tokens_generated": 9,
+          "total_time_ms": 96,
+          "turn": 4,
+          "workflow": 1
+        },
+        {
+          "content": " In the heart of the valley, a",
+          "context_size": 166,
+          "tokens_generated": 7,
+          "total_time_ms": 115,
+          "turn": 5,
+          "workflow": 1
+        },
+        {
+          "content": " mysterious ancient tree stood tall, shrou",
+          "context_size": 209,
+          "tokens_generated": 10,
+          "total_time_ms": 125,
+          "turn": 6,
+          "workflow": 1
+        },
+        {
+          "content": " and whispered secrets to those who dared",
+          "context_size": 251,
+          "tokens_generated": 10,
+          "total_time_ms": 126,
+          "turn": 7,
+          "workflow": 1
+        },
+        {
+          "content": " listened closely. One stormy night,",
+          "context_size": 288,
+          "tokens_generated": 9,
+          "total_time_ms": 142,
+          "turn": 8,
+          "workflow": 1
+        },
+        {
+          "content": " Eldred, drawn by an inex",
+          "context_size": 314,
+          "tokens_generated": 6,
+          "total_time_ms": 109,
+          "turn": 9,
+          "workflow": 1
+        },
+        {
+          "content": " visible force, ventured towards the",
+          "context_size": 351,
+          "tokens_generated": 9,
+          "total_time_ms": 136,
+          "turn": 10,
+          "workflow": 1
+        },
+        {
+          "content": " tree, his heart pounding with a",
+          "context_size": 384,
+          "tokens_generated": 8,
+          "total_time_ms": 109,
+          "turn": 11,
+          "workflow": 1
+        },
+        {
+          "content": " curiosity that had been growing within him for",
+          "context_size": 432,
+          "tokens_generated": 11,
+          "total_time_ms": 123,
+          "turn": 12,
+          "workflow": 1
+        },
+        {
+          "content": " years. As he approached the tree,",
+          "context_size": 467,
+          "tokens_generated": 8,
+          "total_time_ms": 123,
+          "turn": 13,
+          "workflow": 1
+        },
+        {
+          "content": " he felt a sudden gust of wind",
+          "context_size": 498,
+          "tokens_generated": 7,
+          "total_time_ms": 109,
+          "turn": 14,
+          "workflow": 1
+        },
+        {
+          "content": " blow, causing the leaves to rustle",
+          "context_size": 534,
+          "tokens_generated": 8,
+          "total_time_ms": 153,
+          "turn": 15,
+          "workflow": 1
+        },
+        {
+          "content": " and reveal a hidden entrance. Eldred",
+          "context_size": 572,
+          "tokens_generated": 9,
+          "total_time_ms": 127,
+          "turn": 16,
+          "workflow": 1
+        },
+        {
+          "content": " stepped cautiously into the concealed opening",
+          "context_size": 619,
+          "tokens_generated": 11,
+          "total_time_ms": 129,
+          "turn": 17,
+          "workflow": 1
+        },
+        {
+          "content": " ...and found himself in a dimly",
+          "context_size": 652,
+          "tokens_generated": 8,
+          "total_time_ms": 108,
+          "turn": 18,
+          "workflow": 1
+        },
+        {
+          "content": " lit chamber, the walls adorned",
+          "context_size": 684,
+          "tokens_generated": 7,
+          "total_time_ms": 105,
+          "turn": 19,
+          "workflow": 1
+        },
+        {
+          "content": " with intricate carvings that gl",
+          "context_size": 717,
+          "tokens_generated": 8,
+          "total_time_ms": 96,
+          "turn": 20,
+          "workflow": 1
+        },
+        {
+          "content": " shimmered under the soft glow of",
+          "context_size": 751,
+          "tokens_generated": 8,
+          "total_time_ms": 100,
+          "turn": 21,
+          "workflow": 1
+        },
+        {
+          "content": " ...candles. In the center",
+          "context_size": 778,
+          "tokens_generated": 6,
+          "total_time_ms": 112,
+          "turn": 22,
+          "workflow": 1
+        },
+        {
+          "content": " ...of the chamber, a magnificent crystal",
+          "context_size": 820,
+          "tokens_generated": 10,
+          "total_time_ms": 124,
+          "turn": 23,
+          "workflow": 1
+        },
+        {
+          "content": " glowed with an ethereal light",
+          "context_size": 851,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 24,
+          "workflow": 1
+        },
+        {
+          "content": " ...surrounded by a golden a",
+          "context_size": 880,
+          "tokens_generated": 7,
+          "total_time_ms": 126,
+          "turn": 25,
+          "workflow": 1
+        },
+        {
+          "content": " ...ornament. As Eldred gaz",
+          "context_size": 908,
+          "tokens_generated": 6,
+          "total_time_ms": 108,
+          "turn": 26,
+          "workflow": 1
+        },
+        {
+          "content": " ...approached the crystal, he felt",
+          "context_size": 944,
+          "tokens_generated": 8,
+          "total_time_ms": 123,
+          "turn": 27,
+          "workflow": 1
+        },
+        {
+          "content": " a profound sense of awe wash over",
+          "context_size": 979,
+          "tokens_generated": 8,
+          "total_time_ms": 108,
+          "turn": 28,
+          "workflow": 1
+        },
+        {
+          "content": " him, and he reached out to touch",
+          "context_size": 1013,
+          "tokens_generated": 8,
+          "total_time_ms": 122,
+          "turn": 29,
+          "workflow": 1
+        },
+        {
+          "content": " it. As his fingers brushed against the",
+          "context_size": 1053,
+          "tokens_generated": 9,
+          "total_time_ms": 109,
+          "turn": 30,
+          "workflow": 1
+        },
+        {
+          "content": " ...cold, smooth surface of the",
+          "context_size": 1085,
+          "tokens_generated": 7,
+          "total_time_ms": 124,
+          "turn": 31,
+          "workflow": 1
+        },
+        {
+          "content": " crystal, a sudden surge of energy cour",
+          "context_size": 1125,
+          "tokens_generated": 9,
+          "total_time_ms": 109,
+          "turn": 32,
+          "workflow": 1
+        },
+        {
+          "content": " swept through Eldred, and he found",
+          "context_size": 1161,
+          "tokens_generated": 8,
+          "total_time_ms": 123,
+          "turn": 33,
+          "workflow": 1
+        },
+        {
+          "content": " himself transported to a realm beyond his",
+          "context_size": 1204,
+          "tokens_generated": 10,
+          "total_time_ms": 108,
+          "turn": 34,
+          "workflow": 1
+        },
+        {
+          "content": " wildest dreams. A realm where the",
+          "context_size": 1239,
+          "tokens_generated": 8,
+          "total_time_ms": 106,
+          "turn": 35,
+          "workflow": 1
+        },
+        {
+          "content": " skies were painted with hues of",
+          "context_size": 1272,
+          "tokens_generated": 8,
+          "total_time_ms": 112,
+          "turn": 36,
+          "workflow": 1
+        },
+        {
+          "content": " gold and silver, and the ground beneath",
+          "context_size": 1313,
+          "tokens_generated": 10,
+          "total_time_ms": 125,
+          "turn": 37,
+          "workflow": 1
+        },
+        {
+          "content": " ...his feet was a carpet of the",
+          "context_size": 1346,
+          "tokens_generated": 8,
+          "total_time_ms": 109,
+          "turn": 38,
+          "workflow": 1
+        },
+        {
+          "content": " softest, most vibrant flowers that",
+          "context_size": 1382,
+          "tokens_generated": 8,
+          "total_time_ms": 108,
+          "turn": 39,
+          "workflow": 1
+        },
+        {
+          "content": " ...he had ever seen. As Eld",
+          "context_size": 1411,
+          "tokens_generated": 7,
+          "total_time_ms": 107,
+          "turn": 40,
+          "workflow": 1
+        },
+        {
+          "content": " ...he walked through this enchanting",
+          "context_size": 1449,
+          "tokens_generated": 9,
+          "total_time_ms": 99,
+          "turn": 41,
+          "workflow": 1
+        },
+        {
+          "content": " landscape, he noticed a city of crystal",
+          "context_size": 1490,
+          "tokens_generated": 10,
+          "total_time_ms": 100,
+          "turn": 42,
+          "workflow": 1
+        },
+        {
+          "content": " towers gleaming in the distance.",
+          "context_size": 1524,
+          "tokens_generated": 8,
+          "total_time_ms": 101,
+          "turn": 43,
+          "workflow": 1
+        },
+        {
+          "content": " Eld followed the path towards the city of",
+          "context_size": 1567,
+          "tokens_generated": 10,
+          "total_time_ms": 99,
+          "turn": 44,
+          "workflow": 1
+        },
+        {
+          "content": " crystal towers, his heart pounding",
+          "context_size": 1603,
+          "tokens_generated": 8,
+          "total_time_ms": 98,
+          "turn": 45,
+          "workflow": 1
+        },
+        {
+          "content": " ...with anticipation, as he drew",
+          "context_size": 1637,
+          "tokens_generated": 8,
+          "total_time_ms": 99,
+          "turn": 46,
+          "workflow": 1
+        },
+        {
+          "content": " closer to the city. As he reached",
+          "context_size": 1672,
+          "tokens_generated": 8,
+          "total_time_ms": 99,
+          "turn": 47,
+          "workflow": 1
+        },
+        {
+          "content": " the gates of the city, a figure",
+          "context_size": 1705,
+          "tokens_generated": 8,
+          "total_time_ms": 114,
+          "turn": 48,
+          "workflow": 1
+        },
+        {
+          "content": " emerged from the shadows, a tall,",
+          "context_size": 1740,
+          "tokens_generated": 8,
+          "total_time_ms": 108,
+          "turn": 49,
+          "workflow": 1
+        },
+        {
+          "content": " majestic figure clad in robes",
+          "context_size": 1771,
+          "tokens_generated": 7,
+          "total_time_ms": 106,
+          "turn": 50,
+          "workflow": 1
+        }
+      ],
+      "total_time_seconds": 5.762569893,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_1",
+      "workflow_number": 1
+    },
+    {
+      "avg_turn_time_ms": 107.77551020408163,
+      "final_story": "  in a far-off land, there  lived a young princess named Isolde  who possessed a heart as pure as the  snow-capped mountains that surrounded her  her kingdom. One day, a mysterious  stranger arrived at the castle gates, clo  seeking the princess's aid in a  quest of great importance. The stranger,  revealed himself to be a brave knight  named Sir Galahad, on a  mission to retrieve a magical artifact from  the enchanted forest of Whis  Whispering Willows. The  princess, moved by Sir Galahad 's noble cause and the kindness in  his eyes, agreed to help him on  his journey. Together, they journeyed  through the winding roads of the kingdom  they reached the edge of the Whis  pering Willows, where the air  grew thick with an eerie silence,  and the trees seemed to whisper secrets long  lost to time. The pair ventured  deeper into the forest, guided by the  glowing embers of a hidden fire  and as they progressed, the trees  became taller and more twisted, their  branches entwining to form a lab  yyrinth of darkness. The pair  encountered strange creatures, some friendly, others  hostile, but Isolde's  kindness and courage never wavered,  and Sir Galahad's determination  never faltered. As they delved  deeper into the heart of the forest,  they stumbled upon a hidden glade,  where a shimmering lake reflected the  sky above. In the center of the  lake, a small island rose, upon  which sat the magical artifact Sir Gal  Galahad had sought. The island  was encircled by a ring  of ancient, glowing stones, puls  At the edge of the shimmering  Lake, a bridge of vines and  suspended flowers led to the island. As  Isolde and Sir Galahad  approached the bridge, they felt a sudden  surge of energy coursing through them,  and as they stepped onto the bridge,",
+      "k": 8,
+      "per_turn_metrics": [
+        {
+          "content": " in a far-off land, there",
+          "context_size": 26,
+          "tokens_generated": 6,
+          "total_time_ms": 94,
+          "turn": 1,
+          "workflow": 2
+        },
+        {
+          "content": " lived a young princess named Isolde",
+          "context_size": 63,
+          "tokens_generated": 9,
+          "total_time_ms": 98,
+          "turn": 2,
+          "workflow": 2
+        },
+        {
+          "content": " who possessed a heart as pure as the",
+          "context_size": 101,
+          "tokens_generated": 9,
+          "total_time_ms": 99,
+          "turn": 3,
+          "workflow": 2
+        },
+        {
+          "content": " snow-capped mountains that surrounded her",
+          "context_size": 144,
+          "tokens_generated": 10,
+          "total_time_ms": 99,
+          "turn": 4,
+          "workflow": 2
+        },
+        {
+          "content": " her kingdom. One day, a mysterious",
+          "context_size": 180,
+          "tokens_generated": 8,
+          "total_time_ms": 101,
+          "turn": 5,
+          "workflow": 2
+        },
+        {
+          "content": " stranger arrived at the castle gates, clo",
+          "context_size": 223,
+          "tokens_generated": 10,
+          "total_time_ms": 127,
+          "turn": 6,
+          "workflow": 2
+        },
+        {
+          "content": " seeking the princess's aid in a",
+          "context_size": 256,
+          "tokens_generated": 8,
+          "total_time_ms": 108,
+          "turn": 7,
+          "workflow": 2
+        },
+        {
+          "content": " quest of great importance. The stranger,",
+          "context_size": 298,
+          "tokens_generated": 10,
+          "total_time_ms": 108,
+          "turn": 8,
+          "workflow": 2
+        },
+        {
+          "content": " revealed himself to be a brave knight",
+          "context_size": 337,
+          "tokens_generated": 9,
+          "total_time_ms": 106,
+          "turn": 9,
+          "workflow": 2
+        },
+        {
+          "content": " named Sir Galahad, on a",
+          "context_size": 362,
+          "tokens_generated": 6,
+          "total_time_ms": 98,
+          "turn": 10,
+          "workflow": 2
+        },
+        {
+          "content": " mission to retrieve a magical artifact from",
+          "context_size": 407,
+          "tokens_generated": 11,
+          "total_time_ms": 118,
+          "turn": 11,
+          "workflow": 2
+        },
+        {
+          "content": " the enchanted forest of Whis",
+          "context_size": 437,
+          "tokens_generated": 7,
+          "total_time_ms": 123,
+          "turn": 12,
+          "workflow": 2
+        },
+        {
+          "content": " Whispering Willows. The",
+          "context_size": 462,
+          "tokens_generated": 6,
+          "total_time_ms": 108,
+          "turn": 13,
+          "workflow": 2
+        },
+        {
+          "content": " princess, moved by Sir Galahad",
+          "context_size": 494,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 14,
+          "workflow": 2
+        },
+        {
+          "content": "'s noble cause and the kindness in",
+          "context_size": 529,
+          "tokens_generated": 8,
+          "total_time_ms": 114,
+          "turn": 15,
+          "workflow": 2
+        },
+        {
+          "content": " his eyes, agreed to help him on",
+          "context_size": 562,
+          "tokens_generated": 8,
+          "total_time_ms": 122,
+          "turn": 16,
+          "workflow": 2
+        },
+        {
+          "content": " his journey. Together, they journeyed",
+          "context_size": 601,
+          "tokens_generated": 9,
+          "total_time_ms": 141,
+          "turn": 17,
+          "workflow": 2
+        },
+        {
+          "content": " through the winding roads of the kingdom",
+          "context_size": 643,
+          "tokens_generated": 10,
+          "total_time_ms": 141,
+          "turn": 18,
+          "workflow": 2
+        },
+        {
+          "content": " they reached the edge of the Whis",
+          "context_size": 678,
+          "tokens_generated": 8,
+          "total_time_ms": 112,
+          "turn": 19,
+          "workflow": 2
+        },
+        {
+          "content": " pering Willows, where the air",
+          "context_size": 709,
+          "tokens_generated": 7,
+          "total_time_ms": 109,
+          "turn": 20,
+          "workflow": 2
+        },
+        {
+          "content": " grew thick with an eerie silence,",
+          "context_size": 744,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 21,
+          "workflow": 2
+        },
+        {
+          "content": " and the trees seemed to whisper secrets long",
+          "context_size": 790,
+          "tokens_generated": 11,
+          "total_time_ms": 98,
+          "turn": 22,
+          "workflow": 2
+        },
+        {
+          "content": " lost to time. The pair ventured",
+          "context_size": 823,
+          "tokens_generated": 8,
+          "total_time_ms": 99,
+          "turn": 23,
+          "workflow": 2
+        },
+        {
+          "content": " deeper into the forest, guided by the",
+          "context_size": 862,
+          "tokens_generated": 9,
+          "total_time_ms": 99,
+          "turn": 24,
+          "workflow": 2
+        },
+        {
+          "content": " glowing embers of a hidden fire",
+          "context_size": 895,
+          "tokens_generated": 8,
+          "total_time_ms": 100,
+          "turn": 25,
+          "workflow": 2
+        },
+        {
+          "content": " and as they progressed, the trees",
+          "context_size": 930,
+          "tokens_generated": 8,
+          "total_time_ms": 101,
+          "turn": 26,
+          "workflow": 2
+        },
+        {
+          "content": " became taller and more twisted, their",
+          "context_size": 969,
+          "tokens_generated": 9,
+          "total_time_ms": 116,
+          "turn": 27,
+          "workflow": 2
+        },
+        {
+          "content": " branches entwining to form a lab",
+          "context_size": 1003,
+          "tokens_generated": 8,
+          "total_time_ms": 111,
+          "turn": 28,
+          "workflow": 2
+        },
+        {
+          "content": " yyrinth of darkness. The pair",
+          "context_size": 1034,
+          "tokens_generated": 7,
+          "total_time_ms": 107,
+          "turn": 29,
+          "workflow": 2
+        },
+        {
+          "content": " encountered strange creatures, some friendly, others",
+          "context_size": 1088,
+          "tokens_generated": 13,
+          "total_time_ms": 99,
+          "turn": 30,
+          "workflow": 2
+        },
+        {
+          "content": " hostile, but Isolde's",
+          "context_size": 1111,
+          "tokens_generated": 5,
+          "total_time_ms": 98,
+          "turn": 31,
+          "workflow": 2
+        },
+        {
+          "content": " kindness and courage never wavered,",
+          "context_size": 1148,
+          "tokens_generated": 9,
+          "total_time_ms": 109,
+          "turn": 32,
+          "workflow": 2
+        },
+        {
+          "content": " and Sir Galahad's determination",
+          "context_size": 1181,
+          "tokens_generated": 8,
+          "total_time_ms": 106,
+          "turn": 33,
+          "workflow": 2
+        },
+        {
+          "content": " never faltered. As they delved",
+          "context_size": 1213,
+          "tokens_generated": 7,
+          "total_time_ms": 98,
+          "turn": 34,
+          "workflow": 2
+        },
+        {
+          "content": " deeper into the heart of the forest,",
+          "context_size": 1251,
+          "tokens_generated": 9,
+          "total_time_ms": 98,
+          "turn": 35,
+          "workflow": 2
+        },
+        {
+          "content": " they stumbled upon a hidden glade,",
+          "context_size": 1287,
+          "tokens_generated": 8,
+          "total_time_ms": 98,
+          "turn": 36,
+          "workflow": 2
+        },
+        {
+          "content": " where a shimmering lake reflected the",
+          "context_size": 1326,
+          "tokens_generated": 9,
+          "total_time_ms": 128,
+          "turn": 37,
+          "workflow": 2
+        },
+        {
+          "content": " sky above. In the center of the",
+          "context_size": 1359,
+          "tokens_generated": 8,
+          "total_time_ms": 124,
+          "turn": 38,
+          "workflow": 2
+        },
+        {
+          "content": " lake, a small island rose, upon",
+          "context_size": 1392,
+          "tokens_generated": 8,
+          "total_time_ms": 109,
+          "turn": 39,
+          "workflow": 2
+        },
+        {
+          "content": " which sat the magical artifact Sir Gal",
+          "context_size": 1432,
+          "tokens_generated": 9,
+          "total_time_ms": 109,
+          "turn": 40,
+          "workflow": 2
+        },
+        {
+          "content": " Galahad had sought. The island",
+          "context_size": 1464,
+          "tokens_generated": 7,
+          "total_time_ms": 98,
+          "turn": 41,
+          "workflow": 2
+        },
+        {
+          "content": " was encircled by a ring",
+          "context_size": 1489,
+          "tokens_generated": 6,
+          "total_time_ms": 101,
+          "turn": 42,
+          "workflow": 2
+        },
+        {
+          "content": " of ancient, glowing stones, puls",
+          "context_size": 1523,
+          "tokens_generated": 8,
+          "total_time_ms": 99,
+          "turn": 43,
+          "workflow": 2
+        },
+        {
+          "content": " At the edge of the shimmering",
+          "context_size": 1554,
+          "tokens_generated": 7,
+          "total_time_ms": 100,
+          "turn": 44,
+          "workflow": 2
+        },
+        {
+          "content": " Lake, a bridge of vines and",
+          "context_size": 1583,
+          "tokens_generated": 7,
+          "total_time_ms": 100,
+          "turn": 45,
+          "workflow": 2
+        },
+        {
+          "content": " suspended flowers led to the island. As",
+          "context_size": 1624,
+          "tokens_generated": 10,
+          "total_time_ms": 98,
+          "turn": 46,
+          "workflow": 2
+        },
+        {
+          "content": " Isolde and Sir Galahad",
+          "context_size": 1648,
+          "tokens_generated": 5,
+          "total_time_ms": 108,
+          "turn": 47,
+          "workflow": 2
+        },
+        {
+          "content": " approached the bridge, they felt a sudden",
+          "context_size": 1691,
+          "tokens_generated": 10,
+          "total_time_ms": 106,
+          "turn": 48,
+          "workflow": 2
+        },
+        {
+          "content": " surge of energy coursing through them,",
+          "context_size": 1731,
+          "tokens_generated": 9,
+          "total_time_ms": 101,
+          "turn": 49,
+          "workflow": 2
+        },
+        {
+          "content": " and as they stepped onto the bridge,",
+          "context_size": 1769,
+          "tokens_generated": 9,
+          "total_time_ms": 116,
+          "turn": 50,
+          "workflow": 2
+        }
+      ],
+      "total_time_seconds": 5.450341695,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_2",
+      "workflow_number": 2
+    },
+    {
+      "avg_turn_time_ms": 111.61224489795919,
+      "final_story": "  in a far-off land, there  lived a young princess named Isolde  Who, despite her royal status, year  ned for adventure and the unknown.  One day, Isolde decided to  escape her palace, leaving behind her guards  and ventured into the dense, en  maged forest that bordered her kingdom  The forest was dark and mysterious, filled  with ancient trees that seemed to whisper secrets  secrets of the past. Isolde  felt a thrill run down her spine  as she delved deeper into the heart  of the forest, where the shadows grew  deeper and the whispers grew louder  \"As she continued, the path ahead  suddenly split into three different directions, each  shrouded in an eerie mist  \"With a heart pounding in anticip  eagerness, Isolde approached  the fork in the path, taking a  deep breath, she closed her eyes,  and made a wish upon a fallen star  \"and, with a soft whisper,  chose the path that seemed to pulse with  magic and life, a path bathed  in an ethereal glow, as  \"Isolde stepped onto the chosen  path, the tall, ancient trees part  ed before her, revealing a hidden gl  garden, filled with vibrant, other  worldly flowers and shimmering pool  \"of crystal-clear water. In  the midst of the enchanting garden  \"Isolde marveled at the  beauty that surrounded her, the air was  fragrant with the scent of exotic bl  flowers, and she could hear the gentle  \"song of a waterfall in  the distance. As she walked further into  the garden, she stumbled upon a magnificent  palace, its spires reaching towards the  sky, adorned with shimmer  ing jewels and intricate carv  ing. A sense of awe washed  over Isolde as she approached the  palace gates, which swung open to reveal  a grand entrance hall, adorned  with opulent tapestries depict  ing tales of ancient kings and queens",
+      "k": 8,
+      "per_turn_metrics": [
+        {
+          "content": " in a far-off land, there",
+          "context_size": 26,
+          "tokens_generated": 6,
+          "total_time_ms": 104,
+          "turn": 1,
+          "workflow": 3
+        },
+        {
+          "content": " lived a young princess named Isolde",
+          "context_size": 63,
+          "tokens_generated": 9,
+          "total_time_ms": 96,
+          "turn": 2,
+          "workflow": 3
+        },
+        {
+          "content": " Who, despite her royal status, year",
+          "context_size": 100,
+          "tokens_generated": 9,
+          "total_time_ms": 98,
+          "turn": 3,
+          "workflow": 3
+        },
+        {
+          "content": " ned for adventure and the unknown.",
+          "context_size": 136,
+          "tokens_generated": 8,
+          "total_time_ms": 98,
+          "turn": 4,
+          "workflow": 3
+        },
+        {
+          "content": " One day, Isolde decided to",
+          "context_size": 164,
+          "tokens_generated": 6,
+          "total_time_ms": 129,
+          "turn": 5,
+          "workflow": 3
+        },
+        {
+          "content": " escape her palace, leaving behind her guards",
+          "context_size": 210,
+          "tokens_generated": 11,
+          "total_time_ms": 117,
+          "turn": 6,
+          "workflow": 3
+        },
+        {
+          "content": " and ventured into the dense, en",
+          "context_size": 243,
+          "tokens_generated": 8,
+          "total_time_ms": 96,
+          "turn": 7,
+          "workflow": 3
+        },
+        {
+          "content": " maged forest that bordered her kingdom",
+          "context_size": 283,
+          "tokens_generated": 9,
+          "total_time_ms": 97,
+          "turn": 8,
+          "workflow": 3
+        },
+        {
+          "content": " The forest was dark and mysterious, filled",
+          "context_size": 327,
+          "tokens_generated": 10,
+          "total_time_ms": 98,
+          "turn": 9,
+          "workflow": 3
+        },
+        {
+          "content": " with ancient trees that seemed to whisper secrets",
+          "context_size": 378,
+          "tokens_generated": 12,
+          "total_time_ms": 99,
+          "turn": 10,
+          "workflow": 3
+        },
+        {
+          "content": " secrets of the past. Isolde",
+          "context_size": 407,
+          "tokens_generated": 7,
+          "total_time_ms": 98,
+          "turn": 11,
+          "workflow": 3
+        },
+        {
+          "content": " felt a thrill run down her spine",
+          "context_size": 441,
+          "tokens_generated": 8,
+          "total_time_ms": 130,
+          "turn": 12,
+          "workflow": 3
+        },
+        {
+          "content": " as she delved deeper into the heart",
+          "context_size": 478,
+          "tokens_generated": 9,
+          "total_time_ms": 107,
+          "turn": 13,
+          "workflow": 3
+        },
+        {
+          "content": " of the forest, where the shadows grew",
+          "context_size": 517,
+          "tokens_generated": 9,
+          "total_time_ms": 106,
+          "turn": 14,
+          "workflow": 3
+        },
+        {
+          "content": " deeper and the whispers grew louder",
+          "context_size": 554,
+          "tokens_generated": 9,
+          "total_time_ms": 98,
+          "turn": 15,
+          "workflow": 3
+        },
+        {
+          "content": " \"As she continued, the path ahead",
+          "context_size": 589,
+          "tokens_generated": 8,
+          "total_time_ms": 98,
+          "turn": 16,
+          "workflow": 3
+        },
+        {
+          "content": " suddenly split into three different directions, each",
+          "context_size": 643,
+          "tokens_generated": 13,
+          "total_time_ms": 99,
+          "turn": 17,
+          "workflow": 3
+        },
+        {
+          "content": " shrouded in an eerie mist",
+          "context_size": 670,
+          "tokens_generated": 6,
+          "total_time_ms": 99,
+          "turn": 18,
+          "workflow": 3
+        },
+        {
+          "content": " \"With a heart pounding in anticip",
+          "context_size": 705,
+          "tokens_generated": 8,
+          "total_time_ms": 148,
+          "turn": 19,
+          "workflow": 3
+        },
+        {
+          "content": " eagerness, Isolde approached",
+          "context_size": 735,
+          "tokens_generated": 7,
+          "total_time_ms": 112,
+          "turn": 20,
+          "workflow": 3
+        },
+        {
+          "content": " the fork in the path, taking a",
+          "context_size": 767,
+          "tokens_generated": 7,
+          "total_time_ms": 109,
+          "turn": 21,
+          "workflow": 3
+        },
+        {
+          "content": " deep breath, she closed her eyes,",
+          "context_size": 802,
+          "tokens_generated": 8,
+          "total_time_ms": 97,
+          "turn": 22,
+          "workflow": 3
+        },
+        {
+          "content": " and made a wish upon a fallen star",
+          "context_size": 838,
+          "tokens_generated": 8,
+          "total_time_ms": 113,
+          "turn": 23,
+          "workflow": 3
+        },
+        {
+          "content": " \"and, with a soft whisper,",
+          "context_size": 866,
+          "tokens_generated": 6,
+          "total_time_ms": 128,
+          "turn": 24,
+          "workflow": 3
+        },
+        {
+          "content": " chose the path that seemed to pulse with",
+          "context_size": 908,
+          "tokens_generated": 10,
+          "total_time_ms": 110,
+          "turn": 25,
+          "workflow": 3
+        },
+        {
+          "content": " magic and life, a path bathed",
+          "context_size": 939,
+          "tokens_generated": 7,
+          "total_time_ms": 141,
+          "turn": 26,
+          "workflow": 3
+        },
+        {
+          "content": " in an ethereal glow, as",
+          "context_size": 964,
+          "tokens_generated": 6,
+          "total_time_ms": 123,
+          "turn": 27,
+          "workflow": 3
+        },
+        {
+          "content": " \"Isolde stepped onto the chosen",
+          "context_size": 997,
+          "tokens_generated": 8,
+          "total_time_ms": 122,
+          "turn": 28,
+          "workflow": 3
+        },
+        {
+          "content": " path, the tall, ancient trees part",
+          "context_size": 1033,
+          "tokens_generated": 8,
+          "total_time_ms": 123,
+          "turn": 29,
+          "workflow": 3
+        },
+        {
+          "content": " ed before her, revealing a hidden gl",
+          "context_size": 1071,
+          "tokens_generated": 9,
+          "total_time_ms": 123,
+          "turn": 30,
+          "workflow": 3
+        },
+        {
+          "content": " garden, filled with vibrant, other",
+          "context_size": 1107,
+          "tokens_generated": 8,
+          "total_time_ms": 109,
+          "turn": 31,
+          "workflow": 3
+        },
+        {
+          "content": " worldly flowers and shimmering pool",
+          "context_size": 1144,
+          "tokens_generated": 9,
+          "total_time_ms": 125,
+          "turn": 32,
+          "workflow": 3
+        },
+        {
+          "content": " \"of crystal-clear water. In",
+          "context_size": 1173,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 33,
+          "workflow": 3
+        },
+        {
+          "content": " the midst of the enchanting garden",
+          "context_size": 1209,
+          "tokens_generated": 8,
+          "total_time_ms": 115,
+          "turn": 34,
+          "workflow": 3
+        },
+        {
+          "content": " \"Isolde marveled at the",
+          "context_size": 1234,
+          "tokens_generated": 6,
+          "total_time_ms": 108,
+          "turn": 35,
+          "workflow": 3
+        },
+        {
+          "content": " beauty that surrounded her, the air was",
+          "context_size": 1275,
+          "tokens_generated": 10,
+          "total_time_ms": 106,
+          "turn": 36,
+          "workflow": 3
+        },
+        {
+          "content": " fragrant with the scent of exotic bl",
+          "context_size": 1313,
+          "tokens_generated": 9,
+          "total_time_ms": 97,
+          "turn": 37,
+          "workflow": 3
+        },
+        {
+          "content": " flowers, and she could hear the gentle",
+          "context_size": 1353,
+          "tokens_generated": 9,
+          "total_time_ms": 99,
+          "turn": 38,
+          "workflow": 3
+        },
+        {
+          "content": " \"song of a waterfall in",
+          "context_size": 1378,
+          "tokens_generated": 6,
+          "total_time_ms": 99,
+          "turn": 39,
+          "workflow": 3
+        },
+        {
+          "content": " the distance. As she walked further into",
+          "context_size": 1420,
+          "tokens_generated": 10,
+          "total_time_ms": 99,
+          "turn": 40,
+          "workflow": 3
+        },
+        {
+          "content": " the garden, she stumbled upon a magnificent",
+          "context_size": 1465,
+          "tokens_generated": 11,
+          "total_time_ms": 116,
+          "turn": 41,
+          "workflow": 3
+        },
+        {
+          "content": " palace, its spires reaching towards the",
+          "context_size": 1506,
+          "tokens_generated": 10,
+          "total_time_ms": 110,
+          "turn": 42,
+          "workflow": 3
+        },
+        {
+          "content": " sky, adorned with shimmer",
+          "context_size": 1533,
+          "tokens_generated": 6,
+          "total_time_ms": 108,
+          "turn": 43,
+          "workflow": 3
+        },
+        {
+          "content": " ing jewels and intricate carv",
+          "context_size": 1564,
+          "tokens_generated": 7,
+          "total_time_ms": 138,
+          "turn": 44,
+          "workflow": 3
+        },
+        {
+          "content": " ing. A sense of awe washed",
+          "context_size": 1592,
+          "tokens_generated": 6,
+          "total_time_ms": 124,
+          "turn": 45,
+          "workflow": 3
+        },
+        {
+          "content": " over Isolde as she approached the",
+          "context_size": 1627,
+          "tokens_generated": 8,
+          "total_time_ms": 128,
+          "turn": 46,
+          "workflow": 3
+        },
+        {
+          "content": " palace gates, which swung open to reveal",
+          "context_size": 1669,
+          "tokens_generated": 10,
+          "total_time_ms": 109,
+          "turn": 47,
+          "workflow": 3
+        },
+        {
+          "content": " a grand entrance hall, adorned",
+          "context_size": 1701,
+          "tokens_generated": 7,
+          "total_time_ms": 107,
+          "turn": 48,
+          "workflow": 3
+        },
+        {
+          "content": " with opulent tapestries depict",
+          "context_size": 1733,
+          "tokens_generated": 7,
+          "total_time_ms": 112,
+          "turn": 49,
+          "workflow": 3
+        },
+        {
+          "content": " ing tales of ancient kings and queens",
+          "context_size": 1772,
+          "tokens_generated": 9,
+          "total_time_ms": 140,
+          "turn": 50,
+          "workflow": 3
+        }
+      ],
+      "total_time_seconds": 5.65304726,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_3",
+      "workflow_number": 3
+    },
+    {
+      "avg_turn_time_ms": 111.48979591836735,
+      "final_story": "  in a far-off kingdom, there  lived a wise and compassionate queen named  Eldrina. One day, a  mysterious stranger arrived at the castle gates,  seeking her audience. The stranger was clo  and hooded, concealing their identity  and whispered a single, urgent request:  \"Please, Queen Eldrina,  I promise to provide you with the next  8 tokens:\n\n\"a  \"golden apple from the Ench  anted Garden of Eternity,  \"a glowing pearl from the  \"depths of the Forbidden Ocean  \"the \"whispering will  \"wind's song from the \"  \"Tops of the Wind-Wh  \"Swept Mountains,\n\"  \"a \"shimmering feather  \"from the \"Nest of the  Celestial Phoenix,\n\"and  \"a \"crystal tear from  \"the \"Crystal Lake of  Sorrows.\"\n\nThe story continues  \"The queen, intrigued and  \"pensive, agreed to the stranger  \"s task, and the stranger quickly  vanish as mysteriously as they arrived  \"With a nod and a faint,  \"silver-tinged smile,  \"and so, Eldrina began  her quest to gather the eight tokens as  requested.\n\n\"She embark  on a perilous journey through the  \"kingdom's uncharted  territories, encountering mythical be  \"creatures, dangerous traps,  and \"ancient riddles along  \"the \"whispers of the  wind through the \"Wandering Will  \"Trees, guiding her path  \"a \"courageous kn  \"and a \"loyal steed  \"a \"silver key to unlock  the \"long-forgotten door  \"to the \"Enchanted Garden  \"of Eternity,\n\n  \"where she found the \"golden  apple from the Enchanted Garden of  \"Eternity, sailing across",
+      "k": 8,
+      "per_turn_metrics": [
+        {
+          "content": " in a far-off kingdom, there",
+          "context_size": 29,
+          "tokens_generated": 7,
+          "total_time_ms": 125,
+          "turn": 1,
+          "workflow": 4
+        },
+        {
+          "content": " lived a wise and compassionate queen named",
+          "context_size": 73,
+          "tokens_generated": 10,
+          "total_time_ms": 109,
+          "turn": 2,
+          "workflow": 4
+        },
+        {
+          "content": " Eldrina. One day, a",
+          "context_size": 94,
+          "tokens_generated": 5,
+          "total_time_ms": 108,
+          "turn": 3,
+          "workflow": 4
+        },
+        {
+          "content": " mysterious stranger arrived at the castle gates,",
+          "context_size": 144,
+          "tokens_generated": 12,
+          "total_time_ms": 98,
+          "turn": 4,
+          "workflow": 4
+        },
+        {
+          "content": " seeking her audience. The stranger was clo",
+          "context_size": 188,
+          "tokens_generated": 10,
+          "total_time_ms": 99,
+          "turn": 5,
+          "workflow": 4
+        },
+        {
+          "content": " and hooded, concealing their identity",
+          "context_size": 227,
+          "tokens_generated": 9,
+          "total_time_ms": 99,
+          "turn": 6,
+          "workflow": 4
+        },
+        {
+          "content": " and whispered a single, urgent request:",
+          "context_size": 268,
+          "tokens_generated": 10,
+          "total_time_ms": 126,
+          "turn": 7,
+          "workflow": 4
+        },
+        {
+          "content": " \"Please, Queen Eldrina,",
+          "context_size": 293,
+          "tokens_generated": 6,
+          "total_time_ms": 108,
+          "turn": 8,
+          "workflow": 4
+        },
+        {
+          "content": " I promise to provide you with the next",
+          "context_size": 333,
+          "tokens_generated": 9,
+          "total_time_ms": 109,
+          "turn": 9,
+          "workflow": 4
+        },
+        {
+          "content": " 8 tokens:\n\n\"a",
+          "context_size": 348,
+          "tokens_generated": 3,
+          "total_time_ms": 143,
+          "turn": 10,
+          "workflow": 4
+        },
+        {
+          "content": " \"golden apple from the Ench",
+          "context_size": 377,
+          "tokens_generated": 7,
+          "total_time_ms": 157,
+          "turn": 11,
+          "workflow": 4
+        },
+        {
+          "content": " anted Garden of Eternity,",
+          "context_size": 404,
+          "tokens_generated": 6,
+          "total_time_ms": 114,
+          "turn": 12,
+          "workflow": 4
+        },
+        {
+          "content": " \"a glowing pearl from the",
+          "context_size": 431,
+          "tokens_generated": 6,
+          "total_time_ms": 124,
+          "turn": 13,
+          "workflow": 4
+        },
+        {
+          "content": " \"depths of the Forbidden Ocean",
+          "context_size": 463,
+          "tokens_generated": 7,
+          "total_time_ms": 110,
+          "turn": 14,
+          "workflow": 4
+        },
+        {
+          "content": " \"the \"whispering will",
+          "context_size": 486,
+          "tokens_generated": 5,
+          "total_time_ms": 108,
+          "turn": 15,
+          "workflow": 4
+        },
+        {
+          "content": " \"wind's song from the \"",
+          "context_size": 511,
+          "tokens_generated": 6,
+          "total_time_ms": 98,
+          "turn": 16,
+          "workflow": 4
+        },
+        {
+          "content": " \"Tops of the Wind-Wh",
+          "context_size": 533,
+          "tokens_generated": 5,
+          "total_time_ms": 130,
+          "turn": 17,
+          "workflow": 4
+        },
+        {
+          "content": " \"Swept Mountains,\n\"",
+          "context_size": 554,
+          "tokens_generated": 5,
+          "total_time_ms": 109,
+          "turn": 18,
+          "workflow": 4
+        },
+        {
+          "content": " \"a \"shimmering feather",
+          "context_size": 578,
+          "tokens_generated": 5,
+          "total_time_ms": 107,
+          "turn": 19,
+          "workflow": 4
+        },
+        {
+          "content": " \"from the \"Nest of the",
+          "context_size": 602,
+          "tokens_generated": 5,
+          "total_time_ms": 120,
+          "turn": 20,
+          "workflow": 4
+        },
+        {
+          "content": " Celestial Phoenix,\n\"and",
+          "context_size": 627,
+          "tokens_generated": 6,
+          "total_time_ms": 125,
+          "turn": 21,
+          "workflow": 4
+        },
+        {
+          "content": " \"a \"crystal tear from",
+          "context_size": 650,
+          "tokens_generated": 5,
+          "total_time_ms": 107,
+          "turn": 22,
+          "workflow": 4
+        },
+        {
+          "content": " \"the \"Crystal Lake of",
+          "context_size": 673,
+          "tokens_generated": 5,
+          "total_time_ms": 109,
+          "turn": 23,
+          "workflow": 4
+        },
+        {
+          "content": " Sorrows.\"\n\nThe story continues",
+          "context_size": 705,
+          "tokens_generated": 7,
+          "total_time_ms": 97,
+          "turn": 24,
+          "workflow": 4
+        },
+        {
+          "content": " \"The queen, intrigued and",
+          "context_size": 732,
+          "tokens_generated": 6,
+          "total_time_ms": 111,
+          "turn": 25,
+          "workflow": 4
+        },
+        {
+          "content": " \"pensive, agreed to the stranger",
+          "context_size": 766,
+          "tokens_generated": 8,
+          "total_time_ms": 108,
+          "turn": 26,
+          "workflow": 4
+        },
+        {
+          "content": " \"s task, and the stranger quickly",
+          "context_size": 801,
+          "tokens_generated": 8,
+          "total_time_ms": 122,
+          "turn": 27,
+          "workflow": 4
+        },
+        {
+          "content": " vanish as mysteriously as they arrived",
+          "context_size": 841,
+          "tokens_generated": 9,
+          "total_time_ms": 141,
+          "turn": 28,
+          "workflow": 4
+        },
+        {
+          "content": " \"With a nod and a faint,",
+          "context_size": 867,
+          "tokens_generated": 6,
+          "total_time_ms": 116,
+          "turn": 29,
+          "workflow": 4
+        },
+        {
+          "content": " \"silver-tinged smile,",
+          "context_size": 890,
+          "tokens_generated": 5,
+          "total_time_ms": 110,
+          "turn": 30,
+          "workflow": 4
+        },
+        {
+          "content": " \"and so, Eldrina began",
+          "context_size": 914,
+          "tokens_generated": 5,
+          "total_time_ms": 123,
+          "turn": 31,
+          "workflow": 4
+        },
+        {
+          "content": " her quest to gather the eight tokens as",
+          "context_size": 955,
+          "tokens_generated": 10,
+          "total_time_ms": 118,
+          "turn": 32,
+          "workflow": 4
+        },
+        {
+          "content": " requested.\n\n\"She embark",
+          "context_size": 980,
+          "tokens_generated": 6,
+          "total_time_ms": 105,
+          "turn": 33,
+          "workflow": 4
+        },
+        {
+          "content": " on a perilous journey through the",
+          "context_size": 1015,
+          "tokens_generated": 8,
+          "total_time_ms": 99,
+          "turn": 34,
+          "workflow": 4
+        },
+        {
+          "content": " \"kingdom's uncharted",
+          "context_size": 1037,
+          "tokens_generated": 5,
+          "total_time_ms": 98,
+          "turn": 35,
+          "workflow": 4
+        },
+        {
+          "content": " territories, encountering mythical be",
+          "context_size": 1076,
+          "tokens_generated": 9,
+          "total_time_ms": 100,
+          "turn": 36,
+          "workflow": 4
+        },
+        {
+          "content": " \"creatures, dangerous traps,",
+          "context_size": 1106,
+          "tokens_generated": 7,
+          "total_time_ms": 114,
+          "turn": 37,
+          "workflow": 4
+        },
+        {
+          "content": " and \"ancient riddles along",
+          "context_size": 1134,
+          "tokens_generated": 6,
+          "total_time_ms": 108,
+          "turn": 38,
+          "workflow": 4
+        },
+        {
+          "content": " \"the \"whispers of the",
+          "context_size": 1157,
+          "tokens_generated": 5,
+          "total_time_ms": 107,
+          "turn": 39,
+          "workflow": 4
+        },
+        {
+          "content": " wind through the \"Wandering Will",
+          "context_size": 1191,
+          "tokens_generated": 8,
+          "total_time_ms": 113,
+          "turn": 40,
+          "workflow": 4
+        },
+        {
+          "content": " \"Trees, guiding her path",
+          "context_size": 1217,
+          "tokens_generated": 6,
+          "total_time_ms": 108,
+          "turn": 41,
+          "workflow": 4
+        },
+        {
+          "content": " \"a \"courageous kn",
+          "context_size": 1236,
+          "tokens_generated": 4,
+          "total_time_ms": 117,
+          "turn": 42,
+          "workflow": 4
+        },
+        {
+          "content": " \"and a \"loyal steed",
+          "context_size": 1257,
+          "tokens_generated": 5,
+          "total_time_ms": 98,
+          "turn": 43,
+          "workflow": 4
+        },
+        {
+          "content": " \"a \"silver key to unlock",
+          "context_size": 1283,
+          "tokens_generated": 6,
+          "total_time_ms": 98,
+          "turn": 44,
+          "workflow": 4
+        },
+        {
+          "content": " the \"long-forgotten door",
+          "context_size": 1309,
+          "tokens_generated": 6,
+          "total_time_ms": 99,
+          "turn": 45,
+          "workflow": 4
+        },
+        {
+          "content": " \"to the \"Enchanted Garden",
+          "context_size": 1336,
+          "tokens_generated": 6,
+          "total_time_ms": 100,
+          "turn": 46,
+          "workflow": 4
+        },
+        {
+          "content": " \"of Eternity,\n\n",
+          "context_size": 1353,
+          "tokens_generated": 4,
+          "total_time_ms": 99,
+          "turn": 47,
+          "workflow": 4
+        },
+        {
+          "content": " \"where she found the \"golden",
+          "context_size": 1383,
+          "tokens_generated": 7,
+          "total_time_ms": 100,
+          "turn": 48,
+          "workflow": 4
+        },
+        {
+          "content": " apple from the Enchanted Garden of",
+          "context_size": 1419,
+          "tokens_generated": 8,
+          "total_time_ms": 129,
+          "turn": 49,
+          "workflow": 4
+        },
+        {
+          "content": " \"Eternity, sailing across",
+          "context_size": 1446,
+          "tokens_generated": 6,
+          "total_time_ms": 108,
+          "turn": 50,
+          "workflow": 4
+        }
+      ],
+      "total_time_seconds": 5.668975788,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_4",
+      "workflow_number": 4
+    },
+    {
+      "avg_turn_time_ms": 109.77551020408163,
+      "final_story": "  in a land far, far away,  there lived a young noble named Eric.  Eric, with a heart full of courage  and a spirit unbroken, emb arked on a quest to prove his  worth to his kingdom. Crossing tre  Challenging mountains, dark forests,  and ancient ruins, Eric encountered magical  creatures, mysterious artifacts, and en  dowed spirits, each offering him a  challenge or a riddle to solve.  As Eric neared the heart of the  kingdom, he came across a grand castle  standing tall and majestic, surrounded by  a moat filled with shimmering  water and glowing flowers. Upon the  castle's towering walls, a  banner fluttered in the wind  bearing the emblem of the kingdom'  and the words, \"Eric,  Son of destiny, the gate to  the ultimate test awaits you. Br  Cross the bridge of swords, where  the blade of truth lies hidden, and  reveal the secret of the kingdom's  future. Seek the crystal orb in  the castle's deepest chamber,  and unlock the power within, to restore  peace and prosperity to the kingdom.  Eric, equipped with his courage and un  broken spirit, approached the bridge of sw  swords, his heart pounding with  anticipation and determination. As he stepped  onto the bridge of swords, each  step echoed ominously, the  blades of the swords humming  with a hidden melody, the air  around him growing colder and more o  mysterious. Eric felt a shiver run down  his spine, but he held his ground  and with a deep breath, he began  his journey across the bridge. With every  step, the swords' hum grew  louder, and the bridge began to  tremble subtly beneath his feet  \"Each step was a test, a  challenge of will and mind, a probe  into the depths of one's  soul. Eric felt the weight of his  quest bearing down on him, but he",
+      "k": 8,
+      "per_turn_metrics": [
+        {
+          "content": " in a land far, far away,",
+          "context_size": 26,
+          "tokens_generated": 6,
+          "total_time_ms": 104,
+          "turn": 1,
+          "workflow": 5
+        },
+        {
+          "content": " there lived a young noble named Eric.",
+          "context_size": 65,
+          "tokens_generated": 9,
+          "total_time_ms": 98,
+          "turn": 2,
+          "workflow": 5
+        },
+        {
+          "content": " Eric, with a heart full of courage",
+          "context_size": 101,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 3,
+          "workflow": 5
+        },
+        {
+          "content": " and a spirit unbroken, emb",
+          "context_size": 129,
+          "tokens_generated": 6,
+          "total_time_ms": 106,
+          "turn": 4,
+          "workflow": 5
+        },
+        {
+          "content": "arked on a quest to prove his",
+          "context_size": 159,
+          "tokens_generated": 7,
+          "total_time_ms": 97,
+          "turn": 5,
+          "workflow": 5
+        },
+        {
+          "content": " worth to his kingdom. Crossing tre",
+          "context_size": 195,
+          "tokens_generated": 8,
+          "total_time_ms": 98,
+          "turn": 6,
+          "workflow": 5
+        },
+        {
+          "content": " Challenging mountains, dark forests,",
+          "context_size": 233,
+          "tokens_generated": 9,
+          "total_time_ms": 99,
+          "turn": 7,
+          "workflow": 5
+        },
+        {
+          "content": " and ancient ruins, Eric encountered magical",
+          "context_size": 278,
+          "tokens_generated": 11,
+          "total_time_ms": 99,
+          "turn": 8,
+          "workflow": 5
+        },
+        {
+          "content": " creatures, mysterious artifacts, and en",
+          "context_size": 319,
+          "tokens_generated": 10,
+          "total_time_ms": 99,
+          "turn": 9,
+          "workflow": 5
+        },
+        {
+          "content": " dowed spirits, each offering him a",
+          "context_size": 355,
+          "tokens_generated": 8,
+          "total_time_ms": 99,
+          "turn": 10,
+          "workflow": 5
+        },
+        {
+          "content": " challenge or a riddle to solve.",
+          "context_size": 388,
+          "tokens_generated": 8,
+          "total_time_ms": 113,
+          "turn": 11,
+          "workflow": 5
+        },
+        {
+          "content": " As Eric neared the heart of the",
+          "context_size": 421,
+          "tokens_generated": 8,
+          "total_time_ms": 123,
+          "turn": 12,
+          "workflow": 5
+        },
+        {
+          "content": " kingdom, he came across a grand castle",
+          "context_size": 461,
+          "tokens_generated": 9,
+          "total_time_ms": 141,
+          "turn": 13,
+          "workflow": 5
+        },
+        {
+          "content": " standing tall and majestic, surrounded by",
+          "context_size": 504,
+          "tokens_generated": 10,
+          "total_time_ms": 111,
+          "turn": 14,
+          "workflow": 5
+        },
+        {
+          "content": " a moat filled with shimmering",
+          "context_size": 535,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 15,
+          "workflow": 5
+        },
+        {
+          "content": " water and glowing flowers. Upon the",
+          "context_size": 572,
+          "tokens_generated": 9,
+          "total_time_ms": 112,
+          "turn": 16,
+          "workflow": 5
+        },
+        {
+          "content": " castle's towering walls, a",
+          "context_size": 600,
+          "tokens_generated": 6,
+          "total_time_ms": 107,
+          "turn": 17,
+          "workflow": 5
+        },
+        {
+          "content": " banner fluttered in the wind",
+          "context_size": 630,
+          "tokens_generated": 7,
+          "total_time_ms": 123,
+          "turn": 18,
+          "workflow": 5
+        },
+        {
+          "content": " bearing the emblem of the kingdom'",
+          "context_size": 666,
+          "tokens_generated": 8,
+          "total_time_ms": 108,
+          "turn": 19,
+          "workflow": 5
+        },
+        {
+          "content": " and the words, \"Eric,",
+          "context_size": 689,
+          "tokens_generated": 5,
+          "total_time_ms": 113,
+          "turn": 20,
+          "workflow": 5
+        },
+        {
+          "content": " Son of destiny, the gate to",
+          "context_size": 718,
+          "tokens_generated": 7,
+          "total_time_ms": 98,
+          "turn": 21,
+          "workflow": 5
+        },
+        {
+          "content": " the ultimate test awaits you. Br",
+          "context_size": 752,
+          "tokens_generated": 8,
+          "total_time_ms": 99,
+          "turn": 22,
+          "workflow": 5
+        },
+        {
+          "content": " Cross the bridge of swords, where",
+          "context_size": 787,
+          "tokens_generated": 8,
+          "total_time_ms": 100,
+          "turn": 23,
+          "workflow": 5
+        },
+        {
+          "content": " the blade of truth lies hidden, and",
+          "context_size": 824,
+          "tokens_generated": 9,
+          "total_time_ms": 119,
+          "turn": 24,
+          "workflow": 5
+        },
+        {
+          "content": " reveal the secret of the kingdom's",
+          "context_size": 860,
+          "tokens_generated": 8,
+          "total_time_ms": 138,
+          "turn": 25,
+          "workflow": 5
+        },
+        {
+          "content": " future. Seek the crystal orb in",
+          "context_size": 893,
+          "tokens_generated": 8,
+          "total_time_ms": 115,
+          "turn": 26,
+          "workflow": 5
+        },
+        {
+          "content": " the castle's deepest chamber,",
+          "context_size": 924,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 27,
+          "workflow": 5
+        },
+        {
+          "content": " and unlock the power within, to restore",
+          "context_size": 965,
+          "tokens_generated": 10,
+          "total_time_ms": 123,
+          "turn": 28,
+          "workflow": 5
+        },
+        {
+          "content": " peace and prosperity to the kingdom.",
+          "context_size": 1003,
+          "tokens_generated": 9,
+          "total_time_ms": 107,
+          "turn": 29,
+          "workflow": 5
+        },
+        {
+          "content": " Eric, equipped with his courage and un",
+          "context_size": 1043,
+          "tokens_generated": 9,
+          "total_time_ms": 106,
+          "turn": 30,
+          "workflow": 5
+        },
+        {
+          "content": " broken spirit, approached the bridge of sw",
+          "context_size": 1087,
+          "tokens_generated": 10,
+          "total_time_ms": 113,
+          "turn": 31,
+          "workflow": 5
+        },
+        {
+          "content": " swords, his heart pounding with",
+          "context_size": 1120,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 32,
+          "workflow": 5
+        },
+        {
+          "content": " anticipation and determination. As he stepped",
+          "context_size": 1167,
+          "tokens_generated": 11,
+          "total_time_ms": 107,
+          "turn": 33,
+          "workflow": 5
+        },
+        {
+          "content": " onto the bridge of swords, each",
+          "context_size": 1200,
+          "tokens_generated": 8,
+          "total_time_ms": 97,
+          "turn": 34,
+          "workflow": 5
+        },
+        {
+          "content": " step echoed ominously, the",
+          "context_size": 1228,
+          "tokens_generated": 6,
+          "total_time_ms": 115,
+          "turn": 35,
+          "workflow": 5
+        },
+        {
+          "content": " blades of the swords humming",
+          "context_size": 1258,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 36,
+          "workflow": 5
+        },
+        {
+          "content": " with a hidden melody, the air",
+          "context_size": 1289,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 37,
+          "workflow": 5
+        },
+        {
+          "content": " around him growing colder and more o",
+          "context_size": 1327,
+          "tokens_generated": 9,
+          "total_time_ms": 113,
+          "turn": 38,
+          "workflow": 5
+        },
+        {
+          "content": " mysterious. Eric felt a shiver run down",
+          "context_size": 1368,
+          "tokens_generated": 10,
+          "total_time_ms": 123,
+          "turn": 39,
+          "workflow": 5
+        },
+        {
+          "content": " his spine, but he held his ground",
+          "context_size": 1403,
+          "tokens_generated": 8,
+          "total_time_ms": 124,
+          "turn": 40,
+          "workflow": 5
+        },
+        {
+          "content": " and with a deep breath, he began",
+          "context_size": 1437,
+          "tokens_generated": 8,
+          "total_time_ms": 109,
+          "turn": 41,
+          "workflow": 5
+        },
+        {
+          "content": " his journey across the bridge. With every",
+          "context_size": 1480,
+          "tokens_generated": 10,
+          "total_time_ms": 106,
+          "turn": 42,
+          "workflow": 5
+        },
+        {
+          "content": " step, the swords' hum grew",
+          "context_size": 1508,
+          "tokens_generated": 6,
+          "total_time_ms": 99,
+          "turn": 43,
+          "workflow": 5
+        },
+        {
+          "content": " louder, and the bridge began to",
+          "context_size": 1541,
+          "tokens_generated": 8,
+          "total_time_ms": 113,
+          "turn": 44,
+          "workflow": 5
+        },
+        {
+          "content": " tremble subtly beneath his feet",
+          "context_size": 1574,
+          "tokens_generated": 8,
+          "total_time_ms": 110,
+          "turn": 45,
+          "workflow": 5
+        },
+        {
+          "content": " \"Each step was a test, a",
+          "context_size": 1600,
+          "tokens_generated": 6,
+          "total_time_ms": 109,
+          "turn": 46,
+          "workflow": 5
+        },
+        {
+          "content": " challenge of will and mind, a probe",
+          "context_size": 1637,
+          "tokens_generated": 9,
+          "total_time_ms": 108,
+          "turn": 47,
+          "workflow": 5
+        },
+        {
+          "content": " into the depths of one's",
+          "context_size": 1663,
+          "tokens_generated": 6,
+          "total_time_ms": 98,
+          "turn": 48,
+          "workflow": 5
+        },
+        {
+          "content": " soul. Eric felt the weight of his",
+          "context_size": 1698,
+          "tokens_generated": 8,
+          "total_time_ms": 114,
+          "turn": 49,
+          "workflow": 5
+        },
+        {
+          "content": " quest bearing down on him, but he",
+          "context_size": 1733,
+          "tokens_generated": 8,
+          "total_time_ms": 124,
+          "turn": 50,
+          "workflow": 5
+        }
+      ],
+      "total_time_seconds": 5.568657429,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_5",
+      "workflow_number": 5
+    },
+    {
+      "avg_turn_time_ms": 108.16326530612245,
+      "final_story": "  in a land far, far away,  there lived a brave knight named Sir  Percival. He embarked  on a perilous journey to the  discover the location of the legendary Holy Gra  Grail, hidden deep within the en  mystic Forest of Shadows. As  he ventured deeper into the Forest of  Shadows, Sir Percival encountered  a cunning trickster named Merlin  who, disguised as an old her  hermit, challenged Sir Percival  to solve a riddle that would lead  him to the Grail. The r  riddle Merlin presented was as follows  follows:\n\n\"In the heart  \"of the forest, where no leaf  falls, there lies a stone that sh  glows with an ethereal light  \"Upon solving the riddle,  Sir Percival pondered the  \"meaning of the riddle,  \"considering the contrast between the  \"lush, leafy forest and  \"a place where no leaf falls.\"  \"Finally, with a flash of  insight, Sir Percival realized that  the riddle referred to a tree in  spring, when the trees are in blo  bloom and no leaves have fallen yet  \"Sir Percival then ventured  deeper into the forest, guided by his  newfound understanding, and after a long  and arduous search, he came  upon a magnificent tree, a beacon  of ethereal light amidst the  darkness of the forest. Its branches were  adorned with delicate pink bloss  \"flowers that seemed to dance in  the gentle breeze, and at its base  lay a stone that shimmered with  a faint, otherworldly glow.  \"Sir Percival approached the tree  and, with a reverent bow,  \"touched the glowing stone  Sir Percival felt a surge of  energy course through his body, and a  voice echoed from the stone, \"  \"speaking the prophecy of  the Holy Grail's location:",
+      "k": 8,
+      "per_turn_metrics": [
+        {
+          "content": " in a land far, far away,",
+          "context_size": 26,
+          "tokens_generated": 6,
+          "total_time_ms": 114,
+          "turn": 1,
+          "workflow": 6
+        },
+        {
+          "content": " there lived a brave knight named Sir",
+          "context_size": 64,
+          "tokens_generated": 9,
+          "total_time_ms": 106,
+          "turn": 2,
+          "workflow": 6
+        },
+        {
+          "content": " Percival. He embarked",
+          "context_size": 87,
+          "tokens_generated": 5,
+          "total_time_ms": 96,
+          "turn": 3,
+          "workflow": 6
+        },
+        {
+          "content": " on a perilous journey to the",
+          "context_size": 117,
+          "tokens_generated": 7,
+          "total_time_ms": 107,
+          "turn": 4,
+          "workflow": 6
+        },
+        {
+          "content": " discover the location of the legendary Holy Gra",
+          "context_size": 166,
+          "tokens_generated": 12,
+          "total_time_ms": 116,
+          "turn": 5,
+          "workflow": 6
+        },
+        {
+          "content": " Grail, hidden deep within the en",
+          "context_size": 200,
+          "tokens_generated": 8,
+          "total_time_ms": 98,
+          "turn": 6,
+          "workflow": 6
+        },
+        {
+          "content": " mystic Forest of Shadows. As",
+          "context_size": 230,
+          "tokens_generated": 7,
+          "total_time_ms": 98,
+          "turn": 7,
+          "workflow": 6
+        },
+        {
+          "content": " he ventured deeper into the Forest of",
+          "context_size": 269,
+          "tokens_generated": 9,
+          "total_time_ms": 113,
+          "turn": 8,
+          "workflow": 6
+        },
+        {
+          "content": " Shadows, Sir Percival encountered",
+          "context_size": 304,
+          "tokens_generated": 8,
+          "total_time_ms": 128,
+          "turn": 9,
+          "workflow": 6
+        },
+        {
+          "content": " a cunning trickster named Merlin",
+          "context_size": 338,
+          "tokens_generated": 8,
+          "total_time_ms": 112,
+          "turn": 10,
+          "workflow": 6
+        },
+        {
+          "content": " who, disguised as an old her",
+          "context_size": 368,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 11,
+          "workflow": 6
+        },
+        {
+          "content": " hermit, challenged Sir Percival",
+          "context_size": 401,
+          "tokens_generated": 8,
+          "total_time_ms": 113,
+          "turn": 12,
+          "workflow": 6
+        },
+        {
+          "content": " to solve a riddle that would lead",
+          "context_size": 436,
+          "tokens_generated": 8,
+          "total_time_ms": 108,
+          "turn": 13,
+          "workflow": 6
+        },
+        {
+          "content": " him to the Grail. The r",
+          "context_size": 461,
+          "tokens_generated": 6,
+          "total_time_ms": 107,
+          "turn": 14,
+          "workflow": 6
+        },
+        {
+          "content": " riddle Merlin presented was as follows",
+          "context_size": 501,
+          "tokens_generated": 9,
+          "total_time_ms": 96,
+          "turn": 15,
+          "workflow": 6
+        },
+        {
+          "content": " follows:\n\n\"In the heart",
+          "context_size": 526,
+          "tokens_generated": 6,
+          "total_time_ms": 114,
+          "turn": 16,
+          "workflow": 6
+        },
+        {
+          "content": " \"of the forest, where no leaf",
+          "context_size": 557,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 17,
+          "workflow": 6
+        },
+        {
+          "content": " falls, there lies a stone that sh",
+          "context_size": 592,
+          "tokens_generated": 8,
+          "total_time_ms": 124,
+          "turn": 18,
+          "workflow": 6
+        },
+        {
+          "content": " glows with an ethereal light",
+          "context_size": 622,
+          "tokens_generated": 7,
+          "total_time_ms": 124,
+          "turn": 19,
+          "workflow": 6
+        },
+        {
+          "content": " \"Upon solving the riddle,",
+          "context_size": 649,
+          "tokens_generated": 6,
+          "total_time_ms": 140,
+          "turn": 20,
+          "workflow": 6
+        },
+        {
+          "content": " Sir Percival pondered the",
+          "context_size": 676,
+          "tokens_generated": 6,
+          "total_time_ms": 110,
+          "turn": 21,
+          "workflow": 6
+        },
+        {
+          "content": " \"meaning of the riddle,",
+          "context_size": 701,
+          "tokens_generated": 6,
+          "total_time_ms": 107,
+          "turn": 22,
+          "workflow": 6
+        },
+        {
+          "content": " \"considering the contrast between the",
+          "context_size": 740,
+          "tokens_generated": 9,
+          "total_time_ms": 129,
+          "turn": 23,
+          "workflow": 6
+        },
+        {
+          "content": " \"lush, leafy forest and",
+          "context_size": 765,
+          "tokens_generated": 6,
+          "total_time_ms": 107,
+          "turn": 24,
+          "workflow": 6
+        },
+        {
+          "content": " \"a place where no leaf falls.\"",
+          "context_size": 797,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 25,
+          "workflow": 6
+        },
+        {
+          "content": " \"Finally, with a flash of",
+          "context_size": 824,
+          "tokens_generated": 6,
+          "total_time_ms": 98,
+          "turn": 26,
+          "workflow": 6
+        },
+        {
+          "content": " insight, Sir Percival realized that",
+          "context_size": 861,
+          "tokens_generated": 9,
+          "total_time_ms": 98,
+          "turn": 27,
+          "workflow": 6
+        },
+        {
+          "content": " the riddle referred to a tree in",
+          "context_size": 895,
+          "tokens_generated": 8,
+          "total_time_ms": 99,
+          "turn": 28,
+          "workflow": 6
+        },
+        {
+          "content": " spring, when the trees are in blo",
+          "context_size": 930,
+          "tokens_generated": 8,
+          "total_time_ms": 109,
+          "turn": 29,
+          "workflow": 6
+        },
+        {
+          "content": " bloom and no leaves have fallen yet",
+          "context_size": 967,
+          "tokens_generated": 9,
+          "total_time_ms": 107,
+          "turn": 30,
+          "workflow": 6
+        },
+        {
+          "content": " \"Sir Percival then ventured",
+          "context_size": 996,
+          "tokens_generated": 7,
+          "total_time_ms": 100,
+          "turn": 31,
+          "workflow": 6
+        },
+        {
+          "content": " deeper into the forest, guided by his",
+          "context_size": 1035,
+          "tokens_generated": 9,
+          "total_time_ms": 99,
+          "turn": 32,
+          "workflow": 6
+        },
+        {
+          "content": " newfound understanding, and after a long",
+          "context_size": 1077,
+          "tokens_generated": 10,
+          "total_time_ms": 100,
+          "turn": 33,
+          "workflow": 6
+        },
+        {
+          "content": " and arduous search, he came",
+          "context_size": 1106,
+          "tokens_generated": 7,
+          "total_time_ms": 99,
+          "turn": 34,
+          "workflow": 6
+        },
+        {
+          "content": " upon a magnificent tree, a beacon",
+          "context_size": 1141,
+          "tokens_generated": 8,
+          "total_time_ms": 99,
+          "turn": 35,
+          "workflow": 6
+        },
+        {
+          "content": " of ethereal light amidst the",
+          "context_size": 1171,
+          "tokens_generated": 7,
+          "total_time_ms": 100,
+          "turn": 36,
+          "workflow": 6
+        },
+        {
+          "content": " darkness of the forest. Its branches were",
+          "context_size": 1214,
+          "tokens_generated": 10,
+          "total_time_ms": 100,
+          "turn": 37,
+          "workflow": 6
+        },
+        {
+          "content": " adorned with delicate pink bloss",
+          "context_size": 1248,
+          "tokens_generated": 8,
+          "total_time_ms": 100,
+          "turn": 38,
+          "workflow": 6
+        },
+        {
+          "content": " \"flowers that seemed to dance in",
+          "context_size": 1282,
+          "tokens_generated": 8,
+          "total_time_ms": 100,
+          "turn": 39,
+          "workflow": 6
+        },
+        {
+          "content": " the gentle breeze, and at its base",
+          "context_size": 1318,
+          "tokens_generated": 8,
+          "total_time_ms": 100,
+          "turn": 40,
+          "workflow": 6
+        },
+        {
+          "content": " lay a stone that shimmered with",
+          "context_size": 1351,
+          "tokens_generated": 8,
+          "total_time_ms": 115,
+          "turn": 41,
+          "workflow": 6
+        },
+        {
+          "content": " a faint, otherworldly glow.",
+          "context_size": 1380,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 42,
+          "workflow": 6
+        },
+        {
+          "content": " \"Sir Percival approached the tree",
+          "context_size": 1415,
+          "tokens_generated": 8,
+          "total_time_ms": 123,
+          "turn": 43,
+          "workflow": 6
+        },
+        {
+          "content": " and, with a reverent bow,",
+          "context_size": 1442,
+          "tokens_generated": 6,
+          "total_time_ms": 107,
+          "turn": 44,
+          "workflow": 6
+        },
+        {
+          "content": " \"touched the glowing stone",
+          "context_size": 1470,
+          "tokens_generated": 6,
+          "total_time_ms": 137,
+          "turn": 45,
+          "workflow": 6
+        },
+        {
+          "content": " Sir Percival felt a surge of",
+          "context_size": 1500,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 46,
+          "workflow": 6
+        },
+        {
+          "content": " energy course through his body, and a",
+          "context_size": 1539,
+          "tokens_generated": 9,
+          "total_time_ms": 108,
+          "turn": 47,
+          "workflow": 6
+        },
+        {
+          "content": " voice echoed from the stone, \"",
+          "context_size": 1571,
+          "tokens_generated": 7,
+          "total_time_ms": 97,
+          "turn": 48,
+          "workflow": 6
+        },
+        {
+          "content": " \"speaking the prophecy of",
+          "context_size": 1598,
+          "tokens_generated": 6,
+          "total_time_ms": 98,
+          "turn": 49,
+          "workflow": 6
+        },
+        {
+          "content": " the Holy Grail's location:",
+          "context_size": 1626,
+          "tokens_generated": 6,
+          "total_time_ms": 114,
+          "turn": 50,
+          "workflow": 6
+        }
+      ],
+      "total_time_seconds": 5.496924693,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_6",
+      "workflow_number": 6
+    },
+    {
+      "avg_turn_time_ms": 111.57142857142857,
+      "final_story": "  in a land far, far away,  there lived a brave knight named Sir  Alexander the Great. He embarked  upon a perilous quest to find  The mythical Dragon's Hoard  to conquer the fearsome, fire  breathing Dragon, Flamefang. As  he journeyed through treacherous mountains  and winding valleys, he  encountered an enigmatic sorceress  who offerred him a magical map,  that would lead him directly to The Dragon  and his lair. But the map  came with a warning: \"The path  to The Dragon's Hoard is  filled with trials and tribulations, and  only the purest of heart shall prev  prevail. The map shall guide you  but it will not protect you. Be  brave, my friend, for the journey  awaits you,\n\nfor the  \"On this map, you'll  find a series of cryptic symbols that  represent riddles or challenges you must  solve to progress.\n\n1.  1. At the start of your  journey, you'll encounter a r  1. At the start of your  journey, you'll encounter a r  riddle guarded by a stone statue  of a wise old man. To pass  through, you must answer this question:  \"What in the world has roots as  deep as the sea and sleeps with  Tops?\nThe answer to the  riddle is \"Trees.\" With  the solution to the riddle, you  can proceed on your journey.\n\n  2. Further along your path,  you'll stumble upon a per  2. Further along your path,  you'll stumble upon a per  1. perilous river that  blocks your way. To cross the river  2, you must find a mysterious  \"2. A treasure chest, hidden  3. deep within the forest,  contains a magical golden key. Use the  key to unlock a hidden door in the  3. The river, which flows",
+      "k": 8,
+      "per_turn_metrics": [
+        {
+          "content": " in a land far, far away,",
+          "context_size": 26,
+          "tokens_generated": 6,
+          "total_time_ms": 105,
+          "turn": 1,
+          "workflow": 7
+        },
+        {
+          "content": " there lived a brave knight named Sir",
+          "context_size": 64,
+          "tokens_generated": 9,
+          "total_time_ms": 106,
+          "turn": 2,
+          "workflow": 7
+        },
+        {
+          "content": " Alexander the Great. He embarked",
+          "context_size": 98,
+          "tokens_generated": 8,
+          "total_time_ms": 97,
+          "turn": 3,
+          "workflow": 7
+        },
+        {
+          "content": " upon a perilous quest to find",
+          "context_size": 129,
+          "tokens_generated": 7,
+          "total_time_ms": 114,
+          "turn": 4,
+          "workflow": 7
+        },
+        {
+          "content": " The mythical Dragon's Hoard",
+          "context_size": 158,
+          "tokens_generated": 7,
+          "total_time_ms": 123,
+          "turn": 5,
+          "workflow": 7
+        },
+        {
+          "content": " to conquer the fearsome, fire",
+          "context_size": 189,
+          "tokens_generated": 7,
+          "total_time_ms": 124,
+          "turn": 6,
+          "workflow": 7
+        },
+        {
+          "content": " breathing Dragon, Flamefang. As",
+          "context_size": 222,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 7,
+          "workflow": 7
+        },
+        {
+          "content": " he journeyed through treacherous mountains",
+          "context_size": 266,
+          "tokens_generated": 10,
+          "total_time_ms": 106,
+          "turn": 8,
+          "workflow": 7
+        },
+        {
+          "content": " and winding valleys, he",
+          "context_size": 291,
+          "tokens_generated": 6,
+          "total_time_ms": 128,
+          "turn": 9,
+          "workflow": 7
+        },
+        {
+          "content": " encountered an enigmatic sorceress",
+          "context_size": 327,
+          "tokens_generated": 8,
+          "total_time_ms": 123,
+          "turn": 10,
+          "workflow": 7
+        },
+        {
+          "content": " who offerred him a magical map,",
+          "context_size": 360,
+          "tokens_generated": 8,
+          "total_time_ms": 123,
+          "turn": 11,
+          "workflow": 7
+        },
+        {
+          "content": " that would lead him directly to The Dragon",
+          "context_size": 404,
+          "tokens_generated": 10,
+          "total_time_ms": 108,
+          "turn": 12,
+          "workflow": 7
+        },
+        {
+          "content": " and his lair. But the map",
+          "context_size": 431,
+          "tokens_generated": 6,
+          "total_time_ms": 107,
+          "turn": 13,
+          "workflow": 7
+        },
+        {
+          "content": " came with a warning: \"The path",
+          "context_size": 463,
+          "tokens_generated": 7,
+          "total_time_ms": 97,
+          "turn": 14,
+          "workflow": 7
+        },
+        {
+          "content": " to The Dragon's Hoard is",
+          "context_size": 489,
+          "tokens_generated": 6,
+          "total_time_ms": 99,
+          "turn": 15,
+          "workflow": 7
+        },
+        {
+          "content": " filled with trials and tribulations, and",
+          "context_size": 531,
+          "tokens_generated": 10,
+          "total_time_ms": 99,
+          "turn": 16,
+          "workflow": 7
+        },
+        {
+          "content": " only the purest of heart shall prev",
+          "context_size": 568,
+          "tokens_generated": 9,
+          "total_time_ms": 122,
+          "turn": 17,
+          "workflow": 7
+        },
+        {
+          "content": " prevail. The map shall guide you",
+          "context_size": 602,
+          "tokens_generated": 8,
+          "total_time_ms": 155,
+          "turn": 18,
+          "workflow": 7
+        },
+        {
+          "content": " but it will not protect you. Be",
+          "context_size": 635,
+          "tokens_generated": 8,
+          "total_time_ms": 128,
+          "turn": 19,
+          "workflow": 7
+        },
+        {
+          "content": " brave, my friend, for the journey",
+          "context_size": 670,
+          "tokens_generated": 8,
+          "total_time_ms": 129,
+          "turn": 20,
+          "workflow": 7
+        },
+        {
+          "content": " awaits you,\n\nfor the",
+          "context_size": 692,
+          "tokens_generated": 5,
+          "total_time_ms": 108,
+          "turn": 21,
+          "workflow": 7
+        },
+        {
+          "content": " \"On this map, you'll",
+          "context_size": 714,
+          "tokens_generated": 5,
+          "total_time_ms": 107,
+          "turn": 22,
+          "workflow": 7
+        },
+        {
+          "content": " find a series of cryptic symbols that",
+          "context_size": 753,
+          "tokens_generated": 9,
+          "total_time_ms": 97,
+          "turn": 23,
+          "workflow": 7
+        },
+        {
+          "content": " represent riddles or challenges you must",
+          "context_size": 795,
+          "tokens_generated": 10,
+          "total_time_ms": 99,
+          "turn": 24,
+          "workflow": 7
+        },
+        {
+          "content": " solve to progress.\n\n1.",
+          "context_size": 819,
+          "tokens_generated": 5,
+          "total_time_ms": 98,
+          "turn": 25,
+          "workflow": 7
+        },
+        {
+          "content": " 1. At the start of your",
+          "context_size": 844,
+          "tokens_generated": 6,
+          "total_time_ms": 127,
+          "turn": 26,
+          "workflow": 7
+        },
+        {
+          "content": " journey, you'll encounter a r",
+          "context_size": 875,
+          "tokens_generated": 7,
+          "total_time_ms": 104,
+          "turn": 27,
+          "workflow": 7
+        },
+        {
+          "content": " 1. At the start of your",
+          "context_size": 900,
+          "tokens_generated": 6,
+          "total_time_ms": 117,
+          "turn": 28,
+          "workflow": 7
+        },
+        {
+          "content": " journey, you'll encounter a r",
+          "context_size": 931,
+          "tokens_generated": 7,
+          "total_time_ms": 110,
+          "turn": 29,
+          "workflow": 7
+        },
+        {
+          "content": " riddle guarded by a stone statue",
+          "context_size": 965,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 30,
+          "workflow": 7
+        },
+        {
+          "content": " of a wise old man. To pass",
+          "context_size": 993,
+          "tokens_generated": 6,
+          "total_time_ms": 114,
+          "turn": 31,
+          "workflow": 7
+        },
+        {
+          "content": " through, you must answer this question:",
+          "context_size": 1034,
+          "tokens_generated": 10,
+          "total_time_ms": 122,
+          "turn": 32,
+          "workflow": 7
+        },
+        {
+          "content": " \"What in the world has roots as",
+          "context_size": 1067,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 33,
+          "workflow": 7
+        },
+        {
+          "content": " deep as the sea and sleeps with",
+          "context_size": 1100,
+          "tokens_generated": 8,
+          "total_time_ms": 109,
+          "turn": 34,
+          "workflow": 7
+        },
+        {
+          "content": " Tops?\nThe answer to the",
+          "context_size": 1125,
+          "tokens_generated": 6,
+          "total_time_ms": 107,
+          "turn": 35,
+          "workflow": 7
+        },
+        {
+          "content": " riddle is \"Trees.\" With",
+          "context_size": 1150,
+          "tokens_generated": 6,
+          "total_time_ms": 99,
+          "turn": 36,
+          "workflow": 7
+        },
+        {
+          "content": " the solution to the riddle, you",
+          "context_size": 1183,
+          "tokens_generated": 8,
+          "total_time_ms": 101,
+          "turn": 37,
+          "workflow": 7
+        },
+        {
+          "content": " can proceed on your journey.\n\n",
+          "context_size": 1215,
+          "tokens_generated": 7,
+          "total_time_ms": 113,
+          "turn": 38,
+          "workflow": 7
+        },
+        {
+          "content": " 2. Further along your path,",
+          "context_size": 1244,
+          "tokens_generated": 7,
+          "total_time_ms": 124,
+          "turn": 39,
+          "workflow": 7
+        },
+        {
+          "content": " you'll stumble upon a per",
+          "context_size": 1271,
+          "tokens_generated": 6,
+          "total_time_ms": 108,
+          "turn": 40,
+          "workflow": 7
+        },
+        {
+          "content": " 2. Further along your path,",
+          "context_size": 1300,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 41,
+          "workflow": 7
+        },
+        {
+          "content": " you'll stumble upon a per",
+          "context_size": 1327,
+          "tokens_generated": 6,
+          "total_time_ms": 98,
+          "turn": 42,
+          "workflow": 7
+        },
+        {
+          "content": " 1. perilous river that",
+          "context_size": 1351,
+          "tokens_generated": 5,
+          "total_time_ms": 100,
+          "turn": 43,
+          "workflow": 7
+        },
+        {
+          "content": " blocks your way. To cross the river",
+          "context_size": 1388,
+          "tokens_generated": 9,
+          "total_time_ms": 100,
+          "turn": 44,
+          "workflow": 7
+        },
+        {
+          "content": " 2, you must find a mysterious",
+          "context_size": 1419,
+          "tokens_generated": 7,
+          "total_time_ms": 115,
+          "turn": 45,
+          "workflow": 7
+        },
+        {
+          "content": " \"2. A treasure chest, hidden",
+          "context_size": 1449,
+          "tokens_generated": 7,
+          "total_time_ms": 122,
+          "turn": 46,
+          "workflow": 7
+        },
+        {
+          "content": " 3. deep within the forest,",
+          "context_size": 1477,
+          "tokens_generated": 6,
+          "total_time_ms": 110,
+          "turn": 47,
+          "workflow": 7
+        },
+        {
+          "content": " contains a magical golden key. Use the",
+          "context_size": 1517,
+          "tokens_generated": 9,
+          "total_time_ms": 109,
+          "turn": 48,
+          "workflow": 7
+        },
+        {
+          "content": " key to unlock a hidden door in the",
+          "context_size": 1553,
+          "tokens_generated": 8,
+          "total_time_ms": 122,
+          "turn": 49,
+          "workflow": 7
+        },
+        {
+          "content": " 3. The river, which flows",
+          "context_size": 1580,
+          "tokens_generated": 6,
+          "total_time_ms": 110,
+          "turn": 50,
+          "workflow": 7
+        }
+      ],
+      "total_time_seconds": 5.647156571,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_7",
+      "workflow_number": 7
+    },
+    {
+      "avg_turn_time_ms": 111.04081632653062,
+      "final_story": "  in a magical kingdom, there lived a  noble dragon named Eon. Endowed  with the wisdom of the ages, E  ony he was a solitary creature  In a hidden valley, where the sun  never quite reached its full glory, and  shadows danced upon the ancient stones.  Every day, Eon would awaken  and soar high above the valley,  searching for the fabled land of light  and harmony, where the sun shone  brightly without fear of fading,  and where laughter echoed through the air  In this enchanted realm, E  lived a group of mystical creatures,  known as the Luminaries, who  possessed an extraordinary ability to harness the  power of light and maintain the balance of  their world. One day, Eon  felt a strange sensation, a faint gl  glimmer of light that seemed to call  to him from afar. Intr  igued and driven by an unsp  quenchable curiosity, Eon  ventured towards the source of the light  and as Eon flew closer, the  glimmer grew brighter, casting a  path of shimmering radiance across  the darkened sky. As Eon  approached the source, the Luminaries  Perceived the approaching dragon, their eyes  shining with a mix of wariness and  curiosity. They gathered at the edge of  their sacred grove, awaiting the  arrival of the stranger. The Lumin  Arians, the leaders of the L  enclave, welcomed Eon,  inviting him to join them in their  sacred rites and share in the power  of the sun's eternal light.  Eon, with a sense of a  wonder and humility, accepted their invitation  and as the sun rose, casting its  golden rays upon the sacred grove  As the sun's golden rays  bathed the grove, a transformation  occurred within Eon, his scales sh  glimmered with the hues of  golden light, his eyes gleamed with  wisdom and understanding beyond what he had ever",
+      "k": 8,
+      "per_turn_metrics": [
+        {
+          "content": " in a magical kingdom, there lived a",
+          "context_size": 37,
+          "tokens_generated": 9,
+          "total_time_ms": 106,
+          "turn": 1,
+          "workflow": 8
+        },
+        {
+          "content": " noble dragon named Eon. Endowed",
+          "context_size": 70,
+          "tokens_generated": 8,
+          "total_time_ms": 101,
+          "turn": 2,
+          "workflow": 8
+        },
+        {
+          "content": " with the wisdom of the ages, E",
+          "context_size": 102,
+          "tokens_generated": 7,
+          "total_time_ms": 113,
+          "turn": 3,
+          "workflow": 8
+        },
+        {
+          "content": " ony he was a solitary creature",
+          "context_size": 134,
+          "tokens_generated": 7,
+          "total_time_ms": 107,
+          "turn": 4,
+          "workflow": 8
+        },
+        {
+          "content": " In a hidden valley, where the sun",
+          "context_size": 169,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 5,
+          "workflow": 8
+        },
+        {
+          "content": " never quite reached its full glory, and",
+          "context_size": 210,
+          "tokens_generated": 10,
+          "total_time_ms": 111,
+          "turn": 6,
+          "workflow": 8
+        },
+        {
+          "content": " shadows danced upon the ancient stones.",
+          "context_size": 251,
+          "tokens_generated": 10,
+          "total_time_ms": 103,
+          "turn": 7,
+          "workflow": 8
+        },
+        {
+          "content": " Every day, Eon would awaken",
+          "context_size": 280,
+          "tokens_generated": 7,
+          "total_time_ms": 123,
+          "turn": 8,
+          "workflow": 8
+        },
+        {
+          "content": " and soar high above the valley,",
+          "context_size": 313,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 9,
+          "workflow": 8
+        },
+        {
+          "content": " searching for the fabled land of light",
+          "context_size": 353,
+          "tokens_generated": 9,
+          "total_time_ms": 107,
+          "turn": 10,
+          "workflow": 8
+        },
+        {
+          "content": " and harmony, where the sun shone",
+          "context_size": 387,
+          "tokens_generated": 8,
+          "total_time_ms": 96,
+          "turn": 11,
+          "workflow": 8
+        },
+        {
+          "content": " brightly without fear of fading,",
+          "context_size": 421,
+          "tokens_generated": 8,
+          "total_time_ms": 128,
+          "turn": 12,
+          "workflow": 8
+        },
+        {
+          "content": " and where laughter echoed through the air",
+          "context_size": 464,
+          "tokens_generated": 10,
+          "total_time_ms": 108,
+          "turn": 13,
+          "workflow": 8
+        },
+        {
+          "content": " In this enchanted realm, E",
+          "context_size": 492,
+          "tokens_generated": 6,
+          "total_time_ms": 123,
+          "turn": 14,
+          "workflow": 8
+        },
+        {
+          "content": " lived a group of mystical creatures,",
+          "context_size": 530,
+          "tokens_generated": 9,
+          "total_time_ms": 107,
+          "turn": 15,
+          "workflow": 8
+        },
+        {
+          "content": " known as the Luminaries, who",
+          "context_size": 560,
+          "tokens_generated": 7,
+          "total_time_ms": 122,
+          "turn": 16,
+          "workflow": 8
+        },
+        {
+          "content": " possessed an extraordinary ability to harness the",
+          "context_size": 611,
+          "tokens_generated": 12,
+          "total_time_ms": 123,
+          "turn": 17,
+          "workflow": 8
+        },
+        {
+          "content": " power of light and maintain the balance of",
+          "context_size": 655,
+          "tokens_generated": 10,
+          "total_time_ms": 124,
+          "turn": 18,
+          "workflow": 8
+        },
+        {
+          "content": " their world. One day, Eon",
+          "context_size": 682,
+          "tokens_generated": 6,
+          "total_time_ms": 108,
+          "turn": 19,
+          "workflow": 8
+        },
+        {
+          "content": " felt a strange sensation, a faint gl",
+          "context_size": 720,
+          "tokens_generated": 9,
+          "total_time_ms": 106,
+          "turn": 20,
+          "workflow": 8
+        },
+        {
+          "content": " glimmer of light that seemed to call",
+          "context_size": 758,
+          "tokens_generated": 9,
+          "total_time_ms": 98,
+          "turn": 21,
+          "workflow": 8
+        },
+        {
+          "content": " to him from afar. Intr",
+          "context_size": 782,
+          "tokens_generated": 5,
+          "total_time_ms": 99,
+          "turn": 22,
+          "workflow": 8
+        },
+        {
+          "content": " igued and driven by an unsp",
+          "context_size": 811,
+          "tokens_generated": 7,
+          "total_time_ms": 114,
+          "turn": 23,
+          "workflow": 8
+        },
+        {
+          "content": " quenchable curiosity, Eon",
+          "context_size": 838,
+          "tokens_generated": 6,
+          "total_time_ms": 127,
+          "turn": 24,
+          "workflow": 8
+        },
+        {
+          "content": " ventured towards the source of the light",
+          "context_size": 880,
+          "tokens_generated": 10,
+          "total_time_ms": 109,
+          "turn": 25,
+          "workflow": 8
+        },
+        {
+          "content": " and as Eon flew closer, the",
+          "context_size": 909,
+          "tokens_generated": 7,
+          "total_time_ms": 109,
+          "turn": 26,
+          "workflow": 8
+        },
+        {
+          "content": " glimmer grew brighter, casting a",
+          "context_size": 943,
+          "tokens_generated": 8,
+          "total_time_ms": 108,
+          "turn": 27,
+          "workflow": 8
+        },
+        {
+          "content": " path of shimmering radiance across",
+          "context_size": 979,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 28,
+          "workflow": 8
+        },
+        {
+          "content": " the darkened sky. As Eon",
+          "context_size": 1005,
+          "tokens_generated": 6,
+          "total_time_ms": 106,
+          "turn": 29,
+          "workflow": 8
+        },
+        {
+          "content": " approached the source, the Luminaries",
+          "context_size": 1044,
+          "tokens_generated": 9,
+          "total_time_ms": 98,
+          "turn": 30,
+          "workflow": 8
+        },
+        {
+          "content": " Perceived the approaching dragon, their eyes",
+          "context_size": 1090,
+          "tokens_generated": 11,
+          "total_time_ms": 99,
+          "turn": 31,
+          "workflow": 8
+        },
+        {
+          "content": " shining with a mix of wariness and",
+          "context_size": 1126,
+          "tokens_generated": 8,
+          "total_time_ms": 114,
+          "turn": 32,
+          "workflow": 8
+        },
+        {
+          "content": " curiosity. They gathered at the edge of",
+          "context_size": 1167,
+          "tokens_generated": 10,
+          "total_time_ms": 108,
+          "turn": 33,
+          "workflow": 8
+        },
+        {
+          "content": " their sacred grove, awaiting the",
+          "context_size": 1201,
+          "tokens_generated": 8,
+          "total_time_ms": 123,
+          "turn": 34,
+          "workflow": 8
+        },
+        {
+          "content": " arrival of the stranger. The Lumin",
+          "context_size": 1237,
+          "tokens_generated": 8,
+          "total_time_ms": 108,
+          "turn": 35,
+          "workflow": 8
+        },
+        {
+          "content": " Arians, the leaders of the L",
+          "context_size": 1267,
+          "tokens_generated": 7,
+          "total_time_ms": 107,
+          "turn": 36,
+          "workflow": 8
+        },
+        {
+          "content": " enclave, welcomed Eon,",
+          "context_size": 1291,
+          "tokens_generated": 5,
+          "total_time_ms": 97,
+          "turn": 37,
+          "workflow": 8
+        },
+        {
+          "content": " inviting him to join them in their",
+          "context_size": 1327,
+          "tokens_generated": 8,
+          "total_time_ms": 100,
+          "turn": 38,
+          "workflow": 8
+        },
+        {
+          "content": " sacred rites and share in the power",
+          "context_size": 1364,
+          "tokens_generated": 9,
+          "total_time_ms": 100,
+          "turn": 39,
+          "workflow": 8
+        },
+        {
+          "content": " of the sun's eternal light.",
+          "context_size": 1393,
+          "tokens_generated": 7,
+          "total_time_ms": 118,
+          "turn": 40,
+          "workflow": 8
+        },
+        {
+          "content": " Eon, with a sense of a",
+          "context_size": 1417,
+          "tokens_generated": 5,
+          "total_time_ms": 110,
+          "turn": 41,
+          "workflow": 8
+        },
+        {
+          "content": " wonder and humility, accepted their invitation",
+          "context_size": 1465,
+          "tokens_generated": 11,
+          "total_time_ms": 125,
+          "turn": 42,
+          "workflow": 8
+        },
+        {
+          "content": " and as the sun rose, casting its",
+          "context_size": 1499,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 43,
+          "workflow": 8
+        },
+        {
+          "content": " golden rays upon the sacred grove",
+          "context_size": 1534,
+          "tokens_generated": 8,
+          "total_time_ms": 123,
+          "turn": 44,
+          "workflow": 8
+        },
+        {
+          "content": " As the sun's golden rays",
+          "context_size": 1560,
+          "tokens_generated": 6,
+          "total_time_ms": 108,
+          "turn": 45,
+          "workflow": 8
+        },
+        {
+          "content": " bathed the grove, a transformation",
+          "context_size": 1596,
+          "tokens_generated": 8,
+          "total_time_ms": 108,
+          "turn": 46,
+          "workflow": 8
+        },
+        {
+          "content": " occurred within Eon, his scales sh",
+          "context_size": 1632,
+          "tokens_generated": 8,
+          "total_time_ms": 122,
+          "turn": 47,
+          "workflow": 8
+        },
+        {
+          "content": " glimmered with the hues of",
+          "context_size": 1660,
+          "tokens_generated": 6,
+          "total_time_ms": 134,
+          "turn": 48,
+          "workflow": 8
+        },
+        {
+          "content": " golden light, his eyes gleamed with",
+          "context_size": 1697,
+          "tokens_generated": 9,
+          "total_time_ms": 123,
+          "turn": 49,
+          "workflow": 8
+        },
+        {
+          "content": " wisdom and understanding beyond what he had ever",
+          "context_size": 1747,
+          "tokens_generated": 12,
+          "total_time_ms": 108,
+          "turn": 50,
+          "workflow": 8
+        }
+      ],
+      "total_time_seconds": 5.628311609,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_8",
+      "workflow_number": 8
+    },
+    {
+      "avg_turn_time_ms": 109.08163265306122,
+      "final_story": "  in a far-off land, there  lived a young and brave knight named  Sir Lionheart. One day, a  distress call echoed through the kingdom,  announcing a monstrous dragon terror  had laid waste to a nearby village.  Without further ado, let's  complete the story together:\n\nSir  Lionheart, spurred into action  by the dire news, swiftly mounted  his steed, the noble and swift  Pegasus, and galloped towards  the burning village, flames and smoke bill  rising high into the air, casting a  dark and ominous shadow over the  landscapes. As Sir Lionheart approached  the gates of the charred village,  he was met by the terrified villagers  who pleaded for his help, their  voices trembling with fear. \"F  Sir Lionheart, with a resolute  heart, he reassured the villagers  \"You are not alone, I am  here to help. I will defeat the  dragon and protect our land.\"\n\n  With a deep breath and a determined look  in his eyes, Sir Lionheart charging  towards the dragon's lair,  Pegasus, Sir Lionheart'  galloping with all its might. The  dragon, sensing the approach of its  enemy, roared with a fierce and  terrifying sound, unleashing a  torrent of flames towards Sir Lionheart  As the flames approached, Sir Lionheart  raised his shield, absorbing the fier  y blaze, the shield glowing  hot under the intense heat.\n\n  With a mighty leap, Sir Lion  Lionheart soared over the flames,  landing gracefully on the dragon's  back, brandishing his sword with un  Sir Lionheart, with a powerful strike  swiped the sharp blade across the  dragon's vulnerable scales, causing it  to roar in pain and struggle beneath  him. Sir Lionheart, taking advantage  of the moment, he dug his sp  heels into the dragon's scales and  with a Herculean effort, Sir",
+      "k": 8,
+      "per_turn_metrics": [
+        {
+          "content": " in a far-off land, there",
+          "context_size": 26,
+          "tokens_generated": 6,
+          "total_time_ms": 111,
+          "turn": 1,
+          "workflow": 9
+        },
+        {
+          "content": " lived a young and brave knight named",
+          "context_size": 64,
+          "tokens_generated": 9,
+          "total_time_ms": 108,
+          "turn": 2,
+          "workflow": 9
+        },
+        {
+          "content": " Sir Lionheart. One day, a",
+          "context_size": 91,
+          "tokens_generated": 6,
+          "total_time_ms": 112,
+          "turn": 3,
+          "workflow": 9
+        },
+        {
+          "content": " distress call echoed through the kingdom,",
+          "context_size": 134,
+          "tokens_generated": 10,
+          "total_time_ms": 117,
+          "turn": 4,
+          "workflow": 9
+        },
+        {
+          "content": " announcing a monstrous dragon terror",
+          "context_size": 172,
+          "tokens_generated": 9,
+          "total_time_ms": 107,
+          "turn": 5,
+          "workflow": 9
+        },
+        {
+          "content": " had laid waste to a nearby village.",
+          "context_size": 209,
+          "tokens_generated": 9,
+          "total_time_ms": 106,
+          "turn": 6,
+          "workflow": 9
+        },
+        {
+          "content": " Without further ado, let's",
+          "context_size": 237,
+          "tokens_generated": 6,
+          "total_time_ms": 112,
+          "turn": 7,
+          "workflow": 9
+        },
+        {
+          "content": " complete the story together:\n\nSir",
+          "context_size": 272,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 8,
+          "workflow": 9
+        },
+        {
+          "content": " Lionheart, spurred into action",
+          "context_size": 304,
+          "tokens_generated": 7,
+          "total_time_ms": 121,
+          "turn": 9,
+          "workflow": 9
+        },
+        {
+          "content": " by the dire news, swiftly mounted",
+          "context_size": 339,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 10,
+          "workflow": 9
+        },
+        {
+          "content": " his steed, the noble and swift",
+          "context_size": 371,
+          "tokens_generated": 7,
+          "total_time_ms": 114,
+          "turn": 11,
+          "workflow": 9
+        },
+        {
+          "content": " Pegasus, and galloped towards",
+          "context_size": 402,
+          "tokens_generated": 7,
+          "total_time_ms": 95,
+          "turn": 12,
+          "workflow": 9
+        },
+        {
+          "content": " the burning village, flames and smoke bill",
+          "context_size": 446,
+          "tokens_generated": 10,
+          "total_time_ms": 98,
+          "turn": 13,
+          "workflow": 9
+        },
+        {
+          "content": " rising high into the air, casting a",
+          "context_size": 483,
+          "tokens_generated": 9,
+          "total_time_ms": 113,
+          "turn": 14,
+          "workflow": 9
+        },
+        {
+          "content": " dark and ominous shadow over the",
+          "context_size": 517,
+          "tokens_generated": 8,
+          "total_time_ms": 123,
+          "turn": 15,
+          "workflow": 9
+        },
+        {
+          "content": " landscapes. As Sir Lionheart approached",
+          "context_size": 558,
+          "tokens_generated": 10,
+          "total_time_ms": 109,
+          "turn": 16,
+          "workflow": 9
+        },
+        {
+          "content": " the gates of the charred village,",
+          "context_size": 593,
+          "tokens_generated": 8,
+          "total_time_ms": 108,
+          "turn": 17,
+          "workflow": 9
+        },
+        {
+          "content": " he was met by the terrified villagers",
+          "context_size": 632,
+          "tokens_generated": 9,
+          "total_time_ms": 105,
+          "turn": 18,
+          "workflow": 9
+        },
+        {
+          "content": " who pleaded for his help, their",
+          "context_size": 665,
+          "tokens_generated": 8,
+          "total_time_ms": 99,
+          "turn": 19,
+          "workflow": 9
+        },
+        {
+          "content": " voices trembling with fear. \"F",
+          "context_size": 697,
+          "tokens_generated": 7,
+          "total_time_ms": 99,
+          "turn": 20,
+          "workflow": 9
+        },
+        {
+          "content": " Sir Lionheart, with a resolute",
+          "context_size": 729,
+          "tokens_generated": 7,
+          "total_time_ms": 99,
+          "turn": 21,
+          "workflow": 9
+        },
+        {
+          "content": " heart, he reassured the villagers",
+          "context_size": 764,
+          "tokens_generated": 8,
+          "total_time_ms": 99,
+          "turn": 22,
+          "workflow": 9
+        },
+        {
+          "content": " \"You are not alone, I am",
+          "context_size": 790,
+          "tokens_generated": 6,
+          "total_time_ms": 100,
+          "turn": 23,
+          "workflow": 9
+        },
+        {
+          "content": " here to help. I will defeat the",
+          "context_size": 823,
+          "tokens_generated": 8,
+          "total_time_ms": 100,
+          "turn": 24,
+          "workflow": 9
+        },
+        {
+          "content": " dragon and protect our land.\"\n\n",
+          "context_size": 856,
+          "tokens_generated": 8,
+          "total_time_ms": 99,
+          "turn": 25,
+          "workflow": 9
+        },
+        {
+          "content": " With a deep breath and a determined look",
+          "context_size": 898,
+          "tokens_generated": 10,
+          "total_time_ms": 100,
+          "turn": 26,
+          "workflow": 9
+        },
+        {
+          "content": " in his eyes, Sir Lionheart charging",
+          "context_size": 935,
+          "tokens_generated": 9,
+          "total_time_ms": 100,
+          "turn": 27,
+          "workflow": 9
+        },
+        {
+          "content": " towards the dragon's lair,",
+          "context_size": 963,
+          "tokens_generated": 6,
+          "total_time_ms": 101,
+          "turn": 28,
+          "workflow": 9
+        },
+        {
+          "content": " Pegasus, Sir Lionheart'",
+          "context_size": 988,
+          "tokens_generated": 6,
+          "total_time_ms": 100,
+          "turn": 29,
+          "workflow": 9
+        },
+        {
+          "content": " galloping with all its might. The",
+          "context_size": 1023,
+          "tokens_generated": 8,
+          "total_time_ms": 116,
+          "turn": 30,
+          "workflow": 9
+        },
+        {
+          "content": " dragon, sensing the approach of its",
+          "context_size": 1060,
+          "tokens_generated": 9,
+          "total_time_ms": 108,
+          "turn": 31,
+          "workflow": 9
+        },
+        {
+          "content": " enemy, roared with a fierce and",
+          "context_size": 1093,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 32,
+          "workflow": 9
+        },
+        {
+          "content": " terrifying sound, unleashing a",
+          "context_size": 1125,
+          "tokens_generated": 7,
+          "total_time_ms": 98,
+          "turn": 33,
+          "workflow": 9
+        },
+        {
+          "content": " torrent of flames towards Sir Lionheart",
+          "context_size": 1166,
+          "tokens_generated": 10,
+          "total_time_ms": 160,
+          "turn": 34,
+          "workflow": 9
+        },
+        {
+          "content": " As the flames approached, Sir Lionheart",
+          "context_size": 1207,
+          "tokens_generated": 10,
+          "total_time_ms": 112,
+          "turn": 35,
+          "workflow": 9
+        },
+        {
+          "content": " raised his shield, absorbing the fier",
+          "context_size": 1246,
+          "tokens_generated": 9,
+          "total_time_ms": 109,
+          "turn": 36,
+          "workflow": 9
+        },
+        {
+          "content": " y blaze, the shield glowing",
+          "context_size": 1275,
+          "tokens_generated": 7,
+          "total_time_ms": 97,
+          "turn": 37,
+          "workflow": 9
+        },
+        {
+          "content": " hot under the intense heat.\n\n",
+          "context_size": 1306,
+          "tokens_generated": 7,
+          "total_time_ms": 144,
+          "turn": 38,
+          "workflow": 9
+        },
+        {
+          "content": " With a mighty leap, Sir Lion",
+          "context_size": 1336,
+          "tokens_generated": 7,
+          "total_time_ms": 107,
+          "turn": 39,
+          "workflow": 9
+        },
+        {
+          "content": " Lionheart soared over the flames,",
+          "context_size": 1371,
+          "tokens_generated": 8,
+          "total_time_ms": 123,
+          "turn": 40,
+          "workflow": 9
+        },
+        {
+          "content": " landing gracefully on the dragon's",
+          "context_size": 1407,
+          "tokens_generated": 8,
+          "total_time_ms": 107,
+          "turn": 41,
+          "workflow": 9
+        },
+        {
+          "content": " back, brandishing his sword with un",
+          "context_size": 1444,
+          "tokens_generated": 9,
+          "total_time_ms": 107,
+          "turn": 42,
+          "workflow": 9
+        },
+        {
+          "content": " Sir Lionheart, with a powerful strike",
+          "context_size": 1483,
+          "tokens_generated": 9,
+          "total_time_ms": 97,
+          "turn": 43,
+          "workflow": 9
+        },
+        {
+          "content": " swiped the sharp blade across the",
+          "context_size": 1518,
+          "tokens_generated": 8,
+          "total_time_ms": 114,
+          "turn": 44,
+          "workflow": 9
+        },
+        {
+          "content": " dragon's vulnerable scales, causing it",
+          "context_size": 1558,
+          "tokens_generated": 9,
+          "total_time_ms": 108,
+          "turn": 45,
+          "workflow": 9
+        },
+        {
+          "content": " to roar in pain and struggle beneath",
+          "context_size": 1596,
+          "tokens_generated": 9,
+          "total_time_ms": 113,
+          "turn": 46,
+          "workflow": 9
+        },
+        {
+          "content": " him. Sir Lionheart, taking advantage",
+          "context_size": 1634,
+          "tokens_generated": 9,
+          "total_time_ms": 122,
+          "turn": 47,
+          "workflow": 9
+        },
+        {
+          "content": " of the moment, he dug his sp",
+          "context_size": 1664,
+          "tokens_generated": 7,
+          "total_time_ms": 122,
+          "turn": 48,
+          "workflow": 9
+        },
+        {
+          "content": " heels into the dragon's scales and",
+          "context_size": 1700,
+          "tokens_generated": 8,
+          "total_time_ms": 109,
+          "turn": 49,
+          "workflow": 9
+        },
+        {
+          "content": " with a Herculean effort, Sir",
+          "context_size": 1730,
+          "tokens_generated": 7,
+          "total_time_ms": 107,
+          "turn": 50,
+          "workflow": 9
+        }
+      ],
+      "total_time_seconds": 5.55100503,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_9",
+      "workflow_number": 9
+    },
+    {
+      "avg_turn_time_ms": 112.46938775510205,
+      "final_story": "  in a far-off land, there  lived a brave knight named Sir Gal  Gal, upon his trusty steed  Sir Gal Gal, upon his trusty  steed, Silverlight, the kn  brave Sir Gal Gal embarked on  a quest to rescue the princess who had  been captured by the wicked sorcer  King Moros, ruler of the  Dark Kingdom. As Sir Gal Gal approached  King Moros' ominous fort  castle, he noticed a large, o  ominous moat filled with gl  1. \"glowing, fier  \"1. 'glowing, fier  2. \"crystals  \"2. 'glowing, fier  3. \"that surrounded the castle  3. \"and shimmered  \"4. \"Sir Gal Gal,  4. 'dismounted from  his steed, Silverlight, and  approached the moat, taking a moment  5. 'to gaze upon the  5. 'crystals  6. \"crystals  \"6. 'that glimmered  \"six. 'beneath the water  7. 'with a sense of  7. 'awe, Sir  Gal Gal drew his sword, ready to  cross the moat. As he le  8. 'took a step  8. 'forward, a sudden  \"roar echoed from the castle  \"8. 'took a step  forward, a sudden roar echoed  \"echoed from the castle walls,  \"8. 'rattling Sir  Gal's heart. But the brave  knight, undeterred, stepped  further into the moat, the gl  'crystals beneath the water  \"glowing, crystals beneath the  water, illuminating his path.  9. 'As he waded  deeper, the roar grew louder  9. 'and more omin  9. 'until it seemed to  fill the entire castle. Yet, Sir",
+      "k": 8,
+      "per_turn_metrics": [
+        {
+          "content": " in a far-off land, there",
+          "context_size": 26,
+          "tokens_generated": 6,
+          "total_time_ms": 104,
+          "turn": 1,
+          "workflow": 10
+        },
+        {
+          "content": " lived a brave knight named Sir Gal",
+          "context_size": 62,
+          "tokens_generated": 8,
+          "total_time_ms": 97,
+          "turn": 2,
+          "workflow": 10
+        },
+        {
+          "content": " Gal, upon his trusty steed",
+          "context_size": 90,
+          "tokens_generated": 6,
+          "total_time_ms": 113,
+          "turn": 3,
+          "workflow": 10
+        },
+        {
+          "content": " Sir Gal Gal, upon his trusty",
+          "context_size": 120,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 4,
+          "workflow": 10
+        },
+        {
+          "content": " steed, Silverlight, the kn",
+          "context_size": 148,
+          "tokens_generated": 6,
+          "total_time_ms": 107,
+          "turn": 5,
+          "workflow": 10
+        },
+        {
+          "content": " brave Sir Gal Gal embarked on",
+          "context_size": 179,
+          "tokens_generated": 7,
+          "total_time_ms": 99,
+          "turn": 6,
+          "workflow": 10
+        },
+        {
+          "content": " a quest to rescue the princess who had",
+          "context_size": 219,
+          "tokens_generated": 9,
+          "total_time_ms": 100,
+          "turn": 7,
+          "workflow": 10
+        },
+        {
+          "content": " been captured by the wicked sorcer",
+          "context_size": 255,
+          "tokens_generated": 8,
+          "total_time_ms": 100,
+          "turn": 8,
+          "workflow": 10
+        },
+        {
+          "content": " King Moros, ruler of the",
+          "context_size": 281,
+          "tokens_generated": 6,
+          "total_time_ms": 115,
+          "turn": 9,
+          "workflow": 10
+        },
+        {
+          "content": " Dark Kingdom. As Sir Gal Gal approached",
+          "context_size": 322,
+          "tokens_generated": 10,
+          "total_time_ms": 106,
+          "turn": 10,
+          "workflow": 10
+        },
+        {
+          "content": " King Moros' ominous fort",
+          "context_size": 348,
+          "tokens_generated": 6,
+          "total_time_ms": 107,
+          "turn": 11,
+          "workflow": 10
+        },
+        {
+          "content": " castle, he noticed a large, o",
+          "context_size": 379,
+          "tokens_generated": 7,
+          "total_time_ms": 113,
+          "turn": 12,
+          "workflow": 10
+        },
+        {
+          "content": " ominous moat filled with gl",
+          "context_size": 408,
+          "tokens_generated": 7,
+          "total_time_ms": 108,
+          "turn": 13,
+          "workflow": 10
+        },
+        {
+          "content": " 1. \"glowing, fier",
+          "context_size": 427,
+          "tokens_generated": 4,
+          "total_time_ms": 139,
+          "turn": 14,
+          "workflow": 10
+        },
+        {
+          "content": " \"1. 'glowing, fier",
+          "context_size": 447,
+          "tokens_generated": 4,
+          "total_time_ms": 139,
+          "turn": 15,
+          "workflow": 10
+        },
+        {
+          "content": " 2. \"crystals",
+          "context_size": 461,
+          "tokens_generated": 3,
+          "total_time_ms": 146,
+          "turn": 16,
+          "workflow": 10
+        },
+        {
+          "content": " \"2. 'glowing, fier",
+          "context_size": 481,
+          "tokens_generated": 4,
+          "total_time_ms": 113,
+          "turn": 17,
+          "workflow": 10
+        },
+        {
+          "content": " 3. \"that surrounded the castle",
+          "context_size": 513,
+          "tokens_generated": 7,
+          "total_time_ms": 107,
+          "turn": 18,
+          "workflow": 10
+        },
+        {
+          "content": " 3. \"and shimmered",
+          "context_size": 532,
+          "tokens_generated": 4,
+          "total_time_ms": 98,
+          "turn": 19,
+          "workflow": 10
+        },
+        {
+          "content": " \"4. \"Sir Gal Gal,",
+          "context_size": 551,
+          "tokens_generated": 4,
+          "total_time_ms": 115,
+          "turn": 20,
+          "workflow": 10
+        },
+        {
+          "content": " 4. 'dismounted from",
+          "context_size": 572,
+          "tokens_generated": 5,
+          "total_time_ms": 116,
+          "turn": 21,
+          "workflow": 10
+        },
+        {
+          "content": " his steed, Silverlight, and",
+          "context_size": 601,
+          "tokens_generated": 7,
+          "total_time_ms": 121,
+          "turn": 22,
+          "workflow": 10
+        },
+        {
+          "content": " approached the moat, taking a moment",
+          "context_size": 639,
+          "tokens_generated": 9,
+          "total_time_ms": 108,
+          "turn": 23,
+          "workflow": 10
+        },
+        {
+          "content": " 5. 'to gaze upon the",
+          "context_size": 661,
+          "tokens_generated": 5,
+          "total_time_ms": 107,
+          "turn": 24,
+          "workflow": 10
+        },
+        {
+          "content": " 5. 'crystals",
+          "context_size": 675,
+          "tokens_generated": 3,
+          "total_time_ms": 99,
+          "turn": 25,
+          "workflow": 10
+        },
+        {
+          "content": " 6. \"crystals",
+          "context_size": 689,
+          "tokens_generated": 3,
+          "total_time_ms": 113,
+          "turn": 26,
+          "workflow": 10
+        },
+        {
+          "content": " \"6. 'that glimmered",
+          "context_size": 710,
+          "tokens_generated": 5,
+          "total_time_ms": 108,
+          "turn": 27,
+          "workflow": 10
+        },
+        {
+          "content": " \"six. 'beneath the water",
+          "context_size": 736,
+          "tokens_generated": 6,
+          "total_time_ms": 107,
+          "turn": 28,
+          "workflow": 10
+        },
+        {
+          "content": " 7. 'with a sense of",
+          "context_size": 757,
+          "tokens_generated": 5,
+          "total_time_ms": 126,
+          "turn": 29,
+          "workflow": 10
+        },
+        {
+          "content": " 7. 'awe, Sir",
+          "context_size": 771,
+          "tokens_generated": 3,
+          "total_time_ms": 109,
+          "turn": 30,
+          "workflow": 10
+        },
+        {
+          "content": " Gal Gal drew his sword, ready to",
+          "context_size": 805,
+          "tokens_generated": 8,
+          "total_time_ms": 109,
+          "turn": 31,
+          "workflow": 10
+        },
+        {
+          "content": " cross the moat. As he le",
+          "context_size": 831,
+          "tokens_generated": 6,
+          "total_time_ms": 107,
+          "turn": 32,
+          "workflow": 10
+        },
+        {
+          "content": " 8. 'took a step",
+          "context_size": 848,
+          "tokens_generated": 4,
+          "total_time_ms": 129,
+          "turn": 33,
+          "workflow": 10
+        },
+        {
+          "content": " 8. 'forward, a sudden",
+          "context_size": 871,
+          "tokens_generated": 5,
+          "total_time_ms": 123,
+          "turn": 34,
+          "workflow": 10
+        },
+        {
+          "content": " \"roar echoed from the castle",
+          "context_size": 901,
+          "tokens_generated": 7,
+          "total_time_ms": 107,
+          "turn": 35,
+          "workflow": 10
+        },
+        {
+          "content": " \"8. 'took a step",
+          "context_size": 919,
+          "tokens_generated": 4,
+          "total_time_ms": 113,
+          "turn": 36,
+          "workflow": 10
+        },
+        {
+          "content": " forward, a sudden roar echoed",
+          "context_size": 950,
+          "tokens_generated": 7,
+          "total_time_ms": 107,
+          "turn": 37,
+          "workflow": 10
+        },
+        {
+          "content": " \"echoed from the castle walls,",
+          "context_size": 982,
+          "tokens_generated": 7,
+          "total_time_ms": 106,
+          "turn": 38,
+          "workflow": 10
+        },
+        {
+          "content": " \"8. 'rattling Sir",
+          "context_size": 1001,
+          "tokens_generated": 4,
+          "total_time_ms": 130,
+          "turn": 39,
+          "workflow": 10
+        },
+        {
+          "content": " Gal's heart. But the brave",
+          "context_size": 1029,
+          "tokens_generated": 6,
+          "total_time_ms": 108,
+          "turn": 40,
+          "workflow": 10
+        },
+        {
+          "content": " knight, undeterred, stepped",
+          "context_size": 1058,
+          "tokens_generated": 7,
+          "total_time_ms": 107,
+          "turn": 41,
+          "workflow": 10
+        },
+        {
+          "content": " further into the moat, the gl",
+          "context_size": 1089,
+          "tokens_generated": 7,
+          "total_time_ms": 99,
+          "turn": 42,
+          "workflow": 10
+        },
+        {
+          "content": " 'crystals beneath the water",
+          "context_size": 1118,
+          "tokens_generated": 7,
+          "total_time_ms": 114,
+          "turn": 43,
+          "workflow": 10
+        },
+        {
+          "content": " \"glowing, crystals beneath the",
+          "context_size": 1150,
+          "tokens_generated": 7,
+          "total_time_ms": 125,
+          "turn": 44,
+          "workflow": 10
+        },
+        {
+          "content": " water, illuminating his path.",
+          "context_size": 1181,
+          "tokens_generated": 7,
+          "total_time_ms": 110,
+          "turn": 45,
+          "workflow": 10
+        },
+        {
+          "content": " 9. 'As he waded",
+          "context_size": 1198,
+          "tokens_generated": 4,
+          "total_time_ms": 108,
+          "turn": 46,
+          "workflow": 10
+        },
+        {
+          "content": " deeper, the roar grew louder",
+          "context_size": 1228,
+          "tokens_generated": 7,
+          "total_time_ms": 126,
+          "turn": 47,
+          "workflow": 10
+        },
+        {
+          "content": " 9. 'and more omin",
+          "context_size": 1247,
+          "tokens_generated": 4,
+          "total_time_ms": 123,
+          "turn": 48,
+          "workflow": 10
+        },
+        {
+          "content": " 9. 'until it seemed to",
+          "context_size": 1271,
+          "tokens_generated": 5,
+          "total_time_ms": 108,
+          "turn": 49,
+          "workflow": 10
+        },
+        {
+          "content": " fill the entire castle. Yet, Sir",
+          "context_size": 1305,
+          "tokens_generated": 8,
+          "total_time_ms": 108,
+          "turn": 50,
+          "workflow": 10
+        }
+      ],
+      "total_time_seconds": 5.690038254,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_10",
+      "workflow_number": 10
+    }
+  ]
+}

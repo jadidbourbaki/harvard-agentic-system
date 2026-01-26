@@ -1,0 +1,84 @@
+{
+  "avg_turn_time_ms": 1254.5555555555557,
+  "final_story": "  In a land far, far away, where the sky was a canvas of twinkling stars and the ground a quilt of vibrant, colorful flowers, there lived a curious young girl named Elara. One day, she stumbled upon a mysterious, old book hidden within the branches of a towering oak tree.\n\nAs she opened the book, pages filled with ancient scripts and enchanting illustrations unfurled before her eyes. Intrigued, Elara began to  read aloud, her voice echoing through the forest. To her surprise, the words seemed to come alive, swirling around her and weaving a tale of an enchanted kingdom and a powerful sorceress named Moria.\n\nAs she continued to read, Elara felt a strange connection to the story, as if she were a part of it. Suddenly, her room transformed into the enchanted kingdom, and she found herself standing before Moria's castle.\n  Swept up by the magic, Elara stepped forward and approached the imposing castle gates. They creaked open, revealing a grand courtyard filled with beautiful fountains, lush gardens, and magnificent statues. Elara marveled at the beauty around her, feeling a sense of awe and wonder.\n\nAs she ventured deeper into the castle, she encountered various magical creatures, each with their own unique stories to tell. One by one, they led her to  Moria herself, who was seated on a magnificent throne. Elara felt a mixture of fear and excitement as she stood before the powerful sorceress. Moria regarded the young girl with a curious gaze, her eyes shining like twin moons.\n\n\"You've come seeking answers, haven't you, Elara?\" Moria asked, her voice as soft as a whisper.\n\nElara nodded, her heart pounding in her chest. \"I have,\" she said  \"And I believe you may hold the key to unlocking the mysteries of this enchanted kingdom,\" Moria replied, a knowing smile spreading across her face.\n\nElara's eyes widened in surprise, and she hesitated for a moment before speaking. \"I do?\" she asked, her voice barely above a whisper.\n\nMoria nodded, her gaze never leaving Elara's face. \"Indeed, you do,\" she said, reaching out to take El  ara's hand. \"But first, you must prove to me that you are worthy of the knowledge I can share,\" she said, her voice filled with determination.\n\nElara nodded, her heart racing. She hesitated for a moment before speaking. \"What must I do?\" she asked, her voice barely above a whisper.\n\nMoria smiled, her eyes twinkling with amusement. \"You must complete a task that only the bravest and smartest of  adventurers have ever attempted,\" Moria said, her voice filled with intrigue. \"I will give you a riddle, and if you can solve it, you will have proven yourself worthy of my knowledge.\"\n\nElara's eyes widened in surprise, and she felt her heart racing with excitement. \"What is the riddle?\" she asked, her voice barely above a whisper.\n\nMoria leaned forward, her gaze intense. \"The answer to the riddle lies  within the heart of the enchanted forest, where the river's song is sweetest,\" Moria said, her voice filled with mystery. \"You must find the ancient tree that sings the most beautiful melody and bring me a single leaf from it.\"\n\nElara's eyes widened, and she felt a surge of determination. \"I will do it!\" she said, her voice filled with determination.\n\nMoria smiled, her eyes twinkling with approval  and gave Elara a small pouch filled with magical seeds. \"Plant these seeds in the heart of the enchanted forest, and they will guide you to the ancient tree,\" Moria said, her voice filled with wisdom.\n\nElara's heart swelled with gratitude, and she quickly thanked Moria before hurrying off to begin her quest. She journeyed deep into the enchanted forest, planting the seeds as she went. As she walked, she  encountered various magical creatures, each offering her advice and guidance on her journey. One small sprite told her to follow the sound of the river, while a wise old owl advised her to trust her instincts and never lose sight of the stars.\n\nElara listened to their words of wisdom, and soon she found herself standing before the tree with the most beautiful melody. She reached out to pluck a single leaf, and as she did, the tree sang out a powerful melody",
+  "k": 100,
+  "machine_info": {
+    "arch": "amd64",
+    "num_cpu": 55,
+    "os": "linux"
+  },
+  "per_turn_metrics": [
+    {
+      "content": " In a land far, far away, where the sky was a canvas of twinkling stars and the ground a quilt of vibrant, colorful flowers, there lived a curious young girl named Elara. One day, she stumbled upon a mysterious, old book hidden within the branches of a towering oak tree.\n\nAs she opened the book, pages filled with ancient scripts and enchanting illustrations unfurled before her eyes. Intrigued, Elara began to",
+      "context_size": 412,
+      "tokens_generated": 102,
+      "total_time_ms": 1090,
+      "turn": 1
+    },
+    {
+      "content": " read aloud, her voice echoing through the forest. To her surprise, the words seemed to come alive, swirling around her and weaving a tale of an enchanted kingdom and a powerful sorceress named Moria.\n\nAs she continued to read, Elara felt a strange connection to the story, as if she were a part of it. Suddenly, her room transformed into the enchanted kingdom, and she found herself standing before Moria's castle.\n",
+      "context_size": 829,
+      "tokens_generated": 104,
+      "total_time_ms": 1143,
+      "turn": 2
+    },
+    {
+      "content": " Swept up by the magic, Elara stepped forward and approached the imposing castle gates. They creaked open, revealing a grand courtyard filled with beautiful fountains, lush gardens, and magnificent statues. Elara marveled at the beauty around her, feeling a sense of awe and wonder.\n\nAs she ventured deeper into the castle, she encountered various magical creatures, each with their own unique stories to tell. One by one, they led her to",
+      "context_size": 1268,
+      "tokens_generated": 109,
+      "total_time_ms": 1137,
+      "turn": 3
+    },
+    {
+      "content": " Moria herself, who was seated on a magnificent throne. Elara felt a mixture of fear and excitement as she stood before the powerful sorceress. Moria regarded the young girl with a curious gaze, her eyes shining like twin moons.\n\n\"You've come seeking answers, haven't you, Elara?\" Moria asked, her voice as soft as a whisper.\n\nElara nodded, her heart pounding in her chest. \"I have,\" she said",
+      "context_size": 1661,
+      "tokens_generated": 98,
+      "total_time_ms": 1154,
+      "turn": 4
+    },
+    {
+      "content": " \"And I believe you may hold the key to unlocking the mysteries of this enchanted kingdom,\" Moria replied, a knowing smile spreading across her face.\n\nElara's eyes widened in surprise, and she hesitated for a moment before speaking. \"I do?\" she asked, her voice barely above a whisper.\n\nMoria nodded, her gaze never leaving Elara's face. \"Indeed, you do,\" she said, reaching out to take El",
+      "context_size": 2051,
+      "tokens_generated": 97,
+      "total_time_ms": 1167,
+      "turn": 5
+    },
+    {
+      "content": " ara's hand. \"But first, you must prove to me that you are worthy of the knowledge I can share,\" she said, her voice filled with determination.\n\nElara nodded, her heart racing. She hesitated for a moment before speaking. \"What must I do?\" she asked, her voice barely above a whisper.\n\nMoria smiled, her eyes twinkling with amusement. \"You must complete a task that only the bravest and smartest of",
+      "context_size": 2449,
+      "tokens_generated": 99,
+      "total_time_ms": 1270,
+      "turn": 6
+    },
+    {
+      "content": " adventurers have ever attempted,\" Moria said, her voice filled with intrigue. \"I will give you a riddle, and if you can solve it, you will have proven yourself worthy of my knowledge.\"\n\nElara's eyes widened in surprise, and she felt her heart racing with excitement. \"What is the riddle?\" she asked, her voice barely above a whisper.\n\nMoria leaned forward, her gaze intense. \"The answer to the riddle lies",
+      "context_size": 2856,
+      "tokens_generated": 101,
+      "total_time_ms": 1311,
+      "turn": 7
+    },
+    {
+      "content": " within the heart of the enchanted forest, where the river's song is sweetest,\" Moria said, her voice filled with mystery. \"You must find the ancient tree that sings the most beautiful melody and bring me a single leaf from it.\"\n\nElara's eyes widened, and she felt a surge of determination. \"I will do it!\" she said, her voice filled with determination.\n\nMoria smiled, her eyes twinkling with approval",
+      "context_size": 3258,
+      "tokens_generated": 100,
+      "total_time_ms": 1378,
+      "turn": 8
+    },
+    {
+      "content": " and gave Elara a small pouch filled with magical seeds. \"Plant these seeds in the heart of the enchanted forest, and they will guide you to the ancient tree,\" Moria said, her voice filled with wisdom.\n\nElara's heart swelled with gratitude, and she quickly thanked Moria before hurrying off to begin her quest. She journeyed deep into the enchanted forest, planting the seeds as she went. As she walked, she",
+      "context_size": 3666,
+      "tokens_generated": 101,
+      "total_time_ms": 1482,
+      "turn": 9
+    },
+    {
+      "content": " encountered various magical creatures, each offering her advice and guidance on her journey. One small sprite told her to follow the sound of the river, while a wise old owl advised her to trust her instincts and never lose sight of the stars.\n\nElara listened to their words of wisdom, and soon she found herself standing before the tree with the most beautiful melody. She reached out to pluck a single leaf, and as she did, the tree sang out a powerful melody",
+      "context_size": 4129,
+      "tokens_generated": 115,
+      "total_time_ms": 1249,
+      "turn": 10
+    }
+  ],
+  "total_time_seconds": 12.400278631,
+  "turns": 10
+}

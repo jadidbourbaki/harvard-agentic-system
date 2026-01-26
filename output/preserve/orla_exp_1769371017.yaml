@@ -1,0 +1,44 @@
+log_format: pretty
+log_level: debug
+agentic_serving:
+  mode: daemon
+  daemon:
+    listen_address: "localhost:8081"
+  llm_servers:
+    - name: "sglang_shared"
+      backend:
+        type: "sglang"
+        endpoint: "http://localhost:30000"
+      model: "sglang:mistralai/Mistral-7B-Instruct-v0.3"
+      context:
+        shared: true
+      cache:
+        policy: "preserve"
+  agent_profiles:
+    - name: "story_agent_a"
+      llm_server: "sglang_shared"
+    - name: "story_agent_b"
+      llm_server: "sglang_shared"
+  workflows:
+    - name: "story_finishing_game"
+      tasks:
+        - agent_profile: story_agent_a
+        - agent_profile: story_agent_b
+        - agent_profile: story_agent_a
+        - agent_profile: story_agent_b
+        - agent_profile: story_agent_a
+        - agent_profile: story_agent_b
+        - agent_profile: story_agent_a
+        - agent_profile: story_agent_b
+        - agent_profile: story_agent_a
+        - agent_profile: story_agent_b
+        - agent_profile: story_agent_a
+        - agent_profile: story_agent_b
+        - agent_profile: story_agent_a
+        - agent_profile: story_agent_b
+        - agent_profile: story_agent_a
+        - agent_profile: story_agent_b
+        - agent_profile: story_agent_a
+        - agent_profile: story_agent_b
+        - agent_profile: story_agent_a
+        - agent_profile: story_agent_b

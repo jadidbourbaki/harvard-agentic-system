@@ -172,9 +172,26 @@ func main() {
 		waited += checkInterval
 	}
 
+	// Continue monitoring daemon process during experiment
+	daemonMonitorDone := make(chan bool, 1)
+	go func() {
+		select {
+		case err := <-processExited:
+			log.Printf("Orla daemon process exited during experiment (exit code: %v)", err)
+			displayLogTail(logFile)
+			log.Fatalf("Orla daemon process exited during experiment. Check full logs at: %s", logFile)
+		case <-daemonMonitorDone:
+			return
+		}
+	}()
+
 	// Run experiment
 	ctx := context.Background()
 	results, err := runExperiment(ctx, orlaURL, *mode, *numTasks)
+
+	// Stop monitoring
+	close(daemonMonitorDone)
+
 	if err != nil {
 		log.Fatalf("Experiment failed: %v", err)
 	}
@@ -451,10 +468,8 @@ func runExperiment(ctx context.Context, orlaURL string, mode string, numTasks in
 
 		analysisStart := time.Now()
 		prompt1 := fmt.Sprintf("Analyze this software engineering issue and identify the problem:\n\nIssue: %s\n\nCurrent code:\n```python\n%s\n```\n\nProvide a brief analysis: what is the problem, what needs to be fixed, and what approach should be taken?", task.Issue, task.Code)
-		// Use a longer timeout for inference tasks (2 minutes should be enough for small models)
-		taskCtx, cancel := context.WithTimeout(ctx, 2*time.Minute)
-		_, err = client.ExecuteTask(taskCtx, execID, taskIndex1, prompt1, 50)
-		cancel()
+		// Use context.Background() to avoid any context cancellation issues that might affect the daemon
+		_, err = client.ExecuteTask(context.Background(), execID, taskIndex1, prompt1, 50)
 		if err != nil {
 			return nil, fmt.Errorf("failed to execute analysis task: %w", err)
 		}
@@ -472,12 +487,21 @@ func runExperiment(ctx context.Context, orlaURL string, mode string, numTasks in
 
 		synthesisStart := time.Now()
 		prompt2 := fmt.Sprintf("Based on the analysis, generate the fixed code for this issue:\n\nIssue: %s\n\nOriginal code:\n```python\n%s\n```\n\nProvide the complete fixed function with proper error handling and edge cases.", task.Issue, task.Code)
-		// Use a longer timeout for code generation (3 minutes for large models, especially Ollama which can be slower)
-		taskCtx, cancel = context.WithTimeout(ctx, 3*time.Minute)
-		_, err = client.ExecuteTask(taskCtx, execID, taskIndex2, prompt2, 150)
-		cancel()
-		if err != nil {
-			return nil, fmt.Errorf("failed to execute synthesis task: %w", err)
+		// Use context.Background() to avoid any context cancellation issues that might affect the daemon
+		// Retry logic for synthesis task (Ollama can be flaky)
+		var synthesisErr error
+		for retry := 0; retry < 3; retry++ {
+			_, synthesisErr = client.ExecuteTask(context.Background(), execID, taskIndex2, prompt2, 150)
+			if synthesisErr == nil {
+				break
+			}
+			if retry < 2 {
+				log.Printf("Synthesis task failed (attempt %d/3), retrying in 2s: %v", retry+1, synthesisErr)
+				time.Sleep(2 * time.Second)
+			}
+		}
+		if synthesisErr != nil {
+			return nil, fmt.Errorf("failed to execute synthesis task after 3 attempts: %w", synthesisErr)
 		}
 		synthesisTime := time.Since(synthesisStart)
 		synthesisTimes = append(synthesisTimes, float64(synthesisTime.Milliseconds()))
@@ -493,10 +517,8 @@ func runExperiment(ctx context.Context, orlaURL string, mode string, numTasks in
 
 		summaryStart := time.Now()
 		prompt3 := fmt.Sprintf("Summarize the fix that was applied to resolve this issue in 2-3 sentences:\n\nIssue: %s", task.Issue)
-		// Use a longer timeout for inference tasks (2 minutes should be enough for small models)
-		taskCtx, cancel = context.WithTimeout(ctx, 2*time.Minute)
-		_, err = client.ExecuteTask(taskCtx, execID, taskIndex3, prompt3, 30)
-		cancel()
+		// Use context.Background() to avoid any context cancellation issues that might affect the daemon
+		_, err = client.ExecuteTask(context.Background(), execID, taskIndex3, prompt3, 30)
 		if err != nil {
 			return nil, fmt.Errorf("failed to execute summary task: %w", err)
 		}

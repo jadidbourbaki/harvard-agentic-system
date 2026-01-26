@@ -1,0 +1,84 @@
+{
+  "avg_turn_time_ms": 125.44444444444444,
+  "final_story": "  In a land far, far away, there lived  a young girl named Elara. She was the  only child of the king and queen. She spent  her days playing in the vast gardens that surrounded the  castle, but she was always drawn to the dark  forest that lay beyond the castle walls. One day  she ventured into the forest, determined to explore  the unknown. As she wandered deeper into the  forest, she stumbled upon an ancient, crumbling  tower, half-hidden by creepers and v",
+  "k": 10,
+  "machine_info": {
+    "arch": "amd64",
+    "num_cpu": 55,
+    "os": "linux"
+  },
+  "per_turn_metrics": [
+    {
+      "content": " In a land far, far away, there lived",
+      "context_size": 38,
+      "tokens_generated": 9,
+      "total_time_ms": 140,
+      "turn": 1
+    },
+    {
+      "content": " a young girl named Elara. She was the",
+      "context_size": 77,
+      "tokens_generated": 9,
+      "total_time_ms": 127,
+      "turn": 2
+    },
+    {
+      "content": " only child of the king and queen. She spent",
+      "context_size": 122,
+      "tokens_generated": 11,
+      "total_time_ms": 120,
+      "turn": 3
+    },
+    {
+      "content": " her days playing in the vast gardens that surrounded the",
+      "context_size": 180,
+      "tokens_generated": 14,
+      "total_time_ms": 122,
+      "turn": 4
+    },
+    {
+      "content": " castle, but she was always drawn to the dark",
+      "context_size": 226,
+      "tokens_generated": 11,
+      "total_time_ms": 123,
+      "turn": 5
+    },
+    {
+      "content": " forest that lay beyond the castle walls. One day",
+      "context_size": 276,
+      "tokens_generated": 12,
+      "total_time_ms": 124,
+      "turn": 6
+    },
+    {
+      "content": " she ventured into the forest, determined to explore",
+      "context_size": 329,
+      "tokens_generated": 13,
+      "total_time_ms": 127,
+      "turn": 7
+    },
+    {
+      "content": " the unknown. As she wandered deeper into the",
+      "context_size": 375,
+      "tokens_generated": 11,
+      "total_time_ms": 127,
+      "turn": 8
+    },
+    {
+      "content": " forest, she stumbled upon an ancient, crumbling",
+      "context_size": 424,
+      "tokens_generated": 12,
+      "total_time_ms": 129,
+      "turn": 9
+    },
+    {
+      "content": " tower, half-hidden by creepers and v",
+      "context_size": 462,
+      "tokens_generated": 9,
+      "total_time_ms": 130,
+      "turn": 10
+    }
+  ],
+  "total_time_seconds": 1.287023218,
+  "turns": 10
+}

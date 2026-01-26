@@ -1,0 +1,4136 @@
+{
+  "avg_turn_time_ms": 202.05918367346936,
+  "k": 16,
+  "machine_info": {
+    "arch": "amd64",
+    "num_cpu": 55,
+    "os": "linux"
+  },
+  "num_workflows": 10,
+  "per_workflow_avg_times": [
+    202.83673469387756,
+    201.3469387755102,
+    197.40816326530611,
+    203.59183673469389,
+    203.6122448979592,
+    201.0612244897959,
+    201.40816326530611,
+    205.3673469387755,
+    202.24489795918367,
+    201.71428571428572
+  ],
+  "total_time_seconds": 101.785705418,
+  "turns_per_workflow": 100,
+  "workflows": [
+    {
+      "avg_turn_time_ms": 202.83673469387756,
+      "final_story": "  in a land far, far away, there lived a young princess named Isol  de. Isolde was not like other princesses; she had a secret  longing for adventure, a yearning to see the world beyond her castle walls  Lived in a towering palace, hidden deep within an enchanted forest  and longed for the day she could escape and explore.\nOne day,  while tending to her garden, Isolde heard a strange melody that  floated through the air, capturing her imagination. Intrigued,  Isolde followed the music's alluring rhythm, venturing deeper into  the forest than she had ever been before. As she walked, the trees seemed  to sway in time with the music, the leaves rustling like a chorus  singing in harmony. The path before her grew more winding, yet Isol  de continued to follow the mysterious melody, her heart pounding with excitement and  anticipation. Soon, the sound grew louder, and Isolde could  see a radiant light up ahead, illuminating a small clearing in the  forest. As she reached the clearing, Isolde gasped in awe  A majestic, ethereal figure emerged from the light, a knight  adorned in shimmering armor, his steed a magnificent unic  horse with a horn that glowed brightly. The knight, recognizing  Isolde's pure heart and adventurous spirit, bowed low  and spoke, \"Fair princess Isolde, I have been waiting for  you, for a long time. I have a quest for you, a journey  that will test your courage and wisdom. A powerful sorceress, Morgana  Le Fay, has cast a curse upon our kingdom, turning its inhabitants into  stones. To break the curse, you must find the legendary Crystal of Life  and journey to the enchanted Crystal Cavern, hidden deep within  the Forbidden Mountains. There, you will find the Crystal of Life,  and with it, you shall restore the kingdom to its former glory. But be ware, for Morgana Le Fay will not let you go unchall  unchallenged. She will send her dark minions to hinder  your progress and protect the Crystal Cavern. But do not fear,  princess Isolde, for I, Sir Tristan, shall accompany you on  your quest, offering my sword and my strength to protect you. Together, we  shall embark on a perilous journey to the Forbidden Mountains, seeking  the Crystal of Life and breaking Morgana Le Fay's curse.  \"And so, with a newfound sense of purpose, Princess Isolde  and Sir Tristan set forth on their journey, venturing through the Forbidden  Mountains, the air growing colder and more treacherous with each passing day  \"As they journeyed through the Forbidden Mountains, Isolde and Sir  Tristan encountered many perils and challenges, but their bond of friendship and Is  trust in each other grew stronger with each obstacle they overcame. They  fought valiantly against Morgana Le Fay's minions, defe  \"minions who sought to hinder their progress, their determination unwaver  \"and their courage unwavering. With each victory, they drew closer  to the enchanted Crystal Cavern, its radiant glow growing  brighter in the distance.\n\nFinally, after many days of travel  and hardship, Isolde and Sir Tristan standing before the entrance of  the enchanted Crystal Cavern, the radiant glow illumin  \"its entrance, casting long, shimmering shadows upon the ground. The  air was thick with anticipation as they prepared to face the final challenge. Taking  a deep breath, Isolde and Sir Tristan stepped into the Crystal",
+      "k": 16,
+      "per_turn_metrics": [
+        {
+          "content": " in a land far, far away, there lived a young princess named Isol",
+          "context_size": 66,
+          "tokens_generated": 16,
+          "total_time_ms": 195,
+          "turn": 1,
+          "workflow": 1
+        },
+        {
+          "content": " de. Isolde was not like other princesses; she had a secret",
+          "context_size": 126,
+          "tokens_generated": 14,
+          "total_time_ms": 190,
+          "turn": 2,
+          "workflow": 1
+        },
+        {
+          "content": " longing for adventure, a yearning to see the world beyond her castle walls",
+          "context_size": 202,
+          "tokens_generated": 18,
+          "total_time_ms": 184,
+          "turn": 3,
+          "workflow": 1
+        },
+        {
+          "content": " Lived in a towering palace, hidden deep within an enchanted forest",
+          "context_size": 270,
+          "tokens_generated": 16,
+          "total_time_ms": 185,
+          "turn": 4,
+          "workflow": 1
+        },
+        {
+          "content": " and longed for the day she could escape and explore.\nOne day,",
+          "context_size": 333,
+          "tokens_generated": 15,
+          "total_time_ms": 199,
+          "turn": 5,
+          "workflow": 1
+        },
+        {
+          "content": " while tending to her garden, Isolde heard a strange melody that",
+          "context_size": 398,
+          "tokens_generated": 16,
+          "total_time_ms": 190,
+          "turn": 6,
+          "workflow": 1
+        },
+        {
+          "content": " floated through the air, capturing her imagination. Intrigued,",
+          "context_size": 462,
+          "tokens_generated": 15,
+          "total_time_ms": 184,
+          "turn": 7,
+          "workflow": 1
+        },
+        {
+          "content": " Isolde followed the music's alluring rhythm, venturing deeper into",
+          "context_size": 530,
+          "tokens_generated": 16,
+          "total_time_ms": 186,
+          "turn": 8,
+          "workflow": 1
+        },
+        {
+          "content": " the forest than she had ever been before. As she walked, the trees seemed",
+          "context_size": 605,
+          "tokens_generated": 18,
+          "total_time_ms": 186,
+          "turn": 9,
+          "workflow": 1
+        },
+        {
+          "content": " to sway in time with the music, the leaves rustling like a chorus",
+          "context_size": 672,
+          "tokens_generated": 16,
+          "total_time_ms": 187,
+          "turn": 10,
+          "workflow": 1
+        },
+        {
+          "content": " singing in harmony. The path before her grew more winding, yet Isol",
+          "context_size": 741,
+          "tokens_generated": 17,
+          "total_time_ms": 268,
+          "turn": 11,
+          "workflow": 1
+        },
+        {
+          "content": " de continued to follow the mysterious melody, her heart pounding with excitement and",
+          "context_size": 827,
+          "tokens_generated": 21,
+          "total_time_ms": 216,
+          "turn": 12,
+          "workflow": 1
+        },
+        {
+          "content": " anticipation. Soon, the sound grew louder, and Isolde could",
+          "context_size": 888,
+          "tokens_generated": 15,
+          "total_time_ms": 191,
+          "turn": 13,
+          "workflow": 1
+        },
+        {
+          "content": " see a radiant light up ahead, illuminating a small clearing in the",
+          "context_size": 956,
+          "tokens_generated": 16,
+          "total_time_ms": 215,
+          "turn": 14,
+          "workflow": 1
+        },
+        {
+          "content": " forest. As she reached the clearing, Isolde gasped in awe",
+          "context_size": 1015,
+          "tokens_generated": 14,
+          "total_time_ms": 190,
+          "turn": 15,
+          "workflow": 1
+        },
+        {
+          "content": " A majestic, ethereal figure emerged from the light, a knight",
+          "context_size": 1077,
+          "tokens_generated": 15,
+          "total_time_ms": 183,
+          "turn": 16,
+          "workflow": 1
+        },
+        {
+          "content": " adorned in shimmering armor, his steed a magnificent unic",
+          "context_size": 1136,
+          "tokens_generated": 14,
+          "total_time_ms": 200,
+          "turn": 17,
+          "workflow": 1
+        },
+        {
+          "content": " horse with a horn that glowed brightly. The knight, recognizing",
+          "context_size": 1201,
+          "tokens_generated": 16,
+          "total_time_ms": 206,
+          "turn": 18,
+          "workflow": 1
+        },
+        {
+          "content": " Isolde's pure heart and adventurous spirit, bowed low",
+          "context_size": 1256,
+          "tokens_generated": 13,
+          "total_time_ms": 217,
+          "turn": 19,
+          "workflow": 1
+        },
+        {
+          "content": " and spoke, \"Fair princess Isolde, I have been waiting for",
+          "context_size": 1315,
+          "tokens_generated": 14,
+          "total_time_ms": 238,
+          "turn": 20,
+          "workflow": 1
+        },
+        {
+          "content": " you, for a long time. I have a quest for you, a journey",
+          "context_size": 1372,
+          "tokens_generated": 14,
+          "total_time_ms": 229,
+          "turn": 21,
+          "workflow": 1
+        },
+        {
+          "content": " that will test your courage and wisdom. A powerful sorceress, Morgana",
+          "context_size": 1443,
+          "tokens_generated": 17,
+          "total_time_ms": 191,
+          "turn": 22,
+          "workflow": 1
+        },
+        {
+          "content": " Le Fay, has cast a curse upon our kingdom, turning its inhabitants into",
+          "context_size": 1516,
+          "tokens_generated": 18,
+          "total_time_ms": 183,
+          "turn": 23,
+          "workflow": 1
+        },
+        {
+          "content": " stones. To break the curse, you must find the legendary Crystal of Life",
+          "context_size": 1589,
+          "tokens_generated": 18,
+          "total_time_ms": 185,
+          "turn": 24,
+          "workflow": 1
+        },
+        {
+          "content": " and journey to the enchanted Crystal Cavern, hidden deep within",
+          "context_size": 1654,
+          "tokens_generated": 16,
+          "total_time_ms": 200,
+          "turn": 25,
+          "workflow": 1
+        },
+        {
+          "content": " the Forbidden Mountains. There, you will find the Crystal of Life,",
+          "context_size": 1722,
+          "tokens_generated": 16,
+          "total_time_ms": 222,
+          "turn": 26,
+          "workflow": 1
+        },
+        {
+          "content": " and with it, you shall restore the kingdom to its former glory. But be",
+          "context_size": 1794,
+          "tokens_generated": 17,
+          "total_time_ms": 208,
+          "turn": 27,
+          "workflow": 1
+        },
+        {
+          "content": "ware, for Morgana Le Fay will not let you go unchall",
+          "context_size": 1847,
+          "tokens_generated": 13,
+          "total_time_ms": 192,
+          "turn": 28,
+          "workflow": 1
+        },
+        {
+          "content": " unchallenged. She will send her dark minions to hinder",
+          "context_size": 1903,
+          "tokens_generated": 13,
+          "total_time_ms": 237,
+          "turn": 29,
+          "workflow": 1
+        },
+        {
+          "content": " your progress and protect the Crystal Cavern. But do not fear,",
+          "context_size": 1967,
+          "tokens_generated": 15,
+          "total_time_ms": 194,
+          "turn": 30,
+          "workflow": 1
+        },
+        {
+          "content": " princess Isolde, for I, Sir Tristan, shall accompany you on",
+          "context_size": 2028,
+          "tokens_generated": 15,
+          "total_time_ms": 191,
+          "turn": 31,
+          "workflow": 1
+        },
+        {
+          "content": " your quest, offering my sword and my strength to protect you. Together, we",
+          "context_size": 2104,
+          "tokens_generated": 18,
+          "total_time_ms": 199,
+          "turn": 32,
+          "workflow": 1
+        },
+        {
+          "content": " shall embark on a perilous journey to the Forbidden Mountains, seeking",
+          "context_size": 2176,
+          "tokens_generated": 17,
+          "total_time_ms": 223,
+          "turn": 33,
+          "workflow": 1
+        },
+        {
+          "content": " the Crystal of Life and breaking Morgana Le Fay's curse.",
+          "context_size": 2234,
+          "tokens_generated": 14,
+          "total_time_ms": 240,
+          "turn": 34,
+          "workflow": 1
+        },
+        {
+          "content": " \"And so, with a newfound sense of purpose, Princess Isolde",
+          "context_size": 2294,
+          "tokens_generated": 14,
+          "total_time_ms": 192,
+          "turn": 35,
+          "workflow": 1
+        },
+        {
+          "content": " and Sir Tristan set forth on their journey, venturing through the Forbidden",
+          "context_size": 2371,
+          "tokens_generated": 19,
+          "total_time_ms": 200,
+          "turn": 36,
+          "workflow": 1
+        },
+        {
+          "content": " Mountains, the air growing colder and more treacherous with each passing day",
+          "context_size": 2449,
+          "tokens_generated": 19,
+          "total_time_ms": 208,
+          "turn": 37,
+          "workflow": 1
+        },
+        {
+          "content": " \"As they journeyed through the Forbidden Mountains, Isolde and Sir",
+          "context_size": 2517,
+          "tokens_generated": 16,
+          "total_time_ms": 215,
+          "turn": 38,
+          "workflow": 1
+        },
+        {
+          "content": " Tristan encountered many perils and challenges, but their bond of friendship and Is",
+          "context_size": 2602,
+          "tokens_generated": 21,
+          "total_time_ms": 194,
+          "turn": 39,
+          "workflow": 1
+        },
+        {
+          "content": " trust in each other grew stronger with each obstacle they overcame. They",
+          "context_size": 2676,
+          "tokens_generated": 18,
+          "total_time_ms": 206,
+          "turn": 40,
+          "workflow": 1
+        },
+        {
+          "content": " fought valiantly against Morgana Le Fay's minions, defe",
+          "context_size": 2733,
+          "tokens_generated": 14,
+          "total_time_ms": 210,
+          "turn": 41,
+          "workflow": 1
+        },
+        {
+          "content": " \"minions who sought to hinder their progress, their determination unwaver",
+          "context_size": 2808,
+          "tokens_generated": 18,
+          "total_time_ms": 191,
+          "turn": 42,
+          "workflow": 1
+        },
+        {
+          "content": " \"and their courage unwavering. With each victory, they drew closer",
+          "context_size": 2876,
+          "tokens_generated": 16,
+          "total_time_ms": 187,
+          "turn": 43,
+          "workflow": 1
+        },
+        {
+          "content": " to the enchanted Crystal Cavern, its radiant glow growing",
+          "context_size": 2935,
+          "tokens_generated": 14,
+          "total_time_ms": 188,
+          "turn": 44,
+          "workflow": 1
+        },
+        {
+          "content": " brighter in the distance.\n\nFinally, after many days of travel",
+          "context_size": 2998,
+          "tokens_generated": 15,
+          "total_time_ms": 214,
+          "turn": 45,
+          "workflow": 1
+        },
+        {
+          "content": " and hardship, Isolde and Sir Tristan standing before the entrance of",
+          "context_size": 3068,
+          "tokens_generated": 17,
+          "total_time_ms": 194,
+          "turn": 46,
+          "workflow": 1
+        },
+        {
+          "content": " the enchanted Crystal Cavern, the radiant glow illumin",
+          "context_size": 3124,
+          "tokens_generated": 13,
+          "total_time_ms": 237,
+          "turn": 47,
+          "workflow": 1
+        },
+        {
+          "content": " \"its entrance, casting long, shimmering shadows upon the ground. The",
+          "context_size": 3194,
+          "tokens_generated": 17,
+          "total_time_ms": 202,
+          "turn": 48,
+          "workflow": 1
+        },
+        {
+          "content": " air was thick with anticipation as they prepared to face the final challenge. Taking",
+          "context_size": 3280,
+          "tokens_generated": 21,
+          "total_time_ms": 192,
+          "turn": 49,
+          "workflow": 1
+        },
+        {
+          "content": " a deep breath, Isolde and Sir Tristan stepped into the Crystal",
+          "context_size": 3344,
+          "tokens_generated": 15,
+          "total_time_ms": 200,
+          "turn": 50,
+          "workflow": 1
+        }
+      ],
+      "total_time_seconds": 10.225988374,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_1",
+      "workflow_number": 1
+    },
+    {
+      "avg_turn_time_ms": 201.3469387755102,
+      "final_story": "  in a far-off kingdom, there lived a brave knight named Sir Gal  Percival. He was renowned for his strength, honor, and un  true courage. One day, a mysterious prophecy foretold the arrival  of a dark sorcerer who would bring destruction to the kingdom. Sir Gal  Percival, undeterred by fear, vowed to protect his home  and set off on a perilous journey to seek the ancient artifact known  as the \"Eternal Amulet,\" said to have the power to van  vanquish the dark sorcerer.\n\nAfter months of travel,  Sir Gal Percival finally reached the rumored location of the Eternal A  Amulet, hidden deep within the treacherous Labyrinth of Sh  Shadows. As he entered the labyrinth, the air grew colder  and darker. The walls were adorned with twisted, gnarled  stones, and the ground was covered in a thick layer of dust. A faint  glimmer of light ahead caught Sir Gal Percival's eye, and  he approached it with caution, his heart pounding in his chest. The light  led him to a grand chamber, the source of the light revealed to be a  shimmering crystal suspended in the air, casting an ethereal glow upon  the chamber. As Sir Gal Percival stepped into the light, he felt  a sudden surge of energy coursing through his veins, invigorating  him and filling him with a newfound sense of determination. In the center of  the chamber, upon a pedestal, lay the Eternal Amulet,  glistening with an iridescent sheen. Sir Gal Percival  reached out, his fingers trembling with anticipation. As he grasped the  Amulet, a deafening roar echoed through the chamber,  and the walls began to tremble. A colossal figure emerged from the  shadows, the dark sorcerer revealed at last. With a wicked grin  \"Sir Gal Percival, gripping the Eternal Amulet tightly  in his calloused hands, the dark sorcerer let out a g  evil laugh, his eyes glowing with malevolent intent. \"Fool  \"I have been waiting for this moment, brave knight,\" the dark sor  sorcerer sneered, his voice echoing menacingly throughout the chamber  \"the chamber. You have fallen into my trap, and now, the A  amulet's power will be mine! Prepare to meet your do  om's end, Sir Gal Percival!\" The dark sorcerer  raised his staff high, a sinister glow emanating from its tip.  \"But Sir Gal Percival, undeterred by fear and fueled  by his newfound strength, Sir Gal Percival gripped the Eternal  Amulet tighter, his eyes blazing with resolve. With a  roar of his own, Sir Gal Percival charged at the dark sor  sorcerer, his sword glinting in the crystal light. The two  clashed in a fierce battle, their weapons clanging against each other with a  deafening resonance. The chamber shook as the force of their battle r  raged on, the air around them crackling with magical energy. Sir Gal  Percival, with every strike, felt the Amulet's power  surging through him, empowering him further. The dark sorcerer ret  alas, was no match for the brave knight's unyield  ing spirit and newfound power. With a mighty swing, Sir Gal Per  Percival's sword pierced the dark sorcerer's armor  heart, the sorcerer let out a howl of pain and fell to  his knees, the life draining from his eyes. The chamber fell silent,",
+      "k": 16,
+      "per_turn_metrics": [
+        {
+          "content": " in a far-off kingdom, there lived a brave knight named Sir Gal",
+          "context_size": 64,
+          "tokens_generated": 15,
+          "total_time_ms": 205,
+          "turn": 1,
+          "workflow": 2
+        },
+        {
+          "content": " Percival. He was renowned for his strength, honor, and un",
+          "context_size": 123,
+          "tokens_generated": 14,
+          "total_time_ms": 221,
+          "turn": 2,
+          "workflow": 2
+        },
+        {
+          "content": " true courage. One day, a mysterious prophecy foretold the arrival",
+          "context_size": 190,
+          "tokens_generated": 16,
+          "total_time_ms": 207,
+          "turn": 3,
+          "workflow": 2
+        },
+        {
+          "content": " of a dark sorcerer who would bring destruction to the kingdom. Sir Gal",
+          "context_size": 262,
+          "tokens_generated": 17,
+          "total_time_ms": 191,
+          "turn": 4,
+          "workflow": 2
+        },
+        {
+          "content": " Percival, undeterred by fear, vowed to protect his home",
+          "context_size": 319,
+          "tokens_generated": 14,
+          "total_time_ms": 212,
+          "turn": 5,
+          "workflow": 2
+        },
+        {
+          "content": " and set off on a perilous journey to seek the ancient artifact known",
+          "context_size": 389,
+          "tokens_generated": 17,
+          "total_time_ms": 191,
+          "turn": 6,
+          "workflow": 2
+        },
+        {
+          "content": " as the \"Eternal Amulet,\" said to have the power to van",
+          "context_size": 445,
+          "tokens_generated": 13,
+          "total_time_ms": 184,
+          "turn": 7,
+          "workflow": 2
+        },
+        {
+          "content": " vanquish the dark sorcerer.\n\nAfter months of travel,",
+          "context_size": 499,
+          "tokens_generated": 13,
+          "total_time_ms": 186,
+          "turn": 8,
+          "workflow": 2
+        },
+        {
+          "content": " Sir Gal Percival finally reached the rumored location of the Eternal A",
+          "context_size": 571,
+          "tokens_generated": 17,
+          "total_time_ms": 187,
+          "turn": 9,
+          "workflow": 2
+        },
+        {
+          "content": " Amulet, hidden deep within the treacherous Labyrinth of Sh",
+          "context_size": 631,
+          "tokens_generated": 14,
+          "total_time_ms": 215,
+          "turn": 10,
+          "workflow": 2
+        },
+        {
+          "content": " Shadows. As he entered the labyrinth, the air grew colder",
+          "context_size": 690,
+          "tokens_generated": 14,
+          "total_time_ms": 190,
+          "turn": 11,
+          "workflow": 2
+        },
+        {
+          "content": " and darker. The walls were adorned with twisted, gnarled",
+          "context_size": 748,
+          "tokens_generated": 14,
+          "total_time_ms": 200,
+          "turn": 12,
+          "workflow": 2
+        },
+        {
+          "content": " stones, and the ground was covered in a thick layer of dust. A faint",
+          "context_size": 818,
+          "tokens_generated": 17,
+          "total_time_ms": 207,
+          "turn": 13,
+          "workflow": 2
+        },
+        {
+          "content": " glimmer of light ahead caught Sir Gal Percival's eye, and",
+          "context_size": 877,
+          "tokens_generated": 14,
+          "total_time_ms": 194,
+          "turn": 14,
+          "workflow": 2
+        },
+        {
+          "content": " he approached it with caution, his heart pounding in his chest. The light",
+          "context_size": 952,
+          "tokens_generated": 18,
+          "total_time_ms": 192,
+          "turn": 15,
+          "workflow": 2
+        },
+        {
+          "content": " led him to a grand chamber, the source of the light revealed to be a",
+          "context_size": 1022,
+          "tokens_generated": 17,
+          "total_time_ms": 187,
+          "turn": 16,
+          "workflow": 2
+        },
+        {
+          "content": " shimmering crystal suspended in the air, casting an ethereal glow upon",
+          "context_size": 1094,
+          "tokens_generated": 17,
+          "total_time_ms": 189,
+          "turn": 17,
+          "workflow": 2
+        },
+        {
+          "content": " the chamber. As Sir Gal Percival stepped into the light, he felt",
+          "context_size": 1160,
+          "tokens_generated": 16,
+          "total_time_ms": 189,
+          "turn": 18,
+          "workflow": 2
+        },
+        {
+          "content": " a sudden surge of energy coursing through his veins, invigorating",
+          "context_size": 1227,
+          "tokens_generated": 16,
+          "total_time_ms": 188,
+          "turn": 19,
+          "workflow": 2
+        },
+        {
+          "content": " him and filling him with a newfound sense of determination. In the center of",
+          "context_size": 1305,
+          "tokens_generated": 19,
+          "total_time_ms": 233,
+          "turn": 20,
+          "workflow": 2
+        },
+        {
+          "content": " the chamber, upon a pedestal, lay the Eternal Amulet,",
+          "context_size": 1360,
+          "tokens_generated": 13,
+          "total_time_ms": 216,
+          "turn": 21,
+          "workflow": 2
+        },
+        {
+          "content": " glistening with an iridescent sheen. Sir Gal Percival",
+          "context_size": 1415,
+          "tokens_generated": 13,
+          "total_time_ms": 205,
+          "turn": 22,
+          "workflow": 2
+        },
+        {
+          "content": " reached out, his fingers trembling with anticipation. As he grasped the",
+          "context_size": 1488,
+          "tokens_generated": 18,
+          "total_time_ms": 190,
+          "turn": 23,
+          "workflow": 2
+        },
+        {
+          "content": " Amulet, a deafening roar echoed through the chamber,",
+          "context_size": 1542,
+          "tokens_generated": 13,
+          "total_time_ms": 198,
+          "turn": 24,
+          "workflow": 2
+        },
+        {
+          "content": " and the walls began to tremble. A colossal figure emerged from the",
+          "context_size": 1610,
+          "tokens_generated": 16,
+          "total_time_ms": 191,
+          "turn": 25,
+          "workflow": 2
+        },
+        {
+          "content": " shadows, the dark sorcerer revealed at last. With a wicked grin",
+          "context_size": 1675,
+          "tokens_generated": 16,
+          "total_time_ms": 186,
+          "turn": 26,
+          "workflow": 2
+        },
+        {
+          "content": " \"Sir Gal Percival, gripping the Eternal Amulet tightly",
+          "context_size": 1731,
+          "tokens_generated": 13,
+          "total_time_ms": 188,
+          "turn": 27,
+          "workflow": 2
+        },
+        {
+          "content": " in his calloused hands, the dark sorcerer let out a g",
+          "context_size": 1786,
+          "tokens_generated": 13,
+          "total_time_ms": 199,
+          "turn": 28,
+          "workflow": 2
+        },
+        {
+          "content": " evil laugh, his eyes glowing with malevolent intent. \"Fool",
+          "context_size": 1846,
+          "tokens_generated": 14,
+          "total_time_ms": 192,
+          "turn": 29,
+          "workflow": 2
+        },
+        {
+          "content": " \"I have been waiting for this moment, brave knight,\" the dark sor",
+          "context_size": 1913,
+          "tokens_generated": 16,
+          "total_time_ms": 214,
+          "turn": 30,
+          "workflow": 2
+        },
+        {
+          "content": " sorcerer sneered, his voice echoing menacingly throughout the chamber",
+          "context_size": 1984,
+          "tokens_generated": 17,
+          "total_time_ms": 193,
+          "turn": 31,
+          "workflow": 2
+        },
+        {
+          "content": " \"the chamber. You have fallen into my trap, and now, the A",
+          "context_size": 2044,
+          "tokens_generated": 14,
+          "total_time_ms": 258,
+          "turn": 32,
+          "workflow": 2
+        },
+        {
+          "content": " amulet's power will be mine! Prepare to meet your do",
+          "context_size": 2098,
+          "tokens_generated": 13,
+          "total_time_ms": 206,
+          "turn": 33,
+          "workflow": 2
+        },
+        {
+          "content": " om's end, Sir Gal Percival!\" The dark sorcerer",
+          "context_size": 2146,
+          "tokens_generated": 11,
+          "total_time_ms": 247,
+          "turn": 34,
+          "workflow": 2
+        },
+        {
+          "content": " raised his staff high, a sinister glow emanating from its tip.",
+          "context_size": 2210,
+          "tokens_generated": 15,
+          "total_time_ms": 192,
+          "turn": 35,
+          "workflow": 2
+        },
+        {
+          "content": " \"But Sir Gal Percival, undeterred by fear and fueled",
+          "context_size": 2264,
+          "tokens_generated": 13,
+          "total_time_ms": 186,
+          "turn": 36,
+          "workflow": 2
+        },
+        {
+          "content": " by his newfound strength, Sir Gal Percival gripped the Eternal",
+          "context_size": 2328,
+          "tokens_generated": 15,
+          "total_time_ms": 188,
+          "turn": 37,
+          "workflow": 2
+        },
+        {
+          "content": " Amulet tighter, his eyes blazing with resolve. With a",
+          "context_size": 2383,
+          "tokens_generated": 13,
+          "total_time_ms": 188,
+          "turn": 38,
+          "workflow": 2
+        },
+        {
+          "content": " roar of his own, Sir Gal Percival charged at the dark sor",
+          "context_size": 2442,
+          "tokens_generated": 14,
+          "total_time_ms": 202,
+          "turn": 39,
+          "workflow": 2
+        },
+        {
+          "content": " sorcerer, his sword glinting in the crystal light. The two",
+          "context_size": 2502,
+          "tokens_generated": 14,
+          "total_time_ms": 192,
+          "turn": 40,
+          "workflow": 2
+        },
+        {
+          "content": " clashed in a fierce battle, their weapons clanging against each other with a",
+          "context_size": 2580,
+          "tokens_generated": 19,
+          "total_time_ms": 200,
+          "turn": 41,
+          "workflow": 2
+        },
+        {
+          "content": " deafening resonance. The chamber shook as the force of their battle r",
+          "context_size": 2651,
+          "tokens_generated": 17,
+          "total_time_ms": 244,
+          "turn": 42,
+          "workflow": 2
+        },
+        {
+          "content": " raged on, the air around them crackling with magical energy. Sir Gal",
+          "context_size": 2721,
+          "tokens_generated": 17,
+          "total_time_ms": 191,
+          "turn": 43,
+          "workflow": 2
+        },
+        {
+          "content": " Percival, with every strike, felt the Amulet's power",
+          "context_size": 2775,
+          "tokens_generated": 13,
+          "total_time_ms": 229,
+          "turn": 44,
+          "workflow": 2
+        },
+        {
+          "content": " surging through him, empowering him further. The dark sorcerer ret",
+          "context_size": 2843,
+          "tokens_generated": 16,
+          "total_time_ms": 192,
+          "turn": 45,
+          "workflow": 2
+        },
+        {
+          "content": " alas, was no match for the brave knight's unyield",
+          "context_size": 2894,
+          "tokens_generated": 12,
+          "total_time_ms": 197,
+          "turn": 46,
+          "workflow": 2
+        },
+        {
+          "content": " ing spirit and newfound power. With a mighty swing, Sir Gal Per",
+          "context_size": 2959,
+          "tokens_generated": 16,
+          "total_time_ms": 211,
+          "turn": 47,
+          "workflow": 2
+        },
+        {
+          "content": " Percival's sword pierced the dark sorcerer's armor",
+          "context_size": 3011,
+          "tokens_generated": 12,
+          "total_time_ms": 199,
+          "turn": 48,
+          "workflow": 2
+        },
+        {
+          "content": " heart, the sorcerer let out a howl of pain and fell to",
+          "context_size": 3067,
+          "tokens_generated": 13,
+          "total_time_ms": 216,
+          "turn": 49,
+          "workflow": 2
+        },
+        {
+          "content": " his knees, the life draining from his eyes. The chamber fell silent,",
+          "context_size": 3137,
+          "tokens_generated": 17,
+          "total_time_ms": 193,
+          "turn": 50,
+          "workflow": 2
+        }
+      ],
+      "total_time_seconds": 10.147149059,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_2",
+      "workflow_number": 2
+    },
+    {
+      "avg_turn_time_ms": 197.40816326530611,
+      "final_story": "  in a far-off kingdom, there lived a humble blacksmith named Thomas  and his wife, Maria. They lived a simple life, content with their small  cottage nestled in the heart of a verdant valley. Every morning, Thomas  awoke at dawn, his heart filled with the anticipation of another day  working in his forge, hammering away at the glowing metal. Maria  prepared breakfast, keeping the warmth of their home alive while Thomas embarked on  his daily journey to the forge, the crisp morning air whispering secrets  to his eager ears. As he approached the forge, the cacoph  once of hammering steel and the scent of burning coal filled his senses, ground  ing him in a familiar rhythm. He worked tirelessly, his hands moving with  precision and grace, shaping molten iron into beautiful creations. As the  sun dipped below the horizon, casting long shadows across the valley, Thomas would  return home, his hands stained with soot and his face glistening  With Maria's warm embrace, Thomas shared the day's events, his  eyes sparkling with joy and exhaustion. Maria listened intently, her own  heart swelling with pride. One evening, as they sat by the fire,  A mysterious stranger arrived at the forge gate, cloaked in darkness and silence  Shrouded in enigma, the stranger ventured closer, his steps barely  audible, a whisper of intent on the evening breeze. Thomas, sensing  something unusual, stepped out to greet the stranger. The cloaked figure bow  before Thomas, revealing a golden pendant encrusted with rare gemstones.  \"The stranger spoke in a voice as smooth as silk, \"I seek your  craftsmanship, master blacksmith. I have been told of your extraordinary  talent and your ability to bring even the most ordinary of objects to life. I  offer you a most extraordinary challenge. I possess this pendant, a treasure of immense  value, said the stranger, showing it to Thomas with a gloved hand.  \"Forge me a weapon, a masterpiece beyond compare, worthy of this  treasure, and in return, I will grant you a single wish, no matter  how grand or impossible it may seem.\" Thomas, taken aback by the stranger  \"The blacksmith, Thomas, gazed at the golden pendant, its gle  am and the rare gemstones shimmering in the firelight. He  pondered the stranger's proposition, his mind racing with possibilities. \"  A single wish, no matter how grand or impossible it may seem. Thomas p  contemplated the offer for a moment, the weight of the stranger's words  heavy upon his heart. He looked at the pendant, its beauty undeniable  \"I accept your challenge, stranger,\" Thomas finally said, his voice steady and  decisive. \"But I must warn you, I will forge this weapon  \"not for personal gain or to prove my skill, but for the safety and  prosperity of my kingdom and its people. I will forge a weapon that  will bring peace and harmony, a weapon that shall be a symbol of our unity  \"and our determination. I will forge this weapon with all the passion and  skill that I possess, and I will not compromise on its quality. I will  forge this weapon without delay, and as I work, the valley will reson  with the rhythm of hammer on anvil, echoing through the night. Each  stroke will be a testament to my dedication, each blow a promise of  peace and harmony to come. The stranger nodded, a hint of respect in his  eyes. \"As you wish, master blacksmith,\" he said, his voice  \"As the moon rose high in the sky, the blacksmith's for  hammer rang out, resonating through the night, echoing the rhythm of the  blacksmith's heart. The valley reverberated with the relentless",
+      "k": 16,
+      "per_turn_metrics": [
+        {
+          "content": " in a far-off kingdom, there lived a humble blacksmith named Thomas",
+          "context_size": 68,
+          "tokens_generated": 16,
+          "total_time_ms": 196,
+          "turn": 1,
+          "workflow": 3
+        },
+        {
+          "content": " and his wife, Maria. They lived a simple life, content with their small",
+          "context_size": 141,
+          "tokens_generated": 18,
+          "total_time_ms": 207,
+          "turn": 2,
+          "workflow": 3
+        },
+        {
+          "content": " cottage nestled in the heart of a verdant valley. Every morning, Thomas",
+          "context_size": 214,
+          "tokens_generated": 18,
+          "total_time_ms": 192,
+          "turn": 3,
+          "workflow": 3
+        },
+        {
+          "content": " awoke at dawn, his heart filled with the anticipation of another day",
+          "context_size": 284,
+          "tokens_generated": 17,
+          "total_time_ms": 185,
+          "turn": 4,
+          "workflow": 3
+        },
+        {
+          "content": " working in his forge, hammering away at the glowing metal. Maria",
+          "context_size": 350,
+          "tokens_generated": 16,
+          "total_time_ms": 214,
+          "turn": 5,
+          "workflow": 3
+        },
+        {
+          "content": " prepared breakfast, keeping the warmth of their home alive while Thomas embarked on",
+          "context_size": 435,
+          "tokens_generated": 21,
+          "total_time_ms": 210,
+          "turn": 6,
+          "workflow": 3
+        },
+        {
+          "content": " his daily journey to the forge, the crisp morning air whispering secrets",
+          "context_size": 509,
+          "tokens_generated": 18,
+          "total_time_ms": 207,
+          "turn": 7,
+          "workflow": 3
+        },
+        {
+          "content": " to his eager ears. As he approached the forge, the cacoph",
+          "context_size": 568,
+          "tokens_generated": 14,
+          "total_time_ms": 191,
+          "turn": 8,
+          "workflow": 3
+        },
+        {
+          "content": " once of hammering steel and the scent of burning coal filled his senses, ground",
+          "context_size": 649,
+          "tokens_generated": 20,
+          "total_time_ms": 186,
+          "turn": 9,
+          "workflow": 3
+        },
+        {
+          "content": " ing him in a familiar rhythm. He worked tirelessly, his hands moving with",
+          "context_size": 724,
+          "tokens_generated": 18,
+          "total_time_ms": 201,
+          "turn": 10,
+          "workflow": 3
+        },
+        {
+          "content": " precision and grace, shaping molten iron into beautiful creations. As the",
+          "context_size": 799,
+          "tokens_generated": 18,
+          "total_time_ms": 240,
+          "turn": 11,
+          "workflow": 3
+        },
+        {
+          "content": " sun dipped below the horizon, casting long shadows across the valley, Thomas would",
+          "context_size": 883,
+          "tokens_generated": 20,
+          "total_time_ms": 207,
+          "turn": 12,
+          "workflow": 3
+        },
+        {
+          "content": " return home, his hands stained with soot and his face glistening",
+          "context_size": 949,
+          "tokens_generated": 16,
+          "total_time_ms": 191,
+          "turn": 13,
+          "workflow": 3
+        },
+        {
+          "content": " With Maria's warm embrace, Thomas shared the day's events, his",
+          "context_size": 1013,
+          "tokens_generated": 15,
+          "total_time_ms": 183,
+          "turn": 14,
+          "workflow": 3
+        },
+        {
+          "content": " eyes sparkling with joy and exhaustion. Maria listened intently, her own",
+          "context_size": 1087,
+          "tokens_generated": 18,
+          "total_time_ms": 201,
+          "turn": 15,
+          "workflow": 3
+        },
+        {
+          "content": " heart swelling with pride. One evening, as they sat by the fire,",
+          "context_size": 1153,
+          "tokens_generated": 16,
+          "total_time_ms": 191,
+          "turn": 16,
+          "workflow": 3
+        },
+        {
+          "content": " A mysterious stranger arrived at the forge gate, cloaked in darkness and silence",
+          "context_size": 1235,
+          "tokens_generated": 20,
+          "total_time_ms": 186,
+          "turn": 17,
+          "workflow": 3
+        },
+        {
+          "content": " Shrouded in enigma, the stranger ventured closer, his steps barely",
+          "context_size": 1303,
+          "tokens_generated": 16,
+          "total_time_ms": 189,
+          "turn": 18,
+          "workflow": 3
+        },
+        {
+          "content": " audible, a whisper of intent on the evening breeze. Thomas, sensing",
+          "context_size": 1372,
+          "tokens_generated": 17,
+          "total_time_ms": 200,
+          "turn": 19,
+          "workflow": 3
+        },
+        {
+          "content": " something unusual, stepped out to greet the stranger. The cloaked figure bow",
+          "context_size": 1450,
+          "tokens_generated": 19,
+          "total_time_ms": 191,
+          "turn": 20,
+          "workflow": 3
+        },
+        {
+          "content": " before Thomas, revealing a golden pendant encrusted with rare gemstones.",
+          "context_size": 1524,
+          "tokens_generated": 18,
+          "total_time_ms": 199,
+          "turn": 21,
+          "workflow": 3
+        },
+        {
+          "content": " \"The stranger spoke in a voice as smooth as silk, \"I seek your",
+          "context_size": 1588,
+          "tokens_generated": 15,
+          "total_time_ms": 192,
+          "turn": 22,
+          "workflow": 3
+        },
+        {
+          "content": " craftsmanship, master blacksmith. I have been told of your extraordinary",
+          "context_size": 1662,
+          "tokens_generated": 18,
+          "total_time_ms": 200,
+          "turn": 23,
+          "workflow": 3
+        },
+        {
+          "content": " talent and your ability to bring even the most ordinary of objects to life. I",
+          "context_size": 1741,
+          "tokens_generated": 19,
+          "total_time_ms": 192,
+          "turn": 24,
+          "workflow": 3
+        },
+        {
+          "content": " offer you a most extraordinary challenge. I possess this pendant, a treasure of immense",
+          "context_size": 1830,
+          "tokens_generated": 22,
+          "total_time_ms": 185,
+          "turn": 25,
+          "workflow": 3
+        },
+        {
+          "content": " value, said the stranger, showing it to Thomas with a gloved hand.",
+          "context_size": 1898,
+          "tokens_generated": 16,
+          "total_time_ms": 188,
+          "turn": 26,
+          "workflow": 3
+        },
+        {
+          "content": " \"Forge me a weapon, a masterpiece beyond compare, worthy of this",
+          "context_size": 1964,
+          "tokens_generated": 16,
+          "total_time_ms": 201,
+          "turn": 27,
+          "workflow": 3
+        },
+        {
+          "content": " treasure, and in return, I will grant you a single wish, no matter",
+          "context_size": 2032,
+          "tokens_generated": 16,
+          "total_time_ms": 227,
+          "turn": 28,
+          "workflow": 3
+        },
+        {
+          "content": " how grand or impossible it may seem.\" Thomas, taken aback by the stranger",
+          "context_size": 2107,
+          "tokens_generated": 18,
+          "total_time_ms": 191,
+          "turn": 29,
+          "workflow": 3
+        },
+        {
+          "content": " \"The blacksmith, Thomas, gazed at the golden pendant, its gle",
+          "context_size": 2170,
+          "tokens_generated": 15,
+          "total_time_ms": 187,
+          "turn": 30,
+          "workflow": 3
+        },
+        {
+          "content": " am and the rare gemstones shimmering in the firelight. He",
+          "context_size": 2229,
+          "tokens_generated": 14,
+          "total_time_ms": 202,
+          "turn": 31,
+          "workflow": 3
+        },
+        {
+          "content": " pondered the stranger's proposition, his mind racing with possibilities. \"",
+          "context_size": 2305,
+          "tokens_generated": 18,
+          "total_time_ms": 208,
+          "turn": 32,
+          "workflow": 3
+        },
+        {
+          "content": " A single wish, no matter how grand or impossible it may seem. Thomas p",
+          "context_size": 2377,
+          "tokens_generated": 17,
+          "total_time_ms": 192,
+          "turn": 33,
+          "workflow": 3
+        },
+        {
+          "content": " contemplated the offer for a moment, the weight of the stranger's words",
+          "context_size": 2450,
+          "tokens_generated": 18,
+          "total_time_ms": 199,
+          "turn": 34,
+          "workflow": 3
+        },
+        {
+          "content": " heavy upon his heart. He looked at the pendant, its beauty undeniable",
+          "context_size": 2521,
+          "tokens_generated": 17,
+          "total_time_ms": 193,
+          "turn": 35,
+          "workflow": 3
+        },
+        {
+          "content": " \"I accept your challenge, stranger,\" Thomas finally said, his voice steady and",
+          "context_size": 2601,
+          "tokens_generated": 19,
+          "total_time_ms": 203,
+          "turn": 36,
+          "workflow": 3
+        },
+        {
+          "content": " decisive. \"But I must warn you, I will forge this weapon",
+          "context_size": 2659,
+          "tokens_generated": 14,
+          "total_time_ms": 196,
+          "turn": 37,
+          "workflow": 3
+        },
+        {
+          "content": " \"not for personal gain or to prove my skill, but for the safety and",
+          "context_size": 2728,
+          "tokens_generated": 17,
+          "total_time_ms": 184,
+          "turn": 38,
+          "workflow": 3
+        },
+        {
+          "content": " prosperity of my kingdom and its people. I will forge a weapon that",
+          "context_size": 2797,
+          "tokens_generated": 17,
+          "total_time_ms": 189,
+          "turn": 39,
+          "workflow": 3
+        },
+        {
+          "content": " will bring peace and harmony, a weapon that shall be a symbol of our unity",
+          "context_size": 2873,
+          "tokens_generated": 18,
+          "total_time_ms": 203,
+          "turn": 40,
+          "workflow": 3
+        },
+        {
+          "content": " \"and our determination. I will forge this weapon with all the passion and",
+          "context_size": 2948,
+          "tokens_generated": 18,
+          "total_time_ms": 192,
+          "turn": 41,
+          "workflow": 3
+        },
+        {
+          "content": " skill that I possess, and I will not compromise on its quality. I will",
+          "context_size": 3020,
+          "tokens_generated": 17,
+          "total_time_ms": 186,
+          "turn": 42,
+          "workflow": 3
+        },
+        {
+          "content": " forge this weapon without delay, and as I work, the valley will reson",
+          "context_size": 3091,
+          "tokens_generated": 17,
+          "total_time_ms": 189,
+          "turn": 43,
+          "workflow": 3
+        },
+        {
+          "content": " with the rhythm of hammer on anvil, echoing through the night. Each",
+          "context_size": 3160,
+          "tokens_generated": 17,
+          "total_time_ms": 205,
+          "turn": 44,
+          "workflow": 3
+        },
+        {
+          "content": " stroke will be a testament to my dedication, each blow a promise of",
+          "context_size": 3229,
+          "tokens_generated": 17,
+          "total_time_ms": 211,
+          "turn": 45,
+          "workflow": 3
+        },
+        {
+          "content": " peace and harmony to come. The stranger nodded, a hint of respect in his",
+          "context_size": 3303,
+          "tokens_generated": 18,
+          "total_time_ms": 206,
+          "turn": 46,
+          "workflow": 3
+        },
+        {
+          "content": " eyes. \"As you wish, master blacksmith,\" he said, his voice",
+          "context_size": 3363,
+          "tokens_generated": 14,
+          "total_time_ms": 195,
+          "turn": 47,
+          "workflow": 3
+        },
+        {
+          "content": " \"As the moon rose high in the sky, the blacksmith's for",
+          "context_size": 3420,
+          "tokens_generated": 14,
+          "total_time_ms": 189,
+          "turn": 48,
+          "workflow": 3
+        },
+        {
+          "content": " hammer rang out, resonating through the night, echoing the rhythm of the",
+          "context_size": 3494,
+          "tokens_generated": 18,
+          "total_time_ms": 202,
+          "turn": 49,
+          "workflow": 3
+        },
+        {
+          "content": " blacksmith's heart. The valley reverberated with the relentless",
+          "context_size": 3559,
+          "tokens_generated": 16,
+          "total_time_ms": 195,
+          "turn": 50,
+          "workflow": 3
+        }
+      ],
+      "total_time_seconds": 9.94477053,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_3",
+      "workflow_number": 3
+    },
+    {
+      "avg_turn_time_ms": 203.59183673469389,
+      "final_story": "  in a land far, far away, there lived a young, brave knight  named Sir Galahad. He was known throughout the realm for his unwa  rival courage and unwavering honor. One day, a mysterious message arrived  at the castle, summoning Sir Galahad to a distant kingdom in dire  need. The message was sealed and bore the royal crest of a land he  had never visited before. Intrigued and compelled by duty, Sir  Galahad set off on his trusty steed, venturing through tre  mysterious forests, across roaring rivers, and over towering mountains. The journey  was long and arduous, but Sir Galahad's spirit remained  unbroken. He encountered various creatures and challenges, yet he persever  ed, his resolve never wavering. At last, he reached the kingdom  in distress. The castle walls were crumbling, and the once-vibr  ant, bustling town was now silent and desolate. Sir Galahad  approached the castle gates, his heart heavy with concern. He dismounted and  approached the grand, yet weathered entrance, his helmet beneath his arm. A  voice echoed from within, \"Enter, Sir Galahad, and may  your valiant deeds illuminate the darkness that has fallen upon us. Within  lies a fabled treasure, lost for eons,\nA beacon of  hope in our time of need.\n\nWith a deep breath, Sir Gal  Ahmed, a wise and ancient sage, emerged from the castle, his eyes  twinkling with wisdom. \"Greetings, noble knight,\" he  said, his voice echoing with the weight of centuries. \"I have been  waiting for you, Sir Galahad. The treasure you seek is not one  of material wealth, but a powerful artifact that can restore the kingdom to its  former glory. The artifact, known as the Star of Eternity,  was stolen by a dark sorcerer who seeks to plunge the world into  eternal darkness. The artifact is hidden deep within the heart of the forbidden  forest, guarded by a fearsome beast. To reach it, you must  face trials beyond your imagination,\n\nbut your courage and honor will guide you  through the darkest paths.\n\n\"The beast that guards the artifact  is a colossal, shadowy creature, shrouded in an a  eerie mist. Its eyes glow with an otherworldly light, and its  roar echoes through the forest like the sound of a thousand thunderclaps  \"Awakening from its slumber, the beast charges at you with  a ferocity that shakes the very ground beneath your feet. Its massive form  blocks the path, and its claws scratch and scrape against the earth.  \"But do not fear, for you are Sir Galahad, the kn  knight of unwavering courage and honor. With a swift and might  y swing of his enchanted sword, Excalibur, Sir Gal  Galahad stood firm, his heart pounding in his chest as the beast  lunged towards him. With a mighty roar, Sir Galahad  struck the beast with the edge of Excalibur, sending shockwaves  through the forest. The beast recoiled, howling in pain, its  shadows dissipating momentarily, revealing a chained and shackled figure  behind the beast. \"Free me, Sir Galahad,\" the figure ple  cried, its voice echoing weakly. \"I am the guardian of  the Star of Eternity, and I have been imprisoned here by the  dark sorcerer. Release me, and I will lead you to the Star  of Eternity, and together we shall defeat the dark sorcerer and  restore peace to this realm.\n\nWith a swift and powerful motion, Sir",
+      "k": 16,
+      "per_turn_metrics": [
+        {
+          "content": " in a land far, far away, there lived a young, brave knight",
+          "context_size": 60,
+          "tokens_generated": 14,
+          "total_time_ms": 191,
+          "turn": 1,
+          "workflow": 4
+        },
+        {
+          "content": " named Sir Galahad. He was known throughout the realm for his unwa",
+          "context_size": 127,
+          "tokens_generated": 16,
+          "total_time_ms": 186,
+          "turn": 2,
+          "workflow": 4
+        },
+        {
+          "content": " rival courage and unwavering honor. One day, a mysterious message arrived",
+          "context_size": 202,
+          "tokens_generated": 18,
+          "total_time_ms": 188,
+          "turn": 3,
+          "workflow": 4
+        },
+        {
+          "content": " at the castle, summoning Sir Galahad to a distant kingdom in dire",
+          "context_size": 269,
+          "tokens_generated": 16,
+          "total_time_ms": 188,
+          "turn": 4,
+          "workflow": 4
+        },
+        {
+          "content": " need. The message was sealed and bore the royal crest of a land he",
+          "context_size": 337,
+          "tokens_generated": 16,
+          "total_time_ms": 198,
+          "turn": 5,
+          "workflow": 4
+        },
+        {
+          "content": " had never visited before. Intrigued and compelled by duty, Sir",
+          "context_size": 401,
+          "tokens_generated": 15,
+          "total_time_ms": 237,
+          "turn": 6,
+          "workflow": 4
+        },
+        {
+          "content": " Galahad set off on his trusty steed, venturing through tre",
+          "context_size": 461,
+          "tokens_generated": 14,
+          "total_time_ms": 216,
+          "turn": 7,
+          "workflow": 4
+        },
+        {
+          "content": " mysterious forests, across roaring rivers, and over towering mountains. The journey",
+          "context_size": 546,
+          "tokens_generated": 21,
+          "total_time_ms": 204,
+          "turn": 8,
+          "workflow": 4
+        },
+        {
+          "content": " was long and arduous, but Sir Galahad's spirit remained",
+          "context_size": 603,
+          "tokens_generated": 14,
+          "total_time_ms": 194,
+          "turn": 9,
+          "workflow": 4
+        },
+        {
+          "content": " unbroken. He encountered various creatures and challenges, yet he persever",
+          "context_size": 679,
+          "tokens_generated": 18,
+          "total_time_ms": 223,
+          "turn": 10,
+          "workflow": 4
+        },
+        {
+          "content": " ed, his resolve never wavering. At last, he reached the kingdom",
+          "context_size": 744,
+          "tokens_generated": 16,
+          "total_time_ms": 207,
+          "turn": 11,
+          "workflow": 4
+        },
+        {
+          "content": " in distress. The castle walls were crumbling, and the once-vibr",
+          "context_size": 809,
+          "tokens_generated": 16,
+          "total_time_ms": 207,
+          "turn": 12,
+          "workflow": 4
+        },
+        {
+          "content": " ant, bustling town was now silent and desolate. Sir Galahad",
+          "context_size": 870,
+          "tokens_generated": 15,
+          "total_time_ms": 223,
+          "turn": 13,
+          "workflow": 4
+        },
+        {
+          "content": " approached the castle gates, his heart heavy with concern. He dismounted and",
+          "context_size": 948,
+          "tokens_generated": 19,
+          "total_time_ms": 191,
+          "turn": 14,
+          "workflow": 4
+        },
+        {
+          "content": " approached the grand, yet weathered entrance, his helmet beneath his arm. A",
+          "context_size": 1025,
+          "tokens_generated": 19,
+          "total_time_ms": 187,
+          "turn": 15,
+          "workflow": 4
+        },
+        {
+          "content": " voice echoed from within, \"Enter, Sir Galahad, and may",
+          "context_size": 1081,
+          "tokens_generated": 13,
+          "total_time_ms": 200,
+          "turn": 16,
+          "workflow": 4
+        },
+        {
+          "content": " your valiant deeds illuminate the darkness that has fallen upon us. Within",
+          "context_size": 1157,
+          "tokens_generated": 18,
+          "total_time_ms": 207,
+          "turn": 17,
+          "workflow": 4
+        },
+        {
+          "content": " lies a fabled treasure, lost for eons,\nA beacon of",
+          "context_size": 1209,
+          "tokens_generated": 12,
+          "total_time_ms": 193,
+          "turn": 18,
+          "workflow": 4
+        },
+        {
+          "content": " hope in our time of need.\n\nWith a deep breath, Sir Gal",
+          "context_size": 1265,
+          "tokens_generated": 13,
+          "total_time_ms": 187,
+          "turn": 19,
+          "workflow": 4
+        },
+        {
+          "content": " Ahmed, a wise and ancient sage, emerged from the castle, his eyes",
+          "context_size": 1332,
+          "tokens_generated": 16,
+          "total_time_ms": 189,
+          "turn": 20,
+          "workflow": 4
+        },
+        {
+          "content": " twinkling with wisdom. \"Greetings, noble knight,\" he",
+          "context_size": 1386,
+          "tokens_generated": 13,
+          "total_time_ms": 200,
+          "turn": 21,
+          "workflow": 4
+        },
+        {
+          "content": " said, his voice echoing with the weight of centuries. \"I have been",
+          "context_size": 1454,
+          "tokens_generated": 16,
+          "total_time_ms": 208,
+          "turn": 22,
+          "workflow": 4
+        },
+        {
+          "content": " waiting for you, Sir Galahad. The treasure you seek is not one",
+          "context_size": 1518,
+          "tokens_generated": 15,
+          "total_time_ms": 244,
+          "turn": 23,
+          "workflow": 4
+        },
+        {
+          "content": " of material wealth, but a powerful artifact that can restore the kingdom to its",
+          "context_size": 1599,
+          "tokens_generated": 20,
+          "total_time_ms": 214,
+          "turn": 24,
+          "workflow": 4
+        },
+        {
+          "content": " former glory. The artifact, known as the Star of Eternity,",
+          "context_size": 1659,
+          "tokens_generated": 14,
+          "total_time_ms": 206,
+          "turn": 25,
+          "workflow": 4
+        },
+        {
+          "content": " was stolen by a dark sorcerer who seeks to plunge the world into",
+          "context_size": 1725,
+          "tokens_generated": 16,
+          "total_time_ms": 193,
+          "turn": 26,
+          "workflow": 4
+        },
+        {
+          "content": " eternal darkness. The artifact is hidden deep within the heart of the forbidden",
+          "context_size": 1806,
+          "tokens_generated": 20,
+          "total_time_ms": 199,
+          "turn": 27,
+          "workflow": 4
+        },
+        {
+          "content": " forest, guarded by a fearsome beast. To reach it, you must",
+          "context_size": 1866,
+          "tokens_generated": 14,
+          "total_time_ms": 193,
+          "turn": 28,
+          "workflow": 4
+        },
+        {
+          "content": " face trials beyond your imagination,\n\nbut your courage and honor will guide you",
+          "context_size": 1947,
+          "tokens_generated": 20,
+          "total_time_ms": 224,
+          "turn": 29,
+          "workflow": 4
+        },
+        {
+          "content": " through the darkest paths.\n\n\"The beast that guards the artifact",
+          "context_size": 2012,
+          "tokens_generated": 16,
+          "total_time_ms": 193,
+          "turn": 30,
+          "workflow": 4
+        },
+        {
+          "content": " is a colossal, shadowy creature, shrouded in an a",
+          "context_size": 2063,
+          "tokens_generated": 12,
+          "total_time_ms": 188,
+          "turn": 31,
+          "workflow": 4
+        },
+        {
+          "content": " eerie mist. Its eyes glow with an otherworldly light, and its",
+          "context_size": 2126,
+          "tokens_generated": 15,
+          "total_time_ms": 188,
+          "turn": 32,
+          "workflow": 4
+        },
+        {
+          "content": " roar echoes through the forest like the sound of a thousand thunderclaps",
+          "context_size": 2200,
+          "tokens_generated": 18,
+          "total_time_ms": 200,
+          "turn": 33,
+          "workflow": 4
+        },
+        {
+          "content": " \"Awakening from its slumber, the beast charges at you with",
+          "context_size": 2260,
+          "tokens_generated": 14,
+          "total_time_ms": 192,
+          "turn": 34,
+          "workflow": 4
+        },
+        {
+          "content": " a ferocity that shakes the very ground beneath your feet. Its massive form",
+          "context_size": 2336,
+          "tokens_generated": 18,
+          "total_time_ms": 188,
+          "turn": 35,
+          "workflow": 4
+        },
+        {
+          "content": " blocks the path, and its claws scratch and scrape against the earth.",
+          "context_size": 2406,
+          "tokens_generated": 17,
+          "total_time_ms": 204,
+          "turn": 36,
+          "workflow": 4
+        },
+        {
+          "content": " \"But do not fear, for you are Sir Galahad, the kn",
+          "context_size": 2457,
+          "tokens_generated": 12,
+          "total_time_ms": 193,
+          "turn": 37,
+          "workflow": 4
+        },
+        {
+          "content": " knight of unwavering courage and honor. With a swift and might",
+          "context_size": 2521,
+          "tokens_generated": 15,
+          "total_time_ms": 196,
+          "turn": 38,
+          "workflow": 4
+        },
+        {
+          "content": " y swing of his enchanted sword, Excalibur, Sir Gal",
+          "context_size": 2573,
+          "tokens_generated": 12,
+          "total_time_ms": 189,
+          "turn": 39,
+          "workflow": 4
+        },
+        {
+          "content": " Galahad stood firm, his heart pounding in his chest as the beast",
+          "context_size": 2639,
+          "tokens_generated": 16,
+          "total_time_ms": 200,
+          "turn": 40,
+          "workflow": 4
+        },
+        {
+          "content": " lunged towards him. With a mighty roar, Sir Galahad",
+          "context_size": 2692,
+          "tokens_generated": 13,
+          "total_time_ms": 194,
+          "turn": 41,
+          "workflow": 4
+        },
+        {
+          "content": " struck the beast with the edge of Excalibur, sending shockwaves",
+          "context_size": 2757,
+          "tokens_generated": 16,
+          "total_time_ms": 189,
+          "turn": 42,
+          "workflow": 4
+        },
+        {
+          "content": " through the forest. The beast recoiled, howling in pain, its",
+          "context_size": 2819,
+          "tokens_generated": 15,
+          "total_time_ms": 190,
+          "turn": 43,
+          "workflow": 4
+        },
+        {
+          "content": " shadows dissipating momentarily, revealing a chained and shackled figure",
+          "context_size": 2893,
+          "tokens_generated": 18,
+          "total_time_ms": 190,
+          "turn": 44,
+          "workflow": 4
+        },
+        {
+          "content": " behind the beast. \"Free me, Sir Galahad,\" the figure ple",
+          "context_size": 2951,
+          "tokens_generated": 14,
+          "total_time_ms": 251,
+          "turn": 45,
+          "workflow": 4
+        },
+        {
+          "content": " cried, its voice echoing weakly. \"I am the guardian of",
+          "context_size": 3007,
+          "tokens_generated": 13,
+          "total_time_ms": 232,
+          "turn": 46,
+          "workflow": 4
+        },
+        {
+          "content": " the Star of Eternity, and I have been imprisoned here by the",
+          "context_size": 3069,
+          "tokens_generated": 15,
+          "total_time_ms": 239,
+          "turn": 47,
+          "workflow": 4
+        },
+        {
+          "content": " dark sorcerer. Release me, and I will lead you to the Star",
+          "context_size": 3129,
+          "tokens_generated": 14,
+          "total_time_ms": 213,
+          "turn": 48,
+          "workflow": 4
+        },
+        {
+          "content": " of Eternity, and together we shall defeat the dark sorcerer and",
+          "context_size": 3194,
+          "tokens_generated": 16,
+          "total_time_ms": 217,
+          "turn": 49,
+          "workflow": 4
+        },
+        {
+          "content": " restore peace to this realm.\n\nWith a swift and powerful motion, Sir",
+          "context_size": 3263,
+          "tokens_generated": 17,
+          "total_time_ms": 224,
+          "turn": 50,
+          "workflow": 4
+        }
+      ],
+      "total_time_seconds": 10.242244588,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_4",
+      "workflow_number": 4
+    },
+    {
+      "avg_turn_time_ms": 203.6122448979592,
+      "final_story": "  in a land far, far away, there lived a humble blacksmith named  Jack, who forged not only weapons and armor, but also enchanted  objects of extraordinary power. His reputation as a master craftsman spread far and  wide, drawing the attention of many. One day, a mysterious stranger, clo  and hooded, approached Jack's forge. The stranger, with a  grave and determined air, requested a specific enchanted object: a sword im  bued with the power of lightning. Jack, though intrigued, was  wary of creating such a potent weapon, but the stranger's earn  est plea and promise of great reward convinced Jack to take on the task.  \"As the days passed, Jack labored tirelessly over the creation of the  sword. He forged and hammered, melted and molded, inf  using ancient arcane runes and secret incantations. The air in the  forge crackled with energy, and the very earth shook beneath the intensity of  his craft. On the eve of its completion, Jack knelt before the  glowing sword, a fierce bolt of lightning dancing along its length. He ut  spoke the final incantation, and the sword roared to life, its  blade gleaming with an ethereal glow. The mysterious stranger, now revealed  as a powerful sorcerer, appeared once more. Jack, awe-  struck, presented the sword to the sorcerer. \"By the power v  granted by the gods, this sword shall strike with the force of lightning, its  strikes shall be swift and unyielding. The sorcerer, with  a sinister grin, accepted the sword and thanked Jack profusely.  \"However, as the sorcerer departed, a sense of unease  settled upon Jack. He had a feeling that he had made a grave mistake,  that the sword was not meant for the sorcerer's hands, but  for a greater evil's. As the days turned into weeks, stories of  the sorcerer's exploits began to spread, and the tales of  devastation and destruction followed him. Jack, consumed by guilt and fear, knew  that he must take back the sword and prevent its misuse.\n\nIn  the midst of his restless nights, Jack, the humble blacksmith,  dreamt of a journey to a hidden temple, shrouded by mist and  surrounded by ancient trees. He dreamt of a path, shimmering with  golden light, leading him to the temple's entrance. He dreamt of  a journey through treacherous terrains, crossing rivers of molten lava  and perilous mountains, venturing into dark caves filled with unknown creatures  In the quiet hours of the morning, Jack awoke with a start,  resolved to embark on the journey of his dreams, to the hidden temple sh  and retrieve the sword from the sorcerer's grasp. He spent days  preparing for his journey, gathering supplies and studying ancient maps. He forged a  sturdy shield, imbued with protective enchantments, to saf  guard him from harm during his perilous quest. He also crafted a  map of the treacherous terrains, marked with the path of golden light  He embarked on his journey, guided by the dreams of the golden path  and ancient maps, Jack ventured forth, his heart filled with resolve. Through  His journey was arduous, filled with trials and tribulations, yet Jack  persevered, driven by his guilt and determination. He crossed rivers of  molten lava, navigated through dark caves filled with unknown creatures,  and scaled perilous mountains, narrowly escaping the clutches  of deadly beasts.\n\nIn the heart of the dark forest, Jack  encountered a wise old hermit, who offered him guidance and wisdom. The her",
+      "k": 16,
+      "per_turn_metrics": [
+        {
+          "content": " in a land far, far away, there lived a humble blacksmith named",
+          "context_size": 64,
+          "tokens_generated": 15,
+          "total_time_ms": 243,
+          "turn": 1,
+          "workflow": 5
+        },
+        {
+          "content": " Jack, who forged not only weapons and armor, but also enchanted",
+          "context_size": 129,
+          "tokens_generated": 16,
+          "total_time_ms": 192,
+          "turn": 2,
+          "workflow": 5
+        },
+        {
+          "content": " objects of extraordinary power. His reputation as a master craftsman spread far and",
+          "context_size": 214,
+          "tokens_generated": 21,
+          "total_time_ms": 199,
+          "turn": 3,
+          "workflow": 5
+        },
+        {
+          "content": " wide, drawing the attention of many. One day, a mysterious stranger, clo",
+          "context_size": 288,
+          "tokens_generated": 18,
+          "total_time_ms": 209,
+          "turn": 4,
+          "workflow": 5
+        },
+        {
+          "content": " and hooded, approached Jack's forge. The stranger, with a",
+          "context_size": 347,
+          "tokens_generated": 14,
+          "total_time_ms": 200,
+          "turn": 5,
+          "workflow": 5
+        },
+        {
+          "content": " grave and determined air, requested a specific enchanted object: a sword im",
+          "context_size": 424,
+          "tokens_generated": 19,
+          "total_time_ms": 199,
+          "turn": 6,
+          "workflow": 5
+        },
+        {
+          "content": " bued with the power of lightning. Jack, though intrigued, was",
+          "context_size": 487,
+          "tokens_generated": 15,
+          "total_time_ms": 192,
+          "turn": 7,
+          "workflow": 5
+        },
+        {
+          "content": " wary of creating such a potent weapon, but the stranger's earn",
+          "context_size": 551,
+          "tokens_generated": 15,
+          "total_time_ms": 197,
+          "turn": 8,
+          "workflow": 5
+        },
+        {
+          "content": " est plea and promise of great reward convinced Jack to take on the task.",
+          "context_size": 625,
+          "tokens_generated": 18,
+          "total_time_ms": 206,
+          "turn": 9,
+          "workflow": 5
+        },
+        {
+          "content": " \"As the days passed, Jack labored tirelessly over the creation of the",
+          "context_size": 696,
+          "tokens_generated": 17,
+          "total_time_ms": 191,
+          "turn": 10,
+          "workflow": 5
+        },
+        {
+          "content": " sword. He forged and hammered, melted and molded, inf",
+          "context_size": 751,
+          "tokens_generated": 13,
+          "total_time_ms": 201,
+          "turn": 11,
+          "workflow": 5
+        },
+        {
+          "content": " using ancient arcane runes and secret incantations. The air in the",
+          "context_size": 819,
+          "tokens_generated": 16,
+          "total_time_ms": 209,
+          "turn": 12,
+          "workflow": 5
+        },
+        {
+          "content": " forge crackled with energy, and the very earth shook beneath the intensity of",
+          "context_size": 898,
+          "tokens_generated": 19,
+          "total_time_ms": 223,
+          "turn": 13,
+          "workflow": 5
+        },
+        {
+          "content": " his craft. On the eve of its completion, Jack knelt before the",
+          "context_size": 962,
+          "tokens_generated": 15,
+          "total_time_ms": 193,
+          "turn": 14,
+          "workflow": 5
+        },
+        {
+          "content": " glowing sword, a fierce bolt of lightning dancing along its length. He ut",
+          "context_size": 1037,
+          "tokens_generated": 18,
+          "total_time_ms": 223,
+          "turn": 15,
+          "workflow": 5
+        },
+        {
+          "content": " spoke the final incantation, and the sword roared to life, its",
+          "context_size": 1101,
+          "tokens_generated": 15,
+          "total_time_ms": 208,
+          "turn": 16,
+          "workflow": 5
+        },
+        {
+          "content": " blade gleaming with an ethereal glow. The mysterious stranger, now revealed",
+          "context_size": 1178,
+          "tokens_generated": 19,
+          "total_time_ms": 208,
+          "turn": 17,
+          "workflow": 5
+        },
+        {
+          "content": " as a powerful sorcerer, appeared once more. Jack, awe-",
+          "context_size": 1234,
+          "tokens_generated": 13,
+          "total_time_ms": 190,
+          "turn": 18,
+          "workflow": 5
+        },
+        {
+          "content": " struck, presented the sword to the sorcerer. \"By the power v",
+          "context_size": 1296,
+          "tokens_generated": 15,
+          "total_time_ms": 200,
+          "turn": 19,
+          "workflow": 5
+        },
+        {
+          "content": " granted by the gods, this sword shall strike with the force of lightning, its",
+          "context_size": 1375,
+          "tokens_generated": 19,
+          "total_time_ms": 207,
+          "turn": 20,
+          "workflow": 5
+        },
+        {
+          "content": " strikes shall be swift and unyielding. The sorcerer, with",
+          "context_size": 1434,
+          "tokens_generated": 14,
+          "total_time_ms": 191,
+          "turn": 21,
+          "workflow": 5
+        },
+        {
+          "content": " a sinister grin, accepted the sword and thanked Jack profusely.",
+          "context_size": 1499,
+          "tokens_generated": 16,
+          "total_time_ms": 199,
+          "turn": 22,
+          "workflow": 5
+        },
+        {
+          "content": " \"However, as the sorcerer departed, a sense of unease",
+          "context_size": 1554,
+          "tokens_generated": 13,
+          "total_time_ms": 207,
+          "turn": 23,
+          "workflow": 5
+        },
+        {
+          "content": " settled upon Jack. He had a feeling that he had made a grave mistake,",
+          "context_size": 1625,
+          "tokens_generated": 17,
+          "total_time_ms": 193,
+          "turn": 24,
+          "workflow": 5
+        },
+        {
+          "content": " that the sword was not meant for the sorcerer's hands, but",
+          "context_size": 1685,
+          "tokens_generated": 14,
+          "total_time_ms": 207,
+          "turn": 25,
+          "workflow": 5
+        },
+        {
+          "content": " for a greater evil's. As the days turned into weeks, stories of",
+          "context_size": 1750,
+          "tokens_generated": 16,
+          "total_time_ms": 192,
+          "turn": 26,
+          "workflow": 5
+        },
+        {
+          "content": " the sorcerer's exploits began to spread, and the tales of",
+          "context_size": 1809,
+          "tokens_generated": 14,
+          "total_time_ms": 216,
+          "turn": 27,
+          "workflow": 5
+        },
+        {
+          "content": " devastation and destruction followed him. Jack, consumed by guilt and fear, knew",
+          "context_size": 1891,
+          "tokens_generated": 20,
+          "total_time_ms": 194,
+          "turn": 28,
+          "workflow": 5
+        },
+        {
+          "content": " that he must take back the sword and prevent its misuse.\n\nIn",
+          "context_size": 1953,
+          "tokens_generated": 15,
+          "total_time_ms": 186,
+          "turn": 29,
+          "workflow": 5
+        },
+        {
+          "content": " the midst of his restless nights, Jack, the humble blacksmith,",
+          "context_size": 2017,
+          "tokens_generated": 15,
+          "total_time_ms": 200,
+          "turn": 30,
+          "workflow": 5
+        },
+        {
+          "content": " dreamt of a journey to a hidden temple, shrouded by mist and",
+          "context_size": 2079,
+          "tokens_generated": 15,
+          "total_time_ms": 194,
+          "turn": 31,
+          "workflow": 5
+        },
+        {
+          "content": " surrounded by ancient trees. He dreamt of a path, shimmering with",
+          "context_size": 2146,
+          "tokens_generated": 16,
+          "total_time_ms": 190,
+          "turn": 32,
+          "workflow": 5
+        },
+        {
+          "content": " golden light, leading him to the temple's entrance. He dreamt of",
+          "context_size": 2212,
+          "tokens_generated": 16,
+          "total_time_ms": 249,
+          "turn": 33,
+          "workflow": 5
+        },
+        {
+          "content": " a journey through treacherous terrains, crossing rivers of molten lava",
+          "context_size": 2284,
+          "tokens_generated": 17,
+          "total_time_ms": 221,
+          "turn": 34,
+          "workflow": 5
+        },
+        {
+          "content": " and perilous mountains, venturing into dark caves filled with unknown creatures",
+          "context_size": 2365,
+          "tokens_generated": 20,
+          "total_time_ms": 208,
+          "turn": 35,
+          "workflow": 5
+        },
+        {
+          "content": " In the quiet hours of the morning, Jack awoke with a start,",
+          "context_size": 2426,
+          "tokens_generated": 15,
+          "total_time_ms": 224,
+          "turn": 36,
+          "workflow": 5
+        },
+        {
+          "content": " resolved to embark on the journey of his dreams, to the hidden temple sh",
+          "context_size": 2500,
+          "tokens_generated": 18,
+          "total_time_ms": 207,
+          "turn": 37,
+          "workflow": 5
+        },
+        {
+          "content": " and retrieve the sword from the sorcerer's grasp. He spent days",
+          "context_size": 2565,
+          "tokens_generated": 16,
+          "total_time_ms": 207,
+          "turn": 38,
+          "workflow": 5
+        },
+        {
+          "content": " preparing for his journey, gathering supplies and studying ancient maps. He forged a",
+          "context_size": 2651,
+          "tokens_generated": 21,
+          "total_time_ms": 208,
+          "turn": 39,
+          "workflow": 5
+        },
+        {
+          "content": " sturdy shield, imbued with protective enchantments, to saf",
+          "context_size": 2711,
+          "tokens_generated": 14,
+          "total_time_ms": 216,
+          "turn": 40,
+          "workflow": 5
+        },
+        {
+          "content": " guard him from harm during his perilous quest. He also crafted a",
+          "context_size": 2777,
+          "tokens_generated": 16,
+          "total_time_ms": 191,
+          "turn": 41,
+          "workflow": 5
+        },
+        {
+          "content": " map of the treacherous terrains, marked with the path of golden light",
+          "context_size": 2848,
+          "tokens_generated": 17,
+          "total_time_ms": 188,
+          "turn": 42,
+          "workflow": 5
+        },
+        {
+          "content": " He embarked on his journey, guided by the dreams of the golden path",
+          "context_size": 2917,
+          "tokens_generated": 17,
+          "total_time_ms": 190,
+          "turn": 43,
+          "workflow": 5
+        },
+        {
+          "content": " and ancient maps, Jack ventured forth, his heart filled with resolve. Through",
+          "context_size": 2996,
+          "tokens_generated": 19,
+          "total_time_ms": 191,
+          "turn": 44,
+          "workflow": 5
+        },
+        {
+          "content": " His journey was arduous, filled with trials and tribulations, yet Jack",
+          "context_size": 3068,
+          "tokens_generated": 17,
+          "total_time_ms": 205,
+          "turn": 45,
+          "workflow": 5
+        },
+        {
+          "content": " persevered, driven by his guilt and determination. He crossed rivers of",
+          "context_size": 3141,
+          "tokens_generated": 18,
+          "total_time_ms": 209,
+          "turn": 46,
+          "workflow": 5
+        },
+        {
+          "content": " molten lava, navigated through dark caves filled with unknown creatures,",
+          "context_size": 3215,
+          "tokens_generated": 18,
+          "total_time_ms": 193,
+          "turn": 47,
+          "workflow": 5
+        },
+        {
+          "content": " and scaled perilous mountains, narrowly escaping the clutches",
+          "context_size": 3278,
+          "tokens_generated": 15,
+          "total_time_ms": 190,
+          "turn": 48,
+          "workflow": 5
+        },
+        {
+          "content": " of deadly beasts.\n\nIn the heart of the dark forest, Jack",
+          "context_size": 3336,
+          "tokens_generated": 14,
+          "total_time_ms": 249,
+          "turn": 49,
+          "workflow": 5
+        },
+        {
+          "content": " encountered a wise old hermit, who offered him guidance and wisdom. The her",
+          "context_size": 3413,
+          "tokens_generated": 19,
+          "total_time_ms": 215,
+          "turn": 50,
+          "workflow": 5
+        }
+      ],
+      "total_time_seconds": 10.297004687,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_5",
+      "workflow_number": 5
+    },
+    {
+      "avg_turn_time_ms": 201.0612244897959,
+      "final_story": "  in a land far, far away, there lived a young girl named Elara  who possessed a unique gift. She could communicate with the wind, hearing its whis  whispers and understanding its secrets. One day, as she sat by the river  and gazed at the dancing water, a gust of wind swept by,  carrying a small, glowing feather. Elara, intrigued,  picked up the feather and felt a surge of energy coursing through her.  Suddenly, the feather began to glow brighter, and a voice echoed  within her mind, \"Chosen one, the time has come. A darkness  looms over our realm, and only you can save us. The feather  is the key to unlocking the ancient power within you. Follow the wind to  the mystical forest of Eldara, where the ancient tree of Tharis stands  waits for you. There, you will find the answers you seek and the  strength to face the darkness. But beware, for the path is long and  treacherous, and many challenges await you. As you journey through the forest  and across the rolling hills, the wind will guide you, though storms may  arise to test your resolve. The wind shall speak to you in riddles  Embrace the journey, brave Elara,\nFor the wind shall be thy  compass, and the feather thy guide. In the forest of Eldara,  you will find ancient wisdom and hidden allies.\nThe wind will reveal the path  As Elara held the glowing feather, she felt a sense of determination  wash over her. She stood up, the feather still glowing brightly  in her hand, and whispered back to the wind, \"I accept the challenge  \"With a gentle whisper, the wind replied, 'Your journey begins at the  dawn of the new day, beyond the sun-kissed meadows.  Follow the wind's guidance,\nBeyond the sun-kiss  kissed meadows, beyond the hidden grove,\nWhere the ancient tree'  stands tall and proud,\nBeneath its boughs, you'll  find the answers you seek,\nThe strength to face the darkness,\nA  and the wisdom to guide your path.\n\nThe sun dipped below the  horizon, casting long shadows across the sun-kissed meadows. El  ara waited patiently for the dawn, her heart filled with anticipation.  As the first light of dawn broke, Elara stepped onto the sun-k  kissed meadows, the feather in her hand shimmering with a soft  glimmer.\nShe followed the wind's gentle breeze,\nGuiding  her through the hidden grove,\nWhere the ancient tree's roots tw  twined and tangled,\nA testament to its age and wisdom.  As Elara approached the ancient tree, she felt a sense of awe wash  over her. The tree stood tall and majestic, its branches reaching towards the  sky, adorned with leaves that shimmered with an ethereal  glow.\n\nElara reached out, placing her hand on the tree'  trunk, and the tree responded with a low, rumbling hum. The fe  feather in her hand began to pulse, growing brighter and brighter until  it illuminated the entire area around her, casting a soft, golden light  that danced upon the ancient tree's bark. Elara closed her eyes  and felt a surge of energy coursing through her, a connection between the tree  and the feather, a link to the ancient power within her. As she  opened her eyes, a vision appeared before her. She saw a dark and o  murky land, shrouded in an ever-present storm. A terrible  beast, with eyes burning like embers and a body twisted and grotesque  In the vision, Elara heard a chilling laughter echoing through the darkness",
+      "k": 16,
+      "per_turn_metrics": [
+        {
+          "content": " in a land far, far away, there lived a young girl named Elara",
+          "context_size": 63,
+          "tokens_generated": 15,
+          "total_time_ms": 189,
+          "turn": 1,
+          "workflow": 6
+        },
+        {
+          "content": " who possessed a unique gift. She could communicate with the wind, hearing its whis",
+          "context_size": 147,
+          "tokens_generated": 20,
+          "total_time_ms": 196,
+          "turn": 2,
+          "workflow": 6
+        },
+        {
+          "content": " whispers and understanding its secrets. One day, as she sat by the river",
+          "context_size": 221,
+          "tokens_generated": 18,
+          "total_time_ms": 197,
+          "turn": 3,
+          "workflow": 6
+        },
+        {
+          "content": " and gazed at the dancing water, a gust of wind swept by,",
+          "context_size": 279,
+          "tokens_generated": 14,
+          "total_time_ms": 208,
+          "turn": 4,
+          "workflow": 6
+        },
+        {
+          "content": " carrying a small, glowing feather. Elara, intrigued,",
+          "context_size": 333,
+          "tokens_generated": 13,
+          "total_time_ms": 220,
+          "turn": 5,
+          "workflow": 6
+        },
+        {
+          "content": " picked up the feather and felt a surge of energy coursing through her.",
+          "context_size": 405,
+          "tokens_generated": 17,
+          "total_time_ms": 209,
+          "turn": 6,
+          "workflow": 6
+        },
+        {
+          "content": " Suddenly, the feather began to glow brighter, and a voice echoed",
+          "context_size": 471,
+          "tokens_generated": 16,
+          "total_time_ms": 208,
+          "turn": 7,
+          "workflow": 6
+        },
+        {
+          "content": " within her mind, \"Chosen one, the time has come. A darkness",
+          "context_size": 532,
+          "tokens_generated": 15,
+          "total_time_ms": 222,
+          "turn": 8,
+          "workflow": 6
+        },
+        {
+          "content": " looms over our realm, and only you can save us. The feather",
+          "context_size": 593,
+          "tokens_generated": 15,
+          "total_time_ms": 193,
+          "turn": 9,
+          "workflow": 6
+        },
+        {
+          "content": " is the key to unlocking the ancient power within you. Follow the wind to",
+          "context_size": 667,
+          "tokens_generated": 18,
+          "total_time_ms": 187,
+          "turn": 10,
+          "workflow": 6
+        },
+        {
+          "content": " the mystical forest of Eldara, where the ancient tree of Tharis stands",
+          "context_size": 739,
+          "tokens_generated": 17,
+          "total_time_ms": 202,
+          "turn": 11,
+          "workflow": 6
+        },
+        {
+          "content": " waits for you. There, you will find the answers you seek and the",
+          "context_size": 805,
+          "tokens_generated": 16,
+          "total_time_ms": 192,
+          "turn": 12,
+          "workflow": 6
+        },
+        {
+          "content": " strength to face the darkness. But beware, for the path is long and",
+          "context_size": 874,
+          "tokens_generated": 17,
+          "total_time_ms": 189,
+          "turn": 13,
+          "workflow": 6
+        },
+        {
+          "content": " treacherous, and many challenges await you. As you journey through the forest",
+          "context_size": 953,
+          "tokens_generated": 19,
+          "total_time_ms": 199,
+          "turn": 14,
+          "workflow": 6
+        },
+        {
+          "content": " and across the rolling hills, the wind will guide you, though storms may",
+          "context_size": 1027,
+          "tokens_generated": 18,
+          "total_time_ms": 207,
+          "turn": 15,
+          "workflow": 6
+        },
+        {
+          "content": " arise to test your resolve. The wind shall speak to you in riddles",
+          "context_size": 1095,
+          "tokens_generated": 16,
+          "total_time_ms": 191,
+          "turn": 16,
+          "workflow": 6
+        },
+        {
+          "content": " Embrace the journey, brave Elara,\nFor the wind shall be thy",
+          "context_size": 1156,
+          "tokens_generated": 15,
+          "total_time_ms": 199,
+          "turn": 17,
+          "workflow": 6
+        },
+        {
+          "content": " compass, and the feather thy guide. In the forest of Eldara,",
+          "context_size": 1218,
+          "tokens_generated": 15,
+          "total_time_ms": 192,
+          "turn": 18,
+          "workflow": 6
+        },
+        {
+          "content": " you will find ancient wisdom and hidden allies.\nThe wind will reveal the path",
+          "context_size": 1297,
+          "tokens_generated": 19,
+          "total_time_ms": 188,
+          "turn": 19,
+          "workflow": 6
+        },
+        {
+          "content": " As Elara held the glowing feather, she felt a sense of determination",
+          "context_size": 1367,
+          "tokens_generated": 17,
+          "total_time_ms": 197,
+          "turn": 20,
+          "workflow": 6
+        },
+        {
+          "content": " wash over her. She stood up, the feather still glowing brightly",
+          "context_size": 1432,
+          "tokens_generated": 16,
+          "total_time_ms": 207,
+          "turn": 21,
+          "workflow": 6
+        },
+        {
+          "content": " in her hand, and whispered back to the wind, \"I accept the challenge",
+          "context_size": 1502,
+          "tokens_generated": 17,
+          "total_time_ms": 235,
+          "turn": 22,
+          "workflow": 6
+        },
+        {
+          "content": " \"With a gentle whisper, the wind replied, 'Your journey begins at the",
+          "context_size": 1573,
+          "tokens_generated": 17,
+          "total_time_ms": 192,
+          "turn": 23,
+          "workflow": 6
+        },
+        {
+          "content": " dawn of the new day, beyond the sun-kissed meadows.",
+          "context_size": 1626,
+          "tokens_generated": 13,
+          "total_time_ms": 200,
+          "turn": 24,
+          "workflow": 6
+        },
+        {
+          "content": " Follow the wind's guidance,\nBeyond the sun-kiss",
+          "context_size": 1675,
+          "tokens_generated": 12,
+          "total_time_ms": 212,
+          "turn": 25,
+          "workflow": 6
+        },
+        {
+          "content": " kissed meadows, beyond the hidden grove,\nWhere the ancient tree'",
+          "context_size": 1741,
+          "tokens_generated": 16,
+          "total_time_ms": 193,
+          "turn": 26,
+          "workflow": 6
+        },
+        {
+          "content": " stands tall and proud,\nBeneath its boughs, you'll",
+          "context_size": 1792,
+          "tokens_generated": 12,
+          "total_time_ms": 200,
+          "turn": 27,
+          "workflow": 6
+        },
+        {
+          "content": " find the answers you seek,\nThe strength to face the darkness,\nA",
+          "context_size": 1857,
+          "tokens_generated": 16,
+          "total_time_ms": 194,
+          "turn": 28,
+          "workflow": 6
+        },
+        {
+          "content": " and the wisdom to guide your path.\n\nThe sun dipped below the",
+          "context_size": 1919,
+          "tokens_generated": 15,
+          "total_time_ms": 190,
+          "turn": 29,
+          "workflow": 6
+        },
+        {
+          "content": " horizon, casting long shadows across the sun-kissed meadows. El",
+          "context_size": 1984,
+          "tokens_generated": 16,
+          "total_time_ms": 191,
+          "turn": 30,
+          "workflow": 6
+        },
+        {
+          "content": " ara waited patiently for the dawn, her heart filled with anticipation.",
+          "context_size": 2056,
+          "tokens_generated": 17,
+          "total_time_ms": 190,
+          "turn": 31,
+          "workflow": 6
+        },
+        {
+          "content": " As the first light of dawn broke, Elara stepped onto the sun-k",
+          "context_size": 2120,
+          "tokens_generated": 15,
+          "total_time_ms": 221,
+          "turn": 32,
+          "workflow": 6
+        },
+        {
+          "content": " kissed meadows, the feather in her hand shimmering with a soft",
+          "context_size": 2184,
+          "tokens_generated": 15,
+          "total_time_ms": 194,
+          "turn": 33,
+          "workflow": 6
+        },
+        {
+          "content": " glimmer.\nShe followed the wind's gentle breeze,\nGuiding",
+          "context_size": 2241,
+          "tokens_generated": 14,
+          "total_time_ms": 187,
+          "turn": 34,
+          "workflow": 6
+        },
+        {
+          "content": " her through the hidden grove,\nWhere the ancient tree's roots tw",
+          "context_size": 2306,
+          "tokens_generated": 16,
+          "total_time_ms": 192,
+          "turn": 35,
+          "workflow": 6
+        },
+        {
+          "content": " twined and tangled,\nA testament to its age and wisdom.",
+          "context_size": 2362,
+          "tokens_generated": 13,
+          "total_time_ms": 214,
+          "turn": 36,
+          "workflow": 6
+        },
+        {
+          "content": " As Elara approached the ancient tree, she felt a sense of awe wash",
+          "context_size": 2430,
+          "tokens_generated": 16,
+          "total_time_ms": 209,
+          "turn": 37,
+          "workflow": 6
+        },
+        {
+          "content": " over her. The tree stood tall and majestic, its branches reaching towards the",
+          "context_size": 2509,
+          "tokens_generated": 19,
+          "total_time_ms": 208,
+          "turn": 38,
+          "workflow": 6
+        },
+        {
+          "content": " sky, adorned with leaves that shimmered with an ethereal",
+          "context_size": 2567,
+          "tokens_generated": 14,
+          "total_time_ms": 207,
+          "turn": 39,
+          "workflow": 6
+        },
+        {
+          "content": " glow.\n\nElara reached out, placing her hand on the tree'",
+          "context_size": 2624,
+          "tokens_generated": 14,
+          "total_time_ms": 208,
+          "turn": 40,
+          "workflow": 6
+        },
+        {
+          "content": " trunk, and the tree responded with a low, rumbling hum. The fe",
+          "context_size": 2688,
+          "tokens_generated": 15,
+          "total_time_ms": 208,
+          "turn": 41,
+          "workflow": 6
+        },
+        {
+          "content": " feather in her hand began to pulse, growing brighter and brighter until",
+          "context_size": 2761,
+          "tokens_generated": 18,
+          "total_time_ms": 208,
+          "turn": 42,
+          "workflow": 6
+        },
+        {
+          "content": " it illuminated the entire area around her, casting a soft, golden light",
+          "context_size": 2834,
+          "tokens_generated": 18,
+          "total_time_ms": 207,
+          "turn": 43,
+          "workflow": 6
+        },
+        {
+          "content": " that danced upon the ancient tree's bark. Elara closed her eyes",
+          "context_size": 2899,
+          "tokens_generated": 16,
+          "total_time_ms": 191,
+          "turn": 44,
+          "workflow": 6
+        },
+        {
+          "content": " and felt a surge of energy coursing through her, a connection between the tree",
+          "context_size": 2979,
+          "tokens_generated": 19,
+          "total_time_ms": 189,
+          "turn": 45,
+          "workflow": 6
+        },
+        {
+          "content": " and the feather, a link to the ancient power within her. As she",
+          "context_size": 3044,
+          "tokens_generated": 16,
+          "total_time_ms": 191,
+          "turn": 46,
+          "workflow": 6
+        },
+        {
+          "content": " opened her eyes, a vision appeared before her. She saw a dark and o",
+          "context_size": 3113,
+          "tokens_generated": 17,
+          "total_time_ms": 192,
+          "turn": 47,
+          "workflow": 6
+        },
+        {
+          "content": " murky land, shrouded in an ever-present storm. A terrible",
+          "context_size": 3172,
+          "tokens_generated": 14,
+          "total_time_ms": 216,
+          "turn": 48,
+          "workflow": 6
+        },
+        {
+          "content": " beast, with eyes burning like embers and a body twisted and grotesque",
+          "context_size": 3243,
+          "tokens_generated": 17,
+          "total_time_ms": 193,
+          "turn": 49,
+          "workflow": 6
+        },
+        {
+          "content": " In the vision, Elara heard a chilling laughter echoing through the darkness",
+          "context_size": 3320,
+          "tokens_generated": 19,
+          "total_time_ms": 217,
+          "turn": 50,
+          "workflow": 6
+        }
+      ],
+      "total_time_seconds": 10.120009527,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_6",
+      "workflow_number": 6
+    },
+    {
+      "avg_turn_time_ms": 201.40816326530611,
+      "final_story": "  in a far-off kingdom, there lived a young princess named Isabella  who was known for her beauty and kindness. One day, a mysterious old woman  approached the palace gates, claiming to possess a magical secret that could change Isab  Isabella's heart pounded with anticipation as she, accompanied by  her loyal guard, ventured out to meet the old woman. The woman led  Isabella and her guard deep into the forest, to a hidden glade  where a shimmering pool nestled among ancient trees. The old woman gest  urged Isabella to approach the pool and, with a wave of her hand  \"and, with a wave of her hand, the old woman whispered a spell  \"The water in the pool began to swirl and churn, and as  Isabella leaned forward, the water's surface parted, revealing a  glowing crystal beneath. The old woman instructed Isabella to reach into  the pool and grasp the crystal. As Isabella's fingers touched the  crystalline surface, the pool erupted with a brilliant light, ill  uminating the forest in a radiant glow. A sudden, powerful force sur  gripped Isabella, and she felt her senses heighten as a  voice echoed within her, \"Embrace the power within, Isabella  Princess Isabella, now overwhelmed with an indescribable power, felt  a surge of energy coursing through her veins. Her eyes glowed with  an otherworldly radiance, and her hair flowed like a casc  ade of silver. With a deep breath, she raised her arms, and  the world around her trembled. A storm brewed in the distance, but  Isabella, now a beacon of untamed energy, spoke with a  voice of command, \"Storm, cease!\" The winds howled and  raged, but slowly began to subside, the rain clouds parting to  reveal a brilliant sunset. The once dark and foreboding forest was now  bathed in the warm hues of twilight. The old woman,  satisfied, smiled and said, \"You have harnessed the power, Is  My apologies for the delay. Here are the next 16 tokens to  continue the story:\n\n13. \"Now, you must learn to  control this power, for it is a gift and a curse.\n14  14. \"Within you lies the power to change the world,  but also the power to destroy it.\n15. \"You must choose  16. \"Your journey has just begun, my dear Isabella  17. \"Now, you must find a way to use this power  18. \"For the good of your kingdom.\"\n19.  20. \"And so, Isabella returned to the palace,  21. \"Her transformation was a secret she guarded fiercely  22. \"But her kindness and compassion remained unchanged.\n2  23. \"Isabella spent many days and nights learning to control  her newfound powers, seeking wisdom from scholars, sorcerers, and the  24. \"Her guard remained loyal, protecting her day and night,  25. \"Yet, she knew she could not keep her powers  hidden forever.\n26. One day, a villager approached the palace  27. \"Panicked and terrified, he spoke of a great beast  28. \"The beast has returned, Your Highness,\" he cried  29. \"What beast?\" Isabella asked, her eyes wid  30. \"A monster, a terror, it's been destroying  villages and taking lives, Your Highness,\" the villager sobbed.  31. Isabella's heart filled with determination, and she",
+      "k": 16,
+      "per_turn_metrics": [
+        {
+          "content": " in a far-off kingdom, there lived a young princess named Isabella",
+          "context_size": 67,
+          "tokens_generated": 16,
+          "total_time_ms": 190,
+          "turn": 1,
+          "workflow": 7
+        },
+        {
+          "content": " who was known for her beauty and kindness. One day, a mysterious old woman",
+          "context_size": 143,
+          "tokens_generated": 18,
+          "total_time_ms": 186,
+          "turn": 2,
+          "workflow": 7
+        },
+        {
+          "content": " approached the palace gates, claiming to possess a magical secret that could change Isab",
+          "context_size": 233,
+          "tokens_generated": 22,
+          "total_time_ms": 187,
+          "turn": 3,
+          "workflow": 7
+        },
+        {
+          "content": " Isabella's heart pounded with anticipation as she, accompanied by",
+          "context_size": 300,
+          "tokens_generated": 16,
+          "total_time_ms": 188,
+          "turn": 4,
+          "workflow": 7
+        },
+        {
+          "content": " her loyal guard, ventured out to meet the old woman. The woman led",
+          "context_size": 368,
+          "tokens_generated": 16,
+          "total_time_ms": 200,
+          "turn": 5,
+          "workflow": 7
+        },
+        {
+          "content": " Isabella and her guard deep into the forest, to a hidden glade",
+          "context_size": 432,
+          "tokens_generated": 15,
+          "total_time_ms": 207,
+          "turn": 6,
+          "workflow": 7
+        },
+        {
+          "content": " where a shimmering pool nestled among ancient trees. The old woman gest",
+          "context_size": 505,
+          "tokens_generated": 18,
+          "total_time_ms": 207,
+          "turn": 7,
+          "workflow": 7
+        },
+        {
+          "content": " urged Isabella to approach the pool and, with a wave of her hand",
+          "context_size": 571,
+          "tokens_generated": 16,
+          "total_time_ms": 225,
+          "turn": 8,
+          "workflow": 7
+        },
+        {
+          "content": " \"and, with a wave of her hand, the old woman whispered a spell",
+          "context_size": 635,
+          "tokens_generated": 15,
+          "total_time_ms": 222,
+          "turn": 9,
+          "workflow": 7
+        },
+        {
+          "content": " \"The water in the pool began to swirl and churn, and as",
+          "context_size": 692,
+          "tokens_generated": 14,
+          "total_time_ms": 192,
+          "turn": 10,
+          "workflow": 7
+        },
+        {
+          "content": " Isabella leaned forward, the water's surface parted, revealing a",
+          "context_size": 758,
+          "tokens_generated": 16,
+          "total_time_ms": 199,
+          "turn": 11,
+          "workflow": 7
+        },
+        {
+          "content": " glowing crystal beneath. The old woman instructed Isabella to reach into",
+          "context_size": 832,
+          "tokens_generated": 18,
+          "total_time_ms": 191,
+          "turn": 12,
+          "workflow": 7
+        },
+        {
+          "content": " the pool and grasp the crystal. As Isabella's fingers touched the",
+          "context_size": 899,
+          "tokens_generated": 16,
+          "total_time_ms": 186,
+          "turn": 13,
+          "workflow": 7
+        },
+        {
+          "content": " crystalline surface, the pool erupted with a brilliant light, ill",
+          "context_size": 966,
+          "tokens_generated": 16,
+          "total_time_ms": 217,
+          "turn": 14,
+          "workflow": 7
+        },
+        {
+          "content": " uminating the forest in a radiant glow. A sudden, powerful force sur",
+          "context_size": 1036,
+          "tokens_generated": 17,
+          "total_time_ms": 193,
+          "turn": 15,
+          "workflow": 7
+        },
+        {
+          "content": " gripped Isabella, and she felt her senses heighten as a",
+          "context_size": 1093,
+          "tokens_generated": 14,
+          "total_time_ms": 209,
+          "turn": 16,
+          "workflow": 7
+        },
+        {
+          "content": " voice echoed within her, \"Embrace the power within, Isabella",
+          "context_size": 1155,
+          "tokens_generated": 15,
+          "total_time_ms": 193,
+          "turn": 17,
+          "workflow": 7
+        },
+        {
+          "content": " Princess Isabella, now overwhelmed with an indescribable power, felt",
+          "context_size": 1225,
+          "tokens_generated": 17,
+          "total_time_ms": 188,
+          "turn": 18,
+          "workflow": 7
+        },
+        {
+          "content": " a surge of energy coursing through her veins. Her eyes glowed with",
+          "context_size": 1293,
+          "tokens_generated": 16,
+          "total_time_ms": 203,
+          "turn": 19,
+          "workflow": 7
+        },
+        {
+          "content": " an otherworldly radiance, and her hair flowed like a casc",
+          "context_size": 1352,
+          "tokens_generated": 14,
+          "total_time_ms": 212,
+          "turn": 20,
+          "workflow": 7
+        },
+        {
+          "content": " ade of silver. With a deep breath, she raised her arms, and",
+          "context_size": 1413,
+          "tokens_generated": 15,
+          "total_time_ms": 191,
+          "turn": 21,
+          "workflow": 7
+        },
+        {
+          "content": " the world around her trembled. A storm brewed in the distance, but",
+          "context_size": 1481,
+          "tokens_generated": 16,
+          "total_time_ms": 186,
+          "turn": 22,
+          "workflow": 7
+        },
+        {
+          "content": " Isabella, now a beacon of untamed energy, spoke with a",
+          "context_size": 1537,
+          "tokens_generated": 13,
+          "total_time_ms": 203,
+          "turn": 23,
+          "workflow": 7
+        },
+        {
+          "content": " voice of command, \"Storm, cease!\" The winds howled and",
+          "context_size": 1593,
+          "tokens_generated": 13,
+          "total_time_ms": 204,
+          "turn": 24,
+          "workflow": 7
+        },
+        {
+          "content": " raged, but slowly began to subside, the rain clouds parting to",
+          "context_size": 1657,
+          "tokens_generated": 15,
+          "total_time_ms": 224,
+          "turn": 25,
+          "workflow": 7
+        },
+        {
+          "content": " reveal a brilliant sunset. The once dark and foreboding forest was now",
+          "context_size": 1729,
+          "tokens_generated": 17,
+          "total_time_ms": 257,
+          "turn": 26,
+          "workflow": 7
+        },
+        {
+          "content": " bathed in the warm hues of twilight. The old woman,",
+          "context_size": 1782,
+          "tokens_generated": 13,
+          "total_time_ms": 194,
+          "turn": 27,
+          "workflow": 7
+        },
+        {
+          "content": " satisfied, smiled and said, \"You have harnessed the power, Is",
+          "context_size": 1845,
+          "tokens_generated": 15,
+          "total_time_ms": 184,
+          "turn": 28,
+          "workflow": 7
+        },
+        {
+          "content": " My apologies for the delay. Here are the next 16 tokens to",
+          "context_size": 1905,
+          "tokens_generated": 14,
+          "total_time_ms": 203,
+          "turn": 29,
+          "workflow": 7
+        },
+        {
+          "content": " continue the story:\n\n13. \"Now, you must learn to",
+          "context_size": 1955,
+          "tokens_generated": 12,
+          "total_time_ms": 194,
+          "turn": 30,
+          "workflow": 7
+        },
+        {
+          "content": " control this power, for it is a gift and a curse.\n14",
+          "context_size": 2009,
+          "tokens_generated": 13,
+          "total_time_ms": 209,
+          "turn": 31,
+          "workflow": 7
+        },
+        {
+          "content": " 14. \"Within you lies the power to change the world,",
+          "context_size": 2062,
+          "tokens_generated": 13,
+          "total_time_ms": 193,
+          "turn": 32,
+          "workflow": 7
+        },
+        {
+          "content": " but also the power to destroy it.\n15. \"You must choose",
+          "context_size": 2118,
+          "tokens_generated": 13,
+          "total_time_ms": 214,
+          "turn": 33,
+          "workflow": 7
+        },
+        {
+          "content": " 16. \"Your journey has just begun, my dear Isabella",
+          "context_size": 2170,
+          "tokens_generated": 12,
+          "total_time_ms": 192,
+          "turn": 34,
+          "workflow": 7
+        },
+        {
+          "content": " 17. \"Now, you must find a way to use this power",
+          "context_size": 2219,
+          "tokens_generated": 12,
+          "total_time_ms": 202,
+          "turn": 35,
+          "workflow": 7
+        },
+        {
+          "content": " 18. \"For the good of your kingdom.\"\n19.",
+          "context_size": 2260,
+          "tokens_generated": 10,
+          "total_time_ms": 193,
+          "turn": 36,
+          "workflow": 7
+        },
+        {
+          "content": " 20. \"And so, Isabella returned to the palace,",
+          "context_size": 2307,
+          "tokens_generated": 11,
+          "total_time_ms": 213,
+          "turn": 37,
+          "workflow": 7
+        },
+        {
+          "content": " 21. \"Her transformation was a secret she guarded fiercely",
+          "context_size": 2366,
+          "tokens_generated": 14,
+          "total_time_ms": 209,
+          "turn": 38,
+          "workflow": 7
+        },
+        {
+          "content": " 22. \"But her kindness and compassion remained unchanged.\n2",
+          "context_size": 2426,
+          "tokens_generated": 14,
+          "total_time_ms": 195,
+          "turn": 39,
+          "workflow": 7
+        },
+        {
+          "content": " 23. \"Isabella spent many days and nights learning to control",
+          "context_size": 2488,
+          "tokens_generated": 15,
+          "total_time_ms": 196,
+          "turn": 40,
+          "workflow": 7
+        },
+        {
+          "content": " her newfound powers, seeking wisdom from scholars, sorcerers, and the",
+          "context_size": 2559,
+          "tokens_generated": 17,
+          "total_time_ms": 190,
+          "turn": 41,
+          "workflow": 7
+        },
+        {
+          "content": " 24. \"Her guard remained loyal, protecting her day and night,",
+          "context_size": 2621,
+          "tokens_generated": 15,
+          "total_time_ms": 191,
+          "turn": 42,
+          "workflow": 7
+        },
+        {
+          "content": " 25. \"Yet, she knew she could not keep her powers",
+          "context_size": 2671,
+          "tokens_generated": 12,
+          "total_time_ms": 191,
+          "turn": 43,
+          "workflow": 7
+        },
+        {
+          "content": " hidden forever.\n26. One day, a villager approached the palace",
+          "context_size": 2734,
+          "tokens_generated": 15,
+          "total_time_ms": 223,
+          "turn": 44,
+          "workflow": 7
+        },
+        {
+          "content": " 27. \"Panicked and terrified, he spoke of a great beast",
+          "context_size": 2790,
+          "tokens_generated": 13,
+          "total_time_ms": 210,
+          "turn": 45,
+          "workflow": 7
+        },
+        {
+          "content": " 28. \"The beast has returned, Your Highness,\" he cried",
+          "context_size": 2845,
+          "tokens_generated": 13,
+          "total_time_ms": 210,
+          "turn": 46,
+          "workflow": 7
+        },
+        {
+          "content": " 29. \"What beast?\" Isabella asked, her eyes wid",
+          "context_size": 2893,
+          "tokens_generated": 11,
+          "total_time_ms": 209,
+          "turn": 47,
+          "workflow": 7
+        },
+        {
+          "content": " 30. \"A monster, a terror, it's been destroying",
+          "context_size": 2941,
+          "tokens_generated": 11,
+          "total_time_ms": 194,
+          "turn": 48,
+          "workflow": 7
+        },
+        {
+          "content": " villages and taking lives, Your Highness,\" the villager sobbed.",
+          "context_size": 3006,
+          "tokens_generated": 16,
+          "total_time_ms": 190,
+          "turn": 49,
+          "workflow": 7
+        },
+        {
+          "content": " 31. Isabella's heart filled with determination, and she",
+          "context_size": 3063,
+          "tokens_generated": 14,
+          "total_time_ms": 200,
+          "turn": 50,
+          "workflow": 7
+        }
+      ],
+      "total_time_seconds": 10.140787918000001,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_7",
+      "workflow_number": 7
+    },
+    {
+      "avg_turn_time_ms": 205.3673469387755,
+      "final_story": "  in a land far, far away, there lived a young girl named Elara  who possessed an extraordinary gift. She could speak to animals, a secret she kept  hidden from all but one, her most trusted friend, Orion. One day  Elara and Orion ventured into the dense Whispering Woods,  seeking the legendary Crystal of Harmony, a gem said to grant its bear  holder the power to communicate with every living creature across the realm. As they del  ve deeper into the Whispering Woods, the air grew thick and heavy  With every step, the trees seemed to lean in closer, their branches whispering  secrets long forgotten. The undergrowth rustled ominously, and the  shadows grew long and dark. Suddenly, the duo heard a faint, ha  unting melody echoing through the woods. Elara's eyes wid  widened with curiosity, and she urged Orion to follow the sound. As  they followed the haunting melody, the trees parted to reveal a hidden  glade shrouded in an ethereal glow. In the center of  the glade stood a majestic unicorn, its coat shimmering  golden under the moonlight. Its horn radiated a soft, soothing light  The unicorn lowered its head, its eyes locking with Elara'  As Elara and Orion approached, the unicorn began to sing a  sorrowful ballad, its voice as melodious as a lark and  as mournful as the wind weeping through the trees. Elara felt  a deep connection to the unicorn's song, her heart aching  with the melancholy notes. The unicorn continued to sing, its  tears glistening in the moonlight. Elara reached out, her hands  trembling slightly, and placed them on the unicorn's tear-  stained flank. In that moment, a surge of energy flowed through  Elara, and she was filled with a profound understanding of the unicorn  sorrow and the reason for its song. The unicorn, sensing  Elara's empathy, raised its head and bowed gracefully.  Elara closed her eyes, absorbing the anguish that resonated within  the unicorn's spirit. As the song gradually faded, the air  around them began to clear, the shadows receded, and the haunting  melody transformed into a gentle lullaby. The unicorn, now  calmer, looked at Elara with a sense of gratitude in its eyes.  Elara, with tears streaming down her face, spoke softly to the unic  orn, \"I understand your pain, and I share your sorrow.  But the Crystal of Harmony, the source of the unicorn'  's tears, lies deep within the heart of this very woods. It is  my duty, Elara, to protect the Crystal from those who would mis  use its power. With your help, I shall guide you to its location,  but the journey will be perilous and fraught with danger. The  Crystal of Harmony, hidden it lies,\nIn the heart of the  woods, where the shadows never die,\nBeneath the roots of the ancient  tree, where the wind howls with a mournful cry,\nIn  the embrace of the Whispering Woods, where secrets are whispered and tales  tales of old are told,\nWhere the beasts of legend roam,  With the unicorn's guidance, Elara and Orion embark  Upon a path that twists and turns, through the haunted woods so old  and dark, where the air is thick with mystery and the sounds of ancient secrets  remain.\nAs they journey deeper, the trees grow taller and stranger,  Their path was illuminated by the moon's soft glow,\nThe",
+      "k": 16,
+      "per_turn_metrics": [
+        {
+          "content": " in a land far, far away, there lived a young girl named Elara",
+          "context_size": 63,
+          "tokens_generated": 15,
+          "total_time_ms": 193,
+          "turn": 1,
+          "workflow": 8
+        },
+        {
+          "content": " who possessed an extraordinary gift. She could speak to animals, a secret she kept",
+          "context_size": 147,
+          "tokens_generated": 20,
+          "total_time_ms": 220,
+          "turn": 2,
+          "workflow": 8
+        },
+        {
+          "content": " hidden from all but one, her most trusted friend, Orion. One day",
+          "context_size": 213,
+          "tokens_generated": 16,
+          "total_time_ms": 195,
+          "turn": 3,
+          "workflow": 8
+        },
+        {
+          "content": " Elara and Orion ventured into the dense Whispering Woods,",
+          "context_size": 272,
+          "tokens_generated": 14,
+          "total_time_ms": 217,
+          "turn": 4,
+          "workflow": 8
+        },
+        {
+          "content": " seeking the legendary Crystal of Harmony, a gem said to grant its bear",
+          "context_size": 344,
+          "tokens_generated": 17,
+          "total_time_ms": 228,
+          "turn": 5,
+          "workflow": 8
+        },
+        {
+          "content": " holder the power to communicate with every living creature across the realm. As they del",
+          "context_size": 434,
+          "tokens_generated": 22,
+          "total_time_ms": 208,
+          "turn": 6,
+          "workflow": 8
+        },
+        {
+          "content": " ve deeper into the Whispering Woods, the air grew thick and heavy",
+          "context_size": 501,
+          "tokens_generated": 16,
+          "total_time_ms": 223,
+          "turn": 7,
+          "workflow": 8
+        },
+        {
+          "content": " With every step, the trees seemed to lean in closer, their branches whispering",
+          "context_size": 581,
+          "tokens_generated": 19,
+          "total_time_ms": 192,
+          "turn": 8,
+          "workflow": 8
+        },
+        {
+          "content": " secrets long forgotten. The undergrowth rustled ominously, and the",
+          "context_size": 649,
+          "tokens_generated": 16,
+          "total_time_ms": 198,
+          "turn": 9,
+          "workflow": 8
+        },
+        {
+          "content": " shadows grew long and dark. Suddenly, the duo heard a faint, ha",
+          "context_size": 714,
+          "tokens_generated": 16,
+          "total_time_ms": 208,
+          "turn": 10,
+          "workflow": 8
+        },
+        {
+          "content": " unting melody echoing through the woods. Elara's eyes wid",
+          "context_size": 773,
+          "tokens_generated": 14,
+          "total_time_ms": 207,
+          "turn": 11,
+          "workflow": 8
+        },
+        {
+          "content": " widened with curiosity, and she urged Orion to follow the sound. As",
+          "context_size": 842,
+          "tokens_generated": 17,
+          "total_time_ms": 223,
+          "turn": 12,
+          "workflow": 8
+        },
+        {
+          "content": " they followed the haunting melody, the trees parted to reveal a hidden",
+          "context_size": 914,
+          "tokens_generated": 17,
+          "total_time_ms": 206,
+          "turn": 13,
+          "workflow": 8
+        },
+        {
+          "content": " glade shrouded in an ethereal glow. In the center of",
+          "context_size": 968,
+          "tokens_generated": 13,
+          "total_time_ms": 209,
+          "turn": 14,
+          "workflow": 8
+        },
+        {
+          "content": " the glade stood a majestic unicorn, its coat shimmering",
+          "context_size": 1025,
+          "tokens_generated": 14,
+          "total_time_ms": 208,
+          "turn": 15,
+          "workflow": 8
+        },
+        {
+          "content": " golden under the moonlight. Its horn radiated a soft, soothing light",
+          "context_size": 1095,
+          "tokens_generated": 17,
+          "total_time_ms": 225,
+          "turn": 16,
+          "workflow": 8
+        },
+        {
+          "content": " The unicorn lowered its head, its eyes locking with Elara'",
+          "context_size": 1155,
+          "tokens_generated": 14,
+          "total_time_ms": 191,
+          "turn": 17,
+          "workflow": 8
+        },
+        {
+          "content": " As Elara and Orion approached, the unicorn began to sing a",
+          "context_size": 1215,
+          "tokens_generated": 14,
+          "total_time_ms": 200,
+          "turn": 18,
+          "workflow": 8
+        },
+        {
+          "content": " sorrowful ballad, its voice as melodious as a lark and",
+          "context_size": 1271,
+          "tokens_generated": 13,
+          "total_time_ms": 207,
+          "turn": 19,
+          "workflow": 8
+        },
+        {
+          "content": " as mournful as the wind weeping through the trees. Elara felt",
+          "context_size": 1334,
+          "tokens_generated": 15,
+          "total_time_ms": 191,
+          "turn": 20,
+          "workflow": 8
+        },
+        {
+          "content": " a deep connection to the unicorn's song, her heart aching",
+          "context_size": 1393,
+          "tokens_generated": 14,
+          "total_time_ms": 188,
+          "turn": 21,
+          "workflow": 8
+        },
+        {
+          "content": " with the melancholy notes. The unicorn continued to sing, its",
+          "context_size": 1456,
+          "tokens_generated": 15,
+          "total_time_ms": 199,
+          "turn": 22,
+          "workflow": 8
+        },
+        {
+          "content": " tears glistening in the moonlight. Elara reached out, her hands",
+          "context_size": 1521,
+          "tokens_generated": 16,
+          "total_time_ms": 198,
+          "turn": 23,
+          "workflow": 8
+        },
+        {
+          "content": " trembling slightly, and placed them on the unicorn's tear-",
+          "context_size": 1581,
+          "tokens_generated": 14,
+          "total_time_ms": 195,
+          "turn": 24,
+          "workflow": 8
+        },
+        {
+          "content": " stained flank. In that moment, a surge of energy flowed through",
+          "context_size": 1646,
+          "tokens_generated": 16,
+          "total_time_ms": 215,
+          "turn": 25,
+          "workflow": 8
+        },
+        {
+          "content": " Elara, and she was filled with a profound understanding of the unicorn",
+          "context_size": 1718,
+          "tokens_generated": 17,
+          "total_time_ms": 195,
+          "turn": 26,
+          "workflow": 8
+        },
+        {
+          "content": " sorrow and the reason for its song. The unicorn, sensing",
+          "context_size": 1776,
+          "tokens_generated": 14,
+          "total_time_ms": 185,
+          "turn": 27,
+          "workflow": 8
+        },
+        {
+          "content": " Elara's empathy, raised its head and bowed gracefully.",
+          "context_size": 1832,
+          "tokens_generated": 13,
+          "total_time_ms": 190,
+          "turn": 28,
+          "workflow": 8
+        },
+        {
+          "content": " Elara closed her eyes, absorbing the anguish that resonated within",
+          "context_size": 1900,
+          "tokens_generated": 16,
+          "total_time_ms": 190,
+          "turn": 29,
+          "workflow": 8
+        },
+        {
+          "content": " the unicorn's spirit. As the song gradually faded, the air",
+          "context_size": 1960,
+          "tokens_generated": 14,
+          "total_time_ms": 191,
+          "turn": 30,
+          "workflow": 8
+        },
+        {
+          "content": " around them began to clear, the shadows receded, and the haunting",
+          "context_size": 2027,
+          "tokens_generated": 16,
+          "total_time_ms": 217,
+          "turn": 31,
+          "workflow": 8
+        },
+        {
+          "content": " melody transformed into a gentle lullaby. The unicorn, now",
+          "context_size": 2087,
+          "tokens_generated": 14,
+          "total_time_ms": 209,
+          "turn": 32,
+          "workflow": 8
+        },
+        {
+          "content": " calmer, looked at Elara with a sense of gratitude in its eyes.",
+          "context_size": 2151,
+          "tokens_generated": 15,
+          "total_time_ms": 193,
+          "turn": 33,
+          "workflow": 8
+        },
+        {
+          "content": " Elara, with tears streaming down her face, spoke softly to the unic",
+          "context_size": 2220,
+          "tokens_generated": 17,
+          "total_time_ms": 202,
+          "turn": 34,
+          "workflow": 8
+        },
+        {
+          "content": " orn, \"I understand your pain, and I share your sorrow.",
+          "context_size": 2276,
+          "tokens_generated": 13,
+          "total_time_ms": 209,
+          "turn": 35,
+          "workflow": 8
+        },
+        {
+          "content": " But the Crystal of Harmony, the source of the unicorn'",
+          "context_size": 2332,
+          "tokens_generated": 13,
+          "total_time_ms": 207,
+          "turn": 36,
+          "workflow": 8
+        },
+        {
+          "content": " 's tears, lies deep within the heart of this very woods. It is",
+          "context_size": 2396,
+          "tokens_generated": 15,
+          "total_time_ms": 223,
+          "turn": 37,
+          "workflow": 8
+        },
+        {
+          "content": " my duty, Elara, to protect the Crystal from those who would mis",
+          "context_size": 2461,
+          "tokens_generated": 16,
+          "total_time_ms": 193,
+          "turn": 38,
+          "workflow": 8
+        },
+        {
+          "content": " use its power. With your help, I shall guide you to its location,",
+          "context_size": 2528,
+          "tokens_generated": 16,
+          "total_time_ms": 199,
+          "turn": 39,
+          "workflow": 8
+        },
+        {
+          "content": " but the journey will be perilous and fraught with danger. The",
+          "context_size": 2591,
+          "tokens_generated": 15,
+          "total_time_ms": 258,
+          "turn": 40,
+          "workflow": 8
+        },
+        {
+          "content": " Crystal of Harmony, hidden it lies,\nIn the heart of the",
+          "context_size": 2648,
+          "tokens_generated": 14,
+          "total_time_ms": 196,
+          "turn": 41,
+          "workflow": 8
+        },
+        {
+          "content": " woods, where the shadows never die,\nBeneath the roots of the ancient",
+          "context_size": 2718,
+          "tokens_generated": 17,
+          "total_time_ms": 201,
+          "turn": 42,
+          "workflow": 8
+        },
+        {
+          "content": " tree, where the wind howls with a mournful cry,\nIn",
+          "context_size": 2770,
+          "tokens_generated": 12,
+          "total_time_ms": 196,
+          "turn": 43,
+          "workflow": 8
+        },
+        {
+          "content": " the embrace of the Whispering Woods, where secrets are whispered and tales",
+          "context_size": 2846,
+          "tokens_generated": 18,
+          "total_time_ms": 191,
+          "turn": 44,
+          "workflow": 8
+        },
+        {
+          "content": " tales of old are told,\nWhere the beasts of legend roam,",
+          "context_size": 2903,
+          "tokens_generated": 14,
+          "total_time_ms": 199,
+          "turn": 45,
+          "workflow": 8
+        },
+        {
+          "content": " With the unicorn's guidance, Elara and Orion embark",
+          "context_size": 2956,
+          "tokens_generated": 13,
+          "total_time_ms": 212,
+          "turn": 46,
+          "workflow": 8
+        },
+        {
+          "content": " Upon a path that twists and turns, through the haunted woods so old",
+          "context_size": 3025,
+          "tokens_generated": 17,
+          "total_time_ms": 210,
+          "turn": 47,
+          "workflow": 8
+        },
+        {
+          "content": " and dark, where the air is thick with mystery and the sounds of ancient secrets",
+          "context_size": 3106,
+          "tokens_generated": 20,
+          "total_time_ms": 194,
+          "turn": 48,
+          "workflow": 8
+        },
+        {
+          "content": " remain.\nAs they journey deeper, the trees grow taller and stranger,",
+          "context_size": 3175,
+          "tokens_generated": 17,
+          "total_time_ms": 229,
+          "turn": 49,
+          "workflow": 8
+        },
+        {
+          "content": " Their path was illuminated by the moon's soft glow,\nThe",
+          "context_size": 3232,
+          "tokens_generated": 14,
+          "total_time_ms": 223,
+          "turn": 50,
+          "workflow": 8
+        }
+      ],
+      "total_time_seconds": 10.32742711,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_8",
+      "workflow_number": 8
+    },
+    {
+      "avg_turn_time_ms": 202.24489795918367,
+      "final_story": "  in a far-off land, there lived a young girl named Elara.  Elara, the young girl with golden hair and eyes as bright as the morning  sun, lived in a humble cottage nestled within a dense forest. Every  day, Elara would venture into the forest to gather berries and herbs  to sell at the market, but one day as she was wandering deeper than  she ever had before, she stumbled upon a hidden glade where a magnificent un  dragon rested, its scales shimmering like the night sky. Elara,  gasped in awe, her heart pounding in her chest. The dragon  stretched its massive wings, letting out a low, rumbling purr. El  El, the young girl, stepped forward, her heart still racing but her curiosity  overcoming her fear. She knelt before the dragon, her hands outstret  stretched, palms up, offering no threat. The dragon's eyes narrow  met Elara's, and for a moment, time seemed to stand still  Still and silent, the dragon's gaze softened, a gentle breeze rust  blew through the glade, and the dragon spoke in a voice as deep and  wise as the earth itself, saying, \"Child, you have come to me  seeking wisdom or aid in a time of need. I have sensed your pure  heart and great potential, Elara. You have a destiny to fulfill,  but to unlock it, you must prove yourself worthy. A great trial awaits  you, a test of courage and resilience, a journey that will challenge  you to the core, but I shall aid you in your quest. The first  clue to your quest lies within the depths of the forest, where the shadows  whisper secrets long forgotten.\n\nBeware, for the path is tre  laden with danger and deception,\nAnd those who seek the path'  must be wary and vigilant,\nFor the shadows can conceal  evil, and the deception can lead to despair.\nBut do not fear  The shadows can also reveal hidden truths, and the deception can be overcome  With a determination burning in her heart, Elara ventured deeper into the forest  than she ever had before, her footsteps echoing through the trees as she  followed the whispers of the shadows, guided by an intuition she could not  explain. As she journeyed, she encountered many strange and wondrous s  things, from talking animals to ancient ruins shrouded in mystery. She  met a wise old owl perched atop a gnarled tree,  who told her cryptic riddles and offered guidance on her path, and  she encountered a mischievous sprite who led her astray with tricks  and laughter, but Elara remained steadfast, never losing her focus on the  quest ahead. As she continued deeper into the heart of the forest, the shadows  grew darker, and the whispers became louder, until at last,  she arrived at a hidden grove where the trees parted to reveal an ancient  stone altar, its surface etched with symbols and runes that seemed to  glow with an otherworldly light.\n\nAs Elara approached the  altar, she felt a sudden surge of energy pulsing through her veins  veins, her heart racing with anticipation. She reached out, placing her  hands upon the ancient stone, and as she did, a vision filled her mind  With a vision burning bright, Elara saw a tale of old,\nA  tale of a great hero who had once defeated a dark sorcerer and saved  the realm from eternal darkness. In the vision, she witnessed the hero's  struggles and triumphs, learned of the powerful artifact he had wielded  to vanquish the sorcerer, and felt a profound connection to this  hero of old, for she realized that she was destined to follow in their",
+      "k": 16,
+      "per_turn_metrics": [
+        {
+          "content": " in a far-off land, there lived a young girl named Elara.",
+          "context_size": 58,
+          "tokens_generated": 14,
+          "total_time_ms": 190,
+          "turn": 1,
+          "workflow": 9
+        },
+        {
+          "content": " Elara, the young girl with golden hair and eyes as bright as the morning",
+          "context_size": 132,
+          "tokens_generated": 18,
+          "total_time_ms": 191,
+          "turn": 2,
+          "workflow": 9
+        },
+        {
+          "content": " sun, lived in a humble cottage nestled within a dense forest. Every",
+          "context_size": 201,
+          "tokens_generated": 17,
+          "total_time_ms": 193,
+          "turn": 3,
+          "workflow": 9
+        },
+        {
+          "content": " day, Elara would venture into the forest to gather berries and herbs",
+          "context_size": 271,
+          "tokens_generated": 17,
+          "total_time_ms": 188,
+          "turn": 4,
+          "workflow": 9
+        },
+        {
+          "content": " to sell at the market, but one day as she was wandering deeper than",
+          "context_size": 340,
+          "tokens_generated": 17,
+          "total_time_ms": 189,
+          "turn": 5,
+          "workflow": 9
+        },
+        {
+          "content": " she ever had before, she stumbled upon a hidden glade where a magnificent un",
+          "context_size": 418,
+          "tokens_generated": 19,
+          "total_time_ms": 198,
+          "turn": 6,
+          "workflow": 9
+        },
+        {
+          "content": " dragon rested, its scales shimmering like the night sky. Elara,",
+          "context_size": 483,
+          "tokens_generated": 16,
+          "total_time_ms": 211,
+          "turn": 7,
+          "workflow": 9
+        },
+        {
+          "content": " gasped in awe, her heart pounding in her chest. The dragon",
+          "context_size": 543,
+          "tokens_generated": 14,
+          "total_time_ms": 208,
+          "turn": 8,
+          "workflow": 9
+        },
+        {
+          "content": " stretched its massive wings, letting out a low, rumbling purr. El",
+          "context_size": 610,
+          "tokens_generated": 16,
+          "total_time_ms": 208,
+          "turn": 9,
+          "workflow": 9
+        },
+        {
+          "content": " El, the young girl, stepped forward, her heart still racing but her curiosity",
+          "context_size": 689,
+          "tokens_generated": 19,
+          "total_time_ms": 207,
+          "turn": 10,
+          "workflow": 9
+        },
+        {
+          "content": " overcoming her fear. She knelt before the dragon, her hands outstret",
+          "context_size": 759,
+          "tokens_generated": 17,
+          "total_time_ms": 207,
+          "turn": 11,
+          "workflow": 9
+        },
+        {
+          "content": " stretched, palms up, offering no threat. The dragon's eyes narrow",
+          "context_size": 826,
+          "tokens_generated": 16,
+          "total_time_ms": 222,
+          "turn": 12,
+          "workflow": 9
+        },
+        {
+          "content": " met Elara's, and for a moment, time seemed to stand still",
+          "context_size": 885,
+          "tokens_generated": 14,
+          "total_time_ms": 192,
+          "turn": 13,
+          "workflow": 9
+        },
+        {
+          "content": " Still and silent, the dragon's gaze softened, a gentle breeze rust",
+          "context_size": 953,
+          "tokens_generated": 16,
+          "total_time_ms": 185,
+          "turn": 14,
+          "workflow": 9
+        },
+        {
+          "content": " blew through the glade, and the dragon spoke in a voice as deep and",
+          "context_size": 1022,
+          "tokens_generated": 17,
+          "total_time_ms": 218,
+          "turn": 15,
+          "workflow": 9
+        },
+        {
+          "content": " wise as the earth itself, saying, \"Child, you have come to me",
+          "context_size": 1085,
+          "tokens_generated": 15,
+          "total_time_ms": 208,
+          "turn": 16,
+          "workflow": 9
+        },
+        {
+          "content": " seeking wisdom or aid in a time of need. I have sensed your pure",
+          "context_size": 1151,
+          "tokens_generated": 16,
+          "total_time_ms": 192,
+          "turn": 17,
+          "workflow": 9
+        },
+        {
+          "content": " heart and great potential, Elara. You have a destiny to fulfill,",
+          "context_size": 1217,
+          "tokens_generated": 16,
+          "total_time_ms": 187,
+          "turn": 18,
+          "workflow": 9
+        },
+        {
+          "content": " but to unlock it, you must prove yourself worthy. A great trial awaits",
+          "context_size": 1289,
+          "tokens_generated": 17,
+          "total_time_ms": 216,
+          "turn": 19,
+          "workflow": 9
+        },
+        {
+          "content": " you, a test of courage and resilience, a journey that will challenge",
+          "context_size": 1359,
+          "tokens_generated": 17,
+          "total_time_ms": 208,
+          "turn": 20,
+          "workflow": 9
+        },
+        {
+          "content": " you to the core, but I shall aid you in your quest. The first",
+          "context_size": 1422,
+          "tokens_generated": 15,
+          "total_time_ms": 192,
+          "turn": 21,
+          "workflow": 9
+        },
+        {
+          "content": " clue to your quest lies within the depths of the forest, where the shadows",
+          "context_size": 1498,
+          "tokens_generated": 18,
+          "total_time_ms": 246,
+          "turn": 22,
+          "workflow": 9
+        },
+        {
+          "content": " whisper secrets long forgotten.\n\nBeware, for the path is tre",
+          "context_size": 1560,
+          "tokens_generated": 15,
+          "total_time_ms": 196,
+          "turn": 23,
+          "workflow": 9
+        },
+        {
+          "content": " laden with danger and deception,\nAnd those who seek the path'",
+          "context_size": 1623,
+          "tokens_generated": 15,
+          "total_time_ms": 210,
+          "turn": 24,
+          "workflow": 9
+        },
+        {
+          "content": " must be wary and vigilant,\nFor the shadows can conceal",
+          "context_size": 1679,
+          "tokens_generated": 13,
+          "total_time_ms": 224,
+          "turn": 25,
+          "workflow": 9
+        },
+        {
+          "content": " evil, and the deception can lead to despair.\nBut do not fear",
+          "context_size": 1741,
+          "tokens_generated": 15,
+          "total_time_ms": 208,
+          "turn": 26,
+          "workflow": 9
+        },
+        {
+          "content": " The shadows can also reveal hidden truths, and the deception can be overcome",
+          "context_size": 1819,
+          "tokens_generated": 19,
+          "total_time_ms": 193,
+          "turn": 27,
+          "workflow": 9
+        },
+        {
+          "content": " With a determination burning in her heart, Elara ventured deeper into the forest",
+          "context_size": 1901,
+          "tokens_generated": 20,
+          "total_time_ms": 202,
+          "turn": 28,
+          "workflow": 9
+        },
+        {
+          "content": " than she ever had before, her footsteps echoing through the trees as she",
+          "context_size": 1975,
+          "tokens_generated": 18,
+          "total_time_ms": 193,
+          "turn": 29,
+          "workflow": 9
+        },
+        {
+          "content": " followed the whispers of the shadows, guided by an intuition she could not",
+          "context_size": 2051,
+          "tokens_generated": 18,
+          "total_time_ms": 199,
+          "turn": 30,
+          "workflow": 9
+        },
+        {
+          "content": " explain. As she journeyed, she encountered many strange and wondrous s",
+          "context_size": 2123,
+          "tokens_generated": 17,
+          "total_time_ms": 194,
+          "turn": 31,
+          "workflow": 9
+        },
+        {
+          "content": " things, from talking animals to ancient ruins shrouded in mystery. She",
+          "context_size": 2195,
+          "tokens_generated": 17,
+          "total_time_ms": 189,
+          "turn": 32,
+          "workflow": 9
+        },
+        {
+          "content": " met a wise old owl perched atop a gnarled tree,",
+          "context_size": 2244,
+          "tokens_generated": 12,
+          "total_time_ms": 191,
+          "turn": 33,
+          "workflow": 9
+        },
+        {
+          "content": " who told her cryptic riddles and offered guidance on her path, and",
+          "context_size": 2312,
+          "tokens_generated": 16,
+          "total_time_ms": 201,
+          "turn": 34,
+          "workflow": 9
+        },
+        {
+          "content": " she encountered a mischievous sprite who led her astray with tricks",
+          "context_size": 2381,
+          "tokens_generated": 17,
+          "total_time_ms": 187,
+          "turn": 35,
+          "workflow": 9
+        },
+        {
+          "content": " and laughter, but Elara remained steadfast, never losing her focus on the",
+          "context_size": 2456,
+          "tokens_generated": 18,
+          "total_time_ms": 190,
+          "turn": 36,
+          "workflow": 9
+        },
+        {
+          "content": " quest ahead. As she continued deeper into the heart of the forest, the shadows",
+          "context_size": 2536,
+          "tokens_generated": 19,
+          "total_time_ms": 202,
+          "turn": 37,
+          "workflow": 9
+        },
+        {
+          "content": " grew darker, and the whispers became louder, until at last,",
+          "context_size": 2597,
+          "tokens_generated": 15,
+          "total_time_ms": 207,
+          "turn": 38,
+          "workflow": 9
+        },
+        {
+          "content": " she arrived at a hidden grove where the trees parted to reveal an ancient",
+          "context_size": 2672,
+          "tokens_generated": 18,
+          "total_time_ms": 202,
+          "turn": 39,
+          "workflow": 9
+        },
+        {
+          "content": " stone altar, its surface etched with symbols and runes that seemed to",
+          "context_size": 2743,
+          "tokens_generated": 17,
+          "total_time_ms": 189,
+          "turn": 40,
+          "workflow": 9
+        },
+        {
+          "content": " glow with an otherworldly light.\n\nAs Elara approached the",
+          "context_size": 2802,
+          "tokens_generated": 14,
+          "total_time_ms": 190,
+          "turn": 41,
+          "workflow": 9
+        },
+        {
+          "content": " altar, she felt a sudden surge of energy pulsing through her veins",
+          "context_size": 2870,
+          "tokens_generated": 16,
+          "total_time_ms": 215,
+          "turn": 42,
+          "workflow": 9
+        },
+        {
+          "content": " veins, her heart racing with anticipation. She reached out, placing her",
+          "context_size": 2943,
+          "tokens_generated": 18,
+          "total_time_ms": 229,
+          "turn": 43,
+          "workflow": 9
+        },
+        {
+          "content": " hands upon the ancient stone, and as she did, a vision filled her mind",
+          "context_size": 3015,
+          "tokens_generated": 17,
+          "total_time_ms": 209,
+          "turn": 44,
+          "workflow": 9
+        },
+        {
+          "content": " With a vision burning bright, Elara saw a tale of old,\nA",
+          "context_size": 3073,
+          "tokens_generated": 14,
+          "total_time_ms": 207,
+          "turn": 45,
+          "workflow": 9
+        },
+        {
+          "content": " tale of a great hero who had once defeated a dark sorcerer and saved",
+          "context_size": 3143,
+          "tokens_generated": 17,
+          "total_time_ms": 222,
+          "turn": 46,
+          "workflow": 9
+        },
+        {
+          "content": " the realm from eternal darkness. In the vision, she witnessed the hero's",
+          "context_size": 3217,
+          "tokens_generated": 18,
+          "total_time_ms": 192,
+          "turn": 47,
+          "workflow": 9
+        },
+        {
+          "content": " struggles and triumphs, learned of the powerful artifact he had wielded",
+          "context_size": 3290,
+          "tokens_generated": 18,
+          "total_time_ms": 183,
+          "turn": 48,
+          "workflow": 9
+        },
+        {
+          "content": " to vanquish the sorcerer, and felt a profound connection to this",
+          "context_size": 3356,
+          "tokens_generated": 16,
+          "total_time_ms": 224,
+          "turn": 49,
+          "workflow": 9
+        },
+        {
+          "content": " hero of old, for she realized that she was destined to follow in their",
+          "context_size": 3428,
+          "tokens_generated": 17,
+          "total_time_ms": 196,
+          "turn": 50,
+          "workflow": 9
+        }
+      ],
+      "total_time_seconds": 10.17747812,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_9",
+      "workflow_number": 9
+    },
+    {
+      "avg_turn_time_ms": 201.71428571428572,
+      "final_story": "  in a far-off land, there lived a young girl named Elara.  She was blessed with a heart of gold and a spirit that never wavered  She spent her days tending to the village's garden, her hands st  covered in the rich, dark soil. One day, a mysterious old woman appeared  Before Elara could even utter a greeting, the old woman spoke, her  voice echoing with an ancient wisdom, \"Child, I have observed your kindness  and selflessness. I have a task for you, one that requires your courage  and purity of heart. \"The village is in grave danger, for a  dark sorcerer, known as Moros, has awakened from his  slumber deep within the heart of the Forbidden Mountain. He seeks to cover  the land in eternal darkness, and it falls upon you, Elara, to  stop Moros and save the land from eternal darkness. The old woman handed El  a small, ornate box, its surface glowing with an ethereal  light. \"Within this box,\" the old woman continued, \"you will  find a seed, the last hope of the fading light. Plant it in  the heart of the Forbidden Mountain, where Moros lies, and it shall  grow into a radiant tree, its branches reaching towards the very soul of Mor  \"This tree, when fully grown, will cast a light so bright that it  will pierce the darkness Moros has brought upon the land, and his evil  power will wither. \"Take this amulet,\" the old woman said  \"You must wear this amulet, Elara. It will guide you  and protect you on your journey. The amulet will also grant you the  power to communicate with the enchanted creatures that dwell within the Forbidden Mountain  \"But be warned, Elara,\" the old woman added, her gaze turning  serious, \"the Forbidden Mountain is a treacherous place, filled with  perilous traps and guarded by Moros' minions. But  do not fear, for you have been chosen for this task,\nFor the  \"and you carry the strength of a thousand suns within your heart.\n  Now, here are the next 16 tokens to complete the story:\n  1. \"Go now, Elara, and embark on your quest  2. \"May the wind be at your back, and the sun shine  upon your face.\n3. \"The path ahead will be long and ar  4. \"But you have the heart of a warrior, and the spirit  of a champion.\n5. \"Remember the villagers who depend on  you to save them and let their hope fuel your courage.\n6. \"  6. \"As you journey through the Forbidden Mountain, trust in the  7. \"the amulet's guidance and the power it grants  7. \"It will lead you where you need to go, and protect  you from harm.\n8. \"The enchanted creatures you encounter will  8. \"befriend you, aiding you in your quest to reach  the heart of the Forbidden Mountain.\n\n9. \"They will share  their ancient knowledge and help you navigate the treacherous mountain terrain.\n1  9. \"You will face many challenges, but never lose hope,\n  10. \"For the seed in the box is the last hope of  the fading light, and its destiny lies with you, Elara.  10. \"Your journey is important, not just for the villagers  11. \"The heart of the Forbidden Mountain is guarded by  11. \"by Moros' most powerful minions, but remember  12. \"You possess the strength of a thousand suns within your  12. \"and the power to overcome any challenge.\n13",
+      "k": 16,
+      "per_turn_metrics": [
+        {
+          "content": " in a far-off land, there lived a young girl named Elara.",
+          "context_size": 58,
+          "tokens_generated": 14,
+          "total_time_ms": 196,
+          "turn": 1,
+          "workflow": 10
+        },
+        {
+          "content": " She was blessed with a heart of gold and a spirit that never wavered",
+          "context_size": 128,
+          "tokens_generated": 17,
+          "total_time_ms": 207,
+          "turn": 2,
+          "workflow": 10
+        },
+        {
+          "content": " She spent her days tending to the village's garden, her hands st",
+          "context_size": 194,
+          "tokens_generated": 16,
+          "total_time_ms": 193,
+          "turn": 3,
+          "workflow": 10
+        },
+        {
+          "content": " covered in the rich, dark soil. One day, a mysterious old woman appeared",
+          "context_size": 268,
+          "tokens_generated": 18,
+          "total_time_ms": 195,
+          "turn": 4,
+          "workflow": 10
+        },
+        {
+          "content": " Before Elara could even utter a greeting, the old woman spoke, her",
+          "context_size": 336,
+          "tokens_generated": 16,
+          "total_time_ms": 213,
+          "turn": 5,
+          "workflow": 10
+        },
+        {
+          "content": " voice echoing with an ancient wisdom, \"Child, I have observed your kindness",
+          "context_size": 413,
+          "tokens_generated": 19,
+          "total_time_ms": 225,
+          "turn": 6,
+          "workflow": 10
+        },
+        {
+          "content": " and selflessness. I have a task for you, one that requires your courage",
+          "context_size": 486,
+          "tokens_generated": 18,
+          "total_time_ms": 213,
+          "turn": 7,
+          "workflow": 10
+        },
+        {
+          "content": " and purity of heart. \"The village is in grave danger, for a",
+          "context_size": 547,
+          "tokens_generated": 15,
+          "total_time_ms": 193,
+          "turn": 8,
+          "workflow": 10
+        },
+        {
+          "content": " dark sorcerer, known as Moros, has awakened from his",
+          "context_size": 601,
+          "tokens_generated": 13,
+          "total_time_ms": 202,
+          "turn": 9,
+          "workflow": 10
+        },
+        {
+          "content": " slumber deep within the heart of the Forbidden Mountain. He seeks to cover",
+          "context_size": 677,
+          "tokens_generated": 18,
+          "total_time_ms": 207,
+          "turn": 10,
+          "workflow": 10
+        },
+        {
+          "content": " the land in eternal darkness, and it falls upon you, Elara, to",
+          "context_size": 741,
+          "tokens_generated": 15,
+          "total_time_ms": 207,
+          "turn": 11,
+          "workflow": 10
+        },
+        {
+          "content": " stop Moros and save the land from eternal darkness. The old woman handed El",
+          "context_size": 818,
+          "tokens_generated": 19,
+          "total_time_ms": 192,
+          "turn": 12,
+          "workflow": 10
+        },
+        {
+          "content": " a small, ornate box, its surface glowing with an ethereal",
+          "context_size": 877,
+          "tokens_generated": 14,
+          "total_time_ms": 189,
+          "turn": 13,
+          "workflow": 10
+        },
+        {
+          "content": " light. \"Within this box,\" the old woman continued, \"you will",
+          "context_size": 939,
+          "tokens_generated": 15,
+          "total_time_ms": 190,
+          "turn": 14,
+          "workflow": 10
+        },
+        {
+          "content": " find a seed, the last hope of the fading light. Plant it in",
+          "context_size": 1000,
+          "tokens_generated": 15,
+          "total_time_ms": 201,
+          "turn": 15,
+          "workflow": 10
+        },
+        {
+          "content": " the heart of the Forbidden Mountain, where Moros lies, and it shall",
+          "context_size": 1069,
+          "tokens_generated": 17,
+          "total_time_ms": 193,
+          "turn": 16,
+          "workflow": 10
+        },
+        {
+          "content": " grow into a radiant tree, its branches reaching towards the very soul of Mor",
+          "context_size": 1147,
+          "tokens_generated": 19,
+          "total_time_ms": 188,
+          "turn": 17,
+          "workflow": 10
+        },
+        {
+          "content": " \"This tree, when fully grown, will cast a light so bright that it",
+          "context_size": 1214,
+          "tokens_generated": 16,
+          "total_time_ms": 204,
+          "turn": 18,
+          "workflow": 10
+        },
+        {
+          "content": " will pierce the darkness Moros has brought upon the land, and his evil",
+          "context_size": 1286,
+          "tokens_generated": 17,
+          "total_time_ms": 209,
+          "turn": 19,
+          "workflow": 10
+        },
+        {
+          "content": " power will wither. \"Take this amulet,\" the old woman said",
+          "context_size": 1345,
+          "tokens_generated": 14,
+          "total_time_ms": 208,
+          "turn": 20,
+          "workflow": 10
+        },
+        {
+          "content": " \"You must wear this amulet, Elara. It will guide you",
+          "context_size": 1399,
+          "tokens_generated": 13,
+          "total_time_ms": 233,
+          "turn": 21,
+          "workflow": 10
+        },
+        {
+          "content": " and protect you on your journey. The amulet will also grant you the",
+          "context_size": 1468,
+          "tokens_generated": 17,
+          "total_time_ms": 211,
+          "turn": 22,
+          "workflow": 10
+        },
+        {
+          "content": " power to communicate with the enchanted creatures that dwell within the Forbidden Mountain",
+          "context_size": 1560,
+          "tokens_generated": 22,
+          "total_time_ms": 192,
+          "turn": 23,
+          "workflow": 10
+        },
+        {
+          "content": " \"But be warned, Elara,\" the old woman added, her gaze turning",
+          "context_size": 1623,
+          "tokens_generated": 15,
+          "total_time_ms": 200,
+          "turn": 24,
+          "workflow": 10
+        },
+        {
+          "content": " serious, \"the Forbidden Mountain is a treacherous place, filled with",
+          "context_size": 1693,
+          "tokens_generated": 17,
+          "total_time_ms": 192,
+          "turn": 25,
+          "workflow": 10
+        },
+        {
+          "content": " perilous traps and guarded by Moros' minions. But",
+          "context_size": 1744,
+          "tokens_generated": 12,
+          "total_time_ms": 197,
+          "turn": 26,
+          "workflow": 10
+        },
+        {
+          "content": " do not fear, for you have been chosen for this task,\nFor the",
+          "context_size": 1806,
+          "tokens_generated": 15,
+          "total_time_ms": 191,
+          "turn": 27,
+          "workflow": 10
+        },
+        {
+          "content": " \"and you carry the strength of a thousand suns within your heart.\n",
+          "context_size": 1874,
+          "tokens_generated": 16,
+          "total_time_ms": 216,
+          "turn": 28,
+          "workflow": 10
+        },
+        {
+          "content": " Now, here are the next 16 tokens to complete the story:\n",
+          "context_size": 1932,
+          "tokens_generated": 14,
+          "total_time_ms": 224,
+          "turn": 29,
+          "workflow": 10
+        },
+        {
+          "content": " 1. \"Go now, Elara, and embark on your quest",
+          "context_size": 1977,
+          "tokens_generated": 11,
+          "total_time_ms": 192,
+          "turn": 30,
+          "workflow": 10
+        },
+        {
+          "content": " 2. \"May the wind be at your back, and the sun shine",
+          "context_size": 2030,
+          "tokens_generated": 13,
+          "total_time_ms": 188,
+          "turn": 31,
+          "workflow": 10
+        },
+        {
+          "content": " upon your face.\n3. \"The path ahead will be long and ar",
+          "context_size": 2086,
+          "tokens_generated": 13,
+          "total_time_ms": 220,
+          "turn": 32,
+          "workflow": 10
+        },
+        {
+          "content": " 4. \"But you have the heart of a warrior, and the spirit",
+          "context_size": 2143,
+          "tokens_generated": 14,
+          "total_time_ms": 207,
+          "turn": 33,
+          "workflow": 10
+        },
+        {
+          "content": " of a champion.\n5. \"Remember the villagers who depend on",
+          "context_size": 2200,
+          "tokens_generated": 14,
+          "total_time_ms": 192,
+          "turn": 34,
+          "workflow": 10
+        },
+        {
+          "content": " you to save them and let their hope fuel your courage.\n6. \"",
+          "context_size": 2261,
+          "tokens_generated": 15,
+          "total_time_ms": 189,
+          "turn": 35,
+          "workflow": 10
+        },
+        {
+          "content": " 6. \"As you journey through the Forbidden Mountain, trust in the",
+          "context_size": 2326,
+          "tokens_generated": 16,
+          "total_time_ms": 204,
+          "turn": 36,
+          "workflow": 10
+        },
+        {
+          "content": " 7. \"the amulet's guidance and the power it grants",
+          "context_size": 2377,
+          "tokens_generated": 12,
+          "total_time_ms": 193,
+          "turn": 37,
+          "workflow": 10
+        },
+        {
+          "content": " 7. \"It will lead you where you need to go, and protect",
+          "context_size": 2433,
+          "tokens_generated": 13,
+          "total_time_ms": 225,
+          "turn": 38,
+          "workflow": 10
+        },
+        {
+          "content": " you from harm.\n8. \"The enchanted creatures you encounter will",
+          "context_size": 2496,
+          "tokens_generated": 15,
+          "total_time_ms": 207,
+          "turn": 39,
+          "workflow": 10
+        },
+        {
+          "content": " 8. \"befriend you, aiding you in your quest to reach",
+          "context_size": 2549,
+          "tokens_generated": 13,
+          "total_time_ms": 194,
+          "turn": 40,
+          "workflow": 10
+        },
+        {
+          "content": " the heart of the Forbidden Mountain.\n\n9. \"They will share",
+          "context_size": 2608,
+          "tokens_generated": 14,
+          "total_time_ms": 218,
+          "turn": 41,
+          "workflow": 10
+        },
+        {
+          "content": " their ancient knowledge and help you navigate the treacherous mountain terrain.\n1",
+          "context_size": 2691,
+          "tokens_generated": 20,
+          "total_time_ms": 193,
+          "turn": 42,
+          "workflow": 10
+        },
+        {
+          "content": " 9. \"You will face many challenges, but never lose hope,\n",
+          "context_size": 2749,
+          "tokens_generated": 14,
+          "total_time_ms": 190,
+          "turn": 43,
+          "workflow": 10
+        },
+        {
+          "content": " 10. \"For the seed in the box is the last hope of",
+          "context_size": 2799,
+          "tokens_generated": 12,
+          "total_time_ms": 199,
+          "turn": 44,
+          "workflow": 10
+        },
+        {
+          "content": " the fading light, and its destiny lies with you, Elara.",
+          "context_size": 2856,
+          "tokens_generated": 14,
+          "total_time_ms": 198,
+          "turn": 45,
+          "workflow": 10
+        },
+        {
+          "content": " 10. \"Your journey is important, not just for the villagers",
+          "context_size": 2916,
+          "tokens_generated": 14,
+          "total_time_ms": 210,
+          "turn": 46,
+          "workflow": 10
+        },
+        {
+          "content": " 11. \"The heart of the Forbidden Mountain is guarded by",
+          "context_size": 2972,
+          "tokens_generated": 13,
+          "total_time_ms": 194,
+          "turn": 47,
+          "workflow": 10
+        },
+        {
+          "content": " 11. \"by Moros' most powerful minions, but remember",
+          "context_size": 3024,
+          "tokens_generated": 12,
+          "total_time_ms": 199,
+          "turn": 48,
+          "workflow": 10
+        },
+        {
+          "content": " 12. \"You possess the strength of a thousand suns within your",
+          "context_size": 3086,
+          "tokens_generated": 15,
+          "total_time_ms": 195,
+          "turn": 49,
+          "workflow": 10
+        },
+        {
+          "content": " 12. \"and the power to overcome any challenge.\n13",
+          "context_size": 3136,
+          "tokens_generated": 12,
+          "total_time_ms": 192,
+          "turn": 50,
+          "workflow": 10
+        }
+      ],
+      "total_time_seconds": 10.158398436,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_10",
+      "workflow_number": 10
+    }
+  ]
+}

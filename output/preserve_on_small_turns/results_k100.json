@@ -1,0 +1,84 @@
+{
+  "avg_turn_time_ms": 1287.7777777777778,
+  "final_story": "  in a kingdom far, far away, there lived a young princess named Elara. She was known for her kindness, wisdom, and curiosity. One day, while exploring the castle's hidden library, she stumbled upon an ancient scroll that spoke of a legendary treasure hidden deep within the Enchanted Forest.\n\nIntrigued, Elara decided to embark on a quest to find this treasure. She gathered a group of loyal friends: a brave knight named Sir Galen,  a cunning thief named Thorn, and a wise old sage named Morwen. With their unique skills and Elara's leadership, they set off on their journey, following the clues from the ancient scroll.\n\nAs they ventured deeper into the Enchanted Forest, they encountered magical creatures and overcame numerous challenges. They crossed treacherous rivers, climbed steep mountains, and navigated through dense, dark forests. Along the way, they learned valuable lessons about team  work, determination, and perseverance. After many days of travel, they finally reached the clearing where the legendary treasure was said to be hidden.\n\nTo their amazement, they found a magnificent castle, shrouded in a glowing aura. As they approached, the entrance to the castle opened, revealing a grand hall filled with golden treasures beyond their wildest dreams.\n\nHowever, as they entered, they were confronted by a fearsome dragon, who guard  the treasure with its fiery breath and sharp claws. Elara, being the bravest among them, stepped forward and spoke to the dragon, asking for the treasure in a calm and confident voice. To everyone's surprise, the dragon replied, \"I will not give you the treasure without a test. You must prove your worth.\"\n\nThe dragon then challenged Elara and her friends to a riddle. If they could solve it, they would be granted the treasure. The  riddle was: \"What goes up a hill with three legs and comes down with four?\" Elara thought long and hard, using her wisdom and knowledge, but could not solve the riddle. Then, Thorn, using his quick wit, realized the answer was \"a stool.\" With this answer, the dragon was impressed and granted them the treasure.\n\nThe group rejoiced as they gathered the golden treasures and returned to the kingdom, where they were hailed as heroes  and celebrated for their bravery and determination. The king, grateful for their efforts, rewarded them with riches and honors. Elara and her friends became legends, their deeds passed down through generations, inspiring countless others to embark on their own quests.\n\nAnd so, the story of Elara and her friends ends, but their legacy lives on, a testament to the power of teamwork, determination, and the pursuit of adventure.  However, unbeknownst to them, the dragon had been observing them and was secretly impressed by their courage, teamwork, and determination. The dragon, in fact, was not an evil creature at all, but a guardian of the treasure, seeking worthy adventurers to receive it.\n\nThe treasure, it turned out, was not gold or jewels, but a powerful and ancient artifact that could grant the wielder great power. But the artifact could only  be wielded by someone pure of heart. As they approached the dragon, Elara's heart swelled with kindness and compassion, and the dragon knew that she was the one. The dragon then presented them with the artifact, a glowing orb that pulsed with powerful energy.\n\nElara and her friends were overwhelmed by the treasure, but they knew that with great power came great responsibility. They returned to their kingdom and used the artifact to defend their people, vanqu  ishing evil forces and ensuring peace and prosperity. But the artifact was also a double-edged sword, and it was not long before it fell into the hands of a power-hungry sorcerer who sought to use it for his own evil purposes.\n\nThe kingdom was plunged into darkness, and the people lived in fear. But Elara, along with her friends, refused to stand idly by. They set out once again, this time to retrieve the  artifact and restore peace to their kingdom. They journeyed far and wide, facing numerous challenges and obstacles, but their determination never wavered.\n\nFinally, they reached the lair of the sorcerer, a dark and foreboding fortress. They fought their way through hordes of dark creatures, using their skills and the power of the artifact to vanquish their foes.\n\nIn the heart of the fortress, they found the sor",
+  "k": 100,
+  "machine_info": {
+    "arch": "amd64",
+    "num_cpu": 55,
+    "os": "linux"
+  },
+  "per_turn_metrics": [
+    {
+      "content": " in a kingdom far, far away, there lived a young princess named Elara. She was known for her kindness, wisdom, and curiosity. One day, while exploring the castle's hidden library, she stumbled upon an ancient scroll that spoke of a legendary treasure hidden deep within the Enchanted Forest.\n\nIntrigued, Elara decided to embark on a quest to find this treasure. She gathered a group of loyal friends: a brave knight named Sir Galen,",
+      "context_size": 433,
+      "tokens_generated": 108,
+      "total_time_ms": 1110,
+      "turn": 1
+    },
+    {
+      "content": " a cunning thief named Thorn, and a wise old sage named Morwen. With their unique skills and Elara's leadership, they set off on their journey, following the clues from the ancient scroll.\n\nAs they ventured deeper into the Enchanted Forest, they encountered magical creatures and overcame numerous challenges. They crossed treacherous rivers, climbed steep mountains, and navigated through dense, dark forests. Along the way, they learned valuable lessons about team",
+      "context_size": 900,
+      "tokens_generated": 116,
+      "total_time_ms": 1126,
+      "turn": 2
+    },
+    {
+      "content": " work, determination, and perseverance. After many days of travel, they finally reached the clearing where the legendary treasure was said to be hidden.\n\nTo their amazement, they found a magnificent castle, shrouded in a glowing aura. As they approached, the entrance to the castle opened, revealing a grand hall filled with golden treasures beyond their wildest dreams.\n\nHowever, as they entered, they were confronted by a fearsome dragon, who guard",
+      "context_size": 1351,
+      "tokens_generated": 112,
+      "total_time_ms": 1138,
+      "turn": 3
+    },
+    {
+      "content": " the treasure with its fiery breath and sharp claws. Elara, being the bravest among them, stepped forward and spoke to the dragon, asking for the treasure in a calm and confident voice. To everyone's surprise, the dragon replied, \"I will not give you the treasure without a test. You must prove your worth.\"\n\nThe dragon then challenged Elara and her friends to a riddle. If they could solve it, they would be granted the treasure. The",
+      "context_size": 1786,
+      "tokens_generated": 108,
+      "total_time_ms": 1167,
+      "turn": 4
+    },
+    {
+      "content": " riddle was: \"What goes up a hill with three legs and comes down with four?\" Elara thought long and hard, using her wisdom and knowledge, but could not solve the riddle. Then, Thorn, using his quick wit, realized the answer was \"a stool.\" With this answer, the dragon was impressed and granted them the treasure.\n\nThe group rejoiced as they gathered the golden treasures and returned to the kingdom, where they were hailed as heroes",
+      "context_size": 2219,
+      "tokens_generated": 108,
+      "total_time_ms": 1221,
+      "turn": 5
+    },
+    {
+      "content": " and celebrated for their bravery and determination. The king, grateful for their efforts, rewarded them with riches and honors. Elara and her friends became legends, their deeds passed down through generations, inspiring countless others to embark on their own quests.\n\nAnd so, the story of Elara and her friends ends, but their legacy lives on, a testament to the power of teamwork, determination, and the pursuit of adventure.",
+      "context_size": 2649,
+      "tokens_generated": 107,
+      "total_time_ms": 1228,
+      "turn": 6
+    },
+    {
+      "content": " However, unbeknownst to them, the dragon had been observing them and was secretly impressed by their courage, teamwork, and determination. The dragon, in fact, was not an evil creature at all, but a guardian of the treasure, seeking worthy adventurers to receive it.\n\nThe treasure, it turned out, was not gold or jewels, but a powerful and ancient artifact that could grant the wielder great power. But the artifact could only",
+      "context_size": 3077,
+      "tokens_generated": 106,
+      "total_time_ms": 1310,
+      "turn": 7
+    },
+    {
+      "content": " be wielded by someone pure of heart. As they approached the dragon, Elara's heart swelled with kindness and compassion, and the dragon knew that she was the one. The dragon then presented them with the artifact, a glowing orb that pulsed with powerful energy.\n\nElara and her friends were overwhelmed by the treasure, but they knew that with great power came great responsibility. They returned to their kingdom and used the artifact to defend their people, vanqu",
+      "context_size": 3541,
+      "tokens_generated": 115,
+      "total_time_ms": 1396,
+      "turn": 8
+    },
+    {
+      "content": " ishing evil forces and ensuring peace and prosperity. But the artifact was also a double-edged sword, and it was not long before it fell into the hands of a power-hungry sorcerer who sought to use it for his own evil purposes.\n\nThe kingdom was plunged into darkness, and the people lived in fear. But Elara, along with her friends, refused to stand idly by. They set out once again, this time to retrieve the",
+      "context_size": 3951,
+      "tokens_generated": 102,
+      "total_time_ms": 1449,
+      "turn": 9
+    },
+    {
+      "content": " artifact and restore peace to their kingdom. They journeyed far and wide, facing numerous challenges and obstacles, but their determination never wavered.\n\nFinally, they reached the lair of the sorcerer, a dark and foreboding fortress. They fought their way through hordes of dark creatures, using their skills and the power of the artifact to vanquish their foes.\n\nIn the heart of the fortress, they found the sor",
+      "context_size": 4367,
+      "tokens_generated": 103,
+      "total_time_ms": 1555,
+      "turn": 10
+    }
+  ],
+  "total_time_seconds": 12.718554477,
+  "turns": 10
+}

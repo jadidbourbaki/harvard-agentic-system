@@ -1,0 +1,84 @@
+{
+  "avg_turn_time_ms": 51.22222222222222,
+  "final_story": "  in  a  land  of  magic  and  wonder  ,  there  lived",
+  "k": 1,
+  "machine_info": {
+    "arch": "amd64",
+    "num_cpu": 55,
+    "os": "linux"
+  },
+  "per_turn_metrics": [
+    {
+      "content": " in",
+      "context_size": 4,
+      "tokens_generated": 0,
+      "total_time_ms": 38,
+      "turn": 1
+    },
+    {
+      "content": " a",
+      "context_size": 7,
+      "tokens_generated": 0,
+      "total_time_ms": 32,
+      "turn": 2
+    },
+    {
+      "content": " land",
+      "context_size": 13,
+      "tokens_generated": 1,
+      "total_time_ms": 36,
+      "turn": 3
+    },
+    {
+      "content": " of",
+      "context_size": 17,
+      "tokens_generated": 0,
+      "total_time_ms": 41,
+      "turn": 4
+    },
+    {
+      "content": " magic",
+      "context_size": 24,
+      "tokens_generated": 1,
+      "total_time_ms": 45,
+      "turn": 5
+    },
+    {
+      "content": " and",
+      "context_size": 29,
+      "tokens_generated": 1,
+      "total_time_ms": 53,
+      "turn": 6
+    },
+    {
+      "content": " wonder",
+      "context_size": 37,
+      "tokens_generated": 1,
+      "total_time_ms": 51,
+      "turn": 7
+    },
+    {
+      "content": " ,",
+      "context_size": 40,
+      "tokens_generated": 0,
+      "total_time_ms": 60,
+      "turn": 8
+    },
+    {
+      "content": " there",
+      "context_size": 47,
+      "tokens_generated": 1,
+      "total_time_ms": 61,
+      "turn": 9
+    },
+    {
+      "content": " lived",
+      "context_size": 54,
+      "tokens_generated": 1,
+      "total_time_ms": 82,
+      "turn": 10
+    }
+  ],
+  "total_time_seconds": 0.517279188,
+  "turns": 10
+}

@@ -1,0 +1,4136 @@
+{
+  "avg_turn_time_ms": 34.03061224489796,
+  "k": 1,
+  "machine_info": {
+    "arch": "amd64",
+    "num_cpu": 55,
+    "os": "linux"
+  },
+  "num_workflows": 10,
+  "per_workflow_avg_times": [
+    35.51020408163265,
+    35.326530612244895,
+    35.51020408163265,
+    31.836734693877553,
+    32.795918367346935,
+    36.224489795918366,
+    35.02040816326531,
+    30.306122448979593,
+    35.04081632653061,
+    32.734693877551024
+  ],
+  "total_time_seconds": 17.921112215,
+  "turns_per_workflow": 100,
+  "workflows": [
+    {
+      "avg_turn_time_ms": 35.51020408163265,
+      "final_story": "  there  was  a  brave  kn  y  and  who  lived  in  a  castle  in  the  forest  and  he  had  a  magical  sword  and  w  is  sought  by  a  princess  in  dist  ess  in  \"  a  \"  and  \"  The  br  ave  kn  kn  y  emb    upon  a  journey  to  \"",
+      "k": 1,
+      "per_turn_metrics": [
+        {
+          "content": " there",
+          "context_size": 7,
+          "tokens_generated": 1,
+          "total_time_ms": 41,
+          "turn": 1,
+          "workflow": 1
+        },
+        {
+          "content": " was",
+          "context_size": 12,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 2,
+          "workflow": 1
+        },
+        {
+          "content": " a",
+          "context_size": 15,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 3,
+          "workflow": 1
+        },
+        {
+          "content": " brave",
+          "context_size": 22,
+          "tokens_generated": 1,
+          "total_time_ms": 49,
+          "turn": 4,
+          "workflow": 1
+        },
+        {
+          "content": " kn",
+          "context_size": 26,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 5,
+          "workflow": 1
+        },
+        {
+          "content": " y",
+          "context_size": 29,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 6,
+          "workflow": 1
+        },
+        {
+          "content": " and",
+          "context_size": 34,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 7,
+          "workflow": 1
+        },
+        {
+          "content": " who",
+          "context_size": 39,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 8,
+          "workflow": 1
+        },
+        {
+          "content": " lived",
+          "context_size": 46,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 9,
+          "workflow": 1
+        },
+        {
+          "content": " in",
+          "context_size": 50,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 10,
+          "workflow": 1
+        },
+        {
+          "content": " a",
+          "context_size": 53,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 11,
+          "workflow": 1
+        },
+        {
+          "content": " castle",
+          "context_size": 61,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 12,
+          "workflow": 1
+        },
+        {
+          "content": " in",
+          "context_size": 65,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 13,
+          "workflow": 1
+        },
+        {
+          "content": " the",
+          "context_size": 70,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 14,
+          "workflow": 1
+        },
+        {
+          "content": " forest",
+          "context_size": 78,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 15,
+          "workflow": 1
+        },
+        {
+          "content": " and",
+          "context_size": 83,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 16,
+          "workflow": 1
+        },
+        {
+          "content": " he",
+          "context_size": 87,
+          "tokens_generated": 0,
+          "total_time_ms": 25,
+          "turn": 17,
+          "workflow": 1
+        },
+        {
+          "content": " had",
+          "context_size": 92,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 18,
+          "workflow": 1
+        },
+        {
+          "content": " a",
+          "context_size": 95,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 19,
+          "workflow": 1
+        },
+        {
+          "content": " magical",
+          "context_size": 104,
+          "tokens_generated": 2,
+          "total_time_ms": 26,
+          "turn": 20,
+          "workflow": 1
+        },
+        {
+          "content": " sword",
+          "context_size": 111,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 21,
+          "workflow": 1
+        },
+        {
+          "content": " and",
+          "context_size": 116,
+          "tokens_generated": 1,
+          "total_time_ms": 25,
+          "turn": 22,
+          "workflow": 1
+        },
+        {
+          "content": " w",
+          "context_size": 119,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 23,
+          "workflow": 1
+        },
+        {
+          "content": " is",
+          "context_size": 123,
+          "tokens_generated": 0,
+          "total_time_ms": 27,
+          "turn": 24,
+          "workflow": 1
+        },
+        {
+          "content": " sought",
+          "context_size": 131,
+          "tokens_generated": 1,
+          "total_time_ms": 49,
+          "turn": 25,
+          "workflow": 1
+        },
+        {
+          "content": " by",
+          "context_size": 135,
+          "tokens_generated": 0,
+          "total_time_ms": 39,
+          "turn": 26,
+          "workflow": 1
+        },
+        {
+          "content": " a",
+          "context_size": 138,
+          "tokens_generated": 0,
+          "total_time_ms": 34,
+          "turn": 27,
+          "workflow": 1
+        },
+        {
+          "content": " princess",
+          "context_size": 148,
+          "tokens_generated": 2,
+          "total_time_ms": 35,
+          "turn": 28,
+          "workflow": 1
+        },
+        {
+          "content": " in",
+          "context_size": 152,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 29,
+          "workflow": 1
+        },
+        {
+          "content": " dist",
+          "context_size": 158,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 30,
+          "workflow": 1
+        },
+        {
+          "content": " ess",
+          "context_size": 163,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 31,
+          "workflow": 1
+        },
+        {
+          "content": " in",
+          "context_size": 167,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 32,
+          "workflow": 1
+        },
+        {
+          "content": " \"",
+          "context_size": 170,
+          "tokens_generated": 0,
+          "total_time_ms": 49,
+          "turn": 33,
+          "workflow": 1
+        },
+        {
+          "content": " a",
+          "context_size": 173,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 34,
+          "workflow": 1
+        },
+        {
+          "content": " \"",
+          "context_size": 176,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 35,
+          "workflow": 1
+        },
+        {
+          "content": " and",
+          "context_size": 181,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 36,
+          "workflow": 1
+        },
+        {
+          "content": " \"",
+          "context_size": 184,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 37,
+          "workflow": 1
+        },
+        {
+          "content": " The",
+          "context_size": 189,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 38,
+          "workflow": 1
+        },
+        {
+          "content": " br",
+          "context_size": 193,
+          "tokens_generated": 0,
+          "total_time_ms": 50,
+          "turn": 39,
+          "workflow": 1
+        },
+        {
+          "content": " ave",
+          "context_size": 198,
+          "tokens_generated": 1,
+          "total_time_ms": 51,
+          "turn": 40,
+          "workflow": 1
+        },
+        {
+          "content": " kn",
+          "context_size": 202,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 41,
+          "workflow": 1
+        },
+        {
+          "content": " kn",
+          "context_size": 206,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 42,
+          "workflow": 1
+        },
+        {
+          "content": " y",
+          "context_size": 209,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 43,
+          "workflow": 1
+        },
+        {
+          "content": " emb",
+          "context_size": 214,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 44,
+          "workflow": 1
+        },
+        {
+          "content": " ",
+          "context_size": 216,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 45,
+          "workflow": 1
+        },
+        {
+          "content": " upon",
+          "context_size": 222,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 46,
+          "workflow": 1
+        },
+        {
+          "content": " a",
+          "context_size": 225,
+          "tokens_generated": 0,
+          "total_time_ms": 50,
+          "turn": 47,
+          "workflow": 1
+        },
+        {
+          "content": " journey",
+          "context_size": 234,
+          "tokens_generated": 2,
+          "total_time_ms": 31,
+          "turn": 48,
+          "workflow": 1
+        },
+        {
+          "content": " to",
+          "context_size": 238,
+          "tokens_generated": 0,
+          "total_time_ms": 50,
+          "turn": 49,
+          "workflow": 1
+        },
+        {
+          "content": " \"",
+          "context_size": 241,
+          "tokens_generated": 0,
+          "total_time_ms": 39,
+          "turn": 50,
+          "workflow": 1
+        }
+      ],
+      "total_time_seconds": 1.8652744860000001,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_1",
+      "workflow_number": 1
+    },
+    {
+      "avg_turn_time_ms": 35.326530612244895,
+      "final_story": "  There  was  a  king  who  ruled  a  land  with  golden  fields  and  silver  rivers  and  who  possessed  a  magical  crystal  that  granted  him  wisdom  and  and  power  and  The  The  loved  The  loved  the  The  The  loved  the  The  The  The  ...  ...  ...  ...  ...  ...  ...  ...  ...",
+      "k": 1,
+      "per_turn_metrics": [
+        {
+          "content": " There",
+          "context_size": 7,
+          "tokens_generated": 1,
+          "total_time_ms": 62,
+          "turn": 1,
+          "workflow": 2
+        },
+        {
+          "content": " was",
+          "context_size": 12,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 2,
+          "workflow": 2
+        },
+        {
+          "content": " a",
+          "context_size": 15,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 3,
+          "workflow": 2
+        },
+        {
+          "content": " king",
+          "context_size": 21,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 4,
+          "workflow": 2
+        },
+        {
+          "content": " who",
+          "context_size": 26,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 5,
+          "workflow": 2
+        },
+        {
+          "content": " ruled",
+          "context_size": 33,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 6,
+          "workflow": 2
+        },
+        {
+          "content": " a",
+          "context_size": 36,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 7,
+          "workflow": 2
+        },
+        {
+          "content": " land",
+          "context_size": 42,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 8,
+          "workflow": 2
+        },
+        {
+          "content": " with",
+          "context_size": 48,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 9,
+          "workflow": 2
+        },
+        {
+          "content": " golden",
+          "context_size": 56,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 10,
+          "workflow": 2
+        },
+        {
+          "content": " fields",
+          "context_size": 64,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 11,
+          "workflow": 2
+        },
+        {
+          "content": " and",
+          "context_size": 69,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 12,
+          "workflow": 2
+        },
+        {
+          "content": " silver",
+          "context_size": 77,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 13,
+          "workflow": 2
+        },
+        {
+          "content": " rivers",
+          "context_size": 85,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 14,
+          "workflow": 2
+        },
+        {
+          "content": " and",
+          "context_size": 90,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 15,
+          "workflow": 2
+        },
+        {
+          "content": " who",
+          "context_size": 95,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 16,
+          "workflow": 2
+        },
+        {
+          "content": " possessed",
+          "context_size": 106,
+          "tokens_generated": 2,
+          "total_time_ms": 27,
+          "turn": 17,
+          "workflow": 2
+        },
+        {
+          "content": " a",
+          "context_size": 109,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 18,
+          "workflow": 2
+        },
+        {
+          "content": " magical",
+          "context_size": 118,
+          "tokens_generated": 2,
+          "total_time_ms": 36,
+          "turn": 19,
+          "workflow": 2
+        },
+        {
+          "content": " crystal",
+          "context_size": 127,
+          "tokens_generated": 2,
+          "total_time_ms": 36,
+          "turn": 20,
+          "workflow": 2
+        },
+        {
+          "content": " that",
+          "context_size": 133,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 21,
+          "workflow": 2
+        },
+        {
+          "content": " granted",
+          "context_size": 142,
+          "tokens_generated": 2,
+          "total_time_ms": 36,
+          "turn": 22,
+          "workflow": 2
+        },
+        {
+          "content": " him",
+          "context_size": 147,
+          "tokens_generated": 1,
+          "total_time_ms": 38,
+          "turn": 23,
+          "workflow": 2
+        },
+        {
+          "content": " wisdom",
+          "context_size": 155,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 24,
+          "workflow": 2
+        },
+        {
+          "content": " and",
+          "context_size": 160,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 25,
+          "workflow": 2
+        },
+        {
+          "content": " and",
+          "context_size": 165,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 26,
+          "workflow": 2
+        },
+        {
+          "content": " power",
+          "context_size": 172,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 27,
+          "workflow": 2
+        },
+        {
+          "content": " and",
+          "context_size": 177,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 28,
+          "workflow": 2
+        },
+        {
+          "content": " The",
+          "context_size": 182,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 29,
+          "workflow": 2
+        },
+        {
+          "content": " The",
+          "context_size": 187,
+          "tokens_generated": 1,
+          "total_time_ms": 29,
+          "turn": 30,
+          "workflow": 2
+        },
+        {
+          "content": " loved",
+          "context_size": 194,
+          "tokens_generated": 1,
+          "total_time_ms": 24,
+          "turn": 31,
+          "workflow": 2
+        },
+        {
+          "content": " The",
+          "context_size": 199,
+          "tokens_generated": 1,
+          "total_time_ms": 44,
+          "turn": 32,
+          "workflow": 2
+        },
+        {
+          "content": " loved",
+          "context_size": 206,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 33,
+          "workflow": 2
+        },
+        {
+          "content": " the",
+          "context_size": 211,
+          "tokens_generated": 1,
+          "total_time_ms": 47,
+          "turn": 34,
+          "workflow": 2
+        },
+        {
+          "content": " The",
+          "context_size": 216,
+          "tokens_generated": 1,
+          "total_time_ms": 52,
+          "turn": 35,
+          "workflow": 2
+        },
+        {
+          "content": " The",
+          "context_size": 221,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 36,
+          "workflow": 2
+        },
+        {
+          "content": " loved",
+          "context_size": 228,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 37,
+          "workflow": 2
+        },
+        {
+          "content": " the",
+          "context_size": 233,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 38,
+          "workflow": 2
+        },
+        {
+          "content": " The",
+          "context_size": 238,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 39,
+          "workflow": 2
+        },
+        {
+          "content": " The",
+          "context_size": 243,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 40,
+          "workflow": 2
+        },
+        {
+          "content": " The",
+          "context_size": 248,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 41,
+          "workflow": 2
+        },
+        {
+          "content": " ...",
+          "context_size": 253,
+          "tokens_generated": 1,
+          "total_time_ms": 50,
+          "turn": 42,
+          "workflow": 2
+        },
+        {
+          "content": " ...",
+          "context_size": 258,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 43,
+          "workflow": 2
+        },
+        {
+          "content": " ...",
+          "context_size": 263,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 44,
+          "workflow": 2
+        },
+        {
+          "content": " ...",
+          "context_size": 268,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 45,
+          "workflow": 2
+        },
+        {
+          "content": " ...",
+          "context_size": 273,
+          "tokens_generated": 1,
+          "total_time_ms": 47,
+          "turn": 46,
+          "workflow": 2
+        },
+        {
+          "content": " ...",
+          "context_size": 278,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 47,
+          "workflow": 2
+        },
+        {
+          "content": " ...",
+          "context_size": 283,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 48,
+          "workflow": 2
+        },
+        {
+          "content": " ...",
+          "context_size": 288,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 49,
+          "workflow": 2
+        },
+        {
+          "content": " ...",
+          "context_size": 293,
+          "tokens_generated": 1,
+          "total_time_ms": 50,
+          "turn": 50,
+          "workflow": 2
+        }
+      ],
+      "total_time_seconds": 1.857872666,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_2",
+      "workflow_number": 2
+    },
+    {
+      "avg_turn_time_ms": 35.51020408163265,
+      "final_story": "  in  a  land  far  away  there  lived  a  brave  kn    and  a  noble  queen  In  a  castle  high  On  a  hill  And  stood  a  tower  and  In  that  tower  lived  a  w  it  With  a  heart  \"  of  gold  \"  \"  \"  \"  \"  \"  \"  \"  \"  Once",
+      "k": 1,
+      "per_turn_metrics": [
+        {
+          "content": " in",
+          "context_size": 4,
+          "tokens_generated": 0,
+          "total_time_ms": 64,
+          "turn": 1,
+          "workflow": 3
+        },
+        {
+          "content": " a",
+          "context_size": 7,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 2,
+          "workflow": 3
+        },
+        {
+          "content": " land",
+          "context_size": 13,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 3,
+          "workflow": 3
+        },
+        {
+          "content": " far",
+          "context_size": 18,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 4,
+          "workflow": 3
+        },
+        {
+          "content": " away",
+          "context_size": 24,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 5,
+          "workflow": 3
+        },
+        {
+          "content": " there",
+          "context_size": 31,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 6,
+          "workflow": 3
+        },
+        {
+          "content": " lived",
+          "context_size": 38,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 7,
+          "workflow": 3
+        },
+        {
+          "content": " a",
+          "context_size": 41,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 8,
+          "workflow": 3
+        },
+        {
+          "content": " brave",
+          "context_size": 48,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 9,
+          "workflow": 3
+        },
+        {
+          "content": " kn",
+          "context_size": 52,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 10,
+          "workflow": 3
+        },
+        {
+          "content": " ",
+          "context_size": 54,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 11,
+          "workflow": 3
+        },
+        {
+          "content": " and",
+          "context_size": 59,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 12,
+          "workflow": 3
+        },
+        {
+          "content": " a",
+          "context_size": 62,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 13,
+          "workflow": 3
+        },
+        {
+          "content": " noble",
+          "context_size": 69,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 14,
+          "workflow": 3
+        },
+        {
+          "content": " queen",
+          "context_size": 76,
+          "tokens_generated": 1,
+          "total_time_ms": 40,
+          "turn": 15,
+          "workflow": 3
+        },
+        {
+          "content": " In",
+          "context_size": 80,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 16,
+          "workflow": 3
+        },
+        {
+          "content": " a",
+          "context_size": 83,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 17,
+          "workflow": 3
+        },
+        {
+          "content": " castle",
+          "context_size": 91,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 18,
+          "workflow": 3
+        },
+        {
+          "content": " high",
+          "context_size": 97,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 19,
+          "workflow": 3
+        },
+        {
+          "content": " On",
+          "context_size": 101,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 20,
+          "workflow": 3
+        },
+        {
+          "content": " a",
+          "context_size": 104,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 21,
+          "workflow": 3
+        },
+        {
+          "content": " hill",
+          "context_size": 110,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 22,
+          "workflow": 3
+        },
+        {
+          "content": " And",
+          "context_size": 115,
+          "tokens_generated": 1,
+          "total_time_ms": 49,
+          "turn": 23,
+          "workflow": 3
+        },
+        {
+          "content": " stood",
+          "context_size": 122,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 24,
+          "workflow": 3
+        },
+        {
+          "content": " a",
+          "context_size": 125,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 25,
+          "workflow": 3
+        },
+        {
+          "content": " tower",
+          "context_size": 132,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 26,
+          "workflow": 3
+        },
+        {
+          "content": " and",
+          "context_size": 137,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 27,
+          "workflow": 3
+        },
+        {
+          "content": " In",
+          "context_size": 141,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 28,
+          "workflow": 3
+        },
+        {
+          "content": " that",
+          "context_size": 147,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 29,
+          "workflow": 3
+        },
+        {
+          "content": " tower",
+          "context_size": 154,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 30,
+          "workflow": 3
+        },
+        {
+          "content": " lived",
+          "context_size": 161,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 31,
+          "workflow": 3
+        },
+        {
+          "content": " a",
+          "context_size": 164,
+          "tokens_generated": 0,
+          "total_time_ms": 55,
+          "turn": 32,
+          "workflow": 3
+        },
+        {
+          "content": " w",
+          "context_size": 167,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 33,
+          "workflow": 3
+        },
+        {
+          "content": " it",
+          "context_size": 171,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 34,
+          "workflow": 3
+        },
+        {
+          "content": " With",
+          "context_size": 177,
+          "tokens_generated": 1,
+          "total_time_ms": 49,
+          "turn": 35,
+          "workflow": 3
+        },
+        {
+          "content": " a",
+          "context_size": 180,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 36,
+          "workflow": 3
+        },
+        {
+          "content": " heart",
+          "context_size": 187,
+          "tokens_generated": 1,
+          "total_time_ms": 49,
+          "turn": 37,
+          "workflow": 3
+        },
+        {
+          "content": " \"",
+          "context_size": 190,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 38,
+          "workflow": 3
+        },
+        {
+          "content": " of",
+          "context_size": 194,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 39,
+          "workflow": 3
+        },
+        {
+          "content": " gold",
+          "context_size": 200,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 40,
+          "workflow": 3
+        },
+        {
+          "content": " \"",
+          "context_size": 203,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 41,
+          "workflow": 3
+        },
+        {
+          "content": " \"",
+          "context_size": 206,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 42,
+          "workflow": 3
+        },
+        {
+          "content": " \"",
+          "context_size": 209,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 43,
+          "workflow": 3
+        },
+        {
+          "content": " \"",
+          "context_size": 212,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 44,
+          "workflow": 3
+        },
+        {
+          "content": " \"",
+          "context_size": 215,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 45,
+          "workflow": 3
+        },
+        {
+          "content": " \"",
+          "context_size": 218,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 46,
+          "workflow": 3
+        },
+        {
+          "content": " \"",
+          "context_size": 221,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 47,
+          "workflow": 3
+        },
+        {
+          "content": " \"",
+          "context_size": 224,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 48,
+          "workflow": 3
+        },
+        {
+          "content": " \"",
+          "context_size": 227,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 49,
+          "workflow": 3
+        },
+        {
+          "content": " Once",
+          "context_size": 233,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 50,
+          "workflow": 3
+        }
+      ],
+      "total_time_seconds": 1.889381798,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_3",
+      "workflow_number": 3
+    },
+    {
+      "avg_turn_time_ms": 31.836734693877553,
+      "final_story": "  in  a  land  far  away  there  lived  a  princess  named  Rose  and  a  dragon  named  Sm  And  Sm  loved  to  ho  play  And  Sm  and  Rose  would  spend  their  days  playing  together  In  the  forest  and  by  the  lake  And  they  were  happ  y  And  And  one  day  And  And",
+      "k": 1,
+      "per_turn_metrics": [
+        {
+          "content": " in",
+          "context_size": 4,
+          "tokens_generated": 0,
+          "total_time_ms": 33,
+          "turn": 1,
+          "workflow": 4
+        },
+        {
+          "content": " a",
+          "context_size": 7,
+          "tokens_generated": 0,
+          "total_time_ms": 23,
+          "turn": 2,
+          "workflow": 4
+        },
+        {
+          "content": " land",
+          "context_size": 13,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 3,
+          "workflow": 4
+        },
+        {
+          "content": " far",
+          "context_size": 18,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 4,
+          "workflow": 4
+        },
+        {
+          "content": " away",
+          "context_size": 24,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 5,
+          "workflow": 4
+        },
+        {
+          "content": " there",
+          "context_size": 31,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 6,
+          "workflow": 4
+        },
+        {
+          "content": " lived",
+          "context_size": 38,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 7,
+          "workflow": 4
+        },
+        {
+          "content": " a",
+          "context_size": 41,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 8,
+          "workflow": 4
+        },
+        {
+          "content": " princess",
+          "context_size": 51,
+          "tokens_generated": 2,
+          "total_time_ms": 26,
+          "turn": 9,
+          "workflow": 4
+        },
+        {
+          "content": " named",
+          "context_size": 58,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 10,
+          "workflow": 4
+        },
+        {
+          "content": " Rose",
+          "context_size": 64,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 11,
+          "workflow": 4
+        },
+        {
+          "content": " and",
+          "context_size": 69,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 12,
+          "workflow": 4
+        },
+        {
+          "content": " a",
+          "context_size": 72,
+          "tokens_generated": 0,
+          "total_time_ms": 41,
+          "turn": 13,
+          "workflow": 4
+        },
+        {
+          "content": " dragon",
+          "context_size": 80,
+          "tokens_generated": 1,
+          "total_time_ms": 33,
+          "turn": 14,
+          "workflow": 4
+        },
+        {
+          "content": " named",
+          "context_size": 87,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 15,
+          "workflow": 4
+        },
+        {
+          "content": " Sm",
+          "context_size": 91,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 16,
+          "workflow": 4
+        },
+        {
+          "content": " And",
+          "context_size": 96,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 17,
+          "workflow": 4
+        },
+        {
+          "content": " Sm",
+          "context_size": 100,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 18,
+          "workflow": 4
+        },
+        {
+          "content": " loved",
+          "context_size": 107,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 19,
+          "workflow": 4
+        },
+        {
+          "content": " to",
+          "context_size": 111,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 20,
+          "workflow": 4
+        },
+        {
+          "content": " ho",
+          "context_size": 115,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 21,
+          "workflow": 4
+        },
+        {
+          "content": " play",
+          "context_size": 121,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 22,
+          "workflow": 4
+        },
+        {
+          "content": " And",
+          "context_size": 126,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 23,
+          "workflow": 4
+        },
+        {
+          "content": " Sm",
+          "context_size": 130,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 24,
+          "workflow": 4
+        },
+        {
+          "content": " and",
+          "context_size": 135,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 25,
+          "workflow": 4
+        },
+        {
+          "content": " Rose",
+          "context_size": 141,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 26,
+          "workflow": 4
+        },
+        {
+          "content": " would",
+          "context_size": 148,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 27,
+          "workflow": 4
+        },
+        {
+          "content": " spend",
+          "context_size": 155,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 28,
+          "workflow": 4
+        },
+        {
+          "content": " their",
+          "context_size": 162,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 29,
+          "workflow": 4
+        },
+        {
+          "content": " days",
+          "context_size": 168,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 30,
+          "workflow": 4
+        },
+        {
+          "content": " playing",
+          "context_size": 177,
+          "tokens_generated": 2,
+          "total_time_ms": 26,
+          "turn": 31,
+          "workflow": 4
+        },
+        {
+          "content": " together",
+          "context_size": 187,
+          "tokens_generated": 2,
+          "total_time_ms": 26,
+          "turn": 32,
+          "workflow": 4
+        },
+        {
+          "content": " In",
+          "context_size": 191,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 33,
+          "workflow": 4
+        },
+        {
+          "content": " the",
+          "context_size": 196,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 34,
+          "workflow": 4
+        },
+        {
+          "content": " forest",
+          "context_size": 204,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 35,
+          "workflow": 4
+        },
+        {
+          "content": " and",
+          "context_size": 209,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 36,
+          "workflow": 4
+        },
+        {
+          "content": " by",
+          "context_size": 213,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 37,
+          "workflow": 4
+        },
+        {
+          "content": " the",
+          "context_size": 218,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 38,
+          "workflow": 4
+        },
+        {
+          "content": " lake",
+          "context_size": 224,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 39,
+          "workflow": 4
+        },
+        {
+          "content": " And",
+          "context_size": 229,
+          "tokens_generated": 1,
+          "total_time_ms": 51,
+          "turn": 40,
+          "workflow": 4
+        },
+        {
+          "content": " they",
+          "context_size": 235,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 41,
+          "workflow": 4
+        },
+        {
+          "content": " were",
+          "context_size": 241,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 42,
+          "workflow": 4
+        },
+        {
+          "content": " happ",
+          "context_size": 247,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 43,
+          "workflow": 4
+        },
+        {
+          "content": " y",
+          "context_size": 250,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 44,
+          "workflow": 4
+        },
+        {
+          "content": " And",
+          "context_size": 255,
+          "tokens_generated": 1,
+          "total_time_ms": 45,
+          "turn": 45,
+          "workflow": 4
+        },
+        {
+          "content": " And",
+          "context_size": 260,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 46,
+          "workflow": 4
+        },
+        {
+          "content": " one",
+          "context_size": 265,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 47,
+          "workflow": 4
+        },
+        {
+          "content": " day",
+          "context_size": 270,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 48,
+          "workflow": 4
+        },
+        {
+          "content": " And",
+          "context_size": 275,
+          "tokens_generated": 1,
+          "total_time_ms": 49,
+          "turn": 49,
+          "workflow": 4
+        },
+        {
+          "content": " And",
+          "context_size": 280,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 50,
+          "workflow": 4
+        }
+      ],
+      "total_time_seconds": 1.670906981,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_4",
+      "workflow_number": 4
+    },
+    {
+      "avg_turn_time_ms": 32.795918367346935,
+      "final_story": "  in  a  small  village  lived  a  wise  old  man  who  had  a  magical  garden  and  a  magic  book  The  lived  and  worked  hard  and  one  day  discovered  a  secret  discovered  a  \"  pot  \"  \"  \"  The  \"  The  pot  \"  contained  a  \"  \"  \"  \"  \"  The  The",
+      "k": 1,
+      "per_turn_metrics": [
+        {
+          "content": " in",
+          "context_size": 4,
+          "tokens_generated": 0,
+          "total_time_ms": 45,
+          "turn": 1,
+          "workflow": 5
+        },
+        {
+          "content": " a",
+          "context_size": 7,
+          "tokens_generated": 0,
+          "total_time_ms": 34,
+          "turn": 2,
+          "workflow": 5
+        },
+        {
+          "content": " small",
+          "context_size": 14,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 3,
+          "workflow": 5
+        },
+        {
+          "content": " village",
+          "context_size": 23,
+          "tokens_generated": 2,
+          "total_time_ms": 36,
+          "turn": 4,
+          "workflow": 5
+        },
+        {
+          "content": " lived",
+          "context_size": 30,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 5,
+          "workflow": 5
+        },
+        {
+          "content": " a",
+          "context_size": 33,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 6,
+          "workflow": 5
+        },
+        {
+          "content": " wise",
+          "context_size": 39,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 7,
+          "workflow": 5
+        },
+        {
+          "content": " old",
+          "context_size": 44,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 8,
+          "workflow": 5
+        },
+        {
+          "content": " man",
+          "context_size": 49,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 9,
+          "workflow": 5
+        },
+        {
+          "content": " who",
+          "context_size": 54,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 10,
+          "workflow": 5
+        },
+        {
+          "content": " had",
+          "context_size": 59,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 11,
+          "workflow": 5
+        },
+        {
+          "content": " a",
+          "context_size": 62,
+          "tokens_generated": 0,
+          "total_time_ms": 28,
+          "turn": 12,
+          "workflow": 5
+        },
+        {
+          "content": " magical",
+          "context_size": 71,
+          "tokens_generated": 2,
+          "total_time_ms": 25,
+          "turn": 13,
+          "workflow": 5
+        },
+        {
+          "content": " garden",
+          "context_size": 79,
+          "tokens_generated": 1,
+          "total_time_ms": 25,
+          "turn": 14,
+          "workflow": 5
+        },
+        {
+          "content": " and",
+          "context_size": 84,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 15,
+          "workflow": 5
+        },
+        {
+          "content": " a",
+          "context_size": 87,
+          "tokens_generated": 0,
+          "total_time_ms": 40,
+          "turn": 16,
+          "workflow": 5
+        },
+        {
+          "content": " magic",
+          "context_size": 94,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 17,
+          "workflow": 5
+        },
+        {
+          "content": " book",
+          "context_size": 100,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 18,
+          "workflow": 5
+        },
+        {
+          "content": " The",
+          "context_size": 105,
+          "tokens_generated": 1,
+          "total_time_ms": 51,
+          "turn": 19,
+          "workflow": 5
+        },
+        {
+          "content": " lived",
+          "context_size": 112,
+          "tokens_generated": 1,
+          "total_time_ms": 38,
+          "turn": 20,
+          "workflow": 5
+        },
+        {
+          "content": " and",
+          "context_size": 117,
+          "tokens_generated": 1,
+          "total_time_ms": 53,
+          "turn": 21,
+          "workflow": 5
+        },
+        {
+          "content": " worked",
+          "context_size": 125,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 22,
+          "workflow": 5
+        },
+        {
+          "content": " hard",
+          "context_size": 131,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 23,
+          "workflow": 5
+        },
+        {
+          "content": " and",
+          "context_size": 136,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 24,
+          "workflow": 5
+        },
+        {
+          "content": " one",
+          "context_size": 141,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 25,
+          "workflow": 5
+        },
+        {
+          "content": " day",
+          "context_size": 146,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 26,
+          "workflow": 5
+        },
+        {
+          "content": " discovered",
+          "context_size": 158,
+          "tokens_generated": 2,
+          "total_time_ms": 38,
+          "turn": 27,
+          "workflow": 5
+        },
+        {
+          "content": " a",
+          "context_size": 161,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 28,
+          "workflow": 5
+        },
+        {
+          "content": " secret",
+          "context_size": 169,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 29,
+          "workflow": 5
+        },
+        {
+          "content": " discovered",
+          "context_size": 181,
+          "tokens_generated": 2,
+          "total_time_ms": 36,
+          "turn": 30,
+          "workflow": 5
+        },
+        {
+          "content": " a",
+          "context_size": 184,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 31,
+          "workflow": 5
+        },
+        {
+          "content": " \"",
+          "context_size": 187,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 32,
+          "workflow": 5
+        },
+        {
+          "content": " pot",
+          "context_size": 192,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 33,
+          "workflow": 5
+        },
+        {
+          "content": " \"",
+          "context_size": 195,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 34,
+          "workflow": 5
+        },
+        {
+          "content": " \"",
+          "context_size": 198,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 35,
+          "workflow": 5
+        },
+        {
+          "content": " \"",
+          "context_size": 201,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 36,
+          "workflow": 5
+        },
+        {
+          "content": " The",
+          "context_size": 206,
+          "tokens_generated": 1,
+          "total_time_ms": 27,
+          "turn": 37,
+          "workflow": 5
+        },
+        {
+          "content": " \"",
+          "context_size": 209,
+          "tokens_generated": 0,
+          "total_time_ms": 28,
+          "turn": 38,
+          "workflow": 5
+        },
+        {
+          "content": " The",
+          "context_size": 214,
+          "tokens_generated": 1,
+          "total_time_ms": 25,
+          "turn": 39,
+          "workflow": 5
+        },
+        {
+          "content": " pot",
+          "context_size": 219,
+          "tokens_generated": 1,
+          "total_time_ms": 27,
+          "turn": 40,
+          "workflow": 5
+        },
+        {
+          "content": " \"",
+          "context_size": 222,
+          "tokens_generated": 0,
+          "total_time_ms": 27,
+          "turn": 41,
+          "workflow": 5
+        },
+        {
+          "content": " contained",
+          "context_size": 233,
+          "tokens_generated": 2,
+          "total_time_ms": 27,
+          "turn": 42,
+          "workflow": 5
+        },
+        {
+          "content": " a",
+          "context_size": 236,
+          "tokens_generated": 0,
+          "total_time_ms": 29,
+          "turn": 43,
+          "workflow": 5
+        },
+        {
+          "content": " \"",
+          "context_size": 239,
+          "tokens_generated": 0,
+          "total_time_ms": 27,
+          "turn": 44,
+          "workflow": 5
+        },
+        {
+          "content": " \"",
+          "context_size": 242,
+          "tokens_generated": 0,
+          "total_time_ms": 27,
+          "turn": 45,
+          "workflow": 5
+        },
+        {
+          "content": " \"",
+          "context_size": 245,
+          "tokens_generated": 0,
+          "total_time_ms": 40,
+          "turn": 46,
+          "workflow": 5
+        },
+        {
+          "content": " \"",
+          "context_size": 248,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 47,
+          "workflow": 5
+        },
+        {
+          "content": " \"",
+          "context_size": 251,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 48,
+          "workflow": 5
+        },
+        {
+          "content": " The",
+          "context_size": 256,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 49,
+          "workflow": 5
+        },
+        {
+          "content": " The",
+          "context_size": 261,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 50,
+          "workflow": 5
+        }
+      ],
+      "total_time_seconds": 1.711699155,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_5",
+      "workflow_number": 5
+    },
+    {
+      "avg_turn_time_ms": 36.224489795918366,
+      "final_story": "  in  a  small  village  lived  a  wise  old  man  Who  had  the  ability  to  speak  with  animals  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  \"  Once  he  discovered  a",
+      "k": 1,
+      "per_turn_metrics": [
+        {
+          "content": " in",
+          "context_size": 4,
+          "tokens_generated": 0,
+          "total_time_ms": 44,
+          "turn": 1,
+          "workflow": 6
+        },
+        {
+          "content": " a",
+          "context_size": 7,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 2,
+          "workflow": 6
+        },
+        {
+          "content": " small",
+          "context_size": 14,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 3,
+          "workflow": 6
+        },
+        {
+          "content": " village",
+          "context_size": 23,
+          "tokens_generated": 2,
+          "total_time_ms": 36,
+          "turn": 4,
+          "workflow": 6
+        },
+        {
+          "content": " lived",
+          "context_size": 30,
+          "tokens_generated": 1,
+          "total_time_ms": 32,
+          "turn": 5,
+          "workflow": 6
+        },
+        {
+          "content": " a",
+          "context_size": 33,
+          "tokens_generated": 0,
+          "total_time_ms": 42,
+          "turn": 6,
+          "workflow": 6
+        },
+        {
+          "content": " wise",
+          "context_size": 39,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 7,
+          "workflow": 6
+        },
+        {
+          "content": " old",
+          "context_size": 44,
+          "tokens_generated": 1,
+          "total_time_ms": 34,
+          "turn": 8,
+          "workflow": 6
+        },
+        {
+          "content": " man",
+          "context_size": 49,
+          "tokens_generated": 1,
+          "total_time_ms": 34,
+          "turn": 9,
+          "workflow": 6
+        },
+        {
+          "content": " Who",
+          "context_size": 54,
+          "tokens_generated": 1,
+          "total_time_ms": 34,
+          "turn": 10,
+          "workflow": 6
+        },
+        {
+          "content": " had",
+          "context_size": 59,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 11,
+          "workflow": 6
+        },
+        {
+          "content": " the",
+          "context_size": 64,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 12,
+          "workflow": 6
+        },
+        {
+          "content": " ability",
+          "context_size": 73,
+          "tokens_generated": 2,
+          "total_time_ms": 35,
+          "turn": 13,
+          "workflow": 6
+        },
+        {
+          "content": " to",
+          "context_size": 77,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 14,
+          "workflow": 6
+        },
+        {
+          "content": " speak",
+          "context_size": 84,
+          "tokens_generated": 1,
+          "total_time_ms": 49,
+          "turn": 15,
+          "workflow": 6
+        },
+        {
+          "content": " with",
+          "context_size": 90,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 16,
+          "workflow": 6
+        },
+        {
+          "content": " animals",
+          "context_size": 99,
+          "tokens_generated": 2,
+          "total_time_ms": 35,
+          "turn": 17,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 102,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 18,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 105,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 19,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 108,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 20,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 111,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 21,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 114,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 22,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 117,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 23,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 120,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 24,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 123,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 25,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 126,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 26,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 129,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 27,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 132,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 28,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 135,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 29,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 138,
+          "tokens_generated": 0,
+          "total_time_ms": 41,
+          "turn": 30,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 141,
+          "tokens_generated": 0,
+          "total_time_ms": 49,
+          "turn": 31,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 144,
+          "tokens_generated": 0,
+          "total_time_ms": 33,
+          "turn": 32,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 147,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 33,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 150,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 34,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 153,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 35,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 156,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 36,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 159,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 37,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 162,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 38,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 165,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 39,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 168,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 40,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 171,
+          "tokens_generated": 0,
+          "total_time_ms": 48,
+          "turn": 41,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 174,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 42,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 177,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 43,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 180,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 44,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 183,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 45,
+          "workflow": 6
+        },
+        {
+          "content": " \"",
+          "context_size": 186,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 46,
+          "workflow": 6
+        },
+        {
+          "content": " Once",
+          "context_size": 192,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 47,
+          "workflow": 6
+        },
+        {
+          "content": " he",
+          "context_size": 196,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 48,
+          "workflow": 6
+        },
+        {
+          "content": " discovered",
+          "context_size": 208,
+          "tokens_generated": 2,
+          "total_time_ms": 37,
+          "turn": 49,
+          "workflow": 6
+        },
+        {
+          "content": " a",
+          "context_size": 211,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 50,
+          "workflow": 6
+        }
+      ],
+      "total_time_seconds": 1.902229827,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_6",
+      "workflow_number": 6
+    },
+    {
+      "avg_turn_time_ms": 35.02040816326531,
+      "final_story": "  in  a  land  far  away  there  lived  a  king  and  a  queen  who  had  no  children  and  long  sought  a  baby  lived  Once  Upon  a  Time  In  In  A  Land  Far  A  A  way  There  L  lived  lived  lived  a  King  and  and  and  Once  Once  A  time  Once  Once",
+      "k": 1,
+      "per_turn_metrics": [
+        {
+          "content": " in",
+          "context_size": 4,
+          "tokens_generated": 0,
+          "total_time_ms": 43,
+          "turn": 1,
+          "workflow": 7
+        },
+        {
+          "content": " a",
+          "context_size": 7,
+          "tokens_generated": 0,
+          "total_time_ms": 21,
+          "turn": 2,
+          "workflow": 7
+        },
+        {
+          "content": " land",
+          "context_size": 13,
+          "tokens_generated": 1,
+          "total_time_ms": 27,
+          "turn": 3,
+          "workflow": 7
+        },
+        {
+          "content": " far",
+          "context_size": 18,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 4,
+          "workflow": 7
+        },
+        {
+          "content": " away",
+          "context_size": 24,
+          "tokens_generated": 1,
+          "total_time_ms": 53,
+          "turn": 5,
+          "workflow": 7
+        },
+        {
+          "content": " there",
+          "context_size": 31,
+          "tokens_generated": 1,
+          "total_time_ms": 50,
+          "turn": 6,
+          "workflow": 7
+        },
+        {
+          "content": " lived",
+          "context_size": 38,
+          "tokens_generated": 1,
+          "total_time_ms": 53,
+          "turn": 7,
+          "workflow": 7
+        },
+        {
+          "content": " a",
+          "context_size": 41,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 8,
+          "workflow": 7
+        },
+        {
+          "content": " king",
+          "context_size": 47,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 9,
+          "workflow": 7
+        },
+        {
+          "content": " and",
+          "context_size": 52,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 10,
+          "workflow": 7
+        },
+        {
+          "content": " a",
+          "context_size": 55,
+          "tokens_generated": 0,
+          "total_time_ms": 51,
+          "turn": 11,
+          "workflow": 7
+        },
+        {
+          "content": " queen",
+          "context_size": 62,
+          "tokens_generated": 1,
+          "total_time_ms": 38,
+          "turn": 12,
+          "workflow": 7
+        },
+        {
+          "content": " who",
+          "context_size": 67,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 13,
+          "workflow": 7
+        },
+        {
+          "content": " had",
+          "context_size": 72,
+          "tokens_generated": 1,
+          "total_time_ms": 52,
+          "turn": 14,
+          "workflow": 7
+        },
+        {
+          "content": " no",
+          "context_size": 76,
+          "tokens_generated": 0,
+          "total_time_ms": 38,
+          "turn": 15,
+          "workflow": 7
+        },
+        {
+          "content": " children",
+          "context_size": 86,
+          "tokens_generated": 2,
+          "total_time_ms": 37,
+          "turn": 16,
+          "workflow": 7
+        },
+        {
+          "content": " and",
+          "context_size": 91,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 17,
+          "workflow": 7
+        },
+        {
+          "content": " long",
+          "context_size": 97,
+          "tokens_generated": 1,
+          "total_time_ms": 50,
+          "turn": 18,
+          "workflow": 7
+        },
+        {
+          "content": " sought",
+          "context_size": 105,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 19,
+          "workflow": 7
+        },
+        {
+          "content": " a",
+          "context_size": 108,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 20,
+          "workflow": 7
+        },
+        {
+          "content": " baby",
+          "context_size": 114,
+          "tokens_generated": 1,
+          "total_time_ms": 44,
+          "turn": 21,
+          "workflow": 7
+        },
+        {
+          "content": " lived",
+          "context_size": 121,
+          "tokens_generated": 1,
+          "total_time_ms": 34,
+          "turn": 22,
+          "workflow": 7
+        },
+        {
+          "content": " Once",
+          "context_size": 127,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 23,
+          "workflow": 7
+        },
+        {
+          "content": " Upon",
+          "context_size": 133,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 24,
+          "workflow": 7
+        },
+        {
+          "content": " a",
+          "context_size": 136,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 25,
+          "workflow": 7
+        },
+        {
+          "content": " Time",
+          "context_size": 142,
+          "tokens_generated": 1,
+          "total_time_ms": 49,
+          "turn": 26,
+          "workflow": 7
+        },
+        {
+          "content": " In",
+          "context_size": 146,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 27,
+          "workflow": 7
+        },
+        {
+          "content": " In",
+          "context_size": 150,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 28,
+          "workflow": 7
+        },
+        {
+          "content": " A",
+          "context_size": 153,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 29,
+          "workflow": 7
+        },
+        {
+          "content": " Land",
+          "context_size": 159,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 30,
+          "workflow": 7
+        },
+        {
+          "content": " Far",
+          "context_size": 164,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 31,
+          "workflow": 7
+        },
+        {
+          "content": " A",
+          "context_size": 167,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 32,
+          "workflow": 7
+        },
+        {
+          "content": " A",
+          "context_size": 170,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 33,
+          "workflow": 7
+        },
+        {
+          "content": " way",
+          "context_size": 175,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 34,
+          "workflow": 7
+        },
+        {
+          "content": " There",
+          "context_size": 182,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 35,
+          "workflow": 7
+        },
+        {
+          "content": " L",
+          "context_size": 185,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 36,
+          "workflow": 7
+        },
+        {
+          "content": " lived",
+          "context_size": 192,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 37,
+          "workflow": 7
+        },
+        {
+          "content": " lived",
+          "context_size": 199,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 38,
+          "workflow": 7
+        },
+        {
+          "content": " lived",
+          "context_size": 206,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 39,
+          "workflow": 7
+        },
+        {
+          "content": " a",
+          "context_size": 209,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 40,
+          "workflow": 7
+        },
+        {
+          "content": " King",
+          "context_size": 215,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 41,
+          "workflow": 7
+        },
+        {
+          "content": " and",
+          "context_size": 220,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 42,
+          "workflow": 7
+        },
+        {
+          "content": " and",
+          "context_size": 225,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 43,
+          "workflow": 7
+        },
+        {
+          "content": " and",
+          "context_size": 230,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 44,
+          "workflow": 7
+        },
+        {
+          "content": " Once",
+          "context_size": 236,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 45,
+          "workflow": 7
+        },
+        {
+          "content": " Once",
+          "context_size": 242,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 46,
+          "workflow": 7
+        },
+        {
+          "content": " A",
+          "context_size": 245,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 47,
+          "workflow": 7
+        },
+        {
+          "content": " time",
+          "context_size": 251,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 48,
+          "workflow": 7
+        },
+        {
+          "content": " Once",
+          "context_size": 257,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 49,
+          "workflow": 7
+        },
+        {
+          "content": " Once",
+          "context_size": 263,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 50,
+          "workflow": 7
+        }
+      ],
+      "total_time_seconds": 1.835384349,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_7",
+      "workflow_number": 7
+    },
+    {
+      "avg_turn_time_ms": 30.306122448979593,
+      "final_story": "  in  a  en  t  t  land  lived  a  young  dragon  named  F  ly  named  d  r  a  A  Once  Upon  A  time  In  A  An  Once  In  Once  A  time  time  In  Once  In  Once  lived  In  In  A  In  Once  Once  lived  lived  lived  In  In  In  A  Once",
+      "k": 1,
+      "per_turn_metrics": [
+        {
+          "content": " in",
+          "context_size": 4,
+          "tokens_generated": 0,
+          "total_time_ms": 34,
+          "turn": 1,
+          "workflow": 8
+        },
+        {
+          "content": " a",
+          "context_size": 7,
+          "tokens_generated": 0,
+          "total_time_ms": 23,
+          "turn": 2,
+          "workflow": 8
+        },
+        {
+          "content": " en",
+          "context_size": 11,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 3,
+          "workflow": 8
+        },
+        {
+          "content": " t",
+          "context_size": 14,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 4,
+          "workflow": 8
+        },
+        {
+          "content": " t",
+          "context_size": 17,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 5,
+          "workflow": 8
+        },
+        {
+          "content": " land",
+          "context_size": 23,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 6,
+          "workflow": 8
+        },
+        {
+          "content": " lived",
+          "context_size": 30,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 7,
+          "workflow": 8
+        },
+        {
+          "content": " a",
+          "context_size": 33,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 8,
+          "workflow": 8
+        },
+        {
+          "content": " young",
+          "context_size": 40,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 9,
+          "workflow": 8
+        },
+        {
+          "content": " dragon",
+          "context_size": 48,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 10,
+          "workflow": 8
+        },
+        {
+          "content": " named",
+          "context_size": 55,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 11,
+          "workflow": 8
+        },
+        {
+          "content": " F",
+          "context_size": 58,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 12,
+          "workflow": 8
+        },
+        {
+          "content": " ly",
+          "context_size": 62,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 13,
+          "workflow": 8
+        },
+        {
+          "content": " named",
+          "context_size": 69,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 14,
+          "workflow": 8
+        },
+        {
+          "content": " d",
+          "context_size": 72,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 15,
+          "workflow": 8
+        },
+        {
+          "content": " r",
+          "context_size": 75,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 16,
+          "workflow": 8
+        },
+        {
+          "content": " a",
+          "context_size": 78,
+          "tokens_generated": 0,
+          "total_time_ms": 28,
+          "turn": 17,
+          "workflow": 8
+        },
+        {
+          "content": " A",
+          "context_size": 81,
+          "tokens_generated": 0,
+          "total_time_ms": 41,
+          "turn": 18,
+          "workflow": 8
+        },
+        {
+          "content": " Once",
+          "context_size": 87,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 19,
+          "workflow": 8
+        },
+        {
+          "content": " Upon",
+          "context_size": 93,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 20,
+          "workflow": 8
+        },
+        {
+          "content": " A",
+          "context_size": 96,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 21,
+          "workflow": 8
+        },
+        {
+          "content": " time",
+          "context_size": 102,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 22,
+          "workflow": 8
+        },
+        {
+          "content": " In",
+          "context_size": 106,
+          "tokens_generated": 0,
+          "total_time_ms": 50,
+          "turn": 23,
+          "workflow": 8
+        },
+        {
+          "content": " A",
+          "context_size": 109,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 24,
+          "workflow": 8
+        },
+        {
+          "content": " An",
+          "context_size": 113,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 25,
+          "workflow": 8
+        },
+        {
+          "content": " Once",
+          "context_size": 119,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 26,
+          "workflow": 8
+        },
+        {
+          "content": " In",
+          "context_size": 123,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 27,
+          "workflow": 8
+        },
+        {
+          "content": " Once",
+          "context_size": 129,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 28,
+          "workflow": 8
+        },
+        {
+          "content": " A",
+          "context_size": 132,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 29,
+          "workflow": 8
+        },
+        {
+          "content": " time",
+          "context_size": 138,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 30,
+          "workflow": 8
+        },
+        {
+          "content": " time",
+          "context_size": 144,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 31,
+          "workflow": 8
+        },
+        {
+          "content": " In",
+          "context_size": 148,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 32,
+          "workflow": 8
+        },
+        {
+          "content": " Once",
+          "context_size": 154,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 33,
+          "workflow": 8
+        },
+        {
+          "content": " In",
+          "context_size": 158,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 34,
+          "workflow": 8
+        },
+        {
+          "content": " Once",
+          "context_size": 164,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 35,
+          "workflow": 8
+        },
+        {
+          "content": " lived",
+          "context_size": 171,
+          "tokens_generated": 1,
+          "total_time_ms": 27,
+          "turn": 36,
+          "workflow": 8
+        },
+        {
+          "content": " In",
+          "context_size": 175,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 37,
+          "workflow": 8
+        },
+        {
+          "content": " In",
+          "context_size": 179,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 38,
+          "workflow": 8
+        },
+        {
+          "content": " A",
+          "context_size": 182,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 39,
+          "workflow": 8
+        },
+        {
+          "content": " In",
+          "context_size": 186,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 40,
+          "workflow": 8
+        },
+        {
+          "content": " Once",
+          "context_size": 192,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 41,
+          "workflow": 8
+        },
+        {
+          "content": " Once",
+          "context_size": 198,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 42,
+          "workflow": 8
+        },
+        {
+          "content": " lived",
+          "context_size": 205,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 43,
+          "workflow": 8
+        },
+        {
+          "content": " lived",
+          "context_size": 212,
+          "tokens_generated": 1,
+          "total_time_ms": 27,
+          "turn": 44,
+          "workflow": 8
+        },
+        {
+          "content": " lived",
+          "context_size": 219,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 45,
+          "workflow": 8
+        },
+        {
+          "content": " In",
+          "context_size": 223,
+          "tokens_generated": 0,
+          "total_time_ms": 28,
+          "turn": 46,
+          "workflow": 8
+        },
+        {
+          "content": " In",
+          "context_size": 227,
+          "tokens_generated": 0,
+          "total_time_ms": 25,
+          "turn": 47,
+          "workflow": 8
+        },
+        {
+          "content": " In",
+          "context_size": 231,
+          "tokens_generated": 0,
+          "total_time_ms": 44,
+          "turn": 48,
+          "workflow": 8
+        },
+        {
+          "content": " A",
+          "context_size": 234,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 49,
+          "workflow": 8
+        },
+        {
+          "content": " Once",
+          "context_size": 240,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 50,
+          "workflow": 8
+        }
+      ],
+      "total_time_seconds": 1.595217983,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_8",
+      "workflow_number": 8
+    },
+    {
+      "avg_turn_time_ms": 35.04081632653061,
+      "final_story": "  in  a  land  far  away  lived  a  noble  kn  kn  and  and  his  val  and  and  a  drag  on  Once  Once  Once  Once  And  And  And  And  And  And  \"  Once  Upon  a  time  in  a  land  far  away  lived  a  noble  kn  kn  kn  And  kn  And  kn  kn",
+      "k": 1,
+      "per_turn_metrics": [
+        {
+          "content": " in",
+          "context_size": 4,
+          "tokens_generated": 0,
+          "total_time_ms": 60,
+          "turn": 1,
+          "workflow": 9
+        },
+        {
+          "content": " a",
+          "context_size": 7,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 2,
+          "workflow": 9
+        },
+        {
+          "content": " land",
+          "context_size": 13,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 3,
+          "workflow": 9
+        },
+        {
+          "content": " far",
+          "context_size": 18,
+          "tokens_generated": 1,
+          "total_time_ms": 38,
+          "turn": 4,
+          "workflow": 9
+        },
+        {
+          "content": " away",
+          "context_size": 24,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 5,
+          "workflow": 9
+        },
+        {
+          "content": " lived",
+          "context_size": 31,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 6,
+          "workflow": 9
+        },
+        {
+          "content": " a",
+          "context_size": 34,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 7,
+          "workflow": 9
+        },
+        {
+          "content": " noble",
+          "context_size": 41,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 8,
+          "workflow": 9
+        },
+        {
+          "content": " kn",
+          "context_size": 45,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 9,
+          "workflow": 9
+        },
+        {
+          "content": " kn",
+          "context_size": 49,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 10,
+          "workflow": 9
+        },
+        {
+          "content": " and",
+          "context_size": 54,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 11,
+          "workflow": 9
+        },
+        {
+          "content": " and",
+          "context_size": 59,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 12,
+          "workflow": 9
+        },
+        {
+          "content": " his",
+          "context_size": 64,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 13,
+          "workflow": 9
+        },
+        {
+          "content": " val",
+          "context_size": 69,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 14,
+          "workflow": 9
+        },
+        {
+          "content": " and",
+          "context_size": 74,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 15,
+          "workflow": 9
+        },
+        {
+          "content": " and",
+          "context_size": 79,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 16,
+          "workflow": 9
+        },
+        {
+          "content": " a",
+          "context_size": 82,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 17,
+          "workflow": 9
+        },
+        {
+          "content": " drag",
+          "context_size": 88,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 18,
+          "workflow": 9
+        },
+        {
+          "content": " on",
+          "context_size": 92,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 19,
+          "workflow": 9
+        },
+        {
+          "content": " Once",
+          "context_size": 98,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 20,
+          "workflow": 9
+        },
+        {
+          "content": " Once",
+          "context_size": 104,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 21,
+          "workflow": 9
+        },
+        {
+          "content": " Once",
+          "context_size": 110,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 22,
+          "workflow": 9
+        },
+        {
+          "content": " Once",
+          "context_size": 116,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 23,
+          "workflow": 9
+        },
+        {
+          "content": " And",
+          "context_size": 121,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 24,
+          "workflow": 9
+        },
+        {
+          "content": " And",
+          "context_size": 126,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 25,
+          "workflow": 9
+        },
+        {
+          "content": " And",
+          "context_size": 131,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 26,
+          "workflow": 9
+        },
+        {
+          "content": " And",
+          "context_size": 136,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 27,
+          "workflow": 9
+        },
+        {
+          "content": " And",
+          "context_size": 141,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 28,
+          "workflow": 9
+        },
+        {
+          "content": " And",
+          "context_size": 146,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 29,
+          "workflow": 9
+        },
+        {
+          "content": " \"",
+          "context_size": 149,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 30,
+          "workflow": 9
+        },
+        {
+          "content": " Once",
+          "context_size": 155,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 31,
+          "workflow": 9
+        },
+        {
+          "content": " Upon",
+          "context_size": 161,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 32,
+          "workflow": 9
+        },
+        {
+          "content": " a",
+          "context_size": 164,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 33,
+          "workflow": 9
+        },
+        {
+          "content": " time",
+          "context_size": 170,
+          "tokens_generated": 1,
+          "total_time_ms": 41,
+          "turn": 34,
+          "workflow": 9
+        },
+        {
+          "content": " in",
+          "context_size": 174,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 35,
+          "workflow": 9
+        },
+        {
+          "content": " a",
+          "context_size": 177,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 36,
+          "workflow": 9
+        },
+        {
+          "content": " land",
+          "context_size": 183,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 37,
+          "workflow": 9
+        },
+        {
+          "content": " far",
+          "context_size": 188,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 38,
+          "workflow": 9
+        },
+        {
+          "content": " away",
+          "context_size": 194,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 39,
+          "workflow": 9
+        },
+        {
+          "content": " lived",
+          "context_size": 201,
+          "tokens_generated": 1,
+          "total_time_ms": 49,
+          "turn": 40,
+          "workflow": 9
+        },
+        {
+          "content": " a",
+          "context_size": 204,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 41,
+          "workflow": 9
+        },
+        {
+          "content": " noble",
+          "context_size": 211,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 42,
+          "workflow": 9
+        },
+        {
+          "content": " kn",
+          "context_size": 215,
+          "tokens_generated": 0,
+          "total_time_ms": 50,
+          "turn": 43,
+          "workflow": 9
+        },
+        {
+          "content": " kn",
+          "context_size": 219,
+          "tokens_generated": 0,
+          "total_time_ms": 46,
+          "turn": 44,
+          "workflow": 9
+        },
+        {
+          "content": " kn",
+          "context_size": 223,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 45,
+          "workflow": 9
+        },
+        {
+          "content": " And",
+          "context_size": 228,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 46,
+          "workflow": 9
+        },
+        {
+          "content": " kn",
+          "context_size": 232,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 47,
+          "workflow": 9
+        },
+        {
+          "content": " And",
+          "context_size": 237,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 48,
+          "workflow": 9
+        },
+        {
+          "content": " kn",
+          "context_size": 241,
+          "tokens_generated": 0,
+          "total_time_ms": 37,
+          "turn": 49,
+          "workflow": 9
+        },
+        {
+          "content": " kn",
+          "context_size": 245,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 50,
+          "workflow": 9
+        }
+      ],
+      "total_time_seconds": 1.856924599,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_9",
+      "workflow_number": 9
+    },
+    {
+      "avg_turn_time_ms": 32.734693877551024,
+      "final_story": "  in  a  land  far  away  lived  a  noble  kn  kn  and  and  his  maid  and  a  and  Once  Upon  a  time  Once  Upon  a  time  a  time  Once  Once  Once  In  a  land  far  away  lived  a  noble  kn  kn  kn  kn  lived  In  kn  In  kn  Once  In  lived",
+      "k": 1,
+      "per_turn_metrics": [
+        {
+          "content": " in",
+          "context_size": 4,
+          "tokens_generated": 0,
+          "total_time_ms": 43,
+          "turn": 1,
+          "workflow": 10
+        },
+        {
+          "content": " a",
+          "context_size": 7,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 2,
+          "workflow": 10
+        },
+        {
+          "content": " land",
+          "context_size": 13,
+          "tokens_generated": 1,
+          "total_time_ms": 34,
+          "turn": 3,
+          "workflow": 10
+        },
+        {
+          "content": " far",
+          "context_size": 18,
+          "tokens_generated": 1,
+          "total_time_ms": 34,
+          "turn": 4,
+          "workflow": 10
+        },
+        {
+          "content": " away",
+          "context_size": 24,
+          "tokens_generated": 1,
+          "total_time_ms": 24,
+          "turn": 5,
+          "workflow": 10
+        },
+        {
+          "content": " lived",
+          "context_size": 31,
+          "tokens_generated": 1,
+          "total_time_ms": 24,
+          "turn": 6,
+          "workflow": 10
+        },
+        {
+          "content": " a",
+          "context_size": 34,
+          "tokens_generated": 0,
+          "total_time_ms": 24,
+          "turn": 7,
+          "workflow": 10
+        },
+        {
+          "content": " noble",
+          "context_size": 41,
+          "tokens_generated": 1,
+          "total_time_ms": 24,
+          "turn": 8,
+          "workflow": 10
+        },
+        {
+          "content": " kn",
+          "context_size": 45,
+          "tokens_generated": 0,
+          "total_time_ms": 24,
+          "turn": 9,
+          "workflow": 10
+        },
+        {
+          "content": " kn",
+          "context_size": 49,
+          "tokens_generated": 0,
+          "total_time_ms": 25,
+          "turn": 10,
+          "workflow": 10
+        },
+        {
+          "content": " and",
+          "context_size": 54,
+          "tokens_generated": 1,
+          "total_time_ms": 24,
+          "turn": 11,
+          "workflow": 10
+        },
+        {
+          "content": " and",
+          "context_size": 59,
+          "tokens_generated": 1,
+          "total_time_ms": 24,
+          "turn": 12,
+          "workflow": 10
+        },
+        {
+          "content": " his",
+          "context_size": 64,
+          "tokens_generated": 1,
+          "total_time_ms": 25,
+          "turn": 13,
+          "workflow": 10
+        },
+        {
+          "content": " maid",
+          "context_size": 70,
+          "tokens_generated": 1,
+          "total_time_ms": 24,
+          "turn": 14,
+          "workflow": 10
+        },
+        {
+          "content": " and",
+          "context_size": 75,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 15,
+          "workflow": 10
+        },
+        {
+          "content": " a",
+          "context_size": 78,
+          "tokens_generated": 0,
+          "total_time_ms": 26,
+          "turn": 16,
+          "workflow": 10
+        },
+        {
+          "content": " and",
+          "context_size": 83,
+          "tokens_generated": 1,
+          "total_time_ms": 25,
+          "turn": 17,
+          "workflow": 10
+        },
+        {
+          "content": " Once",
+          "context_size": 89,
+          "tokens_generated": 1,
+          "total_time_ms": 40,
+          "turn": 18,
+          "workflow": 10
+        },
+        {
+          "content": " Upon",
+          "context_size": 95,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 19,
+          "workflow": 10
+        },
+        {
+          "content": " a",
+          "context_size": 98,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 20,
+          "workflow": 10
+        },
+        {
+          "content": " time",
+          "context_size": 104,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 21,
+          "workflow": 10
+        },
+        {
+          "content": " Once",
+          "context_size": 110,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 22,
+          "workflow": 10
+        },
+        {
+          "content": " Upon",
+          "context_size": 116,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 23,
+          "workflow": 10
+        },
+        {
+          "content": " a",
+          "context_size": 119,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 24,
+          "workflow": 10
+        },
+        {
+          "content": " time",
+          "context_size": 125,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 25,
+          "workflow": 10
+        },
+        {
+          "content": " a",
+          "context_size": 128,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 26,
+          "workflow": 10
+        },
+        {
+          "content": " time",
+          "context_size": 134,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 27,
+          "workflow": 10
+        },
+        {
+          "content": " Once",
+          "context_size": 140,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 28,
+          "workflow": 10
+        },
+        {
+          "content": " Once",
+          "context_size": 146,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 29,
+          "workflow": 10
+        },
+        {
+          "content": " Once",
+          "context_size": 152,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 30,
+          "workflow": 10
+        },
+        {
+          "content": " In",
+          "context_size": 156,
+          "tokens_generated": 0,
+          "total_time_ms": 40,
+          "turn": 31,
+          "workflow": 10
+        },
+        {
+          "content": " a",
+          "context_size": 159,
+          "tokens_generated": 0,
+          "total_time_ms": 51,
+          "turn": 32,
+          "workflow": 10
+        },
+        {
+          "content": " land",
+          "context_size": 165,
+          "tokens_generated": 1,
+          "total_time_ms": 37,
+          "turn": 33,
+          "workflow": 10
+        },
+        {
+          "content": " far",
+          "context_size": 170,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 34,
+          "workflow": 10
+        },
+        {
+          "content": " away",
+          "context_size": 176,
+          "tokens_generated": 1,
+          "total_time_ms": 35,
+          "turn": 35,
+          "workflow": 10
+        },
+        {
+          "content": " lived",
+          "context_size": 183,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 36,
+          "workflow": 10
+        },
+        {
+          "content": " a",
+          "context_size": 186,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 37,
+          "workflow": 10
+        },
+        {
+          "content": " noble",
+          "context_size": 193,
+          "tokens_generated": 1,
+          "total_time_ms": 49,
+          "turn": 38,
+          "workflow": 10
+        },
+        {
+          "content": " kn",
+          "context_size": 197,
+          "tokens_generated": 0,
+          "total_time_ms": 33,
+          "turn": 39,
+          "workflow": 10
+        },
+        {
+          "content": " kn",
+          "context_size": 201,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 40,
+          "workflow": 10
+        },
+        {
+          "content": " kn",
+          "context_size": 205,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 41,
+          "workflow": 10
+        },
+        {
+          "content": " kn",
+          "context_size": 209,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 42,
+          "workflow": 10
+        },
+        {
+          "content": " lived",
+          "context_size": 216,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 43,
+          "workflow": 10
+        },
+        {
+          "content": " In",
+          "context_size": 220,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 44,
+          "workflow": 10
+        },
+        {
+          "content": " kn",
+          "context_size": 224,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 45,
+          "workflow": 10
+        },
+        {
+          "content": " In",
+          "context_size": 228,
+          "tokens_generated": 0,
+          "total_time_ms": 35,
+          "turn": 46,
+          "workflow": 10
+        },
+        {
+          "content": " kn",
+          "context_size": 232,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 47,
+          "workflow": 10
+        },
+        {
+          "content": " Once",
+          "context_size": 238,
+          "tokens_generated": 1,
+          "total_time_ms": 36,
+          "turn": 48,
+          "workflow": 10
+        },
+        {
+          "content": " In",
+          "context_size": 242,
+          "tokens_generated": 0,
+          "total_time_ms": 36,
+          "turn": 49,
+          "workflow": 10
+        },
+        {
+          "content": " lived",
+          "context_size": 249,
+          "tokens_generated": 1,
+          "total_time_ms": 26,
+          "turn": 50,
+          "workflow": 10
+        }
+      ],
+      "total_time_seconds": 1.7313001940000001,
+      "turns": 50,
+      "workflow_name": "story_finishing_game_10",
+      "workflow_number": 10
+    }
+  ]
+}

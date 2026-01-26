@@ -1,0 +1,84 @@
+{
+  "avg_turn_time_ms": 163.44444444444446,
+  "final_story": "  in a faraway land, there lived a young  princess named Isabella. She was known for  her kind and gentle heart. She spent her days  playing in the castle gardens, singing to the birds  and tending to the roses. One day  a strange and mysterious man arrived at the castle.  He claimed to be a powerful sorcerer and  demanded that the princess come with him. But Is  refused to go with him, for she knew that  she would be in danger if she left the castle",
+  "k": 10,
+  "machine_info": {
+    "arch": "amd64",
+    "num_cpu": 55,
+    "os": "linux"
+  },
+  "per_turn_metrics": [
+    {
+      "content": " in a faraway land, there lived a young",
+      "context_size": 40,
+      "tokens_generated": 9,
+      "total_time_ms": 144,
+      "turn": 1
+    },
+    {
+      "content": " princess named Isabella. She was known for",
+      "context_size": 84,
+      "tokens_generated": 10,
+      "total_time_ms": 147,
+      "turn": 2
+    },
+    {
+      "content": " her kind and gentle heart. She spent her days",
+      "context_size": 131,
+      "tokens_generated": 11,
+      "total_time_ms": 154,
+      "turn": 3
+    },
+    {
+      "content": " playing in the castle gardens, singing to the birds",
+      "context_size": 184,
+      "tokens_generated": 13,
+      "total_time_ms": 155,
+      "turn": 4
+    },
+    {
+      "content": " and tending to the roses. One day",
+      "context_size": 219,
+      "tokens_generated": 8,
+      "total_time_ms": 139,
+      "turn": 5
+    },
+    {
+      "content": " a strange and mysterious man arrived at the castle.",
+      "context_size": 272,
+      "tokens_generated": 13,
+      "total_time_ms": 155,
+      "turn": 6
+    },
+    {
+      "content": " He claimed to be a powerful sorcerer and",
+      "context_size": 314,
+      "tokens_generated": 10,
+      "total_time_ms": 163,
+      "turn": 7
+    },
+    {
+      "content": " demanded that the princess come with him. But Is",
+      "context_size": 364,
+      "tokens_generated": 12,
+      "total_time_ms": 177,
+      "turn": 8
+    },
+    {
+      "content": " refused to go with him, for she knew that",
+      "context_size": 407,
+      "tokens_generated": 10,
+      "total_time_ms": 188,
+      "turn": 9
+    },
+    {
+      "content": " she would be in danger if she left the castle",
+      "context_size": 454,
+      "tokens_generated": 11,
+      "total_time_ms": 193,
+      "turn": 10
+    }
+  ],
+  "total_time_seconds": 1.637029173,
+  "turns": 10
+}
