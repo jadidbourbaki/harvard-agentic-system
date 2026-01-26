@@ -473,7 +473,7 @@ func runExperiment(ctx context.Context, orlaURL string, mode string, numTasks in
 		synthesisStart := time.Now()
 		prompt2 := fmt.Sprintf("Based on the analysis, generate the fixed code for this issue:\n\nIssue: %s\n\nOriginal code:\n```python\n%s\n```\n\nProvide the complete fixed function with proper error handling and edge cases.", task.Issue, task.Code)
 		// Use a longer timeout for code generation (3 minutes for large models, especially Ollama which can be slower)
-		taskCtx, cancel := context.WithTimeout(ctx, 3*time.Minute)
+		taskCtx, cancel = context.WithTimeout(ctx, 3*time.Minute)
 		_, err = client.ExecuteTask(taskCtx, execID, taskIndex2, prompt2, 150)
 		cancel()
 		if err != nil {
@@ -494,7 +494,7 @@ func runExperiment(ctx context.Context, orlaURL string, mode string, numTasks in
 		summaryStart := time.Now()
 		prompt3 := fmt.Sprintf("Summarize the fix that was applied to resolve this issue in 2-3 sentences:\n\nIssue: %s", task.Issue)
 		// Use a longer timeout for inference tasks (2 minutes should be enough for small models)
-		taskCtx, cancel := context.WithTimeout(ctx, 2*time.Minute)
+		taskCtx, cancel = context.WithTimeout(ctx, 2*time.Minute)
 		_, err = client.ExecuteTask(taskCtx, execID, taskIndex3, prompt3, 30)
 		cancel()
 		if err != nil {
