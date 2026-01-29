@@ -356,24 +356,22 @@ func waitForBackendReady(backendURL string, timeout time.Duration) error {
 // startSGLangInTmux starts SGLang in a new detached tmux session.
 // Uses SGLANG_START_CMD env for the command if set; otherwise runs default docker run (port from backend URL).
 func startSGLangInTmux(backendURL string) error {
-	_ = exec.Command("tmux", "kill-session", "-t", sglangTmuxSession).Run()
 
-	cmdStr := os.Getenv("SGLANG_START_CMD")
-	if cmdStr == "" {
-		u, err := url.Parse(backendURL)
-		if err != nil {
-			return fmt.Errorf("parse backend URL: %w", err)
-		}
-		port := u.Port()
-		if port == "" {
-			port = "30000"
-		}
-		cmdStr = fmt.Sprintf("echo \"$SUDO_PASSWORD\" | sudo -S docker run --rm --name %s --gpus all --shm-size 32g -p %s:30000 "+
-			"-v $HOME/.cache/huggingface:/root/.cache/huggingface --ipc=host "+
-			"lmsysorg/sglang:latest python -m sglang.launch_server "+
-			"--model-path mistralai/Mistral-7B-Instruct-v0.3 --port 30000 --host 0.0.0.0 --mem-fraction-static 0.5",
-			sglangTmuxSession, port)
+	u, err := url.Parse(backendURL)
+	if err != nil {
+		return fmt.Errorf("parse backend URL: %w", err)
 	}
+
+	port := u.Port()
+	if port == "" {
+		port = "30000"
+	}
+
+	cmdStr := fmt.Sprintf("echo \"$SUDO_PASSWORD\" | sudo -S docker run --rm --name %s --gpus all --shm-size 32g -p %s:30000 "+
+		"-v $HOME/.cache/huggingface:/root/.cache/huggingface --ipc=host "+
+		"lmsysorg/sglang:latest python -m sglang.launch_server "+
+		"--model-path mistralai/Mistral-7B-Instruct-v0.3 --port 30000 --host 0.0.0.0 --mem-fraction-static 0.5",
+		sglangTmuxSession, port)
 
 	tmux := exec.Command("tmux", "new-session", "-d", "-s", sglangTmuxSession, "bash", "-c", cmdStr)
 	tmux.Stdout = os.Stdout
