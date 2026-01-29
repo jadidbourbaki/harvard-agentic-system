@@ -296,8 +296,14 @@ func runStoryFinishing(ctx context.Context, orlaURL string, turns, k int) (map[s
 			tpotPerTurn = append(tpotPerTurn, tpotMs)
 			turn++
 
-			if turn%10 == 0 || turn == 1 {
-				log.Printf("[Turn %d/%d] ttft=%.1fms tpot=%.1fms elapsed=%v", turn, turns, ttftMs, tpotMs, elapsed)
+			// Print each increment so you can validate the experiment is working
+			log.Printf("[Turn %d/%d] +%q  (ttft=%.1fms tpot=%.1fms)", turn, turns, content, ttftMs, tpotMs)
+			if turn%10 == 0 && storyContext != "" {
+				preview := storyContext
+				if len(preview) > 128 {
+					preview = preview[:128] + "..."
+				}
+				log.Printf("[Turn %d/%d] story so far (%d chars): %q", turn, turns, len(storyContext), preview)
 			}
 		}
 	}
@@ -324,6 +330,7 @@ func runStoryFinishing(ctx context.Context, orlaURL string, turns, k int) (map[s
 		"tpot_per_turn":       tpotPerTurn,
 		"latency_per_turn_ms": latencyPerTurnMs,
 		"story_length_chars":  len(storyContext),
+		"story":               storyContext,
 	}, nil
 }
 
