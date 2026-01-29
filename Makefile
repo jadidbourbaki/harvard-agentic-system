@@ -1,6 +1,6 @@
 .ONESHELL:
 
-.PHONY: help build-experiments run-cascade-baseline run-cascade-orla connect setup-lambda sync-repo sync-experiments run-sglang run-sglang-tmux stop-sglang restart-sglang clean source-env check-env print-env
+.PHONY: help build-experiments build-story-finishing run-story-finishing run-story-finishing-grid run-cascade-baseline run-cascade-orla connect setup-lambda sync-repo sync-experiments run-sglang run-sglang-tmux stop-sglang restart-sglang clean source-env check-env print-env
 
 # Set default LAMBDA_HOST if not provided
 LAMBDA_HOST ?= lambda1
@@ -90,6 +90,39 @@ build-experiments:
 	@echo "Building model cascade experiment..."
 	@mkdir -p bin
 	@cd experiments/model_cascade && go build -o ../../bin/model_cascade .
+
+# ==============================================================================
+# STORY FINISHING EXPERIMENT
+# ==============================================================================
+# Two agents alternate turns; each turn adds k tokens to the story.
+# Parameters: turns T, k (= c), cache strategy (flush or preserve).
+# See: https://www.notion.so/Harvard-Agentic-System-2cf86d7fcf1a80ec8ad0cfd6892e3456
+
+# Build the story finishing experiment
+build-story-finishing:
+	@echo "Building story finishing experiment..."
+	@mkdir -p bin
+	@cd experiments/story_finishing && go build -o ../../bin/story_finishing .
+
+# Run story finishing experiment (default: 100 turns, k=32, flush)
+# Example: make run-story-finishing STORY_TURNS=50 STORY_K=16 STORY_CACHE=preserve
+STORY_TURNS ?= 100
+STORY_K ?= 32
+STORY_CACHE ?= flush
+STORY_BACKEND ?= http://localhost:30000
+
+run-story-finishing: build-story-finishing
+	@mkdir -p output/story_finishing
+	@echo "=============================================="
+	@echo "Story Finishing: turns=$(STORY_TURNS) k=$(STORY_K) cache=$(STORY_CACHE)"
+	@echo "=============================================="
+	@./bin/story_finishing --turns $(STORY_TURNS) --k $(STORY_K) --cache-strategy $(STORY_CACHE) \
+		--backend $(STORY_BACKEND) \
+		--output output/story_finishing/turns_$(STORY_TURNS)_k_$(STORY_K)_$(STORY_CACHE).json
+
+# Run story finishing over a grid: turns (1,2,4,8,16,32,64), k (1,2,4,8,16,32,64,128), noise (0.5,1,2). Outputs in output/story_finishing/.
+run-story-finishing-grid: build-story-finishing
+	@./scripts/run_story_finishing_grid.sh $(STORY_BACKEND)
 
 # Run baseline experiment (SGLang: always uses large model) - 4 runs (1 warmup + 3 for error bars)
 run-cascade-baseline:

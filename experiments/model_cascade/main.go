@@ -469,7 +469,7 @@ func runExperiment(ctx context.Context, orlaURL string, mode string, numTasks in
 		analysisStart := time.Now()
 		prompt1 := fmt.Sprintf("Analyze this software engineering issue and identify the problem:\n\nIssue: %s\n\nCurrent code:\n```python\n%s\n```\n\nProvide a brief analysis: what is the problem, what needs to be fixed, and what approach should be taken?", task.Issue, task.Code)
 		// Use context.Background() to avoid any context cancellation issues that might affect the daemon
-		_, err = client.ExecuteTask(context.Background(), execID, taskIndex1, prompt1, 50)
+		_, err = client.ExecuteTask(context.Background(), execID, taskIndex1, prompt1, &orla.ExecuteTaskOptions{MaxTokens: 50})
 		if err != nil {
 			return nil, fmt.Errorf("failed to execute analysis task: %w", err)
 		}
@@ -491,7 +491,7 @@ func runExperiment(ctx context.Context, orlaURL string, mode string, numTasks in
 		// Retry logic for synthesis task (Ollama can be flaky)
 		var synthesisErr error
 		for retry := 0; retry < 3; retry++ {
-			_, synthesisErr = client.ExecuteTask(context.Background(), execID, taskIndex2, prompt2, 150)
+			_, synthesisErr = client.ExecuteTask(context.Background(), execID, taskIndex2, prompt2, &orla.ExecuteTaskOptions{MaxTokens: 150})
 			if synthesisErr == nil {
 				break
 			}
@@ -518,7 +518,7 @@ func runExperiment(ctx context.Context, orlaURL string, mode string, numTasks in
 		summaryStart := time.Now()
 		prompt3 := fmt.Sprintf("Summarize the fix that was applied to resolve this issue in 2-3 sentences:\n\nIssue: %s", task.Issue)
 		// Use context.Background() to avoid any context cancellation issues that might affect the daemon
-		_, err = client.ExecuteTask(context.Background(), execID, taskIndex3, prompt3, 30)
+		_, err = client.ExecuteTask(context.Background(), execID, taskIndex3, prompt3, &orla.ExecuteTaskOptions{MaxTokens: 30})
 		if err != nil {
 			return nil, fmt.Errorf("failed to execute summary task: %w", err)
 		}

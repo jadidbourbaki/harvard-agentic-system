@@ -1,9 +1,7 @@
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/dorcha-inc/orla v1.0.1 h1:EkRxq8Y7Mmpn5BTLektilzMJclHSwSTiWdO0X0c6tIM=
-github.com/dorcha-inc/orla v1.0.1/go.mod h1:M/SYJhepyjnJDcch2NDWNbuOYvkuCEZf3FealGhqfgE=
-github.com/dorcha-inc/orla v1.0.2 h1:2Wk5s0XSKMT07+URKcRO8ecM6Z/Uhw/fgV/TuWf8WTk=
-github.com/dorcha-inc/orla v1.0.2/go.mod h1:M/SYJhepyjnJDcch2NDWNbuOYvkuCEZf3FealGhqfgE=
+github.com/dorcha-inc/orla v1.1.0 h1:5Ta0K77G+YEtXlsvLDAvGGHmG+1SIvinhjQAfLAb6YM=
+github.com/dorcha-inc/orla v1.1.0/go.mod h1:M/SYJhepyjnJDcch2NDWNbuOYvkuCEZf3FealGhqfgE=
 github.com/golang-jwt/jwt/v5 v5.2.2 h1:Rl4B7itRWVtYIHFrSNd7vhTiz9UpLdi6gZhZ3wEeDy8=
 github.com/golang-jwt/jwt/v5 v5.2.2/go.mod h1:pqrtFR0X4osieyHYxtmOUWsAWrfe1Q5UVIyoH402zdk=
 github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=

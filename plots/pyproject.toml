@@ -1,0 +1,13 @@
+[project]
+name = "orla-plots"
+version = "0.1.0"
+description = "SOSP-style plots for Orla evaluation results"
+requires-python = ">=3.9"
+dependencies = [
+    "matplotlib>=3.7.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = []

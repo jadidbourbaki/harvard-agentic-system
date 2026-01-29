@@ -2,7 +2,7 @@ module github.com/harvard-agentic-system/orla-experiments
 
 go 1.25.0
 
-require github.com/dorcha-inc/orla v1.0.2
+require github.com/dorcha-inc/orla v1.1.0
 
 require (
 	github.com/google/jsonschema-go v0.4.2 // indirect
