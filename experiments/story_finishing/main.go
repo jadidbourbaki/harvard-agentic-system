@@ -8,7 +8,7 @@
 //
 //	go run . --turns 100 --k 32 --cache-strategy flush --backend http://localhost:30000
 //	go run . --turns 100 --noise-rate 2   # with background load (Poisson, 2 req/s)
-//	go run . --start-sglang   # start SGLang in tmux, wait for ready, then shut down when done
+//	go run . --start-sglang   # start SGLang in a new tmux window (must be inside tmux), wait for ready, then shut down when done
 package main
 
 import (
@@ -31,7 +31,10 @@ import (
 	orla "github.com/dorcha-inc/orla/pkg/api"
 )
 
-const sglangTmuxSession = "sglang-story"
+const (
+	sglangTmuxSession = "sglang-story" // used for docker container name and tmux window name
+	sglangTmuxWindow  = "sglang-story"
+)
 
 func init() {
 	log.SetOutput(os.Stderr)
@@ -353,9 +356,15 @@ func waitForBackendReady(backendURL string, timeout time.Duration) error {
 	return fmt.Errorf("backend %s not ready after %v", backendURL, timeout)
 }
 
-// startSGLangInTmux starts SGLang in a new detached tmux session.
-// Uses SGLANG_START_CMD env for the command if set; otherwise runs default docker run (port from backend URL).
+// startSGLangInTmux starts SGLang in a new detached tmux window in the current session.
+// Requires running inside tmux (TMUX set); errors out if not. Uses SGLANG_START_CMD env if set.
 func startSGLangInTmux(backendURL string) error {
+	if os.Getenv("TMUX") == "" {
+		return fmt.Errorf("--start-sglang requires running inside tmux (so SGLang runs in a new window); start tmux first, then run this command")
+	}
+
+	// Kill existing window with same name if present
+	_ = exec.Command("tmux", "kill-window", "-t", ":"+sglangTmuxWindow).Run()
 
 	u, err := url.Parse(backendURL)
 	if err != nil {
@@ -367,28 +376,32 @@ func startSGLangInTmux(backendURL string) error {
 		port = "30000"
 	}
 
-	cmdStr := fmt.Sprintf("echo \"$SUDO_PASSWORD\" | sudo -S docker run --rm --name %s --gpus all --shm-size 32g -p %s:30000 "+
-		"-v $HOME/.cache/huggingface:/root/.cache/huggingface --ipc=host "+
-		"lmsysorg/sglang:latest python -m sglang.launch_server "+
-		"--model-path mistralai/Mistral-7B-Instruct-v0.3 --port 30000 --host 0.0.0.0 --mem-fraction-static 0.5",
-		sglangTmuxSession, port)
+	cmdStr := os.Getenv("SGLANG_START_CMD")
+	if cmdStr == "" {
+		cmdStr = fmt.Sprintf("echo \"$SUDO_PASSWORD\" | sudo -S docker run --rm --name %s --gpus all --shm-size 32g -p %s:30000 "+
+			"-v $HOME/.cache/huggingface:/root/.cache/huggingface --ipc=host "+
+			"lmsysorg/sglang:latest python -m sglang.launch_server "+
+			"--model-path mistralai/Mistral-7B-Instruct-v0.3 --port 30000 --host 0.0.0.0 --mem-fraction-static 0.5",
+			sglangTmuxSession, port)
+	}
+	cmdStr += "; echo 'SGLang process exited. Window stays open until experiment ends.'; exec bash"
 
-	tmux := exec.Command("tmux", "new-session", "-d", "-s", sglangTmuxSession, "bash", "-c", cmdStr)
+	tmux := exec.Command("tmux", "new-window", "-d", "-n", sglangTmuxWindow, "bash", "-c", cmdStr)
 	tmux.Stdout = os.Stdout
 	tmux.Stderr = os.Stderr
 	if err := tmux.Run(); err != nil {
-		return fmt.Errorf("tmux new-session: %w", err)
+		return fmt.Errorf("tmux new-window: %w", err)
 	}
-	log.Printf("Started SGLang in tmux session %q (attach with: tmux attach -t %s)", sglangTmuxSession, sglangTmuxSession)
+	log.Printf("Started SGLang in new tmux window %q (switch with C-b n or C-b w)", sglangTmuxWindow)
 	return nil
 }
 
 func stopSGLangTmux() {
-	if err := exec.Command("tmux", "kill-session", "-t", sglangTmuxSession).Run(); err != nil {
-		log.Printf("Note: tmux kill-session %s: %v (session may already be gone)", sglangTmuxSession, err)
+	if err := exec.Command("tmux", "kill-window", "-t", ":"+sglangTmuxWindow).Run(); err != nil {
+		log.Printf("Note: tmux kill-window %s: %v (window may already be gone)", sglangTmuxWindow, err)
 		return
 	}
-	log.Printf("Stopped SGLang (tmux session %s)", sglangTmuxSession)
+	log.Printf("Stopped SGLang (tmux window %s)", sglangTmuxWindow)
 }
 
 // runBackgroundNoise sends Poisson-paced requests to the SGLang backend to simulate concurrent load.
