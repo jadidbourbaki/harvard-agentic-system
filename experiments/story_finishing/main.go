@@ -363,8 +363,15 @@ func startSGLangInTmux(backendURL string) error {
 		return fmt.Errorf("--start-sglang requires running inside tmux (so SGLang runs in a new window); start tmux first, then run this command")
 	}
 
-	// Kill existing window with same name if present
-	_ = exec.Command("tmux", "kill-window", "-t", ":"+sglangTmuxWindow).Run()
+	pass := os.Getenv("SUDO_PASSWORD")
+	if pass == "" {
+		return fmt.Errorf("SUDO_PASSWORD environment variable is not set")
+	}
+
+	// Pass SUDO_PASSWORD into the tmux session so the new window's shell has it (new windows don't inherit the pane's env otherwise).
+	if err := exec.Command("tmux", "set-environment", "SUDO_PASSWORD", pass).Run(); err != nil {
+		return fmt.Errorf("could not set SUDO_PASSWORD in tmux session: %w", err)
+	}
 
 	u, err := url.Parse(backendURL)
 	if err != nil {
