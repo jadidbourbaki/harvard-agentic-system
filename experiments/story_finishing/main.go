@@ -41,11 +41,18 @@ func init() {
 	log.SetFlags(log.LstdFlags | log.Lmicroseconds)
 }
 
+var sudoPassword string
+
 const storyPromptTemplate = `We are playing a story finishing game. It is your turn. You are only allowed to give me the next %d tokens. You must give me exactly the next %d tokens to finish the story. The story starts as follows:
 
 Once upon a time %s`
 
 func main() {
+	sudoPassword = os.Getenv("SUDO_PASSWORD")
+	if sudoPassword == "" {
+		log.Fatalf("SUDO_PASSWORD environment variable is not set")
+	}
+
 	if killErr := exec.Command("killall", "orla").Run(); killErr != nil {
 		log.Printf("Note: No existing orla processes to kill (this is OK)")
 	}
@@ -84,11 +91,12 @@ func main() {
 		}
 		defer stopSGLangTmux()
 		if err := waitForBackendReady(*backend, 5*time.Minute); err != nil {
-			stopSGLangTmux()
 			log.Fatalf("SGLang did not become ready: %v", err)
 		}
 		log.Printf("SGLang is ready")
-	} else if err := checkBackendReady(*backend); err != nil {
+	}
+
+	if err := checkBackendReady(*backend); err != nil {
 		log.Fatalf("Backend %s not ready: %v", *backend, err)
 	}
 
@@ -96,6 +104,7 @@ func main() {
 	if *output != "" {
 		logFile = filepath.Join(filepath.Dir(*output), filepath.Base(logFile))
 	}
+
 	daemonLog, err := os.Create(logFile)
 	if err != nil {
 		log.Fatalf("Failed to create daemon log: %v", err)
@@ -368,13 +377,15 @@ func startSGLangInTmux(backendURL string) error {
 		return fmt.Errorf("--start-sglang requires running inside tmux (so SGLang runs in a new window); start tmux first, then run this command")
 	}
 
-	pass := os.Getenv("SUDO_PASSWORD")
-	if pass == "" {
-		return fmt.Errorf("SUDO_PASSWORD environment variable is not set")
+	// Remove any existing container so the new one can bind the port and use the name (do this from Go before creating the window so waitForBackendReady waits for the new SGLang).
+	rm := exec.Command("sh", "-c", "echo \"$SUDO_PASSWORD\" | sudo -S docker rm -f "+sglangTmuxSession+" 2>/dev/null")
+	rm.Env = append(os.Environ(), "SUDO_PASSWORD="+sudoPassword)
+	if err := rm.Run(); err != nil {
+		return fmt.Errorf("could not remove existing container: %w", err)
 	}
 
 	// Pass SUDO_PASSWORD into the tmux session so the new window's shell has it (new windows don't inherit the pane's env otherwise).
-	if err := exec.Command("tmux", "set-environment", "SUDO_PASSWORD", pass).Run(); err != nil {
+	if err := exec.Command("tmux", "set-environment", "SUDO_PASSWORD", sudoPassword).Run(); err != nil {
 		return fmt.Errorf("could not set SUDO_PASSWORD in tmux session: %w", err)
 	}
 
@@ -409,10 +420,19 @@ func startSGLangInTmux(backendURL string) error {
 }
 
 func stopSGLangTmux() {
+	// Remove the container so the name/port are free for the next run (and so we don't leave it running).
+	rm := exec.Command("sh", "-c", "echo \"$SUDO_PASSWORD\" | sudo -S docker rm -f "+sglangTmuxSession+" 2>/dev/null")
+	rm.Env = append(os.Environ(), "SUDO_PASSWORD="+sudoPassword)
+
+	if err := rm.Run(); err != nil {
+		log.Fatalf("Could not remove container: %v", err)
+	}
+
 	if err := exec.Command("tmux", "kill-window", "-t", ":"+sglangTmuxWindow).Run(); err != nil {
 		log.Printf("Note: tmux kill-window %s: %v (window may already be gone)", sglangTmuxWindow, err)
 		return
 	}
+
 	log.Printf("Stopped SGLang (tmux window %s)", sglangTmuxWindow)
 }
 
