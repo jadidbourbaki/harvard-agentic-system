@@ -359,6 +359,11 @@ func waitForBackendReady(backendURL string, timeout time.Duration) error {
 // startSGLangInTmux starts SGLang in a new detached tmux window in the current session.
 // Requires running inside tmux (TMUX set); errors out if not. Uses SGLANG_START_CMD env if set.
 func startSGLangInTmux(backendURL string) error {
+	// Kill existing window with same name if present to avoid errors
+	if err := exec.Command("tmux", "kill-window", "-t", ":"+sglangTmuxWindow).Run(); err != nil {
+		log.Printf("Note: tmux kill-window %s: %v (window may already be gone)", sglangTmuxWindow, err)
+	}
+
 	if os.Getenv("TMUX") == "" {
 		return fmt.Errorf("--start-sglang requires running inside tmux (so SGLang runs in a new window); start tmux first, then run this command")
 	}
