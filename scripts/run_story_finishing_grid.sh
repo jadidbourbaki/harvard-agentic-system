@@ -11,7 +11,8 @@ set -e
 BACKEND="${1:-http://localhost:30000}"
 BIN="${BIN:-./bin/story_finishing}"
 OUT_DIR="${OUT_DIR:-output/story_finishing}"
-CACHE_STRATEGY="${CACHE_STRATEGY:-flush}"
+# Run both cache strategies so plots can compare flush vs preserve
+CACHE_STRATEGIES="${CACHE_STRATEGIES:-flush preserve}"
 
 TURNS="64"
 K_VALS="2 4 8 16 32 64 128"
@@ -19,19 +20,22 @@ NOISE_RATES="0.5 1 2"
 
 mkdir -p "$OUT_DIR"
 echo "=============================================="
-echo "Story Finishing grid: turns x k x noise"
+echo "Story Finishing grid: turns x k x noise x cache_strategy"
 echo "Each run uses --start-sglang (SGLang started/stopped per experiment)"
 echo "Backend: $BACKEND  Out: $OUT_DIR"
+echo "Strategies: $CACHE_STRATEGIES"
 echo "=============================================="
 
-for turns in $TURNS; do
-	for k in $K_VALS; do
-		for noise in $NOISE_RATES; do
-			out="$OUT_DIR/turns_${turns}_k_${k}_noise_${noise}.json"
-			echo "Running turns=$turns k=$k noise=$noise -> $out"
-			"$BIN" --turns "$turns" --k "$k" --cache-strategy "$CACHE_STRATEGY" \
-				--noise-rate "$noise" --backend "$BACKEND" --output "$out" \
-				--start-sglang
+for strategy in $CACHE_STRATEGIES; do
+	for turns in $TURNS; do
+		for k in $K_VALS; do
+			for noise in $NOISE_RATES; do
+				out="$OUT_DIR/turns_${turns}_k_${k}_noise_${noise}_${strategy}.json"
+				echo "Running turns=$turns k=$k noise=$noise strategy=$strategy -> $out"
+				"$BIN" --turns "$turns" --k "$k" --cache-strategy "$strategy" \
+					--noise-rate "$noise" --backend "$BACKEND" --output "$out" \
+					--start-sglang
+			done
 		done
 	done
 done
