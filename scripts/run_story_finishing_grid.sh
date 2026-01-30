@@ -14,7 +14,7 @@ OUT_DIR="${OUT_DIR:-output/story_finishing}"
 CACHE_STRATEGY="${CACHE_STRATEGY:-flush}"
 
 TURNS="64"
-K_VALS="1 2 4 8 16 32 64 128"
+K_VALS="2 4 8 16 32 64 128"
 NOISE_RATES="0.5 1 2"
 
 mkdir -p "$OUT_DIR"
