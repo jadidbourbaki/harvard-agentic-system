@@ -220,10 +220,12 @@ agentic_serving:
   workflows:
     - name: "story_finishing_game"
       tasks:
+        # use_context: false so each turn is independent: Agent 1 (turns 1,3,5,...) and Agent 2 (turns 2,4,6,...)
+        # do not share conversation history; each request is [user] with the full story so far in the prompt.
         - agent_profile: "agent_i"
-          use_context: true
+          use_context: false
         - agent_profile: "agent_j"
-          use_context: true
+          use_context: false
 `, backend, policy)
 	f, err := os.CreateTemp("", "orla_story_finishing_*.yaml")
 	if err != nil {
