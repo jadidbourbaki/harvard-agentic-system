@@ -54,6 +54,9 @@ SOSP_SMALL = {
 
 SAVEFIG_KW = {"dpi": 300, "bbox_inches": "tight", "pad_inches": 0.05}
 
+# Exclude first N turns as cold start (cache warmup, etc.)
+COLD_START_TURNS = 1
+
 
 def load_story_finishing_results(output_dir: Path) -> list[dict[str, Any]]:
     """Load all story_finishing JSON files and return list of records with parsed fields."""
@@ -153,12 +156,13 @@ def plot_turn_vs_ttft(
     grouped: dict[float, dict[int, dict[str, list[dict[str, Any]]]]],
     out_dir: Path,
 ) -> None:
-    """Turn (1–64) vs TTFT, one figure per (noise, k), lines for flush and preserve."""
+    """Turn vs TTFT, one figure per (noise, k), lines for flush and preserve. Cold-start turns excluded."""
     _apply_style()
     for noise, by_k in sorted(grouped.items()):
         for k, by_strategy in sorted(by_k.items()):
             fig, ax = plt.subplots(figsize=FIG_SMALL)
-            turns = np.arange(1, 65, dtype=float)
+            # Exclude cold-start turns from plot
+            turns = np.arange(COLD_START_TURNS + 1, 65, dtype=float)
             for strategy, label, style in [
                 ("flush", "Flush", {"color": "C0", "linestyle": "-"}),
                 ("preserve", "Preserve", {"color": "C1", "linestyle": "-"}),
@@ -166,12 +170,12 @@ def plot_turn_vs_ttft(
                 runs = by_strategy.get(strategy, [])
                 if not runs:
                     continue
-                # Use first run (or average across runs if multiple)
-                ttft = np.array(runs[0]["ttft_per_turn"][:64])
-                if len(ttft) < 64:
-                    ttft = np.resize(ttft, 64)
-                ax.plot(turns, ttft, label=label, **style)
-            ax.set_xlim(1, 64)
+                raw = runs[0]["ttft_per_turn"][:64]
+                ttft = np.array(raw[COLD_START_TURNS:] if len(raw) > COLD_START_TURNS else raw)
+                if len(ttft) < len(turns):
+                    ttft = np.resize(ttft, len(turns))
+                ax.plot(turns, ttft[: len(turns)], label=label, **style)
+            ax.set_xlim(COLD_START_TURNS + 1, 64)
             _set_ylim_from_data(ax)
             ax.set_xlabel("Turn")
             ax.set_ylabel("TTFT (ms)")
@@ -190,12 +194,12 @@ def plot_turn_vs_tpot(
     grouped: dict[float, dict[int, dict[str, list[dict[str, Any]]]]],
     out_dir: Path,
 ) -> None:
-    """Turn (1–64) vs TPOT, one figure per (noise, k), lines for flush and preserve."""
+    """Turn vs TPOT, one figure per (noise, k), lines for flush and preserve. Cold-start turns excluded."""
     _apply_style()
     for noise, by_k in sorted(grouped.items()):
         for k, by_strategy in sorted(by_k.items()):
             fig, ax = plt.subplots(figsize=FIG_SMALL)
-            turns = np.arange(1, 65, dtype=float)
+            turns = np.arange(COLD_START_TURNS + 1, 65, dtype=float)
             for strategy, label, style in [
                 ("flush", "Flush", {"color": "C0", "linestyle": "-"}),
                 ("preserve", "Preserve", {"color": "C1", "linestyle": "-"}),
@@ -203,11 +207,12 @@ def plot_turn_vs_tpot(
                 runs = by_strategy.get(strategy, [])
                 if not runs:
                     continue
-                tpot = np.array(runs[0]["tpot_per_turn"][:64])
-                if len(tpot) < 64:
-                    tpot = np.resize(tpot, 64)
-                ax.plot(turns, tpot, label=label, **style)
-            ax.set_xlim(1, 64)
+                raw = runs[0]["tpot_per_turn"][:64]
+                tpot = np.array(raw[COLD_START_TURNS:] if len(raw) > COLD_START_TURNS else raw)
+                if len(tpot) < len(turns):
+                    tpot = np.resize(tpot, len(turns))
+                ax.plot(turns, tpot[: len(turns)], label=label, **style)
+            ax.set_xlim(COLD_START_TURNS + 1, 64)
             _set_ylim_from_data(ax)
             ax.set_xlabel("Turn")
             ax.set_ylabel("TPOT (ms)")
@@ -256,7 +261,8 @@ def plot_k_vs_ttft_summary(
                     continue
                 all_ttft = []
                 for r in runs:
-                    all_ttft.extend(r["ttft_per_turn"][:64])
+                    raw = r["ttft_per_turn"][:64]
+                    all_ttft.extend(raw[COLD_START_TURNS:] if len(raw) > COLD_START_TURNS else raw)
                 med, p99 = _median_and_p99(all_ttft)
                 med_list.append(med)
                 p99_list.append(p99)
@@ -306,7 +312,8 @@ def plot_k_vs_tpot_summary(
                     continue
                 all_tpot = []
                 for r in runs:
-                    all_tpot.extend(r["tpot_per_turn"][:64])
+                    raw = r["tpot_per_turn"][:64]
+                    all_tpot.extend(raw[COLD_START_TURNS:] if len(raw) > COLD_START_TURNS else raw)
                 med, p99 = _median_and_p99(all_tpot)
                 med_list.append(med)
                 p99_list.append(p99)
