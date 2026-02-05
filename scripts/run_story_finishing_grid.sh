@@ -46,7 +46,7 @@ for strategy in $CACHE_STRATEGIES; do
 	for turns in $TURNS; do
 		for k in $K_VALS; do
 			for noise in $NOISE_RATES; do
-				out="$OUT_DIR/turns_${turns}_k_${k}_noise_${noise}_${strategy}.json"
+				out="$OUT_DIR/turns_${turns}_k_${k}_noise_${noise}_${strategy}_${BACKEND_TYPE}.json"
 				echo "Running turns=$turns k=$k noise=$noise strategy=$strategy -> $out"
 				EXTRA=""
 				if [ "$BACKEND_TYPE" = "vllm" ]; then
