@@ -138,7 +138,7 @@ func main() {
 		log.Fatalf("Backend %s not ready: %v", *backend, err)
 	}
 
-	logFile := fmt.Sprintf("orla_story_finishing_%s_k_%v_turns_%v_noise_%.2f.log", *cacheStrategy, *k, *turns, *noiseRate)
+	logFile := fmt.Sprintf("orla_story_finishing_%s_k_%v_turns_%v_noise_%.2f_%s.log", *cacheStrategy, *k, *turns, *noiseRate, *backendType)
 	if *output != "" {
 		logFile = filepath.Join(filepath.Dir(*output), filepath.Base(logFile))
 	}
@@ -202,7 +202,7 @@ func main() {
 		log.Printf("Background noise started: %.2f req/s (Poisson)", *noiseRate)
 	}
 
-	results, runErr := runStoryFinishing(ctx, orlaURL, *backendType, *turns, *k)
+	results, runErr := runStoryFinishing(ctx, orlaURL, *backendType, *cacheStrategy, *turns, *k)
 
 	if noiseCancel != nil {
 		noiseCancel()
@@ -313,7 +313,7 @@ agentic_serving:
 	return f.Name(), nil
 }
 
-func runStoryFinishing(ctx context.Context, orlaURL, backendType string, turns, k int) (map[string]interface{}, error) {
+func runStoryFinishing(ctx context.Context, orlaURL, backendType, cacheStrategy string, turns, k int) (map[string]interface{}, error) {
 	client := orla.NewClient(orlaURL)
 
 	var ttftPerTurn, tpotPerTurn []float64
@@ -341,9 +341,9 @@ func runStoryFinishing(ctx context.Context, orlaURL, backendType string, turns, 
 			if storyContext == "" {
 				prompt = fmt.Sprintf(storyPromptTemplate, k, k, "")
 			}
-			// For vLLM: prepend a unique prefix per request so every turn gets a fresh KVCache.
+			// For vLLM + flush: prepend a unique prefix per request so every turn gets a fresh KVCache.
 			// vLLM hashes the first block by token content; different prefix => no cache reuse.
-			if backendType == "vllm" {
+			if backendType == "vllm" && cacheStrategy == "flush" {
 				prompt = fmt.Sprintf("Request %d.\n\n", turn) + prompt
 			}
 
