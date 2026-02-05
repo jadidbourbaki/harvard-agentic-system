@@ -1,6 +1,6 @@
 .ONESHELL:
 
-.PHONY: help build-experiments build-story-finishing run-story-finishing run-story-finishing-grid run-cascade-baseline run-cascade-orla connect setup-lambda sync-repo sync-experiments run-sglang run-sglang-tmux stop-sglang restart-sglang clean source-env check-env print-env
+.PHONY: help build-experiments build-story-finishing run-story-finishing run-story-finishing-grid run-story-finishing-vllm run-cascade-baseline run-cascade-orla connect setup-lambda sync-repo sync-experiments run-sglang run-sglang-tmux run-vllm stop-sglang stop-vllm restart-sglang clean source-env check-env print-env
 
 # Set default LAMBDA_HOST if not provided
 LAMBDA_HOST ?= lambda1
@@ -105,23 +105,36 @@ build-story-finishing:
 	@mkdir -p bin
 	@cd experiments/story_finishing && go build -o ../../bin/story_finishing .
 
-# Run story finishing experiment (default: 100 turns, k=32, flush)
+# Run story finishing experiment (default: 100 turns, k=32, flush, SGLang)
 # Example: make run-story-finishing STORY_TURNS=50 STORY_K=16 STORY_CACHE=preserve
+# Example: make run-story-finishing-vllm  (uses vLLM; avoids SGLang global KVCache flush dips)
 STORY_TURNS ?= 100
 STORY_K ?= 32
 STORY_CACHE ?= flush
 STORY_BACKEND ?= http://localhost:30000
+STORY_BACKEND_TYPE ?= sglang
 
 run-story-finishing: build-story-finishing
 	@mkdir -p output/story_finishing
 	@echo "=============================================="
-	@echo "Story Finishing: turns=$(STORY_TURNS) k=$(STORY_K) cache=$(STORY_CACHE)"
+	@echo "Story Finishing: turns=$(STORY_TURNS) k=$(STORY_K) cache=$(STORY_CACHE) backend=$(STORY_BACKEND_TYPE)"
 	@echo "=============================================="
 	@./bin/story_finishing --turns $(STORY_TURNS) --k $(STORY_K) --cache-strategy $(STORY_CACHE) \
-		--backend $(STORY_BACKEND) \
+		--backend-type $(STORY_BACKEND_TYPE) --backend $(STORY_BACKEND) \
 		--output output/story_finishing/turns_$(STORY_TURNS)_k_$(STORY_K)_$(STORY_CACHE).json
 
-# Run story finishing over a grid: turns (1,2,4,8,16,32,64), k (1,2,4,8,16,32,64,128), noise (0.5,1,2). Outputs in output/story_finishing/.
+# Run story finishing with vLLM (no SGLang; avoids flush dips from global KVCache). Start vLLM first or use --start-vllm inside tmux.
+run-story-finishing-vllm: build-story-finishing
+	@mkdir -p output/story_finishing
+	@echo "=============================================="
+	@echo "Story Finishing (vLLM): turns=$(STORY_TURNS) k=$(STORY_K) cache=$(STORY_CACHE)"
+	@echo "=============================================="
+	@./bin/story_finishing --turns $(STORY_TURNS) --k $(STORY_K) --cache-strategy $(STORY_CACHE) \
+		--backend-type vllm --backend http://localhost:8000/v1 \
+		--output output/story_finishing/turns_$(STORY_TURNS)_k_$(STORY_K)_$(STORY_CACHE)_vllm.json
+
+# Run story finishing over a grid. Default SGLang; use BACKEND_TYPE=vllm STORY_BACKEND=http://localhost:8000/v1 for vLLM.
+# With START_VLLM=1 and BACKEND_TYPE=vllm, each run starts vLLM in tmux (self-contained).
 run-story-finishing-grid: build-story-finishing
 	@./scripts/run_story_finishing_grid.sh $(STORY_BACKEND)
 
@@ -258,6 +271,22 @@ stop-sglang:
 	@echo "$$SUDO_PASSWORD" | sudo -S docker stop sglang-large sglang-small 2>/dev/null || true
 	@echo "$$SUDO_PASSWORD" | sudo -S docker rm sglang-large sglang-small 2>/dev/null || true
 	@echo "SGLang servers stopped"
+
+# Start vLLM server (OpenAI-compatible) with Mistral-7B on port 8000 for story finishing
+run-vllm:
+	@echo "Starting vLLM server (OpenAI-compatible) with Mistral-7B on port 8000..."
+	@echo "Model will be downloaded on first run. Press Ctrl+C to stop."
+	@echo ""
+	@echo "$$SUDO_PASSWORD" | sudo -S docker run --rm --name vllm-story --gpus all -p 8000:8000 \
+		-v ~/.cache/huggingface:/root/.cache/huggingface \
+		vllm/vllm-openai:latest \
+		--model mistralai/Mistral-7B-Instruct-v0.3 --host 0.0.0.0 --port 8000
+
+# Stop vLLM story server
+stop-vllm:
+	@echo "Stopping vLLM server..."
+	@echo "$$SUDO_PASSWORD" | sudo -S docker rm -f vllm-story 2>/dev/null || true
+	@echo "vLLM server stopped"
 
 # Restart SGLang servers (stop then start in tmux)
 restart-sglang: stop-sglang run-sglang-tmux

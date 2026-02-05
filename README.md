@@ -212,10 +212,68 @@ For 20 SWE-Bench-style tasks (3-stage workflow):
 
 **Key Insight:** Orla's model cascade optimization provides similar relative improvements on both datacenter (SGLang) and edge (Ollama) serving systems, demonstrating the portability of agent-level optimizations.
 
+## Story Finishing Experiment
+
+The **story finishing** experiment (two agents alternating turns, each producing k tokens) can run on **SGLang** or **vLLM**. Use vLLM to avoid latency/throughput dips in the "flush" cache strategy: SGLang exposes a global KVCache API, so Orla's aggressive flush can cause contention; vLLM uses per-request prefix caching and has no global flush, so re-running the experiment on vLLM removes those dips.
+
+- **SGLang (default):** `make run-story-finishing` or `make run-story-finishing-grid` (uses `--start-sglang` in the grid to start SGLang in tmux per run).
+- **vLLM:** Start vLLM with `make run-vllm`, then `make run-story-finishing-vllm`. Or run the grid with vLLM: `BACKEND_TYPE=vllm START_VLLM=1 make run-story-finishing-grid` (self-contained: each run starts vLLM in tmux).
+
+Results are written to `output/story_finishing/`; experiment params in the JSON include `backend_type` and `start_vllm` / `start_sglang`.
+
+### Running story finishing on the server (Lambda cluster)
+
+From your **local machine**, one-time setup:
+
+```bash
+# Create .env with SSH_KEY, JUMPER_PASSWORD, LAMBDA_PASSWORD, LAMBDA_HOST (e.g. lambda1)
+make sync-repo       # sync repo and build experiments for Linux
+make sync-orla       # build Orla for Linux and sync bin/orla
+make setup-lambda    # install Go, Docker, Orla on the server (only needed once)
+```
+
+Then **on the server** (e.g. `make connect` to SSH in), from the repo root (e.g. `~/harvard-agentic-system`):
+
+The story finishing binary **starts the Orla daemon itself** (with a generated config on `http://localhost:8081`), so you do not need to run Orla separately.
+
+1. **Single run with vLLM** (recommended: per-turn cache flush, no SGLang contention):
+   ```bash
+   export SUDO_PASSWORD='your-sudo-password'   # needed for Docker
+
+   # Option A: start vLLM yourself in another tmux window, then:
+   make run-vllm    # in another terminal/tmux window
+   make run-story-finishing-vllm
+
+   # Option B: let the experiment start/stop vLLM in tmux (must be inside tmux):
+   ./bin/story_finishing --turns 64 --k 32 --backend-type vllm --backend http://localhost:8000/v1 \
+     --start-vllm --output output/story_finishing/run.json
+   ```
+
+2. **Grid (many turns × k × noise × strategy)** on the server:
+   ```bash
+   export SUDO_PASSWORD='...'
+
+   # vLLM: each grid run starts vLLM in tmux (self-contained)
+   BACKEND_TYPE=vllm START_VLLM=1 make run-story-finishing-grid
+
+   # Or SGLang (each run starts SGLang in tmux)
+   make run-story-finishing-grid
+   ```
+   Ensure you are inside **tmux** when using `START_VLLM=1` or `--start-sglang`, so the backend can be started in a separate window.
+
+3. **Pull results back to your machine:**
+   ```bash
+   make sync-experiments   # from local machine; downloads output/ from server
+   ```
+
+The experiment binary is at `./bin/story_finishing` after `make build-experiments` (or `make sync-repo` builds it on the server). The binary starts the Orla daemon; the backend (vLLM or SGLang) must be reachable at the URL you pass (default vLLM: `http://localhost:8000/v1`).
+
 ## Files
 
-- `experiments/model_cascade/main.go` - Main experiment code
+- `experiments/model_cascade/main.go` - Model cascade experiment
+- `experiments/story_finishing/main.go` - Story finishing experiment (SGLang or vLLM)
 - `scripts/compare_cascade_results.py` - Comparison script (generates `comparison_results.json`)
+- `scripts/run_story_finishing_grid.sh` - Grid runner (turns × k × noise × cache strategy; supports BACKEND_TYPE=sglang|vllm)
 - `Makefile` - Build and run targets
 
 ## Syncing Results

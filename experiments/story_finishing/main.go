@@ -9,6 +9,7 @@
 //	go run . --turns 100 --k 32 --cache-strategy flush --backend http://localhost:30000
 //	go run . --turns 100 --noise-rate 2   # with background load (Poisson, 2 req/s)
 //	go run . --start-sglang   # start SGLang in a new tmux window (must be inside tmux), wait for ready, then shut down when done
+//	go run . --backend-type vllm --backend http://localhost:8000/v1 --start-vllm   # run on vLLM to avoid SGLang global KVCache flush dips
 package main
 
 import (
@@ -34,6 +35,9 @@ import (
 const (
 	sglangTmuxSession = "sglang-story" // used for docker container name and tmux window name
 	sglangTmuxWindow  = "sglang-story"
+	vllmTmuxSession   = "vllm-story"
+	vllmTmuxWindow    = "vllm-story"
+	storyModelName    = "mistralai/Mistral-7B-Instruct-v0.3"
 )
 
 func init() {
@@ -60,11 +64,33 @@ func main() {
 	turns := flag.Int("turns", 100, "Number of turns T")
 	k := flag.Int("k", 32, "Tokens per turn (k = c)")
 	cacheStrategy := flag.String("cache-strategy", "flush", "Cache strategy: 'flush' or 'preserve'")
-	backend := flag.String("backend", "http://localhost:30000", "SGLang backend URL")
-	noiseRate := flag.Float64("noise-rate", 0, "Background noise: Poisson rate (req/s) to SGLang; 0 = disabled")
+	backendType := flag.String("backend-type", "sglang", "Backend type: 'sglang' or 'vllm' (vllm uses Orla's openai backend)")
+	backend := flag.String("backend", "", "Backend URL (default: http://localhost:30000 for sglang, http://localhost:8000/v1 for vllm)")
+	noiseRate := flag.Float64("noise-rate", 0, "Background noise: Poisson rate (req/s); 0 = disabled")
 	startSGLang := flag.Bool("start-sglang", false, "Start SGLang in a new tmux session before the experiment and shut it down when done")
+	startVLLM := flag.Bool("start-vllm", false, "Start vLLM in a new tmux session before the experiment and shut it down when done")
 	output := flag.String("output", "", "Output file (default: stdout)")
 	flag.Parse()
+
+	if *backendType != "sglang" && *backendType != "vllm" {
+		log.Fatalf("backend-type must be 'sglang' or 'vllm', got %q", *backendType)
+	}
+	if *backend == "" {
+		if *backendType == "vllm" {
+			*backend = "http://localhost:8000/v1"
+		} else {
+			*backend = "http://localhost:30000"
+		}
+	}
+	if *startSGLang && *startVLLM {
+		log.Fatalf("cannot use both --start-sglang and --start-vllm")
+	}
+	if *startVLLM && *backendType != "vllm" {
+		log.Fatalf("--start-vllm requires --backend-type vllm")
+	}
+	if *startSGLang && *backendType != "sglang" {
+		log.Fatalf("--start-sglang requires --backend-type sglang")
+	}
 
 	if *cacheStrategy != "flush" && *cacheStrategy != "preserve" {
 		log.Fatalf("cache-strategy must be 'flush' or 'preserve', got %q", *cacheStrategy)
@@ -76,9 +102,9 @@ func main() {
 		}
 	}
 
-	log.Printf("Story finishing: turns=%d, k=%d, cache=%s, noise-rate=%.2f, start-sglang=%v", *turns, *k, *cacheStrategy, *noiseRate, *startSGLang)
+	log.Printf("Story finishing: turns=%d, k=%d, cache=%s, backend-type=%s, noise-rate=%.2f, start-sglang=%v, start-vllm=%v", *turns, *k, *cacheStrategy, *backendType, *noiseRate, *startSGLang, *startVLLM)
 
-	configFile, configErr := createStoryFinishingConfig(*backend, *cacheStrategy)
+	configFile, configErr := createStoryFinishingConfig(*backendType, *backend, *cacheStrategy)
 	if configErr != nil {
 		log.Fatalf("Failed to create config: %v", configErr)
 	}
@@ -90,13 +116,25 @@ func main() {
 			log.Fatalf("Failed to start SGLang in tmux: %v", err)
 		}
 		defer stopSGLangTmux()
-		if err := waitForBackendReady(*backend, 5*time.Minute); err != nil {
+		if err := waitForBackendReady(*backend, *backendType, 5*time.Minute); err != nil {
 			log.Fatalf("SGLang did not become ready: %v", err)
 		}
 		log.Printf("SGLang is ready")
 	}
 
-	if err := checkBackendReady(*backend); err != nil {
+	// Optional: start vLLM in tmux before experiment, shut down when we exit
+	if *startVLLM {
+		if err := startVLLMInTmux(*backend); err != nil {
+			log.Fatalf("Failed to start vLLM in tmux: %v", err)
+		}
+		defer stopVLLMTmux()
+		if err := waitForBackendReady(*backend, *backendType, 5*time.Minute); err != nil {
+			log.Fatalf("vLLM did not become ready: %v", err)
+		}
+		log.Printf("vLLM is ready")
+	}
+
+	if err := checkBackendReady(*backend, *backendType); err != nil {
 		log.Fatalf("Backend %s not ready: %v", *backend, err)
 	}
 
@@ -155,16 +193,16 @@ func main() {
 
 	ctx := context.Background()
 
-	// Optional background noise: send concurrent requests to SGLang on another goroutine
+	// Optional background noise: send concurrent requests to the backend on another goroutine
 	var noiseCancel context.CancelFunc
 	if *noiseRate > 0 {
 		noiseCtx, cancel := context.WithCancel(ctx)
 		noiseCancel = cancel
-		go runBackgroundNoise(noiseCtx, *backend, *noiseRate)
+		go runBackgroundNoise(noiseCtx, *backend, *backendType, *noiseRate)
 		log.Printf("Background noise started: %.2f req/s (Poisson)", *noiseRate)
 	}
 
-	results, runErr := runStoryFinishing(ctx, orlaURL, *turns, *k)
+	results, runErr := runStoryFinishing(ctx, orlaURL, *backendType, *turns, *k)
 
 	if noiseCancel != nil {
 		noiseCancel()
@@ -179,9 +217,11 @@ func main() {
 		"turns":          *turns,
 		"k":              *k,
 		"cache_strategy": *cacheStrategy,
+		"backend_type":   *backendType,
 		"backend":        *backend,
 		"noise_rate":     *noiseRate,
 		"start_sglang":   *startSGLang,
+		"start_vllm":     *startVLLM,
 	}
 
 	jsonData, _ := json.MarshalIndent(results, "", "  ")
@@ -193,12 +233,15 @@ func main() {
 	}
 }
 
-func createStoryFinishingConfig(backend, cacheStrategy string) (string, error) {
+func createStoryFinishingConfig(backendType, backend, cacheStrategy string) (string, error) {
 	policy := "preserve"
 	if cacheStrategy == "flush" {
 		policy = "aggressive_flush"
 	}
-	config := fmt.Sprintf(`log_format: pretty
+	var config string
+	if backendType == "vllm" {
+		// Orla's "openai" backend; vLLM exposes OpenAI-compatible API. Cache policy is recorded but not applied (no global flush).
+		config = fmt.Sprintf(`log_format: pretty
 log_level: info
 agentic_serving:
   mode: daemon
@@ -207,9 +250,9 @@ agentic_serving:
   llm_servers:
     - name: "story_model"
       backend:
-        type: "sglang"
+        type: "openai"
         endpoint: "%s"
-      model: "sglang:mistralai/Mistral-7B-Instruct-v0.3"
+      model: "%s"
       cache:
         policy: "%s"
   agent_profiles:
@@ -220,13 +263,40 @@ agentic_serving:
   workflows:
     - name: "story_finishing_game"
       tasks:
-        # use_context: false so each turn is independent: Agent 1 (turns 1,3,5,...) and Agent 2 (turns 2,4,6,...)
-        # do not share conversation history; each request is [user] with the full story so far in the prompt.
         - agent_profile: "agent_i"
           use_context: false
         - agent_profile: "agent_j"
           use_context: false
-`, backend, policy)
+`, backend, storyModelName, policy)
+	} else {
+		config = fmt.Sprintf(`log_format: pretty
+log_level: info
+agentic_serving:
+  mode: daemon
+  daemon:
+    listen_address: "localhost:8081"
+  llm_servers:
+    - name: "story_model"
+      backend:
+        type: "sglang"
+        endpoint: "%s"
+      model: "sglang:%s"
+      cache:
+        policy: "%s"
+  agent_profiles:
+    - name: "agent_i"
+      llm_server: "story_model"
+    - name: "agent_j"
+      llm_server: "story_model"
+  workflows:
+    - name: "story_finishing_game"
+      tasks:
+        - agent_profile: "agent_i"
+          use_context: false
+        - agent_profile: "agent_j"
+          use_context: false
+`, backend, storyModelName, policy)
+	}
 	f, err := os.CreateTemp("", "orla_story_finishing_*.yaml")
 	if err != nil {
 		return "", err
@@ -243,7 +313,7 @@ agentic_serving:
 	return f.Name(), nil
 }
 
-func runStoryFinishing(ctx context.Context, orlaURL string, turns, k int) (map[string]interface{}, error) {
+func runStoryFinishing(ctx context.Context, orlaURL, backendType string, turns, k int) (map[string]interface{}, error) {
 	client := orla.NewClient(orlaURL)
 
 	var ttftPerTurn, tpotPerTurn []float64
@@ -270,6 +340,11 @@ func runStoryFinishing(ctx context.Context, orlaURL string, turns, k int) (map[s
 			prompt := fmt.Sprintf(storyPromptTemplate, k, k, storyContext)
 			if storyContext == "" {
 				prompt = fmt.Sprintf(storyPromptTemplate, k, k, "")
+			}
+			// For vLLM: prepend a unique prefix per request so every turn gets a fresh KVCache.
+			// vLLM hashes the first block by token content; different prefix => no cache reuse.
+			if backendType == "vllm" {
+				prompt = fmt.Sprintf("Request %d.\n\n", turn) + prompt
 			}
 
 			turnStart := time.Now()
@@ -348,9 +423,21 @@ func checkOrlaReady(url string) error {
 	return nil
 }
 
-func checkBackendReady(backendURL string) error {
+func vllmProbeURL(backendURL string) string {
+	base := strings.TrimSuffix(backendURL, "/")
+	if strings.HasSuffix(base, "/v1") {
+		return base + "/models"
+	}
+	return base + "/v1/models"
+}
+
+func checkBackendReady(backendURL, backendType string) error {
 	c := &http.Client{Timeout: 5 * time.Second}
-	resp, err := c.Get(backendURL)
+	probeURL := backendURL
+	if backendType == "vllm" {
+		probeURL = vllmProbeURL(backendURL)
+	}
+	resp, err := c.Get(probeURL)
 	if err != nil {
 		return err
 	}
@@ -360,11 +447,16 @@ func checkBackendReady(backendURL string) error {
 
 // waitForBackendReady polls the backend until it responds or timeout.
 // SGLang may not return 200 on GET; we consider it ready when the server accepts connections.
-func waitForBackendReady(backendURL string, timeout time.Duration) error {
+// vLLM: probe /v1/models.
+func waitForBackendReady(backendURL, backendType string, timeout time.Duration) error {
+	probeURL := backendURL
+	if backendType == "vllm" {
+		probeURL = vllmProbeURL(backendURL)
+	}
 	deadline := time.Now().Add(timeout)
 	c := &http.Client{Timeout: 5 * time.Second}
 	for time.Now().Before(deadline) {
-		resp, err := c.Get(backendURL)
+		resp, err := c.Get(probeURL)
 		if err == nil {
 			resp.Body.Close()
 			return nil
@@ -445,9 +537,72 @@ func stopSGLangTmux() {
 	log.Printf("Stopped SGLang (tmux window %s)", sglangTmuxWindow)
 }
 
-// runBackgroundNoise sends Poisson-paced requests to the SGLang backend to simulate concurrent load.
-// It runs until ctx is cancelled.
-func runBackgroundNoise(ctx context.Context, backend string, rate float64) {
+// startVLLMInTmux starts vLLM (OpenAI-compatible) in a new detached tmux window.
+// Requires running inside tmux. Uses VLLM_START_CMD env if set.
+func startVLLMInTmux(backendURL string) error {
+	if err := exec.Command("tmux", "kill-window", "-t", ":"+vllmTmuxWindow).Run(); err != nil {
+		log.Printf("Note: tmux kill-window %s: %v (window may already be gone)", vllmTmuxWindow, err)
+	}
+
+	if os.Getenv("TMUX") == "" {
+		return fmt.Errorf("--start-vllm requires running inside tmux; start tmux first, then run this command")
+	}
+
+	rm := exec.Command("sh", "-c", "echo \"$SUDO_PASSWORD\" | sudo -S docker rm -f "+vllmTmuxSession+" 2>/dev/null")
+	rm.Env = append(os.Environ(), "SUDO_PASSWORD="+sudoPassword)
+	if err := rm.Run(); err != nil {
+		return fmt.Errorf("could not remove existing container: %w", err)
+	}
+
+	if err := exec.Command("tmux", "set-environment", "SUDO_PASSWORD", sudoPassword).Run(); err != nil {
+		return fmt.Errorf("could not set SUDO_PASSWORD in tmux session: %w", err)
+	}
+
+	u, err := url.Parse(backendURL)
+	if err != nil {
+		return fmt.Errorf("parse backend URL: %w", err)
+	}
+	port := u.Port()
+	if port == "" {
+		port = "8000"
+	}
+
+	cmdStr := os.Getenv("VLLM_START_CMD")
+	if cmdStr == "" {
+		cmdStr = fmt.Sprintf("echo \"$SUDO_PASSWORD\" | sudo -S docker run --rm --name %s --gpus all -p %s:8000 "+
+			"-v $HOME/.cache/huggingface:/root/.cache/huggingface "+
+			"vllm/vllm-openai:latest "+
+			"--model %s --host 0.0.0.0 --port 8000",
+			vllmTmuxSession, port, storyModelName)
+	}
+	cmdStr += "; echo 'vLLM process exited. Window stays open until experiment ends.'; exec bash"
+
+	tmux := exec.Command("tmux", "new-window", "-d", "-n", vllmTmuxWindow, "bash", "-c", cmdStr)
+	tmux.Stdout = os.Stdout
+	tmux.Stderr = os.Stderr
+	if err := tmux.Run(); err != nil {
+		return fmt.Errorf("tmux new-window: %w", err)
+	}
+	log.Printf("Started vLLM in new tmux window %q (switch with C-b n or C-b w)", vllmTmuxWindow)
+	return nil
+}
+
+func stopVLLMTmux() {
+	rm := exec.Command("sh", "-c", "echo \"$SUDO_PASSWORD\" | sudo -S docker rm -f "+vllmTmuxSession+" 2>/dev/null")
+	rm.Env = append(os.Environ(), "SUDO_PASSWORD="+sudoPassword)
+	if err := rm.Run(); err != nil {
+		log.Fatalf("Could not remove vLLM container: %v", err)
+	}
+	if err := exec.Command("tmux", "kill-window", "-t", ":"+vllmTmuxWindow).Run(); err != nil {
+		log.Printf("Note: tmux kill-window %s: %v (window may already be gone)", vllmTmuxWindow, err)
+		return
+	}
+	log.Printf("Stopped vLLM (tmux window %s)", vllmTmuxWindow)
+}
+
+// runBackgroundNoise sends Poisson-paced requests to the backend to simulate concurrent load.
+// It runs until ctx is cancelled. Uses SGLang /api/chat or OpenAI /v1/chat/completions depending on backendType.
+func runBackgroundNoise(ctx context.Context, backend, backendType string, rate float64) {
 	client := &http.Client{Timeout: 30 * time.Second}
 	prompts := []string{
 		"What is the weather today?",
@@ -470,7 +625,7 @@ func runBackgroundNoise(ctx context.Context, backend string, rate float64) {
 				rngMu.Lock()
 				prompt := prompts[rng.Intn(len(prompts))]
 				rngMu.Unlock()
-				if err := sendNoiseRequest(client, backend, prompt); err != nil {
+				if err := sendNoiseRequest(client, backend, backendType, prompt); err != nil {
 					log.Printf("Background noise request failed: %v", err)
 				}
 			}()
@@ -486,10 +641,43 @@ func runBackgroundNoise(ctx context.Context, backend string, rate float64) {
 	}
 }
 
-func sendNoiseRequest(client *http.Client, backend, prompt string) error {
-	url := fmt.Sprintf("%s/api/chat", backend)
+func sendNoiseRequest(client *http.Client, backend, backendType, prompt string) error {
+	if backendType == "vllm" {
+		// OpenAI-compatible POST /v1/chat/completions
+		base := strings.TrimSuffix(backend, "/v1")
+		base = strings.TrimSuffix(base, "/")
+		noiseURL := base + "/v1/chat/completions"
+		reqBody := map[string]any{
+			"model": storyModelName,
+			"messages": []map[string]string{
+				{"role": "user", "content": prompt},
+			},
+			"stream":     false,
+			"max_tokens": 20,
+		}
+		jsonData, err := json.Marshal(reqBody)
+		if err != nil {
+			return err
+		}
+		req, err := http.NewRequest("POST", noiseURL, bytes.NewBuffer(jsonData))
+		if err != nil {
+			return err
+		}
+		req.Header.Set("Content-Type", "application/json")
+		resp, err := client.Do(req)
+		if err != nil {
+			return err
+		}
+		defer resp.Body.Close()
+		if resp.StatusCode != http.StatusOK {
+			return fmt.Errorf("status %d", resp.StatusCode)
+		}
+		return nil
+	}
+	// SGLang /api/chat
+	noiseURL := fmt.Sprintf("%s/api/chat", backend)
 	reqBody := map[string]any{
-		"model": "mistralai/Mistral-7B-Instruct-v0.3",
+		"model": storyModelName,
 		"messages": []map[string]string{
 			{"role": "user", "content": prompt},
 		},
@@ -502,7 +690,7 @@ func sendNoiseRequest(client *http.Client, backend, prompt string) error {
 	if err != nil {
 		return err
 	}
-	req, err := http.NewRequest("POST", url, bytes.NewBuffer(jsonData))
+	req, err := http.NewRequest("POST", noiseURL, bytes.NewBuffer(jsonData))
 	if err != nil {
 		return err
 	}
