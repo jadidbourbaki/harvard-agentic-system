@@ -252,7 +252,7 @@ agentic_serving:
       backend:
         type: "openai"
         endpoint: "%s"
-      model: "%s"
+      model: "openai:%s"
       cache:
         policy: "%s"
   agent_profiles:
