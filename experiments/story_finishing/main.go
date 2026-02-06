@@ -237,6 +237,15 @@ func main() {
 	}
 }
 
+// vllmBackendURL ensures the URL has the /v1 path suffix required for vLLM's OpenAI-compatible chat completions endpoint.
+func vllmBackendURL(backend string) string {
+	backend = strings.TrimSuffix(backend, "/")
+	if strings.HasSuffix(backend, "/v1") {
+		return backend
+	}
+	return backend + "/v1"
+}
+
 func createStoryFinishingConfig(backendType, backend, cacheStrategy string) (string, error) {
 	policy := "preserve"
 	if cacheStrategy == "flush" {
@@ -244,7 +253,8 @@ func createStoryFinishingConfig(backendType, backend, cacheStrategy string) (str
 	}
 	var config string
 	if backendType == "vllm" {
-		// Orla's "openai" backend; vLLM exposes OpenAI-compatible API. Cache policy is recorded but not applied (no global flush).
+		// Orla's "openai" backend; vLLM exposes OpenAI-compatible API at /v1/chat/completions.
+		endpoint := vllmBackendURL(backend)
 		config = fmt.Sprintf(`log_format: pretty
 log_level: info
 agentic_serving:
@@ -272,7 +282,7 @@ agentic_serving:
           use_context: false
         - agent_profile: "agent_j"
           use_context: false
-`, backend, storyModelName, policy)
+`, endpoint, storyModelName, policy)
 	} else {
 		config = fmt.Sprintf(`log_format: pretty
 log_level: info
