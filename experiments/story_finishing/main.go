@@ -152,6 +152,10 @@ func main() {
 	cmd := exec.Command("orla", "daemon", "--config", configFile)
 	cmd.Stdout = daemonLog
 	cmd.Stderr = daemonLog
+	// Local vLLM does not use API keys; set dummy so Orla's openai provider is satisfied.
+	if *backendType == "vllm" {
+		cmd.Env = append(os.Environ(), "ORLA_STORY_VLLM_API_KEY=dummy")
+	}
 	if startErr := cmd.Start(); startErr != nil {
 		log.Fatalf("Failed to start Orla: %v", startErr)
 	}
@@ -252,6 +256,7 @@ agentic_serving:
       backend:
         type: "openai"
         endpoint: "%s"
+        api_key_env_var: "ORLA_STORY_VLLM_API_KEY"
       model: "openai:%s"
       cache:
         policy: "%s"
