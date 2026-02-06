@@ -3,15 +3,14 @@
 Generate ACM SOSP-style plots for story_finishing experiment results.
 
 Reads JSON from output/story_finishing/ and produces, for each noise value:
-1. Turn (1–64) vs TTFT — one figure per k, lines for flush and preserve
-2. Turn (1–64) vs TPOT — one figure per k, lines for flush and preserve
-3. k (tokens per turn) vs TTFT — median/p99 for flush and preserve
-4. k vs TPOT — median/p99 for flush and preserve
+1. Turn (1–64) vs TTFT — one figure per k, lines for flush/preserve × SGLang/vLLM
+2. Turn (1–64) vs TPOT — one figure per k, lines for flush/preserve × SGLang/vLLM
+3. k (tokens per turn) vs TTFT — median/p99 for flush and preserve (per backend)
+4. k vs TPOT — median/p99 for flush and preserve (per backend)
 
 Figures are sized for ACM double-column (small single-column or half-column).
-To get both flush and preserve, run the grid twice with different cache strategy
-and different output filenames (e.g. suffix _flush.json and _preserve.json),
-or set CACHE_STRATEGY and write to a path that includes the strategy.
+Filenames may include _flush, _preserve, _sglang, _vllm; backend_type is also
+read from experiment_params.backend_type when present.
 """
 
 from __future__ import annotations
@@ -40,7 +39,7 @@ SOSP_SMALL = {
     "ytick.labelsize": 8,
     "legend.fontsize": 7,
     "legend.frameon": False,
-    "lines.linewidth": 1.5,
+    "lines.linewidth": 1,
     "lines.markersize": 4,
     "axes.linewidth": 0.8,
     "xtick.major.width": 0.8,
@@ -79,6 +78,12 @@ def load_story_finishing_results(output_dir: Path) -> list[dict[str, Any]]:
         elif "_flush" in path.stem.lower():
             strategy = "flush"
 
+        backend_type = (params.get("backend_type") or "sglang").lower()
+        if "_vllm" in path.stem.lower():
+            backend_type = "vllm"
+        elif "_sglang" in path.stem.lower():
+            backend_type = "sglang"
+
         noise = float(params.get("noise_rate", 0))
         k = int(data.get("k", params.get("k", 0)))
         ttft = data.get("ttft_per_turn") or []
@@ -101,6 +106,7 @@ def load_story_finishing_results(output_dir: Path) -> list[dict[str, Any]]:
             "noise": noise,
             "k": k,
             "strategy": strategy,
+            "backend_type": backend_type,
             "ttft_per_turn": ttft,
             "tpot_per_turn": tpot,
             "path": str(path),
@@ -108,22 +114,54 @@ def load_story_finishing_results(output_dir: Path) -> list[dict[str, Any]]:
     return records
 
 
-def group_by_noise_k_strategy(
+# Order and style for (strategy, backend). Each of the 4 series gets a distinct grayscale color and linestyle for print.
+STRATEGY_BACKEND_ORDER = [
+    ("flush", "sglang"),
+    ("preserve", "sglang"),
+    ("flush", "vllm"),
+    ("preserve", "vllm"),
+]
+
+# Grayscale + linestyle: one per (strategy, backend) for print-friendly, B&W-safe plots.
+_SERIES_STYLES = [
+    {"color": "0.5", "linestyle": "-"},   # Flush (SGLang): black, solid
+    {"color": "0.5", "linestyle": "--"},  # Preserve (SGLang): dark gray, dashed
+    {"color": "0", "linestyle": "-"},   # Flush (vLLM): medium gray, dotted
+    {"color": "0", "linestyle": ":"},  # Preserve (vLLM): light gray, dash-dot
+]
+
+
+def _series_style(strategy: str, backend_type: str) -> dict[str, Any]:
+    """Distinct grayscale color and linestyle per series for printing."""
+    key = (strategy, backend_type)
+    for i, (s, b) in enumerate(STRATEGY_BACKEND_ORDER):
+        if (s, b) == key:
+            return dict(_SERIES_STYLES[i])
+    return {"color": "0.5", "linestyle": "-"}
+
+
+def _series_label(strategy: str, backend_type: str) -> str:
+    backend_label = "SGLang" if backend_type == "sglang" else "vLLM"
+    strat_label = strategy.capitalize()
+    return f"{strat_label} ({backend_label})"
+
+
+def group_by_noise_k_strategy_backend(
     records: list[dict[str, Any]],
-) -> dict[float, dict[int, dict[str, list[dict[str, Any]]]]]:
-    """Group records by noise -> k -> strategy -> list of runs (usually one)."""
-    out: dict[float, dict[int, dict[str, list[dict[str, Any]]]]] = {}
+) -> dict[float, dict[int, dict[tuple[str, str], list[dict[str, Any]]]]]:
+    """Group records by noise -> k -> (strategy, backend_type) -> list of runs."""
+    out: dict[float, dict[int, dict[tuple[str, str], list[dict[str, Any]]]]] = {}
     for r in records:
         n = r["noise"]
         k = r["k"]
-        s = r["strategy"]
+        key = (r["strategy"], r["backend_type"])
         if n not in out:
             out[n] = {}
         if k not in out[n]:
             out[n][k] = {}
-        if s not in out[n][k]:
-            out[n][k][s] = []
-        out[n][k][s].append(r)
+        if key not in out[n][k]:
+            out[n][k][key] = []
+        out[n][k][key].append(r)
     return out
 
 
@@ -153,28 +191,24 @@ def _set_ylim_from_data(ax: plt.Axes, margin: float = 1.08, min_top: float = 1.0
 
 
 def plot_turn_vs_ttft(
-    grouped: dict[float, dict[int, dict[str, list[dict[str, Any]]]]],
+    grouped: dict[float, dict[int, dict[tuple[str, str], list[dict[str, Any]]]]],
     out_dir: Path,
 ) -> None:
-    """Turn vs TTFT, one figure per (noise, k), lines for flush and preserve. Cold-start turns excluded."""
+    """Turn vs TTFT, one figure per (noise, k), lines for flush/preserve × SGLang/vLLM. Cold-start excluded."""
     _apply_style()
     for noise, by_k in sorted(grouped.items()):
-        for k, by_strategy in sorted(by_k.items()):
+        for k, by_sb in sorted(by_k.items()):
             fig, ax = plt.subplots(figsize=FIG_SMALL)
-            # Exclude cold-start turns from plot
             turns = np.arange(COLD_START_TURNS + 1, 65, dtype=float)
-            for strategy, label, style in [
-                ("flush", "Flush", {"color": "C0", "linestyle": "-"}),
-                ("preserve", "Preserve", {"color": "C1", "linestyle": "-"}),
-            ]:
-                runs = by_strategy.get(strategy, [])
+            for strategy, backend in STRATEGY_BACKEND_ORDER:
+                runs = by_sb.get((strategy, backend), [])
                 if not runs:
                     continue
                 raw = runs[0]["ttft_per_turn"][:64]
                 ttft = np.array(raw[COLD_START_TURNS:] if len(raw) > COLD_START_TURNS else raw)
                 if len(ttft) < len(turns):
                     ttft = np.resize(ttft, len(turns))
-                ax.plot(turns, ttft[: len(turns)], label=label, **style)
+                ax.plot(turns, ttft[: len(turns)], label=_series_label(strategy, backend), **_series_style(strategy, backend))
             ax.set_xlim(COLD_START_TURNS + 1, 64)
             _set_ylim_from_data(ax)
             ax.set_xlabel("Turn")
@@ -191,27 +225,24 @@ def plot_turn_vs_ttft(
 
 
 def plot_turn_vs_tpot(
-    grouped: dict[float, dict[int, dict[str, list[dict[str, Any]]]]],
+    grouped: dict[float, dict[int, dict[tuple[str, str], list[dict[str, Any]]]]],
     out_dir: Path,
 ) -> None:
-    """Turn vs TPOT, one figure per (noise, k), lines for flush and preserve. Cold-start turns excluded."""
+    """Turn vs TPOT, one figure per (noise, k), lines for flush/preserve × SGLang/vLLM. Cold-start excluded."""
     _apply_style()
     for noise, by_k in sorted(grouped.items()):
-        for k, by_strategy in sorted(by_k.items()):
+        for k, by_sb in sorted(by_k.items()):
             fig, ax = plt.subplots(figsize=FIG_SMALL)
             turns = np.arange(COLD_START_TURNS + 1, 65, dtype=float)
-            for strategy, label, style in [
-                ("flush", "Flush", {"color": "C0", "linestyle": "-"}),
-                ("preserve", "Preserve", {"color": "C1", "linestyle": "-"}),
-            ]:
-                runs = by_strategy.get(strategy, [])
+            for strategy, backend in STRATEGY_BACKEND_ORDER:
+                runs = by_sb.get((strategy, backend), [])
                 if not runs:
                     continue
                 raw = runs[0]["tpot_per_turn"][:64]
                 tpot = np.array(raw[COLD_START_TURNS:] if len(raw) > COLD_START_TURNS else raw)
                 if len(tpot) < len(turns):
                     tpot = np.resize(tpot, len(turns))
-                ax.plot(turns, tpot[: len(turns)], label=label, **style)
+                ax.plot(turns, tpot[: len(turns)], label=_series_label(strategy, backend), **_series_style(strategy, backend))
             ax.set_xlim(COLD_START_TURNS + 1, 64)
             _set_ylim_from_data(ax)
             ax.set_xlabel("Turn")
@@ -236,25 +267,21 @@ def _median_and_p99(values: list[float]) -> tuple[float, float]:
 
 
 def plot_k_vs_ttft_summary(
-    grouped: dict[float, dict[int, dict[str, list[dict[str, Any]]]]],
+    grouped: dict[float, dict[int, dict[tuple[str, str], list[dict[str, Any]]]]],
     out_dir: Path,
 ) -> None:
-    """k (x) vs TTFT (y): Median Flush, p99 Flush, Median Preserve, p99 Preserve. One figure per noise."""
+    """k (x) vs TTFT (y): Median/p99 for Flush/Preserve × SGLang/vLLM. One figure per noise."""
     _apply_style()
     for noise, by_k in sorted(grouped.items()):
         k_vals = sorted(by_k.keys())
         if not k_vals:
             continue
-        # Collect median and p99 per (k, strategy)
-        flush_med, flush_p99 = [], []
-        preserve_med, preserve_p99 = [], []
-        for k in k_vals:
-            by_strategy = by_k[k]
-            for strategy, med_list, p99_list in [
-                ("flush", flush_med, flush_p99),
-                ("preserve", preserve_med, preserve_p99),
-            ]:
-                runs = by_strategy.get(strategy, [])
+        x = np.array(k_vals, dtype=float)
+        fig, ax = plt.subplots(figsize=FIG_TWO_LINES)
+        for strategy, backend in STRATEGY_BACKEND_ORDER:
+            med_list, p99_list = [], []
+            for k in k_vals:
+                runs = by_k[k].get((strategy, backend), [])
                 if not runs:
                     med_list.append(np.nan)
                     p99_list.append(np.nan)
@@ -266,13 +293,10 @@ def plot_k_vs_ttft_summary(
                 med, p99 = _median_and_p99(all_ttft)
                 med_list.append(med)
                 p99_list.append(p99)
-
-        fig, ax = plt.subplots(figsize=FIG_TWO_LINES)
-        x = np.array(k_vals, dtype=float)
-        ax.plot(x, flush_med, "o-", color="C0", linewidth=1.5, markersize=4, label="Median Flush")
-        ax.plot(x, flush_p99, "s--", color="C0", linewidth=1, markersize=3, alpha=0.8, label="p99 Flush")
-        ax.plot(x, preserve_med, "o-", color="C1", linewidth=1.5, markersize=4, label="Median Preserve")
-        ax.plot(x, preserve_p99, "s--", color="C1", linewidth=1, markersize=3, alpha=0.8, label="p99 Preserve")
+            style = _series_style(strategy, backend)
+            lbl = _series_label(strategy, backend)
+            ax.plot(x, med_list, "o", color=style["color"], linestyle=style["linestyle"], linewidth=1.5, markersize=4, label=f"Median {lbl}")
+            ax.plot(x, p99_list, "s", color=style["color"], linestyle="--", linewidth=1, markersize=3, alpha=0.8, label=f"p99 {lbl}")
         ax.set_xlabel("Tokens per turn (k)")
         ax.set_ylabel("TTFT (ms)")
         ax.set_title(f"Noise = {noise}")
@@ -288,24 +312,21 @@ def plot_k_vs_ttft_summary(
 
 
 def plot_k_vs_tpot_summary(
-    grouped: dict[float, dict[int, dict[str, list[dict[str, Any]]]]],
+    grouped: dict[float, dict[int, dict[tuple[str, str], list[dict[str, Any]]]]],
     out_dir: Path,
 ) -> None:
-    """k (x) vs TPOT (y): Median Flush, p99 Flush, Median Preserve, p99 Preserve. One figure per noise."""
+    """k (x) vs TPOT (y): Median/p99 for Flush/Preserve × SGLang/vLLM. One figure per noise."""
     _apply_style()
     for noise, by_k in sorted(grouped.items()):
         k_vals = sorted(by_k.keys())
         if not k_vals:
             continue
-        flush_med, flush_p99 = [], []
-        preserve_med, preserve_p99 = [], []
-        for k in k_vals:
-            by_strategy = by_k[k]
-            for strategy, med_list, p99_list in [
-                ("flush", flush_med, flush_p99),
-                ("preserve", preserve_med, preserve_p99),
-            ]:
-                runs = by_strategy.get(strategy, [])
+        x = np.array(k_vals, dtype=float)
+        fig, ax = plt.subplots(figsize=FIG_TWO_LINES)
+        for strategy, backend in STRATEGY_BACKEND_ORDER:
+            med_list, p99_list = [], []
+            for k in k_vals:
+                runs = by_k[k].get((strategy, backend), [])
                 if not runs:
                     med_list.append(np.nan)
                     p99_list.append(np.nan)
@@ -317,13 +338,10 @@ def plot_k_vs_tpot_summary(
                 med, p99 = _median_and_p99(all_tpot)
                 med_list.append(med)
                 p99_list.append(p99)
-
-        fig, ax = plt.subplots(figsize=FIG_TWO_LINES)
-        x = np.array(k_vals, dtype=float)
-        ax.plot(x, flush_med, "o-", color="C0", linewidth=1.5, markersize=4, label="Median Flush")
-        ax.plot(x, flush_p99, "s--", color="C0", linewidth=1, markersize=3, alpha=0.8, label="p99 Flush")
-        ax.plot(x, preserve_med, "o-", color="C1", linewidth=1.5, markersize=4, label="Median Preserve")
-        ax.plot(x, preserve_p99, "s--", color="C1", linewidth=1, markersize=3, alpha=0.8, label="p99 Preserve")
+            style = _series_style(strategy, backend)
+            lbl = _series_label(strategy, backend)
+            ax.plot(x, med_list, "o", color=style["color"], linestyle=style["linestyle"], linewidth=1.5, markersize=4, label=f"Median {lbl}")
+            ax.plot(x, p99_list, "s", color=style["color"], linestyle="--", linewidth=1, markersize=3, alpha=0.8, label=f"p99 {lbl}")
         ax.set_xlabel("Tokens per turn (k)")
         ax.set_ylabel("TPOT (ms)")
         ax.set_title(f"Noise = {noise}")
@@ -354,7 +372,7 @@ def main() -> None:
         print("No JSON records found.")
         return
 
-    grouped = group_by_noise_k_strategy(records)
+    grouped = group_by_noise_k_strategy_backend(records)
     n_noise = len(grouped)
     n_k = sum(len(by_k) for by_k in grouped.values())
     print(f"Loaded {len(records)} runs, {n_noise} noise value(s), {n_k} (noise,k) configs.")
