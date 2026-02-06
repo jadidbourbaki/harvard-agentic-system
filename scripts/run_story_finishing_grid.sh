@@ -42,22 +42,25 @@ else
 fi
 echo "=============================================="
 
+EXTRA_VLLM_ARGS=()
+[ "$START_VLLM" = "1" ] && EXTRA_VLLM_ARGS=(--start-vllm)
+
 for strategy in $CACHE_STRATEGIES; do
 	for turns in $TURNS; do
 		for k in $K_VALS; do
 			for noise in $NOISE_RATES; do
 				out="$OUT_DIR/turns_${turns}_k_${k}_noise_${noise}_${strategy}_${BACKEND_TYPE}.json"
 				echo "Running turns=$turns k=$k noise=$noise strategy=$strategy -> $out"
-				EXTRA=""
 				if [ "$BACKEND_TYPE" = "vllm" ]; then
-					EXTRA="--backend-type vllm"
-					[ "$START_VLLM" = "1" ] && EXTRA="$EXTRA --start-vllm"
+					"$BIN" --turns "$turns" --k "$k" --cache-strategy "$strategy" \
+						--noise-rate "$noise" --backend "$BACKEND" --output "$out" \
+						--backend-type vllm \
+						"${EXTRA_VLLM_ARGS[@]}"
 				else
-					EXTRA="--start-sglang"
+					"$BIN" --turns "$turns" --k "$k" --cache-strategy "$strategy" \
+						--noise-rate "$noise" --backend "$BACKEND" --output "$out" \
+						--start-sglang
 				fi
-				"$BIN" --turns "$turns" --k "$k" --cache-strategy "$strategy" \
-					--noise-rate "$noise" --backend "$BACKEND" --output "$out" \
-					"$EXTRA"
 			done
 		done
 	done
