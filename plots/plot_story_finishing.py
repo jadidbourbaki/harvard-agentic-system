@@ -7,6 +7,8 @@ Reads JSON from output/story_finishing/ and produces, for each noise value:
 2. Turn (1–64) vs TPOT — one figure per k, lines for flush/preserve × SGLang/vLLM
 3. k (tokens per turn) vs TTFT — median/p99 for flush and preserve (per backend)
 4. k vs TPOT — median/p99 for flush and preserve (per backend)
+5. Noise vs Story Finishing TTFT — one figure per k, X=noise rate, Y=median story TTFT
+6. Turn/request index vs Background Noise TTFT — one figure per (noise, k), X=background request index, Y=TTFT (ms)
 
 Figures are sized for ACM double-column (small single-column or half-column).
 Filenames may include _flush, _preserve, _sglang, _vllm; backend_type is also
@@ -17,6 +19,7 @@ from __future__ import annotations
 
 import json
 import re
+from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
@@ -102,7 +105,7 @@ def load_story_finishing_results(output_dir: Path) -> list[dict[str, Any]]:
         if len(tpot) < turns:
             tpot = tpot + [0.0] * (turns - len(tpot))
 
-        records.append({
+        rec = {
             "noise": noise,
             "k": k,
             "strategy": strategy,
@@ -110,7 +113,10 @@ def load_story_finishing_results(output_dir: Path) -> list[dict[str, Any]]:
             "ttft_per_turn": ttft,
             "tpot_per_turn": tpot,
             "path": str(path),
-        })
+        }
+        if "ttft_background_ms" in data:
+            rec["ttft_background_ms"] = list(data["ttft_background_ms"])
+        records.append(rec)
     return records
 
 
@@ -356,6 +362,131 @@ def plot_k_vs_tpot_summary(
         print(f"  Saved TPOT vs k noise={noise}")
 
 
+def plot_noise_vs_avg_background_ttft(
+    records: list[dict[str, Any]],
+    out_dir: Path,
+) -> None:
+    """Noise rate (x) vs avg background TTFT (y). One line per (strategy, backend)."""
+    has_bg = [r for r in records if r.get("ttft_background_ms")]
+    if not has_bg:
+        return
+    _apply_style()
+    by_sb: dict[tuple[str, str], list[tuple[float, float]]] = defaultdict(list)
+    for r in has_bg:
+        key = (r["strategy"], r["backend_type"])
+        by_sb[key].append((r["noise"], float(np.mean(r["ttft_background_ms"]))))
+    fig, ax = plt.subplots(figsize=FIG_SMALL)
+    for strategy, backend in STRATEGY_BACKEND_ORDER:
+        key = (strategy, backend)
+        if key not in by_sb:
+            continue
+        points = by_sb[key]
+        by_noise: dict[float, list[float]] = defaultdict(list)
+        for n, v in points:
+            by_noise[n].append(v)
+        x_noise = np.array(sorted(by_noise.keys()), dtype=float)
+        y_mean = np.array([np.mean(by_noise[n]) for n in x_noise])
+        ax.plot(x_noise, y_mean, label=_series_label(strategy, backend), **_series_style(strategy, backend))
+    ax.set_xlabel("Noise rate (req/s)")
+    ax.set_ylabel("Avg background TTFT (ms)")
+    ax.set_title("Noise vs avg background TTFT")
+    ax.legend(loc="best")
+    _set_ylim_from_data(ax)
+    _clean_axis(ax)
+    plt.tight_layout()
+    plt.savefig(out_dir / "story_finishing_noise_vs_avg_background_ttft.pdf", **SAVEFIG_KW)
+    plt.savefig(out_dir / "story_finishing_noise_vs_avg_background_ttft.png", **SAVEFIG_KW)
+    plt.close()
+    print("  Saved Noise vs avg background TTFT")
+
+
+def plot_noise_vs_story_ttft(
+    grouped: dict[float, dict[int, dict[tuple[str, str], list[dict[str, Any]]]]],
+    out_dir: Path,
+) -> None:
+    """Noise rate (x) vs median Story Finishing TTFT (y). One figure per k, lines for flush/preserve × SGLang/vLLM."""
+    _apply_style()
+    all_k = set()
+    for by_k in grouped.values():
+        all_k.update(by_k.keys())
+    for k in sorted(all_k):
+        fig, ax = plt.subplots(figsize=FIG_SMALL)
+        noise_vals = sorted(grouped.keys())
+        for strategy, backend in STRATEGY_BACKEND_ORDER:
+            x_noise, y_med = [], []
+            for noise in noise_vals:
+                by_k = grouped.get(noise, {})
+                runs = by_k.get(k, {}).get((strategy, backend), [])
+                if not runs:
+                    continue
+                all_ttft = []
+                for r in runs:
+                    raw = r["ttft_per_turn"][:64]
+                    all_ttft.extend(raw[COLD_START_TURNS:] if len(raw) > COLD_START_TURNS else raw)
+                if not all_ttft:
+                    continue
+                med, _ = _median_and_p99(all_ttft)
+                x_noise.append(noise)
+                y_med.append(med)
+            if x_noise:
+                ax.plot(x_noise, y_med, label=_series_label(strategy, backend), **_series_style(strategy, backend))
+        ax.set_xlabel("Noise rate (req/s)")
+        ax.set_ylabel("Story Finishing TTFT (ms, median)")
+        ax.set_title(f"Noise vs Story Finishing TTFT (k={k})")
+        ax.legend(loc="best")
+        _set_ylim_from_data(ax)
+        _clean_axis(ax)
+        plt.tight_layout()
+        safe = re.sub(r"[^\w\-.]", "_", f"k_{k}")
+        plt.savefig(out_dir / f"story_finishing_noise_vs_story_ttft_{safe}.pdf", **SAVEFIG_KW)
+        plt.savefig(out_dir / f"story_finishing_noise_vs_story_ttft_{safe}.png", **SAVEFIG_KW)
+        plt.close()
+        print(f"  Saved Noise vs Story Finishing TTFT k={k}")
+
+
+def plot_turn_vs_background_ttft(
+    grouped: dict[float, dict[int, dict[tuple[str, str], list[dict[str, Any]]]]],
+    out_dir: Path,
+) -> None:
+    """Background request index (x) vs Background Noise TTFT (y). One figure per (noise, k), lines for flush/preserve × SGLang/vLLM."""
+    _apply_style()
+    for noise, by_k in sorted(grouped.items()):
+        for k, by_sb in sorted(by_k.items()):
+            has_any = any(
+                r.get("ttft_background_ms") for runs in by_sb.values() for r in runs
+            )
+            if not has_any:
+                continue
+            fig, ax = plt.subplots(figsize=FIG_SMALL)
+            for strategy, backend in STRATEGY_BACKEND_ORDER:
+                runs = by_sb.get((strategy, backend), [])
+                if not runs:
+                    continue
+                samples = runs[0].get("ttft_background_ms") or []
+                if not samples:
+                    continue
+                # Downsample if huge for smaller PDFs (plot every nth point, max ~2000)
+                max_pts = 2000
+                step = max(1, len(samples) // max_pts) if len(samples) > max_pts else 1
+                x = np.arange(1, len(samples) + 1, step, dtype=float)
+                y = np.array(samples[::step], dtype=float)
+                if len(x) > len(y):
+                    x = x[: len(y)]
+                ax.plot(x, y, label=_series_label(strategy, backend), **_series_style(strategy, backend))
+            ax.set_xlabel("Background request index")
+            ax.set_ylabel("Background TTFT (ms)")
+            ax.set_title(f"Turn / request index vs Background Noise TTFT (noise={noise}, k={k})")
+            ax.legend(loc="best")
+            _set_ylim_from_data(ax)
+            _clean_axis(ax)
+            plt.tight_layout()
+            safe = re.sub(r"[^\w\-.]", "_", f"noise_{noise}_k_{k}")
+            plt.savefig(out_dir / f"story_finishing_turn_vs_background_ttft_{safe}.pdf", **SAVEFIG_KW)
+            plt.savefig(out_dir / f"story_finishing_turn_vs_background_ttft_{safe}.png", **SAVEFIG_KW)
+            plt.close()
+            print(f"  Saved Turn vs Background TTFT noise={noise} k={k}")
+
+
 def main() -> None:
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent
@@ -385,6 +516,13 @@ def main() -> None:
     plot_k_vs_ttft_summary(grouped, plots_dir)
     print("Generating k vs TPOT summary (median/p99) per noise...")
     plot_k_vs_tpot_summary(grouped, plots_dir)
+    print("Generating Noise vs Story Finishing TTFT (one per k)...")
+    plot_noise_vs_story_ttft(grouped, plots_dir)
+    print("Generating Turn / request index vs Background Noise TTFT...")
+    plot_turn_vs_background_ttft(grouped, plots_dir)
+    if any(r.get("ttft_background_ms") for r in records):
+        print("Generating Noise vs avg background TTFT...")
+        plot_noise_vs_avg_background_ttft(records, plots_dir)
     print("Done. Plots saved to", plots_dir)
 
 

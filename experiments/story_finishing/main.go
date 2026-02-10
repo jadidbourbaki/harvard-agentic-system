@@ -13,7 +13,7 @@
 package main
 
 import (
-	"bytes"
+	"bufio"
 	"context"
 	"encoding/json"
 	"flag"
@@ -31,6 +31,70 @@ import (
 
 	orla "github.com/dorcha-inc/orla/pkg/api"
 )
+
+const dolly15kURL = "https://huggingface.co/datasets/databricks/databricks-dolly-15k/resolve/main/databricks-dolly-15k.jsonl"
+
+// loadDollyInstructions fetches the Dolly 15K dataset from Hugging Face and returns the instruction field from each row.
+// It errors if the fetch or parse fails or if no instructions are found.
+func loadDollyInstructions() ([]string, error) {
+	req, err := http.NewRequestWithContext(context.Background(), http.MethodGet, dolly15kURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("dolly instructions request: %w", err)
+	}
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("dolly instructions fetch: %w", err)
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("dolly instructions fetch: HTTP %s", resp.Status)
+	}
+	var prompts []string
+	scanner := bufio.NewScanner(resp.Body)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if line == "" {
+			continue
+		}
+		var row struct {
+			Instruction string `json:"instruction"`
+		}
+		if err := json.Unmarshal([]byte(line), &row); err != nil {
+			return nil, fmt.Errorf("dolly instructions parse line %q: %w", line, err)
+		}
+		if row.Instruction != "" {
+			prompts = append(prompts, row.Instruction)
+		}
+	}
+	if err := scanner.Err(); err != nil {
+		return nil, fmt.Errorf("dolly instructions read body: %w", err)
+	}
+	if len(prompts) == 0 {
+		return nil, fmt.Errorf("dolly instructions: no instructions in dataset")
+	}
+	log.Printf("Loaded %d Dolly instructions from %s", len(prompts), dolly15kURL)
+	return prompts, nil
+}
+
+// ttftCollector is a thread-safe collector for background task TTFT samples (ms).
+type ttftCollector struct {
+	mu      sync.Mutex
+	samples []float64
+}
+
+func (c *ttftCollector) Append(ttftMs float64) {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	c.samples = append(c.samples, ttftMs)
+}
+
+func (c *ttftCollector) Samples() []float64 {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	out := make([]float64, len(c.samples))
+	copy(out, c.samples)
+	return out
+}
 
 const (
 	sglangTmuxSession = "sglang-story" // used for docker container name and tmux window name
@@ -197,13 +261,19 @@ func main() {
 
 	ctx := context.Background()
 
-	// Optional background noise: send concurrent requests to the backend on another goroutine
+	// Optional background noise: run Orla "background_noise" workflow at Poisson rate and collect TTFT.
 	var noiseCancel context.CancelFunc
+	var backgroundTTFT *ttftCollector
 	if *noiseRate > 0 {
+		prompts, err := loadDollyInstructions()
+		if err != nil {
+			log.Fatalf("load Dolly instructions: %v", err)
+		}
+		backgroundTTFT = &ttftCollector{}
 		noiseCtx, cancel := context.WithCancel(ctx)
 		noiseCancel = cancel
-		go runBackgroundNoise(noiseCtx, *backend, *backendType, *noiseRate)
-		log.Printf("Background noise started: %.2f req/s (Poisson)", *noiseRate)
+		go runBackgroundNoise(noiseCtx, orlaURL, *noiseRate, backgroundTTFT, prompts)
+		log.Printf("Background noise started: %.2f req/s (Poisson), via Orla", *noiseRate)
 	}
 
 	results, runErr := runStoryFinishing(ctx, orlaURL, *backendType, *cacheStrategy, *turns, *k)
@@ -215,6 +285,14 @@ func main() {
 
 	if runErr != nil {
 		log.Fatalf("Experiment failed: %v", runErr)
+	}
+
+	// Raw background TTFT samples for plotting (avg/p50/p99 computed in plot script)
+	if backgroundTTFT != nil {
+		samples := backgroundTTFT.Samples()
+		if len(samples) > 0 {
+			results["ttft_background_ms"] = samples
+		}
 	}
 
 	results["experiment_params"] = map[string]interface{}{
@@ -282,6 +360,10 @@ agentic_serving:
           use_context: false
         - agent_profile: "agent_j"
           use_context: false
+    - name: "background_noise"
+      tasks:
+        - agent_profile: "agent_i"
+          use_context: false
 `, endpoint, storyModelName, policy)
 	} else {
 		config = fmt.Sprintf(`log_format: pretty
@@ -309,6 +391,10 @@ agentic_serving:
         - agent_profile: "agent_i"
           use_context: false
         - agent_profile: "agent_j"
+          use_context: false
+    - name: "background_noise"
+      tasks:
+        - agent_profile: "agent_i"
           use_context: false
 `, backend, storyModelName, policy)
 	}
@@ -412,13 +498,16 @@ func runStoryFinishing(ctx context.Context, orlaURL, backendType, cacheStrategy 
 		return s / float64(len(x))
 	}
 
+	avgTTFT := avg(ttftPerTurn)
 	return map[string]interface{}{
 		"turns":               turns,
 		"k":                   k,
 		"total_time_sec":      totalTime.Seconds(),
-		"avg_ttft_ms":         avg(ttftPerTurn),
+		"avg_ttft_ms":         avgTTFT,
+		"avg_ttft_story_ms":   avgTTFT,
 		"avg_tpot_ms":         avg(tpotPerTurn),
 		"ttft_per_turn":       ttftPerTurn,
+		"ttft_story_per_turn": ttftPerTurn,
 		"tpot_per_turn":       tpotPerTurn,
 		"latency_per_turn_ms": latencyPerTurnMs,
 		"story_length_chars":  len(storyContext),
@@ -615,108 +704,47 @@ func stopVLLMTmux() {
 	log.Printf("Stopped vLLM (tmux window %s)", vllmTmuxWindow)
 }
 
-// runBackgroundNoise sends Poisson-paced requests to the backend to simulate concurrent load.
-// It runs until ctx is cancelled. Uses SGLang /api/chat or OpenAI /v1/chat/completions depending on backendType.
-func runBackgroundNoise(ctx context.Context, backend, backendType string, rate float64) {
-	client := &http.Client{Timeout: 30 * time.Second}
-	prompts := []string{
-		"What is the weather today?",
-		"Explain quantum computing in simple terms.",
-		"Write a haiku about programming.",
-		"List 5 benefits of exercise.",
-		"What is the capital of France?",
-		"Describe the water cycle.",
-		"Tell me a fun fact about space.",
-		"What are the main components of a computer?",
+// runBackgroundNoise runs the Orla "background_noise" workflow at Poisson rate and records
+// TTFT from each task into collector. Single goroutine; no max_tokens for variable-length responses.
+func runBackgroundNoise(ctx context.Context, orlaURL string, rate float64, collector *ttftCollector, prompts []string) {
+	if len(prompts) == 0 {
+		return
 	}
+	client := orla.NewClient(orlaURL)
 	rng := rand.New(rand.NewSource(42))
-	var rngMu sync.Mutex
 	for {
 		select {
 		case <-ctx.Done():
 			return
 		default:
-			go func() {
-				rngMu.Lock()
-				prompt := prompts[rng.Intn(len(prompts))]
-				rngMu.Unlock()
-				if err := sendNoiseRequest(client, backend, backendType, prompt); err != nil {
-					log.Printf("Background noise request failed: %v", err)
-				}
-			}()
-			rngMu.Lock()
-			interArrival := time.Duration(rng.ExpFloat64() / rate * float64(time.Second))
-			rngMu.Unlock()
-			select {
-			case <-ctx.Done():
-				return
-			case <-time.After(interArrival):
-			}
 		}
-	}
-}
-
-func sendNoiseRequest(client *http.Client, backend, backendType, prompt string) error {
-	if backendType == "vllm" {
-		// OpenAI-compatible POST /v1/chat/completions
-		base := strings.TrimSuffix(backend, "/v1")
-		base = strings.TrimSuffix(base, "/")
-		noiseURL := base + "/v1/chat/completions"
-		reqBody := map[string]any{
-			"model": storyModelName,
-			"messages": []map[string]string{
-				{"role": "user", "content": prompt},
-			},
-			"stream":     false,
-			"max_tokens": 20,
+		interArrival := time.Duration(rng.ExpFloat64() / rate * float64(time.Second))
+		select {
+		case <-ctx.Done():
+			return
+		case <-time.After(interArrival):
 		}
-		jsonData, err := json.Marshal(reqBody)
+		prompt := prompts[rng.Intn(len(prompts))]
+		execID, err := client.StartWorkflow(ctx, "background_noise")
 		if err != nil {
-			return err
+			log.Printf("Background noise StartWorkflow: %v", err)
+			continue
 		}
-		req, err := http.NewRequest("POST", noiseURL, bytes.NewBuffer(jsonData))
+		_, taskIndex, complete, _, err := client.GetNextTask(ctx, execID)
 		if err != nil {
-			return err
+			log.Printf("Background noise GetNextTask: %v", err)
+			continue
 		}
-		req.Header.Set("Content-Type", "application/json")
-		resp, err := client.Do(req)
+		if complete {
+			continue
+		}
+		resp, err := client.ExecuteTask(ctx, execID, taskIndex, prompt, &orla.ExecuteTaskOptions{Stream: true})
 		if err != nil {
-			return err
+			log.Printf("Background noise ExecuteTask: %v", err)
+			continue
 		}
-		defer resp.Body.Close()
-		if resp.StatusCode != http.StatusOK {
-			return fmt.Errorf("status %d", resp.StatusCode)
+		if resp.Metrics != nil {
+			collector.Append(float64(resp.Metrics.TTFTMs))
 		}
-		return nil
 	}
-	// SGLang /api/chat
-	noiseURL := fmt.Sprintf("%s/api/chat", backend)
-	reqBody := map[string]any{
-		"model": storyModelName,
-		"messages": []map[string]string{
-			{"role": "user", "content": prompt},
-		},
-		"stream": false,
-		"options": map[string]any{
-			"num_predict": 20,
-		},
-	}
-	jsonData, err := json.Marshal(reqBody)
-	if err != nil {
-		return err
-	}
-	req, err := http.NewRequest("POST", noiseURL, bytes.NewBuffer(jsonData))
-	if err != nil {
-		return err
-	}
-	req.Header.Set("Content-Type", "application/json")
-	resp, err := client.Do(req)
-	if err != nil {
-		return err
-	}
-	defer resp.Body.Close()
-	if resp.StatusCode != http.StatusOK {
-		return fmt.Errorf("status %d", resp.StatusCode)
-	}
-	return nil
 }

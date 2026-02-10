@@ -11,6 +11,7 @@
 #   BACKEND_TYPE   sglang (default) or vllm
 #   START_VLLM     1 to start vLLM in tmux per run (only when BACKEND_TYPE=vllm)
 #   CACHE_STRATEGIES  default "flush preserve"
+#   NOISE_RATES    space-separated noise rates (req/s); default "0.5 1 2"
 
 set -e
 
@@ -28,7 +29,7 @@ START_VLLM="${START_VLLM:-0}"
 
 TURNS="64"
 K_VALS="2 4 8 16 32 64 128"
-NOISE_RATES="0.5 1 2"
+NOISE_RATES="${NOISE_RATES:-2 4 8}"
 
 mkdir -p "$OUT_DIR"
 echo "=============================================="
