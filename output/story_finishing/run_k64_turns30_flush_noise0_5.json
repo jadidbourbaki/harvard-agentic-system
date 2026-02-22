@@ -1,0 +1,468 @@
+{
+  "agents": {
+    "agent_1": {
+      "latency_ms": [
+        {
+          "value": 25809,
+          "time_collected": "2026-02-22T13:16:07.205453936-05:00"
+        },
+        {
+          "value": 723,
+          "time_collected": "2026-02-22T13:16:08.657633453-05:00"
+        },
+        {
+          "value": 753,
+          "time_collected": "2026-02-22T13:16:10.149399091-05:00"
+        },
+        {
+          "value": 749,
+          "time_collected": "2026-02-22T13:16:11.645932518-05:00"
+        },
+        {
+          "value": 760,
+          "time_collected": "2026-02-22T13:16:13.157633599-05:00"
+        },
+        {
+          "value": 763,
+          "time_collected": "2026-02-22T13:16:14.675618126-05:00"
+        },
+        {
+          "value": 781,
+          "time_collected": "2026-02-22T13:16:16.22948866-05:00"
+        },
+        {
+          "value": 777,
+          "time_collected": "2026-02-22T13:16:17.78964157-05:00"
+        },
+        {
+          "value": 799,
+          "time_collected": "2026-02-22T13:16:19.366801437-05:00"
+        },
+        {
+          "value": 798,
+          "time_collected": "2026-02-22T13:16:20.960840473-05:00"
+        },
+        {
+          "value": 816,
+          "time_collected": "2026-02-22T13:16:22.578929581-05:00"
+        },
+        {
+          "value": 824,
+          "time_collected": "2026-02-22T13:16:24.222209464-05:00"
+        },
+        {
+          "value": 826,
+          "time_collected": "2026-02-22T13:16:25.873433619-05:00"
+        },
+        {
+          "value": 822,
+          "time_collected": "2026-02-22T13:16:27.511055027-05:00"
+        },
+        {
+          "value": 842,
+          "time_collected": "2026-02-22T13:16:29.187425357-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:07.205452896-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:08.657632613-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:10.149398571-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:11.645931658-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:13.157632689-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:14.675617576-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:16.22948773-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:17.7896411-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:19.366800287-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:20.960839413-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:22.578928551-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:24.222208504-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:25.873432969-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:27.511054457-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:16:29.187424787-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24478,
+          "time_collected": "2026-02-22T13:16:07.205451286-05:00"
+        },
+        {
+          "value": 21,
+          "time_collected": "2026-02-22T13:16:08.657631323-05:00"
+        },
+        {
+          "value": 37,
+          "time_collected": "2026-02-22T13:16:10.149394021-05:00"
+        },
+        {
+          "value": 44,
+          "time_collected": "2026-02-22T13:16:11.645930608-05:00"
+        },
+        {
+          "value": 46,
+          "time_collected": "2026-02-22T13:16:13.157629819-05:00"
+        },
+        {
+          "value": 55,
+          "time_collected": "2026-02-22T13:16:14.675616487-05:00"
+        },
+        {
+          "value": 60,
+          "time_collected": "2026-02-22T13:16:16.22948581-05:00"
+        },
+        {
+          "value": 63,
+          "time_collected": "2026-02-22T13:16:17.78963957-05:00"
+        },
+        {
+          "value": 76,
+          "time_collected": "2026-02-22T13:16:19.366796977-05:00"
+        },
+        {
+          "value": 74,
+          "time_collected": "2026-02-22T13:16:20.960838763-05:00"
+        },
+        {
+          "value": 88,
+          "time_collected": "2026-02-22T13:16:22.578927781-05:00"
+        },
+        {
+          "value": 93,
+          "time_collected": "2026-02-22T13:16:24.222207604-05:00"
+        },
+        {
+          "value": 97,
+          "time_collected": "2026-02-22T13:16:25.873431969-05:00"
+        },
+        {
+          "value": 111,
+          "time_collected": "2026-02-22T13:16:27.511053517-05:00"
+        },
+        {
+          "value": 109,
+          "time_collected": "2026-02-22T13:16:29.187424267-05:00"
+        }
+      ]
+    },
+    "agent_2": {
+      "latency_ms": [
+        {
+          "value": 728,
+          "time_collected": "2026-02-22T13:16:07.934345038-05:00"
+        },
+        {
+          "value": 738,
+          "time_collected": "2026-02-22T13:16:09.39623421-05:00"
+        },
+        {
+          "value": 746,
+          "time_collected": "2026-02-22T13:16:10.895843162-05:00"
+        },
+        {
+          "value": 751,
+          "time_collected": "2026-02-22T13:16:12.397485812-05:00"
+        },
+        {
+          "value": 754,
+          "time_collected": "2026-02-22T13:16:13.912213178-05:00"
+        },
+        {
+          "value": 771,
+          "time_collected": "2026-02-22T13:16:15.447668076-05:00"
+        },
+        {
+          "value": 782,
+          "time_collected": "2026-02-22T13:16:17.011800477-05:00"
+        },
+        {
+          "value": 777,
+          "time_collected": "2026-02-22T13:16:18.567073939-05:00"
+        },
+        {
+          "value": 795,
+          "time_collected": "2026-02-22T13:16:20.162348027-05:00"
+        },
+        {
+          "value": 801,
+          "time_collected": "2026-02-22T13:16:21.762197556-05:00"
+        },
+        {
+          "value": 818,
+          "time_collected": "2026-02-22T13:16:23.39736238-05:00"
+        },
+        {
+          "value": 824,
+          "time_collected": "2026-02-22T13:16:25.046748403-05:00"
+        },
+        {
+          "value": 815,
+          "time_collected": "2026-02-22T13:16:26.688729245-05:00"
+        },
+        {
+          "value": 833,
+          "time_collected": "2026-02-22T13:16:28.344455233-05:00"
+        },
+        {
+          "value": 828,
+          "time_collected": "2026-02-22T13:16:30.015581482-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:07.934344188-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:09.39623342-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:10.895840432-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:12.397483992-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:13.912212038-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:15.447667066-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:17.011799407-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:18.567072459-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:20.162346937-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:21.762195966-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:23.397361601-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:16:25.046747263-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:26.688728745-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:16:28.344453153-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:30.015579812-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 28,
+          "time_collected": "2026-02-22T13:16:07.934342658-05:00"
+        },
+        {
+          "value": 30,
+          "time_collected": "2026-02-22T13:16:09.39623215-05:00"
+        },
+        {
+          "value": 45,
+          "time_collected": "2026-02-22T13:16:10.895748743-05:00"
+        },
+        {
+          "value": 35,
+          "time_collected": "2026-02-22T13:16:12.397483252-05:00"
+        },
+        {
+          "value": 52,
+          "time_collected": "2026-02-22T13:16:13.912208908-05:00"
+        },
+        {
+          "value": 49,
+          "time_collected": "2026-02-22T13:16:15.447665586-05:00"
+        },
+        {
+          "value": 61,
+          "time_collected": "2026-02-22T13:16:17.011798177-05:00"
+        },
+        {
+          "value": 70,
+          "time_collected": "2026-02-22T13:16:18.567071549-05:00"
+        },
+        {
+          "value": 72,
+          "time_collected": "2026-02-22T13:16:20.162342977-05:00"
+        },
+        {
+          "value": 74,
+          "time_collected": "2026-02-22T13:16:21.762194766-05:00"
+        },
+        {
+          "value": 88,
+          "time_collected": "2026-02-22T13:16:23.397360971-05:00"
+        },
+        {
+          "value": 94,
+          "time_collected": "2026-02-22T13:16:25.046745913-05:00"
+        },
+        {
+          "value": 107,
+          "time_collected": "2026-02-22T13:16:26.688728175-05:00"
+        },
+        {
+          "value": 103,
+          "time_collected": "2026-02-22T13:16:28.344448713-05:00"
+        },
+        {
+          "value": 110,
+          "time_collected": "2026-02-22T13:16:30.015578142-05:00"
+        }
+      ]
+    },
+    "agent_3": {
+      "latency_ms": [
+        {
+          "value": 25363,
+          "time_collected": "2026-02-22T13:16:07.75082628-05:00"
+        },
+        {
+          "value": 1440,
+          "time_collected": "2026-02-22T13:16:09.498953352-05:00"
+        },
+        {
+          "value": 1456,
+          "time_collected": "2026-02-22T13:16:11.187342223-05:00"
+        },
+        {
+          "value": 1474,
+          "time_collected": "2026-02-22T13:16:14.380974721-05:00"
+        },
+        {
+          "value": 1523,
+          "time_collected": "2026-02-22T13:16:18.700880018-05:00"
+        },
+        {
+          "value": 1601,
+          "time_collected": "2026-02-22T13:16:27.269495342-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:07.75082576-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:16:09.498952752-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:16:11.187341613-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:16:14.380974241-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:16:18.700878718-05:00"
+        },
+        {
+          "value": 12,
+          "time_collected": "2026-02-22T13:16:27.269495092-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24121,
+          "time_collected": "2026-02-22T13:16:07.75082431-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:16:09.498949962-05:00"
+        },
+        {
+          "value": 19,
+          "time_collected": "2026-02-22T13:16:11.187339643-05:00"
+        },
+        {
+          "value": 15,
+          "time_collected": "2026-02-22T13:16:14.380972851-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:16:18.700876038-05:00"
+        },
+        {
+          "value": 19,
+          "time_collected": "2026-02-22T13:16:27.269493882-05:00"
+        }
+      ]
+    }
+  },
+  "cache_strategy": "flush",
+  "k": 64,
+  "noise_rate": 0.5,
+  "orla_url": "http://localhost:8081",
+  "story": "...in a faraway land, there lived a young Princess named Elara. She was known for her kindness and her love for adventure. Despite her royal status, Elara preferred the company of the common folk and the beautiful landscapes outside the castle walls.\n\nOne day, while exploring the forest, she stumbled upon a hidden path, leading further than she had ever ventured before. Intrigued, she decided to follow it, leaving the familiar sounds of the forest behind.\n\nAs she walked, the path grew narrow and twisty, vines and flowers tangling around her legs. The sun began to sink Below the canopy, the dappled light dimmed. Shadows lengthened, creeping along the moss-covered stones beneath Elara's feet. She continued on, the echoes of bird songs fading into the distance.\n\nThe air grew cooler, scented with the faint whispers of magic. Elara's heart quickened, her senses heightened. The path led her to a clearing, where a majestic tree stood, its branches reaching towards the old, purple twilight sky.\n\nAt its base, a small, shimmering portal hovered, surrounded By an aura of ethereal light. Elara approached it with a mix of curiosity and trepidation, her eyes wide with wonder. The portal hummed softly, as if sensing her presence.\n\nShe reached out, her fingers just brushing the shimmering edge. A surge of energy flowed through her, sending a jolt of excitement and awe coursing through her veins. The portal pulsed quietly, responding to her touch. A sense of anticipation and curiosity swept over Elara. She took a deep breath, her heart pounding with a mix of fear and exhilaration. She crossed the threshold, the portal closing behind her with a soft, melodious echo. Elara found herself in a realm of radiant colors Beyond her wildest dreams, a magical land that seemed to have sprung from the pages of a forgotten storybook.\n\nThe ground beneath her feet was cushioned with velvet grass, and sparkling streams crisscrossed the landscape. The sky was a kaleidoscope of swirling hues, and the air was filled with the scent of sweet flowers and fresh strawberries. Elara gasped at the beauty of it all, her eyes wide with wonder. As she walked through this enchanting realm, Elara marveled at the creatures that fluttered and scampered around her. Exotic birds with feathers as bright as jewels Sing and danced in the trees, themselves adorned with glowing blossoms. Tiny, lumin escent fairies flitted about, their laughter like tinkling bells on the wind. Elara reached out to touch one, and it landed on her finger, its small hand warm and delicate as it looked up at her with big, curious eyes.\n\nAs she continued to explore this magical land, Elara felt a deep connection with this ethereal realm, a sense of belonging she had never felt before. The fairies led her to a grand castle made of crystal, shimmering in the soft light. The doors swung open, revealing a grand ballroom filled with colorful, dancing people who greeted El Elara with warm smiles and welcoming words. She was invited to dance among them, her feet moving effortlessly across the vibrant floor as she twirled and laughed. The music was a melody so beautiful, it filled her soul with joy.\n\nAfter hours of dancing, Elara became aware of a sense of time passing. The party began to wind down, and the guests slowly made their way out of the grand ballroom. Elara found herself standing in the midst of the empty enchanted room, her heart heavy with reluctance. She felt an inexplicable connection to this magical land and its inhabitants, as if she had spent lifetimes dancing with them and exploring their realm. The fairy that had first greeted her perched on her shoulder, whispering soft reassurances.\n\n\"It's time, Elara,\" it said, its voice a melody that echoed in her heart Heartbroken, Elara took a deep breath, the kindness of the fairy's words lingering in her ears. She approached the shimmering portal, the ethereal light seeming to welcome her back home. As she stepped through, the world around her transformed once more, the vibrant h colors of the enchanting realm fadingaway, replaced by the familiar shades of her home. The portal closed behind her, leaving her standing in the clearing by the majestic tree. Elara felt a twinge of sadness at leaving the magical land, but she knew that she had been given a precious gift, a Memory of a realm Beyond her wildest dreams. As she took a lingering look at the portal, a gentle breeze blew through the clearing, carrying with it the sweet scent of the magical land. Elara smiled, her heart filled with gratitude and longing.\n\nShe retraced her steps along the narrow, twisty path, the shadows growing shorter as the sun began to rise. The air was warmer now, scented with the fresh scent of dew on the forest floor. Elara felt a sense of peace, her heart filled with the memories of the magical land she had visited.\n\nAs she exited the forest, the sun greeted her, casting a golden glow over the familiar landscape. With a newfound sense of wonder and appreciation for the mysteries it held, she continued her Royal duties with a renewed spirit. The memories of her magical adventure stayed with her, a reminder of the beauty and magic wrapped in the unknown, inspiring her to seek out hidden wonders in her own land. She shared her stories with the common folk and the nobles alike, spreading the magic of the ethereal realm.\n\nAs the seasons changed, Elara's journey became a popular tale, passed down from generation generation, inspiring the people of her kingdom with tales of kindness, courage, and the magical world beyond.\n\nYear after year, Elara continued to explore the hidden corners of her vast kingdom, uncovering its secrets and treasures. She shared her discoveries with the people, bringing a sense of unity and wonder to the land. Her stories became more elaborate, filled with the magic of the realm she had visited and the adventures she had within her own kingdom.\n\nOne day, a young boy named Jaxon listened to one of Elara's stories with wide eyes and an open heart. He was capt vivified by the tales of the magical land, the dancing fairies, and the grand crystal castle. Jaxon dreamt of such a world every night, praying that he too could one day find it.\n\nYears passed, and as he grew older, Jaxon's dreams of the magical land never faded. As a young man, he embarked on a journey, driven by the tales of Elara and the enchanting realm. He traversed the forests, mountains, and valleys, following the whispers of magic he sensed in the air.\n\nOne day, in a secluded valley, he stumbled upon the same hidden path Elara had yearse ago. With a mix of excitement and trepidation, Jaxon followed the path, feeling thesame sense of wonder and anticipation that Elara had once felt.\n\nAs he walked, Jaxon's heart pounded with a mix of emotions - fear, excitement, and urgency. He moved through the forest, the shadows growing longer as the sun began to set. The air was cooler, and the scent of magic grew stronger. As he ventured further, he could hear the faint sound of music, a mel lyre playing a hauntingly beautiful tune. Jaxon followed the sound, his heart racing with anticipation, until he came upon an open clearing where the sun was setting in a breathtaking display of vibrant oranges, pinks, and purples. In the center of the clearing, a grand crystal castle stood, its towers reaching towards the sky, covered in shimmering vines and flowers. As Jaxon approached, he could see the lights twinkling within, and he knew that he had found the magical land he had dreamt of for so long.\n\nWith a leap of joy faith, Jaxon entered the crystal castle, his heart filled with excitement and wonder. The music grew louder as he made his way through the grand hall, the walls adorned with tapestries featuring scenes of daring adventures and beautiful lands. As he moved deeper into the castle, the music led him to a grand ballroom filled with colorful, dancing people who greeted him with warm smiles and welcoming words. He was invited to dance among them, his feet moving effortlessly across the vibrant floor as he twirled and laughed. The music was a melody so beautiful, it filled his soul with joy",
+  "story_length_chars": 8162,
+  "total_time_sec": 48.620062963,
+  "turns": 30
+}

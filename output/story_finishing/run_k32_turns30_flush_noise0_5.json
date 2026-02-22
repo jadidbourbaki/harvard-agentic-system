@@ -1,0 +1,456 @@
+{
+  "agents": {
+    "agent_1": {
+      "latency_ms": [
+        {
+          "value": 25176,
+          "time_collected": "2026-02-22T13:00:05.97249713-05:00"
+        },
+        {
+          "value": 370,
+          "time_collected": "2026-02-22T13:00:06.721187845-05:00"
+        },
+        {
+          "value": 376,
+          "time_collected": "2026-02-22T13:00:07.471771972-05:00"
+        },
+        {
+          "value": 391,
+          "time_collected": "2026-02-22T13:00:08.243189208-05:00"
+        },
+        {
+          "value": 391,
+          "time_collected": "2026-02-22T13:00:09.020590134-05:00"
+        },
+        {
+          "value": 389,
+          "time_collected": "2026-02-22T13:00:09.80537515-05:00"
+        },
+        {
+          "value": 395,
+          "time_collected": "2026-02-22T13:00:10.605110864-05:00"
+        },
+        {
+          "value": 404,
+          "time_collected": "2026-02-22T13:00:11.405705514-05:00"
+        },
+        {
+          "value": 410,
+          "time_collected": "2026-02-22T13:00:12.224050149-05:00"
+        },
+        {
+          "value": 412,
+          "time_collected": "2026-02-22T13:00:13.045621737-05:00"
+        },
+        {
+          "value": 412,
+          "time_collected": "2026-02-22T13:00:13.864530303-05:00"
+        },
+        {
+          "value": 413,
+          "time_collected": "2026-02-22T13:00:14.691206384-05:00"
+        },
+        {
+          "value": 425,
+          "time_collected": "2026-02-22T13:00:15.54368143-05:00"
+        },
+        {
+          "value": 425,
+          "time_collected": "2026-02-22T13:00:16.408090368-05:00"
+        },
+        {
+          "value": 428,
+          "time_collected": "2026-02-22T13:00:17.276245399-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:05.97249609-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:06.721187395-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:07.471771642-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:08.243188168-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:09.020589124-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:09.80537463-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:10.605110194-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:11.405704834-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:12.224049229-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:13.045621167-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:13.864529803-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:14.691205904-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:15.54368094-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:16.408088868-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:17.276244669-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24276,
+          "time_collected": "2026-02-22T13:00:05.97249366-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:00:06.721185995-05:00"
+        },
+        {
+          "value": 19,
+          "time_collected": "2026-02-22T13:00:07.471769912-05:00"
+        },
+        {
+          "value": 33,
+          "time_collected": "2026-02-22T13:00:08.243187178-05:00"
+        },
+        {
+          "value": 37,
+          "time_collected": "2026-02-22T13:00:09.020585774-05:00"
+        },
+        {
+          "value": 36,
+          "time_collected": "2026-02-22T13:00:09.80537418-05:00"
+        },
+        {
+          "value": 35,
+          "time_collected": "2026-02-22T13:00:10.605109384-05:00"
+        },
+        {
+          "value": 43,
+          "time_collected": "2026-02-22T13:00:11.405703664-05:00"
+        },
+        {
+          "value": 44,
+          "time_collected": "2026-02-22T13:00:12.224044589-05:00"
+        },
+        {
+          "value": 55,
+          "time_collected": "2026-02-22T13:00:13.045620247-05:00"
+        },
+        {
+          "value": 49,
+          "time_collected": "2026-02-22T13:00:13.864529213-05:00"
+        },
+        {
+          "value": 50,
+          "time_collected": "2026-02-22T13:00:14.691205144-05:00"
+        },
+        {
+          "value": 60,
+          "time_collected": "2026-02-22T13:00:15.5436805-05:00"
+        },
+        {
+          "value": 72,
+          "time_collected": "2026-02-22T13:00:16.408087438-05:00"
+        },
+        {
+          "value": 71,
+          "time_collected": "2026-02-22T13:00:17.276243429-05:00"
+        }
+      ]
+    },
+    "agent_2": {
+      "latency_ms": [
+        {
+          "value": 378,
+          "time_collected": "2026-02-22T13:00:06.350606561-05:00"
+        },
+        {
+          "value": 373,
+          "time_collected": "2026-02-22T13:00:07.094774444-05:00"
+        },
+        {
+          "value": 379,
+          "time_collected": "2026-02-22T13:00:07.851414021-05:00"
+        },
+        {
+          "value": 385,
+          "time_collected": "2026-02-22T13:00:08.629187281-05:00"
+        },
+        {
+          "value": 395,
+          "time_collected": "2026-02-22T13:00:09.415727642-05:00"
+        },
+        {
+          "value": 403,
+          "time_collected": "2026-02-22T13:00:10.209172698-05:00"
+        },
+        {
+          "value": 396,
+          "time_collected": "2026-02-22T13:00:11.001253216-05:00"
+        },
+        {
+          "value": 407,
+          "time_collected": "2026-02-22T13:00:11.813585361-05:00"
+        },
+        {
+          "value": 408,
+          "time_collected": "2026-02-22T13:00:12.632816063-05:00"
+        },
+        {
+          "value": 406,
+          "time_collected": "2026-02-22T13:00:13.452296412-05:00"
+        },
+        {
+          "value": 412,
+          "time_collected": "2026-02-22T13:00:14.277302237-05:00"
+        },
+        {
+          "value": 426,
+          "time_collected": "2026-02-22T13:00:15.117750213-05:00"
+        },
+        {
+          "value": 438,
+          "time_collected": "2026-02-22T13:00:15.982305568-05:00"
+        },
+        {
+          "value": 439,
+          "time_collected": "2026-02-22T13:00:16.847607182-05:00"
+        },
+        {
+          "value": 428,
+          "time_collected": "2026-02-22T13:00:17.704938476-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:06.350605971-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:07.094774154-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:07.851413321-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:08.629186772-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:09.415726982-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:10.209172028-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:11.001252876-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:11.813584881-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:12.632814483-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:13.452295902-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:14.277301727-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:15.117749663-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:00:15.982305278-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:16.847606162-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:17.704937996-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T13:00:06.350604931-05:00"
+        },
+        {
+          "value": 20,
+          "time_collected": "2026-02-22T13:00:07.094773764-05:00"
+        },
+        {
+          "value": 28,
+          "time_collected": "2026-02-22T13:00:07.851412071-05:00"
+        },
+        {
+          "value": 28,
+          "time_collected": "2026-02-22T13:00:08.629186302-05:00"
+        },
+        {
+          "value": 41,
+          "time_collected": "2026-02-22T13:00:09.415724182-05:00"
+        },
+        {
+          "value": 42,
+          "time_collected": "2026-02-22T13:00:10.209171388-05:00"
+        },
+        {
+          "value": 34,
+          "time_collected": "2026-02-22T13:00:11.001252596-05:00"
+        },
+        {
+          "value": 44,
+          "time_collected": "2026-02-22T13:00:11.813584351-05:00"
+        },
+        {
+          "value": 52,
+          "time_collected": "2026-02-22T13:00:12.632765724-05:00"
+        },
+        {
+          "value": 47,
+          "time_collected": "2026-02-22T13:00:13.452295272-05:00"
+        },
+        {
+          "value": 50,
+          "time_collected": "2026-02-22T13:00:14.277301037-05:00"
+        },
+        {
+          "value": 58,
+          "time_collected": "2026-02-22T13:00:15.117748823-05:00"
+        },
+        {
+          "value": 60,
+          "time_collected": "2026-02-22T13:00:15.982304858-05:00"
+        },
+        {
+          "value": 73,
+          "time_collected": "2026-02-22T13:00:16.847604972-05:00"
+        },
+        {
+          "value": 68,
+          "time_collected": "2026-02-22T13:00:17.704937486-05:00"
+        }
+      ]
+    },
+    "agent_3": {
+      "latency_ms": [
+        {
+          "value": 25242,
+          "time_collected": "2026-02-22T13:00:07.030519314-05:00"
+        },
+        {
+          "value": 841,
+          "time_collected": "2026-02-22T13:00:08.179291913-05:00"
+        },
+        {
+          "value": 1490,
+          "time_collected": "2026-02-22T13:00:09.901937708-05:00"
+        },
+        {
+          "value": 1546,
+          "time_collected": "2026-02-22T13:00:13.167686253-05:00"
+        },
+        {
+          "value": 1622,
+          "time_collected": "2026-02-22T13:00:17.586607803-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:07.030519094-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:00:08.179291353-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:00:09.901937248-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:00:13.167685983-05:00"
+        },
+        {
+          "value": 12,
+          "time_collected": "2026-02-22T13:00:17.586607393-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 23832,
+          "time_collected": "2026-02-22T13:00:07.030518124-05:00"
+        },
+        {
+          "value": 20,
+          "time_collected": "2026-02-22T13:00:08.179289583-05:00"
+        },
+        {
+          "value": 23,
+          "time_collected": "2026-02-22T13:00:09.901932798-05:00"
+        },
+        {
+          "value": 19,
+          "time_collected": "2026-02-22T13:00:13.167685113-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:00:17.586605843-05:00"
+        }
+      ]
+    }
+  },
+  "cache_strategy": "flush",
+  "k": 32,
+  "noise_rate": 0.5,
+  "orla_url": "http://localhost:8081",
+  "story": "...in a land far, far away, there was a tiny village nestled at the foot of a towering mountain. The village was simple, with that once-upon-a-time-in-a-land-far-far-away-there-was-a-tiny-village ... where the homes were built from stone and thatch, and the people lived in harmony with nature. The mountain, named Eldrid, was shrouded in a perpetual veil of mist, and it was said to harbor ancient secrets within its crystalline caves.\n\nOne day, a young adventurer named Kael, with sparkling green eyes and a heart brimming with curiosity, arrived in the village seeking the mystery that Eldrid mountain concealed. He knocked on the door of the village elder, an esteemed woman with wisdom etched in every crease on her face. \"Eld elder, I have journeyed far and wide to uncover the secrets of this mystical mountain, Eldrid. I seek your wisdom and guidance in this ende quest, Elder. I've heard tales of ancient treasures and powerful magics hidden within its depths. Can you tell me of the path to discover those secrets, Kael? Indeed, I can. But be warned, the mountain is neither a playground nor a toy. It demands respect and hum respect if one hopes to uncover its secrets. The path you seek lies not on the mountain's slopes, but within its very heart. The entrance \"To access the heart of Eldrid, one must follow a hidden path that begins at the foot of the mountain, where the river's song is strongest Cradled amidst the verdant embrace of ancient trees, the hidden path commences, subtly camouflaged by nature's own hand The hidden path winds through a dense and magical forest, where sunlight dapples the forest floor and the gentle sound of the river guides Kael's steps The path leads Kael through a realm of ethereal beauty, where therianthropic creatures of legend dwell. He encounters sylphs that dance gracefully upon the wind, nymphs who playfully frolic in the river's cool embrace, and griffins that soar maj above the forest canopy. As Kael continues along the hidden path, he feels a growing sense of reverence for the ancient magic that permeates the forest. Eventually, he reaches the heart of the mountain, a grand chamber bathed in the ethereal glow of crystals embedded in the walls. In the heart of the mountain, Kael gazes in awe at the sight before him. The grand chamber is a testament to the majesty of ancient magic, with its walls adorned with intricate carvings of mysterious sigils. In the center of the chamber, a stone pedestal r stands tall and ancient, with a single gemset orbs resting atop it. The green gemstone pulses gently, its light casting a ethereal glimmer on the ancient carvings. Kael, feeling a mix of curiosity and trepidation, approaches the pedestal. As he reaches out to take the orb, a voice echoes around him, \"Choose wisely, Kael, for the power within this orb is not to be taken lightly As Kael hesitates, unsure of what to do, a whispering wind carries the words, \"The choice before you, young adventurer, is a test of your heart's true intent. If you seek the ancient secrets of Eldrid for the betterment of all, the orb will grant you the knowledge and power to unlock the mysteries of Eldrid and protect the village and its people. But if you seek the power for personal gain or evil, inthe realm's darkest corners, the orb will consume you, turning you into an agent of destruction, with the mountain's wrath unle as your soul,\n\nforever bound to its ancient, powerful magic,\n\ndoomed to serve its unyielding will.\n\nWith a heavy heart, Kael contemplated the choice before him. He had journeyed far and wide, braving treacherous terrains and overcoming ins numerous challenges, all due to his insatiable curiosity and desire to learn. He had witnessed and experienced the wonders of the world, but none compared to the moment he now faced. His heart ached with the weight of the decision, but he knew he had come this far for a reason. Embracing",
+  "story_length_chars": 3910,
+  "total_time_sec": 36.90887578,
+  "turns": 30
+}

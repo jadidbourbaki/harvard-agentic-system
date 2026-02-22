@@ -1,0 +1,393 @@
+{
+  "agents": {
+    "agent_1": {
+      "latency_ms": [
+        {
+          "value": 25206,
+          "time_collected": "2026-02-22T12:49:55.088438403-05:00"
+        },
+        {
+          "value": 371,
+          "time_collected": "2026-02-22T12:49:55.833679223-05:00"
+        },
+        {
+          "value": 372,
+          "time_collected": "2026-02-22T12:49:56.57905283-05:00"
+        },
+        {
+          "value": 371,
+          "time_collected": "2026-02-22T12:49:57.326041004-05:00"
+        },
+        {
+          "value": 373,
+          "time_collected": "2026-02-22T12:49:58.072930029-05:00"
+        },
+        {
+          "value": 375,
+          "time_collected": "2026-02-22T12:49:58.82608832-05:00"
+        },
+        {
+          "value": 374,
+          "time_collected": "2026-02-22T12:49:59.575667706-05:00"
+        },
+        {
+          "value": 376,
+          "time_collected": "2026-02-22T12:50:00.327748514-05:00"
+        },
+        {
+          "value": 375,
+          "time_collected": "2026-02-22T12:50:01.078632979-05:00"
+        },
+        {
+          "value": 381,
+          "time_collected": "2026-02-22T12:50:01.839687324-05:00"
+        },
+        {
+          "value": 377,
+          "time_collected": "2026-02-22T12:50:02.597526156-05:00"
+        },
+        {
+          "value": 379,
+          "time_collected": "2026-02-22T12:50:03.355785503-05:00"
+        },
+        {
+          "value": 381,
+          "time_collected": "2026-02-22T12:50:04.117695674-05:00"
+        },
+        {
+          "value": 382,
+          "time_collected": "2026-02-22T12:50:04.88075015-05:00"
+        },
+        {
+          "value": 380,
+          "time_collected": "2026-02-22T12:50:05.643365491-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:55.088437963-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:55.833678973-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:56.57905254-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:57.326040774-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:58.072928879-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:58.82608803-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:59.575667476-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:00.327748274-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:01.078632039-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:01.839686684-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:02.597525656-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:03.355785053-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:04.117695064-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:04.88074951-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:05.643364781-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24259,
+          "time_collected": "2026-02-22T12:49:55.088436623-05:00"
+        },
+        {
+          "value": 16,
+          "time_collected": "2026-02-22T12:49:55.833678643-05:00"
+        },
+        {
+          "value": 16,
+          "time_collected": "2026-02-22T12:49:56.57904651-05:00"
+        },
+        {
+          "value": 16,
+          "time_collected": "2026-02-22T12:49:57.326040464-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T12:49:58.072903469-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T12:49:58.826087531-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T12:49:59.575667036-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T12:50:00.327747744-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T12:50:01.078619689-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:50:01.839686114-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:50:02.597525136-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:50:03.355784603-05:00"
+        },
+        {
+          "value": 19,
+          "time_collected": "2026-02-22T12:50:04.117693824-05:00"
+        },
+        {
+          "value": 19,
+          "time_collected": "2026-02-22T12:50:04.88074885-05:00"
+        },
+        {
+          "value": 19,
+          "time_collected": "2026-02-22T12:50:05.643364471-05:00"
+        }
+      ]
+    },
+    "agent_2": {
+      "latency_ms": [
+        {
+          "value": 373,
+          "time_collected": "2026-02-22T12:49:55.462372284-05:00"
+        },
+        {
+          "value": 372,
+          "time_collected": "2026-02-22T12:49:56.206180904-05:00"
+        },
+        {
+          "value": 375,
+          "time_collected": "2026-02-22T12:49:56.954660096-05:00"
+        },
+        {
+          "value": 373,
+          "time_collected": "2026-02-22T12:49:57.699347183-05:00"
+        },
+        {
+          "value": 377,
+          "time_collected": "2026-02-22T12:49:58.45087217-05:00"
+        },
+        {
+          "value": 375,
+          "time_collected": "2026-02-22T12:49:59.201248243-05:00"
+        },
+        {
+          "value": 375,
+          "time_collected": "2026-02-22T12:49:59.951467748-05:00"
+        },
+        {
+          "value": 375,
+          "time_collected": "2026-02-22T12:50:00.702939005-05:00"
+        },
+        {
+          "value": 379,
+          "time_collected": "2026-02-22T12:50:01.457777412-05:00"
+        },
+        {
+          "value": 379,
+          "time_collected": "2026-02-22T12:50:02.219587886-05:00"
+        },
+        {
+          "value": 378,
+          "time_collected": "2026-02-22T12:50:02.975860361-05:00"
+        },
+        {
+          "value": 380,
+          "time_collected": "2026-02-22T12:50:03.736025909-05:00"
+        },
+        {
+          "value": 380,
+          "time_collected": "2026-02-22T12:50:04.498504133-05:00"
+        },
+        {
+          "value": 381,
+          "time_collected": "2026-02-22T12:50:05.262526523-05:00"
+        },
+        {
+          "value": 379,
+          "time_collected": "2026-02-22T12:50:06.023068576-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:55.462372014-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:56.206180154-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:56.954659786-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:57.699346963-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:58.45087153-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:59.201247873-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:49:59.951467548-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:00.702938815-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:01.457776582-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:02.219587426-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:02.975859881-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:03.736025229-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:04.498503633-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:05.262525853-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:50:06.023067966-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:49:55.462371544-05:00"
+        },
+        {
+          "value": 16,
+          "time_collected": "2026-02-22T12:49:56.206179884-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:49:56.954655996-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T12:49:57.699346523-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:49:58.45087057-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T12:49:59.201247313-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T12:49:59.951467338-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T12:50:00.702938665-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:50:01.457768092-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:50:02.219587066-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:50:02.975859251-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:50:03.736024559-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:50:04.498502823-05:00"
+        },
+        {
+          "value": 19,
+          "time_collected": "2026-02-22T12:50:05.262524964-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:50:06.023067456-05:00"
+        }
+      ]
+    },
+    "agent_3": {
+      "latency_ms": [],
+      "tpot_ms": [],
+      "ttft_ms": []
+    }
+  },
+  "cache_strategy": "preserve",
+  "k": 32,
+  "noise_rate": 0,
+  "orla_url": "http://localhost:8081",
+  "story": "...in a land far, far away, there was a young girl named Elara. She lived in a small, humble cottage with her mother and father With dreams of gold and adventure, Elara discovered an ancient map hidden within her father's workshop. It depicted a mysterious island filled with treasure. Unearthing the map's secret, Elara traced her fingers over the intricate lines, her heart pounding with excitement. \"Mother, Father,\" she whispered, trepidation tingling in her voice. \"I've found something strange, a map hidden in your workshop. It seems to lead to a treasure-laden island, a place untouched by time. With a hopeful heart, Elara gathered her provisions, her eyes gleaming with determination. She bid farewell to her familial nest, a pang of sorrow tugging at her heart.\n\nElara' embarked on her journey towards the unknown, the map clutched tightly in her hands. The sun was setting, casting long shadows that danced on the winding cobblestone path. The forest whispered secrets as Elara penetrated its dense foliage. Nightfall approached, and the moon cast a silver glow upon Elara's path. With every step, she felt the weight of her decision, but the allure of treasure and adventure renewed her spirit. As she ventured deeper into the forest, the terrain grew treacherous, with steep hills and tangled vines obscuring her path. Yet Elara's resolve remained unwavering. Navigating through the thicket, she stumbled upon a hidden clearing, adorned with a maj est waterfall cascading from a towering cliff, its shimmering waters reflecting the silvery moonlight. A sense of awe washed over Elara as she stood transfixed by the spectacular sight. She lingered for a moment, allowing the serene ambiance to soothe her weary soul, before she continued her journey, the waterfall's gentle melody echoing in her ears.\n\nAs she pressed on, the forest th inked, becoming more ominous and dark. The trees loomed taller and their leaves rustled ominously. Elara clutched the map tighter, her breath hitching in her throat. The moon's glow faded, replaced by an eerie, forms flickering in the shadows Among the twisted roots of the ancient trees, shadows shifted and moved, as if watching Elara's every step. The air grew cold, and a cre pLETE STORY:\n\nA sinister laugh echoed through the forest, making hairs on Elara's arm stand on end. She spun around, her eyes wide with fear. \"Who's there?\" she called out, her voice shaky.\n\nThe shadows moved, forming into a hooded figure, its face shrouded in darkness. The figure stepped forward, its robes rustling ominously. \"I've been waiting for you, Elara,\" the figure said in a voice as cold as the winter wind. \"You have found the map, the one leading to the treasure \"I declare that treasure foolish mortals seek,\nA curse to those who dare awake its sleep.\nYet, you persist, young Elara \"Foolish mortals seek,\nA curse to those who dare awake its sleep.\nYet, you persist, young Elara, \"Your courage is commendable, but I must warn you, the treasure you seek is no ordinary treasure. It is guarded by my master and disturb 获得了警惕，Elara抬起头，将手中的地图握在手心，心情非 calm。 \"I understand the risks,\" Elara said, trying to sound brave. \"But I must try. I can't let the opportunity of a lifetime pass me by. The hooded figure let out a dark laugh. \"Very well, young girl. But be forewarned, the journey will be treacherous and the treasures guarded with unthinkable horror. But if you must continue, follow this path, deep into the heart of the forest \"The path leads to a dark and desolate lake, surrounded by tall, ominous trees. approaches the lake, the robed figure vanishes into the shadows, leaving Elara alone with her thoughts. With a deep breath, she approached the lake, noticing the water's dark and ominous",
+  "story_length_chars": 3788,
+  "total_time_sec": 36.140861272,
+  "turns": 30
+}

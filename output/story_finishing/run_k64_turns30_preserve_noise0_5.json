@@ -1,0 +1,468 @@
+{
+  "agents": {
+    "agent_1": {
+      "latency_ms": [
+        {
+          "value": 25596,
+          "time_collected": "2026-02-22T13:07:55.860727694-05:00"
+        },
+        {
+          "value": 727,
+          "time_collected": "2026-02-22T13:07:57.311075304-05:00"
+        },
+        {
+          "value": 724,
+          "time_collected": "2026-02-22T13:07:58.752442159-05:00"
+        },
+        {
+          "value": 737,
+          "time_collected": "2026-02-22T13:08:00.215377252-05:00"
+        },
+        {
+          "value": 726,
+          "time_collected": "2026-02-22T13:08:01.674740009-05:00"
+        },
+        {
+          "value": 732,
+          "time_collected": "2026-02-22T13:08:03.144899224-05:00"
+        },
+        {
+          "value": 735,
+          "time_collected": "2026-02-22T13:08:04.61645827-05:00"
+        },
+        {
+          "value": 730,
+          "time_collected": "2026-02-22T13:08:06.084757153-05:00"
+        },
+        {
+          "value": 741,
+          "time_collected": "2026-02-22T13:08:07.565535871-05:00"
+        },
+        {
+          "value": 739,
+          "time_collected": "2026-02-22T13:08:09.04494344-05:00"
+        },
+        {
+          "value": 740,
+          "time_collected": "2026-02-22T13:08:10.525897565-05:00"
+        },
+        {
+          "value": 744,
+          "time_collected": "2026-02-22T13:08:12.01231355-05:00"
+        },
+        {
+          "value": 743,
+          "time_collected": "2026-02-22T13:08:13.501878567-05:00"
+        },
+        {
+          "value": 731,
+          "time_collected": "2026-02-22T13:08:14.972889721-05:00"
+        },
+        {
+          "value": 747,
+          "time_collected": "2026-02-22T13:08:16.448833152-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:07:55.860727004-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:07:57.311074594-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:07:58.752441399-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:00.215376772-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:01.674738799-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:03.144898744-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:04.61645781-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:06.084756593-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:07.565534821-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:09.04494259-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:10.525897055-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:12.01231298-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:13.501877907-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:14.972889051-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:16.448832522-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24341,
+          "time_collected": "2026-02-22T13:07:55.860725964-05:00"
+        },
+        {
+          "value": 25,
+          "time_collected": "2026-02-22T13:07:57.311073054-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:07:58.752438419-05:00"
+        },
+        {
+          "value": 25,
+          "time_collected": "2026-02-22T13:08:00.215375622-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:08:01.674730709-05:00"
+        },
+        {
+          "value": 23,
+          "time_collected": "2026-02-22T13:08:03.144898174-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:08:04.61645675-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:08:06.084755953-05:00"
+        },
+        {
+          "value": 22,
+          "time_collected": "2026-02-22T13:08:07.565531851-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:08:09.04494138-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:08:10.525896635-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:08:12.01231162-05:00"
+        },
+        {
+          "value": 19,
+          "time_collected": "2026-02-22T13:08:13.501876327-05:00"
+        },
+        {
+          "value": 25,
+          "time_collected": "2026-02-22T13:08:14.972888121-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:08:16.448831442-05:00"
+        }
+      ]
+    },
+    "agent_2": {
+      "latency_ms": [
+        {
+          "value": 722,
+          "time_collected": "2026-02-22T13:07:56.583736451-05:00"
+        },
+        {
+          "value": 716,
+          "time_collected": "2026-02-22T13:07:58.027635708-05:00"
+        },
+        {
+          "value": 725,
+          "time_collected": "2026-02-22T13:07:59.477749402-05:00"
+        },
+        {
+          "value": 732,
+          "time_collected": "2026-02-22T13:08:00.948201784-05:00"
+        },
+        {
+          "value": 737,
+          "time_collected": "2026-02-22T13:08:02.411881196-05:00"
+        },
+        {
+          "value": 735,
+          "time_collected": "2026-02-22T13:08:03.880920379-05:00"
+        },
+        {
+          "value": 737,
+          "time_collected": "2026-02-22T13:08:05.353989621-05:00"
+        },
+        {
+          "value": 738,
+          "time_collected": "2026-02-22T13:08:06.823676494-05:00"
+        },
+        {
+          "value": 739,
+          "time_collected": "2026-02-22T13:08:08.304954864-05:00"
+        },
+        {
+          "value": 740,
+          "time_collected": "2026-02-22T13:08:09.785197881-05:00"
+        },
+        {
+          "value": 742,
+          "time_collected": "2026-02-22T13:08:11.268075858-05:00"
+        },
+        {
+          "value": 746,
+          "time_collected": "2026-02-22T13:08:12.758566922-05:00"
+        },
+        {
+          "value": 739,
+          "time_collected": "2026-02-22T13:08:14.241710484-05:00"
+        },
+        {
+          "value": 728,
+          "time_collected": "2026-02-22T13:08:15.701017573-05:00"
+        },
+        {
+          "value": 747,
+          "time_collected": "2026-02-22T13:08:17.196795248-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:07:56.583735521-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:07:58.027635388-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:07:59.477748832-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:00.948200934-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:02.411880396-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:03.880919949-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:05.353988721-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:06.823676044-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:08.304953524-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:09.785196631-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:11.268075038-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:12.758566362-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:14.241709174-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:15.701016443-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:17.196794588-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:07:56.583734121-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:07:58.027634358-05:00"
+        },
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T13:07:59.477747482-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:08:00.948200464-05:00"
+        },
+        {
+          "value": 25,
+          "time_collected": "2026-02-22T13:08:02.411878946-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:08:03.880919479-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:08:05.353987571-05:00"
+        },
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T13:08:06.823675674-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:08:08.304952434-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:08:09.785195321-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:08:11.268074258-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:08:12.758565832-05:00"
+        },
+        {
+          "value": 19,
+          "time_collected": "2026-02-22T13:08:14.241707904-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:08:15.701015393-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:08:17.196793488-05:00"
+        }
+      ]
+    },
+    "agent_3": {
+      "latency_ms": [
+        {
+          "value": 24944,
+          "time_collected": "2026-02-22T13:07:56.200507661-05:00"
+        },
+        {
+          "value": 1423,
+          "time_collected": "2026-02-22T13:07:57.930810081-05:00"
+        },
+        {
+          "value": 1415,
+          "time_collected": "2026-02-22T13:07:59.578949745-05:00"
+        },
+        {
+          "value": 1420,
+          "time_collected": "2026-02-22T13:08:02.718170112-05:00"
+        },
+        {
+          "value": 1432,
+          "time_collected": "2026-02-22T13:08:06.947216434-05:00"
+        },
+        {
+          "value": 1432,
+          "time_collected": "2026-02-22T13:08:15.34753253-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:07:56.200507171-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:07:57.930809771-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:07:59.578949285-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:02.718169832-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:06.947215784-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:08:15.34753226-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 23910,
+          "time_collected": "2026-02-22T13:07:56.200505251-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:07:57.930806991-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:07:59.578946645-05:00"
+        },
+        {
+          "value": 20,
+          "time_collected": "2026-02-22T13:08:02.718168842-05:00"
+        },
+        {
+          "value": 27,
+          "time_collected": "2026-02-22T13:08:06.947193234-05:00"
+        },
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T13:08:15.34753081-05:00"
+        }
+      ]
+    }
+  },
+  "cache_strategy": "preserve",
+  "k": 64,
+  "noise_rate": 0.5,
+  "orla_url": "http://localhost:8081",
+  "story": "...in a land far, far away, there was a young girl named Elara. She lived in a small, humble cottage with her mother and father. Despite their meager means, they were content and loved each other deeply.\n\nOne day, a mysterious old woman visited their home. She carried a hand-woven basket adorned with intricate silver threads. Auset, the old woman, had piercing eyes that seemed to see through the very soul of Elara.\n\n\"I see greatness within you, dear child,\" Auset said softly. \"A gift you must use wisely.\" \"Inside my basket, Elara, lies a magic seed. It has the power to grant a single wish, but be warned, its power must be used judiciously. Plant it in your heart, but do not let greed take root.\"\n\nElara, with wide eyes and a heart pounding With trembling hands, Elara reached for the ancient basket, careful not to disturb the delicate silver threads. As her fingers brushed against the woven fibers, a sense of awe washed over her. Auset watched silently, her piercing gaze never leaving Elara's face.\n\nElara' opened the basket and found the magic seed within. It was small, glowing with an ethereal light, pulsating gently. Elara held it in her palms, the seed's warmth spreading, filling her with a strange mix of fear and excitement.\n\nShe looked at Auset, the old woman, seeking guidance. Auset leaned in and whispered, \"Your wish must be for the greater good, Elara. Remember, the power of the seed must never corrupt your soul.\"\n\nElara nodded, understanding the seriousness of the decision ahead. She carefully closed her eyes and made her wish, her voice barely a whisper as she spoke the words that would change her life and the fate of her land forever: \"Let the magic seed grow within me, and may it bring happiness and prosperity to all those who live here.\"\n\nWith the wish made, Auset nodded approvingly and exited the cottage As the old woman vanished, the cottage seemed to brighten, and a soft, golden light emanated from Elara. A whispering wind blew through the house, carrying the scent of blooming flowers and green leaves.\n\nElara's parents, eyes wide with wonder, approached their daughter, sens feels overjoyed and embraces them, sharing the news of the magic seed and her wish. They are filled with hope for the future and the promise of a brighter tomorrow.\n\nIn the days that follow, Elara begins to feel a strange sensation, as if the seed is growing within her. She feels a warmth spreading through her chest, a gentle pulsing that seems to sync with her heartbeat. Over time, the sensation intensifies, and she starts to experience vivid dreams filled with images of lush landscapes, blooming gardens, and content faces.\n\nOne day, as Elara is walking through the forest, she comes across a clearing filled with the most beautiful flowers she has ever seen. They bloom in every color, painting the meadow in a kaleidoscope of vibrant hues. A soft rustle catches her attention, and she turns to see a small deer, its coat gleaming in the dappled sunlight. As she watches, more animals emerge from the woods: rabbits, birds, and even a majestic stag. They approach her, not frightened, but curious. Elara reaches out, and the deer nuzzles her hand gently.\n\nIn the days that follow, the land undergoes a transformation. The barren fields and lifeless forests begin to flourish, turning into lush meadows and vibrant forests teeming with wildlife. The villagers, initially skeptical, are soon astounded by the rapid changes in their environment.\n\nAs the days pass Turn into weeks, then months, the transformation of Elara's land becomes undeniable. Crops yield bountiful harvests, streams and rivers teem with fish, and the air is filled with the songs of birds. The villagers, once hungry and poor, now have enough food to eat and live comfortably. They build new homes, schools, and community centers, fostering a spirit of unity and togetherness. The story of Elara and the magic seed spreads far and wide, reaching the ears of the king.\n\nA humble and wise ruler, he is moved by the tale and summons Elara to his court. With heavy hearts, Elara's parents accompany their daughter, eager to share her story with the king. The throne room is packed with nobles, courtiers, and commoners, all eager to catch a glimpse of the girl who brought prosperity to their land. King Adrian, the humble and wise ruler, listened intently as Elara's parents recounted their daughter's miraculous journey and the transformation of their land. When when Elara stepped forward, the crowd fell silent. with a kindness that could penetrate even the hardest hearts King Adrian, moved by Elara's story, called her forth and the room grew quiet. He extended his hand towards her, in admiration and trust. \"My child, I offer you my kingdom, for your wisdom and selflessness have shown the path to prosperity for all. Let us work together to build a future where the ground is fertile, the skies are clear, and hearts are filled with joy. With your permission, dear Elara, I offer you a place at my side, as advisor and friend. Together, we shall guide our people towards a brighter tomorrow, ensuring the magic seed \"Your grace, I am deeply grateful for your trust and understanding,\" Elara replied humbly, accepting the king's offer. \"However, I believe the magic seed's power lies not just in my hands, but in the hearts of all our people. Together, we can nurture and grow the seed of hope, fostering unity, love, and prosperity. With the king's wisdom and my people's determination, we shall ensure that the magic seed's power never wanes, as we work together to shape a future where all can thrive.\"\n\nAs the years pass, El Elara becomes an cherished advisor to King Adrian, her wisdom and compassion guiding their kingdom to new heights of prosperity. Under their leadership, the land flourishes, and the people live in harmony, their joy evident in the laughter that rings through the streets.\n\nElara's spirit of generosity and kindness becomes the beacon for all, inspiring countless others to follow in her footsteps. Her story serves as a reminder that even the smallest seed, when nurtured with care and love, can bring about incredible change.\n\nAnd so, in the heart of Elara's land , the magic seed continues to grow, its influence spreading far and wide. The seed's power, once reserved for Elara alone, now resides within every soul who lives there.\n\nThe villagers, now citizens, share a common bond, a unity forged by the magic seed. They work together in harmony, tending to their thriving land, their laughter echoing throughout the once barren landscapes. Elara, now an esteemed advisor to King Adrian, continues to guide their kingdom with wisdom and compassion, ensuring that the magic seed's power never fades. The seed's influence spreads beyond the borders of their land, touching the hearts of neighbors and transforming their lands as well. The once warring kingdoms unite, forging alliances and promoting peace.\n\nIn the years that follow, the magic seed's power extends across the continent, inspiring a new era of unity, love, and prosperity. Elara's legacy lives on, her story echoing through the ages. The magic seed, now a symbol of hope, grows stronger with each passing generation.\n\nCenturies pass, and the land Elara once called home flourishes, standing as a testament to the enduring power of compassion and unity. The magic seed's influence continues to ripple outward, sparking change in neighboring lands. The once war-torn continent becomes a beacon of peace, a haven for those seeking a brighter future.\n\nThrough the generations, Elara remains a symbol of wisdom, selflessness, and courage. Her legacy lives on in the hearts of her people, passing from parent to child, and from friend to friend. The magic seed, now an integral part of the land, continues to radiate its ethereal light, guiding and nurturing all who cross its path. The green forests and vibrant meadows, once barren and lifeless, now stand as titans of hope, their roots intertwined with Elara's memory.\n\nCenturies turn to millennia, and the legends of Elara's magical seed enrich",
+  "story_length_chars": 8096,
+  "total_time_sec": 46.932706349,
+  "turns": 30
+}

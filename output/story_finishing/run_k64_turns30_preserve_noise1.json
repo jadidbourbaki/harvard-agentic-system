@@ -1,0 +1,516 @@
+{
+  "agents": {
+    "agent_1": {
+      "latency_ms": [
+        {
+          "value": 25650,
+          "time_collected": "2026-02-22T13:10:39.325234512-05:00"
+        },
+        {
+          "value": 724,
+          "time_collected": "2026-02-22T13:10:40.777089321-05:00"
+        },
+        {
+          "value": 725,
+          "time_collected": "2026-02-22T13:10:42.218460015-05:00"
+        },
+        {
+          "value": 733,
+          "time_collected": "2026-02-22T13:10:43.679107873-05:00"
+        },
+        {
+          "value": 725,
+          "time_collected": "2026-02-22T13:10:45.12161984-05:00"
+        },
+        {
+          "value": 741,
+          "time_collected": "2026-02-22T13:10:46.595988705-05:00"
+        },
+        {
+          "value": 738,
+          "time_collected": "2026-02-22T13:10:48.062114141-05:00"
+        },
+        {
+          "value": 738,
+          "time_collected": "2026-02-22T13:10:49.5448364-05:00"
+        },
+        {
+          "value": 742,
+          "time_collected": "2026-02-22T13:10:51.024377377-05:00"
+        },
+        {
+          "value": 728,
+          "time_collected": "2026-02-22T13:10:52.485812613-05:00"
+        },
+        {
+          "value": 742,
+          "time_collected": "2026-02-22T13:10:53.966343426-05:00"
+        },
+        {
+          "value": 730,
+          "time_collected": "2026-02-22T13:10:55.427122162-05:00"
+        },
+        {
+          "value": 730,
+          "time_collected": "2026-02-22T13:10:56.886765366-05:00"
+        },
+        {
+          "value": 743,
+          "time_collected": "2026-02-22T13:10:58.368057737-05:00"
+        },
+        {
+          "value": 731,
+          "time_collected": "2026-02-22T13:10:59.838558349-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:39.325233862-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:40.777088561-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:42.218459165-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:43.679107353-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:45.12161868-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:46.595988075-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:48.062113411-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:49.54483517-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:51.024376077-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:52.485812063-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:53.966342806-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:55.427121602-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:56.886764856-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:58.368057077-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:59.838557639-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24397,
+          "time_collected": "2026-02-22T13:10:39.325232632-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:10:40.777087701-05:00"
+        },
+        {
+          "value": 25,
+          "time_collected": "2026-02-22T13:10:42.218457685-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:10:43.679106723-05:00"
+        },
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T13:10:45.121615701-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:10:46.595987165-05:00"
+        },
+        {
+          "value": 25,
+          "time_collected": "2026-02-22T13:10:48.062111361-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:10:49.54483391-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:10:51.024371717-05:00"
+        },
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T13:10:52.485811693-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:10:53.966342226-05:00"
+        },
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T13:10:55.427121002-05:00"
+        },
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T13:10:56.886764216-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:10:58.368056397-05:00"
+        },
+        {
+          "value": 25,
+          "time_collected": "2026-02-22T13:10:59.838556759-05:00"
+        }
+      ]
+    },
+    "agent_2": {
+      "latency_ms": [
+        {
+          "value": 727,
+          "time_collected": "2026-02-22T13:10:40.052896195-05:00"
+        },
+        {
+          "value": 716,
+          "time_collected": "2026-02-22T13:10:41.493221166-05:00"
+        },
+        {
+          "value": 727,
+          "time_collected": "2026-02-22T13:10:42.945770944-05:00"
+        },
+        {
+          "value": 716,
+          "time_collected": "2026-02-22T13:10:44.396103175-05:00"
+        },
+        {
+          "value": 732,
+          "time_collected": "2026-02-22T13:10:45.854221561-05:00"
+        },
+        {
+          "value": 727,
+          "time_collected": "2026-02-22T13:10:47.323104516-05:00"
+        },
+        {
+          "value": 743,
+          "time_collected": "2026-02-22T13:10:48.805786616-05:00"
+        },
+        {
+          "value": 737,
+          "time_collected": "2026-02-22T13:10:50.282288058-05:00"
+        },
+        {
+          "value": 732,
+          "time_collected": "2026-02-22T13:10:51.75680721-05:00"
+        },
+        {
+          "value": 737,
+          "time_collected": "2026-02-22T13:10:53.223548187-05:00"
+        },
+        {
+          "value": 730,
+          "time_collected": "2026-02-22T13:10:54.696474163-05:00"
+        },
+        {
+          "value": 728,
+          "time_collected": "2026-02-22T13:10:56.156050647-05:00"
+        },
+        {
+          "value": 737,
+          "time_collected": "2026-02-22T13:10:57.624378242-05:00"
+        },
+        {
+          "value": 738,
+          "time_collected": "2026-02-22T13:10:59.106980133-05:00"
+        },
+        {
+          "value": 737,
+          "time_collected": "2026-02-22T13:11:00.575739141-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:40.052895275-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:41.493220376-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:42.945770154-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:44.396102715-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:45.854220581-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:47.323103936-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:48.805785926-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:50.282287348-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:51.75680627-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:53.223547757-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:54.696473583-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:56.156050157-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:57.624377662-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:59.106979583-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:11:00.575738561-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T13:10:40.052893395-05:00"
+        },
+        {
+          "value": 15,
+          "time_collected": "2026-02-22T13:10:41.493218496-05:00"
+        },
+        {
+          "value": 25,
+          "time_collected": "2026-02-22T13:10:42.945768554-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:10:44.396102225-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:10:45.854217261-05:00"
+        },
+        {
+          "value": 25,
+          "time_collected": "2026-02-22T13:10:47.323102976-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:10:48.805784746-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:10:50.282286448-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:10:51.7568045-05:00"
+        },
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T13:10:53.223547247-05:00"
+        },
+        {
+          "value": 26,
+          "time_collected": "2026-02-22T13:10:54.696472703-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:10:56.156049507-05:00"
+        },
+        {
+          "value": 20,
+          "time_collected": "2026-02-22T13:10:57.624377272-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:10:59.106978893-05:00"
+        },
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T13:11:00.575737711-05:00"
+        }
+      ]
+    },
+    "agent_3": {
+      "latency_ms": [
+        {
+          "value": 25490,
+          "time_collected": "2026-02-22T13:10:39.66178313-05:00"
+        },
+        {
+          "value": 1417,
+          "time_collected": "2026-02-22T13:10:41.233482553-05:00"
+        },
+        {
+          "value": 1422,
+          "time_collected": "2026-02-22T13:10:42.772709471-05:00"
+        },
+        {
+          "value": 1414,
+          "time_collected": "2026-02-22T13:10:45.046530329-05:00"
+        },
+        {
+          "value": 1422,
+          "time_collected": "2026-02-22T13:10:47.867184694-05:00"
+        },
+        {
+          "value": 1420,
+          "time_collected": "2026-02-22T13:10:52.771553258-05:00"
+        },
+        {
+          "value": 1431,
+          "time_collected": "2026-02-22T13:10:55.307538223-05:00"
+        },
+        {
+          "value": 1427,
+          "time_collected": "2026-02-22T13:10:57.064703756-05:00"
+        },
+        {
+          "value": 353,
+          "time_collected": "2026-02-22T13:10:57.613236307-05:00"
+        },
+        {
+          "value": 1432,
+          "time_collected": "2026-02-22T13:11:00.245346391-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:39.66178293-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:41.233482183-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:42.772709131-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:45.046530029-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:47.867183874-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:52.771552798-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:55.307537683-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:57.064703576-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:10:57.613235867-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:11:00.245346111-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24408,
+          "time_collected": "2026-02-22T13:10:39.66178168-05:00"
+        },
+        {
+          "value": 23,
+          "time_collected": "2026-02-22T13:10:41.233480573-05:00"
+        },
+        {
+          "value": 15,
+          "time_collected": "2026-02-22T13:10:42.772705911-05:00"
+        },
+        {
+          "value": 13,
+          "time_collected": "2026-02-22T13:10:45.046529479-05:00"
+        },
+        {
+          "value": 22,
+          "time_collected": "2026-02-22T13:10:47.867178424-05:00"
+        },
+        {
+          "value": 14,
+          "time_collected": "2026-02-22T13:10:52.771552258-05:00"
+        },
+        {
+          "value": 23,
+          "time_collected": "2026-02-22T13:10:55.307536573-05:00"
+        },
+        {
+          "value": 20,
+          "time_collected": "2026-02-22T13:10:57.064702686-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:10:57.613231597-05:00"
+        },
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T13:11:00.245345441-05:00"
+        }
+      ]
+    }
+  },
+  "cache_strategy": "preserve",
+  "k": 64,
+  "noise_rate": 1,
+  "orla_url": "http://localhost:8081",
+  "story": "...in a land far, far away, there was a young girl named Elara. She lived in a small, humble cottage with her mother and father. Despite their meager means, they were content and loved each other deeply.\n\nOne day, a mysterious old woman visited their home. She carried a velvet bag adorned with intricate, silver embroidery. Elara's eyes widened as the old woman reached inside and pulled out a single, glittering stone.\n\n\"This is no ordinary stone, child,\" the old woman said, her voice as ancient and wise as the mountains themselves. \"It is the heartstone, the last remnant of an ancient civilization that once thrived in these lands. With it, you can unlock the hidden power within you and change the fate of your world.\"\n\nElara's heart raced. She reached out a trembling hand, her fingers gently brushing against the cold, smooth surface of the heartstone. A surge of energy coursed through her veins, filling her with a sense of power and purpose she had never known before.\n\nThe old woman smiled, nodding. \"You have the gift, Elara. Now, go and use this power wisely, for it is not a burden to be taken lightly. The fate of your world rests in your hands. With the heartstone, you can accomplish great things, but remember, with great power comes great responsibility.\n\nElara, however, was overcome with excitement. She had never felt such a surge of energy before. The old woman's words echoed in her mind, and she couldn't help but feel a newfound sense of determination.\n\n\"Thank you,\" Elara managed to say, her voice shaking slightly. \"I won't let you down.\"\n\nThe old woman nodded, her eyes twinkling with approval. \"I have no doubt, Elara. May the spirit of the ancestors guide you on your journey. Remember, the heartstone's power can be overwhelming, but it is also your greatest ally. Use it wisely and with compassion.\" With a farewell glance, the wise old woman turned and vanished into the twilight air, leaving Elara and her parents standing in stunned silence. The heartstone glowed softly in Elara's hand, a beacon of power and destiny.\n\nDays turned into weeks, and El Elara spent those weeks in quiet contemplation, understanding the power the heartstone bestowed upon her. With every sunrise came a deeper connection, a deeper understanding of her newfound abilities.\n\nOne day, a dark cloud appeared over the horizon, a storm threatening the peaceful countryside. Elara knew she had to face the challenge. With a resolve hardened by determination, she carried the heartstone in her pocket and ventured towards the storm. The wind howled, and the rain pounded, but Elara felt a calm inner strength surging within her.\n\nAs she reached the heart of the storm, a fierce gust of wind tore through the clouds, revealing a monstrous entity twisting and contorting in the sky. A dragon, its scales dark as night, breathed fire into the heavens. The land trembled beneath its wrath, and the villagers cowered, praying for a miracle. With a deep breath, Elara raised her hands and focused on the heartstone's power, channeling it into her body. The heartstone glowed bright, and Elara felt an indescribable surge of power coursing through her veins.\n\nThe dragon roared, sens ing the impending danger. Elara, standing her ground, extended her hands towards the menacing creature. The heartstone pulsed with an intensity that seemed to echo the rhythm of her heart. A radiant energy emanated from her, enveloping the dragon in a cocoon of pure light. The dragon hissed, its ancient eyes meeting Elara's determined gaze. As the light surrounded it, the dragon's movements slowed, then ceased entirely. It slumped, magnificent yet vanquished, to the ground.\n\nThe villagers, who had watched in awe as Elara faced the dragon, erupted in cheers and shouts of gratitude. Elara, her heart pounding with adrenaline and relief, approached the fallen dragon. She looked at the heartstone in her hand, its light dimming as she released its power. With a heavy breath, she knelt beside the dragon, its scales cool against her palm. She reached out a tentative hand, touching the hard muscle of its cheek. The dragon did not stir, but its eyes fluttered open, a hint of understanding in their depths.\n\n\"I...\" Elara began, her words choked with emotion Emotion choked her voice, \"I don't wish to harm you.You were once a guardian, a protector of this land. But now, you've become a threat. I'm sorry, but I have to set you free from this terrible power that consumed you.\"\n\nThe dragon looked at Elara, its eyes filled with sorrow and understanding. It lowered its head, allowing Elara to place the heartstone on its scales. The moment the heartstone touched the dragon, it felt a surge of relief, the ancient power flowing out of it. The storm ceased, the dark cloud vaporizing into the sky. The villagers watched in wonder as the dragon, its formerly dark scales glowing with a faint, ethereal light, slowly heaved itself to its feet. It looked at Elara one last time before turning and vanishing into the horizon, leaving behind a trail of shimmer sparkling dust that slowly dissipated, leaving the land peaceful once more. Elara stood, her hands still trembling slightly, as the villagers approached her with gratitude and admiration.\n\n\"Thank you, Elara,\" a villager named Gaius said, bowing before her. \"You have saved our land and restored the balance. The people will remember your name forever. But remember, the heartstone's power is great, and it may test you in ways you cannot imagine. Always trust in yourself and your abilities.\n\nIn the days that followed, Elara was celebrated as a hero. The villagers honored Elara with feasts and songs of praise, their gratitude evident in every word and gesture. Yet, the young girl remained humble, always remembering the wise old woman's words about great responsibility.\n\nWeeks turned into months, and years passed. Elara's powers grew stronger, maturing alongside her wisdom. She used her abilities to protect and heal, loving the land and its people as her own.\n\nThroughout the years, Elara continued to face various challenges, from quelling smaller storms to vanquishing other rogue forces that threatened the peace of her world Elara's reputation spread far and wide, her actions inspiring many to stand up against injustice. Yet, she never sought glory or power, she only wished to help those in need.\n\nOne day, a tall, hooded figure approached Elara in the heart of the village. The figure spoke in a voice as dark as the night, \"Elara, the time has come. The prophecy foretells of a great evil rising from the depths, and only one with the heartstone's power can stand against it. A darkness that threatens to engulf our world, and even end its very existence. The ancient civilization that once bore the heartstone knew of this prophecy and sought to hide it from the world, fearing their power would be used for destruction. Yet, the heartstone found its way to you, and now, it is your destiny to face this darkness and protect our world. The figure, a chronicler of ancient prophecies, shared the grim warning with Elara, who steeled herself against the impending darkness.\n\nIn the years that followed, Elara prepared herself for the culmination of the prophecy. She trained tirelessly, honing her abilities and seeking guidance from the wise elders of the land. She delved into ancient texts, uncovering secrets long lost to time. As the days grew shorter and the nights colder, a sense of foreboding settled over the land.\n\nOn the eve of what the elders believed to be the darkest night, Elara stood on a frost-touched peak, the heartstone in her outstretched hand. She closed her eyes, her mind reaching back to the ancient civilization that had first wielded the heartstone's power. A tear trickled down her cheek as she imagined the hands of her ancestors guiding her, their spirits merging with her own. She felt a surge of power so great, it threatened to consume her. But Elara held onto her resolve, knowing that she must be strong for her world.\n\nWith a cry that echoed across the land, El",
+  "story_length_chars": 8061,
+  "total_time_sec": 46.90107484,
+  "turns": 30
+}

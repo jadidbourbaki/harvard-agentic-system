@@ -1,0 +1,393 @@
+{
+  "agents": {
+    "agent_1": {
+      "latency_ms": [
+        {
+          "value": 25227,
+          "time_collected": "2026-02-22T12:57:32.649097371-05:00"
+        },
+        {
+          "value": 374,
+          "time_collected": "2026-02-22T12:57:33.402005756-05:00"
+        },
+        {
+          "value": 379,
+          "time_collected": "2026-02-22T12:57:34.159503543-05:00"
+        },
+        {
+          "value": 382,
+          "time_collected": "2026-02-22T12:57:34.927046609-05:00"
+        },
+        {
+          "value": 385,
+          "time_collected": "2026-02-22T12:57:35.700396298-05:00"
+        },
+        {
+          "value": 391,
+          "time_collected": "2026-02-22T12:57:36.480366999-05:00"
+        },
+        {
+          "value": 395,
+          "time_collected": "2026-02-22T12:57:37.269162937-05:00"
+        },
+        {
+          "value": 396,
+          "time_collected": "2026-02-22T12:57:38.062304131-05:00"
+        },
+        {
+          "value": 406,
+          "time_collected": "2026-02-22T12:57:38.876280862-05:00"
+        },
+        {
+          "value": 405,
+          "time_collected": "2026-02-22T12:57:39.687072722-05:00"
+        },
+        {
+          "value": 410,
+          "time_collected": "2026-02-22T12:57:40.50803047-05:00"
+        },
+        {
+          "value": 412,
+          "time_collected": "2026-02-22T12:57:41.333357662-05:00"
+        },
+        {
+          "value": 425,
+          "time_collected": "2026-02-22T12:57:42.18177082-05:00"
+        },
+        {
+          "value": 421,
+          "time_collected": "2026-02-22T12:57:43.027145612-05:00"
+        },
+        {
+          "value": 425,
+          "time_collected": "2026-02-22T12:57:43.877605469-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:32.649096511-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:33.402005146-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:34.159502923-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:34.927046269-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:35.700395918-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:36.480366749-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:37.269162367-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:38.062303501-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:38.876279962-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:39.687072152-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:40.50803018-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:41.333356962-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:42.18177022-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:43.027145212-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:43.877605019-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24303,
+          "time_collected": "2026-02-22T12:57:32.649094252-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:57:33.402004086-05:00"
+        },
+        {
+          "value": 21,
+          "time_collected": "2026-02-22T12:57:34.159497213-05:00"
+        },
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T12:57:34.927045829-05:00"
+        },
+        {
+          "value": 28,
+          "time_collected": "2026-02-22T12:57:35.700390078-05:00"
+        },
+        {
+          "value": 33,
+          "time_collected": "2026-02-22T12:57:36.480366499-05:00"
+        },
+        {
+          "value": 34,
+          "time_collected": "2026-02-22T12:57:37.269161347-05:00"
+        },
+        {
+          "value": 35,
+          "time_collected": "2026-02-22T12:57:38.062302961-05:00"
+        },
+        {
+          "value": 44,
+          "time_collected": "2026-02-22T12:57:38.876268003-05:00"
+        },
+        {
+          "value": 44,
+          "time_collected": "2026-02-22T12:57:39.687071742-05:00"
+        },
+        {
+          "value": 48,
+          "time_collected": "2026-02-22T12:57:40.50802979-05:00"
+        },
+        {
+          "value": 50,
+          "time_collected": "2026-02-22T12:57:41.333356092-05:00"
+        },
+        {
+          "value": 60,
+          "time_collected": "2026-02-22T12:57:42.18176991-05:00"
+        },
+        {
+          "value": 60,
+          "time_collected": "2026-02-22T12:57:43.027144882-05:00"
+        },
+        {
+          "value": 61,
+          "time_collected": "2026-02-22T12:57:43.877604509-05:00"
+        }
+      ]
+    },
+    "agent_2": {
+      "latency_ms": [
+        {
+          "value": 378,
+          "time_collected": "2026-02-22T12:57:33.02748018-05:00"
+        },
+        {
+          "value": 377,
+          "time_collected": "2026-02-22T12:57:33.779851103-05:00"
+        },
+        {
+          "value": 385,
+          "time_collected": "2026-02-22T12:57:34.544918246-05:00"
+        },
+        {
+          "value": 387,
+          "time_collected": "2026-02-22T12:57:35.314921866-05:00"
+        },
+        {
+          "value": 388,
+          "time_collected": "2026-02-22T12:57:36.089125572-05:00"
+        },
+        {
+          "value": 393,
+          "time_collected": "2026-02-22T12:57:36.874098058-05:00"
+        },
+        {
+          "value": 396,
+          "time_collected": "2026-02-22T12:57:37.666179337-05:00"
+        },
+        {
+          "value": 407,
+          "time_collected": "2026-02-22T12:57:38.469698646-05:00"
+        },
+        {
+          "value": 405,
+          "time_collected": "2026-02-22T12:57:39.281975793-05:00"
+        },
+        {
+          "value": 410,
+          "time_collected": "2026-02-22T12:57:40.097485172-05:00"
+        },
+        {
+          "value": 412,
+          "time_collected": "2026-02-22T12:57:40.920321372-05:00"
+        },
+        {
+          "value": 422,
+          "time_collected": "2026-02-22T12:57:41.755735173-05:00"
+        },
+        {
+          "value": 424,
+          "time_collected": "2026-02-22T12:57:42.605962654-05:00"
+        },
+        {
+          "value": 425,
+          "time_collected": "2026-02-22T12:57:43.452517859-05:00"
+        },
+        {
+          "value": 424,
+          "time_collected": "2026-02-22T12:57:44.302291586-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:33.02747941-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:33.779850383-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:34.544918006-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:35.314921656-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:36.089124422-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:36.874097508-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:37.666178777-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:38.469698146-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:39.281974963-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:40.097484852-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:40.920320902-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:41.755734603-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:42.605962374-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:43.452517619-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T12:57:44.302291016-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T12:57:33.0274774-05:00"
+        },
+        {
+          "value": 20,
+          "time_collected": "2026-02-22T12:57:33.779849713-05:00"
+        },
+        {
+          "value": 20,
+          "time_collected": "2026-02-22T12:57:34.544917466-05:00"
+        },
+        {
+          "value": 28,
+          "time_collected": "2026-02-22T12:57:35.314921266-05:00"
+        },
+        {
+          "value": 29,
+          "time_collected": "2026-02-22T12:57:36.089118432-05:00"
+        },
+        {
+          "value": 37,
+          "time_collected": "2026-02-22T12:57:36.874096928-05:00"
+        },
+        {
+          "value": 35,
+          "time_collected": "2026-02-22T12:57:37.666178207-05:00"
+        },
+        {
+          "value": 45,
+          "time_collected": "2026-02-22T12:57:38.469697666-05:00"
+        },
+        {
+          "value": 44,
+          "time_collected": "2026-02-22T12:57:39.281973623-05:00"
+        },
+        {
+          "value": 49,
+          "time_collected": "2026-02-22T12:57:40.097484222-05:00"
+        },
+        {
+          "value": 49,
+          "time_collected": "2026-02-22T12:57:40.920320292-05:00"
+        },
+        {
+          "value": 59,
+          "time_collected": "2026-02-22T12:57:41.755734163-05:00"
+        },
+        {
+          "value": 60,
+          "time_collected": "2026-02-22T12:57:42.605961934-05:00"
+        },
+        {
+          "value": 62,
+          "time_collected": "2026-02-22T12:57:43.452517279-05:00"
+        },
+        {
+          "value": 62,
+          "time_collected": "2026-02-22T12:57:44.302290586-05:00"
+        }
+      ]
+    },
+    "agent_3": {
+      "latency_ms": [],
+      "tpot_ms": [],
+      "ttft_ms": []
+    }
+  },
+  "cache_strategy": "flush",
+  "k": 32,
+  "noise_rate": 0,
+  "orla_url": "http://localhost:8081",
+  "story": "...in a land far, far away, there was a tiny village nestled at the foot of a towering mountain. The village was simple, with that charming rusticity that only a place untouched by the march of time could possess. cobblestone streets wound their way through the quiet town, passing qu 1. houses made of stone and wood, their windows glowing softly with the warm light of fireplaces within,\n2. the villagers, 3. dressed in simple clothing, went about their daily tasks with quiet determination, their eyes reflecting a deep-rooted contentment with their simple lives 4. In the heart of the village, a blacksmith's forge could often be heard, ringing with the rhythm of hammer against anvil 5. Its smoke, 6. a mix of iron and charcoal, 7. would waft up into the cool mountain air, 8. creating a thick, dark plume that hung over the village like a protective shroud.\n9. As night fell, the villagers would gather around the town square, the light from the torch-lit cobblestones illuminating their faces with a warm, flickering glow.\n1 10. In the center of the square stood a sturdy oak tree, home to a secluded owl nest that always held the keen, 11. watchful gaze of the village's wise old owl, Old Whisper.\n12. The owl, 1 whispers were sought by the villagers, especially the young ones, as they held stories of old and knowledge that could only be acquired with the passage of time 13. One such night, young Lilian, a curious and imaginative girl, 14. approached Old Whisper, her heart fl 15. pounding softly in her chest. She had heard the old owl's stories on many occasions, but tonight, she had a question 16. that had been gnawing at her for weeks, a question she felt was too small to bother anyone with, but to her, it was of utmost importance.\n\n17. \"Old Whisper,\" she began, her voice barely above a whisper, 18. \"I have been wondering...\" Lilian slowed her pace, gathering her nerves before continuing. \"I've always heard there's a dragon hiding in the 19. deep, dark caves at the heart of the mountain, but no one has ever seen it. I was told that it's a dangerous beast, to be feared and avoided at all costs. But I've always wondered, Old Whisper, is it truly a monster? Or could it be something more, Lilian? Perhaps a misunderstood creature, seeking nothing more than to be left alone? Or maybe, just perhaps, it's 20. a guardian, lying dormant until the time comes when the village needs its protection.\n21. Old Whisper remained silent 22. for a moment, his eyes closed as if contemplating her words. The wind rustled the leaves above, adding a melancholic under 23. to the silence. \"Perhaps,\" he finally replied, 24. his voice, though quiet, resonating with a wisdom that echoed through the night. \"But to truly know the truth, you must embark on a journey, Lilian. Your journey will take you to the heart of the mountain, to the very caves where the dragon is said to reside 26. Armed with courage and an open heart, you may find the truth you seek. 27. Remember, Lilian, the dragon, like all creatures, is a reflection of the world around it. 28. \"But be careful, Lilian,\" Old Whisper continued, his voice losing some of its resonance, 29. \" 30. Fear can cloud our judgement, and the mountain is not a place to underestimate. 31. The caves are treacherous and unpredictable, filled with hidden obstacles and trapdoors.\n32. But always remember, Lilian, courage is not the absence of fear, but the decision to act in spite of it. May the stars guide your way on your journey, and may wisdom guide your heart. Old Whisper's words hung heavy in the air, a whispering melody that echoed through the silent village. Lilian nodded, her heart sw",
+  "story_length_chars": 3655,
+  "total_time_sec": 36.880280776,
+  "turns": 30
+}

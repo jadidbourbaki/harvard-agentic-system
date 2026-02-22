@@ -1,0 +1,516 @@
+{
+  "agents": {
+    "agent_1": {
+      "latency_ms": [
+        {
+          "value": 25711,
+          "time_collected": "2026-02-22T13:18:52.3089285-05:00"
+        },
+        {
+          "value": 717,
+          "time_collected": "2026-02-22T13:18:53.75042344-05:00"
+        },
+        {
+          "value": 733,
+          "time_collected": "2026-02-22T13:18:55.217259283-05:00"
+        },
+        {
+          "value": 748,
+          "time_collected": "2026-02-22T13:18:56.708914466-05:00"
+        },
+        {
+          "value": 749,
+          "time_collected": "2026-02-22T13:18:58.199627814-05:00"
+        },
+        {
+          "value": 763,
+          "time_collected": "2026-02-22T13:18:59.722841898-05:00"
+        },
+        {
+          "value": 763,
+          "time_collected": "2026-02-22T13:19:01.244969608-05:00"
+        },
+        {
+          "value": 783,
+          "time_collected": "2026-02-22T13:19:02.806106777-05:00"
+        },
+        {
+          "value": 790,
+          "time_collected": "2026-02-22T13:19:04.381308908-05:00"
+        },
+        {
+          "value": 787,
+          "time_collected": "2026-02-22T13:19:05.94297459-05:00"
+        },
+        {
+          "value": 801,
+          "time_collected": "2026-02-22T13:19:07.54241455-05:00"
+        },
+        {
+          "value": 828,
+          "time_collected": "2026-02-22T13:19:09.17473826-05:00"
+        },
+        {
+          "value": 817,
+          "time_collected": "2026-02-22T13:19:10.802217503-05:00"
+        },
+        {
+          "value": 844,
+          "time_collected": "2026-02-22T13:19:12.469554202-05:00"
+        },
+        {
+          "value": 827,
+          "time_collected": "2026-02-22T13:19:14.10746916-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:52.30892746-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:53.7504228-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:55.217258563-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:56.708914046-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:58.199626764-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:59.722841598-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:01.244969338-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:02.806106147-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:04.381308478-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:05.94297407-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:07.54241409-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:09.17473763-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:10.802217003-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:19:12.469554022-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:14.10746865-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24455,
+          "time_collected": "2026-02-22T13:18:52.30892411-05:00"
+        },
+        {
+          "value": 25,
+          "time_collected": "2026-02-22T13:18:53.7504216-05:00"
+        },
+        {
+          "value": 37,
+          "time_collected": "2026-02-22T13:18:55.217256043-05:00"
+        },
+        {
+          "value": 34,
+          "time_collected": "2026-02-22T13:18:56.708913416-05:00"
+        },
+        {
+          "value": 43,
+          "time_collected": "2026-02-22T13:18:58.199615854-05:00"
+        },
+        {
+          "value": 48,
+          "time_collected": "2026-02-22T13:18:59.722841178-05:00"
+        },
+        {
+          "value": 61,
+          "time_collected": "2026-02-22T13:19:01.244968928-05:00"
+        },
+        {
+          "value": 63,
+          "time_collected": "2026-02-22T13:19:02.806105237-05:00"
+        },
+        {
+          "value": 69,
+          "time_collected": "2026-02-22T13:19:04.381305668-05:00"
+        },
+        {
+          "value": 79,
+          "time_collected": "2026-02-22T13:19:05.94297335-05:00"
+        },
+        {
+          "value": 88,
+          "time_collected": "2026-02-22T13:19:07.54241362-05:00"
+        },
+        {
+          "value": 102,
+          "time_collected": "2026-02-22T13:19:09.17473687-05:00"
+        },
+        {
+          "value": 105,
+          "time_collected": "2026-02-22T13:19:10.802216553-05:00"
+        },
+        {
+          "value": 101,
+          "time_collected": "2026-02-22T13:19:12.469553793-05:00"
+        },
+        {
+          "value": 118,
+          "time_collected": "2026-02-22T13:19:14.10746809-05:00"
+        }
+      ]
+    },
+    "agent_2": {
+      "latency_ms": [
+        {
+          "value": 723,
+          "time_collected": "2026-02-22T13:18:53.032453934-05:00"
+        },
+        {
+          "value": 733,
+          "time_collected": "2026-02-22T13:18:54.483888445-05:00"
+        },
+        {
+          "value": 742,
+          "time_collected": "2026-02-22T13:18:55.960069229-05:00"
+        },
+        {
+          "value": 740,
+          "time_collected": "2026-02-22T13:18:57.449646064-05:00"
+        },
+        {
+          "value": 760,
+          "time_collected": "2026-02-22T13:18:58.959697303-05:00"
+        },
+        {
+          "value": 758,
+          "time_collected": "2026-02-22T13:19:00.481476619-05:00"
+        },
+        {
+          "value": 777,
+          "time_collected": "2026-02-22T13:19:02.022927191-05:00"
+        },
+        {
+          "value": 783,
+          "time_collected": "2026-02-22T13:19:03.590327508-05:00"
+        },
+        {
+          "value": 774,
+          "time_collected": "2026-02-22T13:19:05.155528507-05:00"
+        },
+        {
+          "value": 798,
+          "time_collected": "2026-02-22T13:19:06.741197812-05:00"
+        },
+        {
+          "value": 803,
+          "time_collected": "2026-02-22T13:19:08.345806925-05:00"
+        },
+        {
+          "value": 809,
+          "time_collected": "2026-02-22T13:19:09.984328614-05:00"
+        },
+        {
+          "value": 822,
+          "time_collected": "2026-02-22T13:19:11.625143278-05:00"
+        },
+        {
+          "value": 810,
+          "time_collected": "2026-02-22T13:19:13.279818586-05:00"
+        },
+        {
+          "value": 821,
+          "time_collected": "2026-02-22T13:19:14.929335921-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:53.032453614-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:54.483887745-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:55.960068379-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:57.449645634-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:58.959696933-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:00.481476389-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:02.022926591-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:03.590326888-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:05.155527787-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:06.741197192-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:08.345805215-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:09.984327884-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:11.625142268-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:13.279817926-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:19:14.929335341-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 25,
+          "time_collected": "2026-02-22T13:18:53.032453324-05:00"
+        },
+        {
+          "value": 38,
+          "time_collected": "2026-02-22T13:18:54.483886985-05:00"
+        },
+        {
+          "value": 45,
+          "time_collected": "2026-02-22T13:18:55.960067279-05:00"
+        },
+        {
+          "value": 45,
+          "time_collected": "2026-02-22T13:18:57.449645284-05:00"
+        },
+        {
+          "value": 44,
+          "time_collected": "2026-02-22T13:18:58.959695743-05:00"
+        },
+        {
+          "value": 61,
+          "time_collected": "2026-02-22T13:19:00.481476009-05:00"
+        },
+        {
+          "value": 59,
+          "time_collected": "2026-02-22T13:19:02.022925621-05:00"
+        },
+        {
+          "value": 64,
+          "time_collected": "2026-02-22T13:19:03.590326278-05:00"
+        },
+        {
+          "value": 78,
+          "time_collected": "2026-02-22T13:19:05.155525887-05:00"
+        },
+        {
+          "value": 75,
+          "time_collected": "2026-02-22T13:19:06.741196582-05:00"
+        },
+        {
+          "value": 98,
+          "time_collected": "2026-02-22T13:19:08.345803215-05:00"
+        },
+        {
+          "value": 102,
+          "time_collected": "2026-02-22T13:19:09.984326924-05:00"
+        },
+        {
+          "value": 110,
+          "time_collected": "2026-02-22T13:19:11.625141318-05:00"
+        },
+        {
+          "value": 106,
+          "time_collected": "2026-02-22T13:19:13.279817116-05:00"
+        },
+        {
+          "value": 109,
+          "time_collected": "2026-02-22T13:19:14.929334821-05:00"
+        }
+      ]
+    },
+    "agent_3": {
+      "latency_ms": [
+        {
+          "value": 25756,
+          "time_collected": "2026-02-22T13:18:52.85125938-05:00"
+        },
+        {
+          "value": 1199,
+          "time_collected": "2026-02-22T13:18:54.204915637-05:00"
+        },
+        {
+          "value": 1434,
+          "time_collected": "2026-02-22T13:18:55.75568132-05:00"
+        },
+        {
+          "value": 1465,
+          "time_collected": "2026-02-22T13:18:58.081294804-05:00"
+        },
+        {
+          "value": 1503,
+          "time_collected": "2026-02-22T13:19:00.982877838-05:00"
+        },
+        {
+          "value": 1476,
+          "time_collected": "2026-02-22T13:19:05.942921511-05:00"
+        },
+        {
+          "value": 1575,
+          "time_collected": "2026-02-22T13:19:08.62303243-05:00"
+        },
+        {
+          "value": 1594,
+          "time_collected": "2026-02-22T13:19:10.547963657-05:00"
+        },
+        {
+          "value": 507,
+          "time_collected": "2026-02-22T13:19:11.250158767-05:00"
+        },
+        {
+          "value": 1613,
+          "time_collected": "2026-02-22T13:19:14.064089536-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:52.85125899-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:54.204915357-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:18:55.755681-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:18:58.081294494-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:19:00.982877498-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:19:05.942921211-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:19:08.62303211-05:00"
+        },
+        {
+          "value": 12,
+          "time_collected": "2026-02-22T13:19:10.547963477-05:00"
+        },
+        {
+          "value": 12,
+          "time_collected": "2026-02-22T13:19:11.250157987-05:00"
+        },
+        {
+          "value": 12,
+          "time_collected": "2026-02-22T13:19:14.064089276-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24466,
+          "time_collected": "2026-02-22T13:18:52.85125796-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:18:54.204914197-05:00"
+        },
+        {
+          "value": 14,
+          "time_collected": "2026-02-22T13:18:55.75567856-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:18:58.081293564-05:00"
+        },
+        {
+          "value": 22,
+          "time_collected": "2026-02-22T13:19:00.982874528-05:00"
+        },
+        {
+          "value": 23,
+          "time_collected": "2026-02-22T13:19:05.942920051-05:00"
+        },
+        {
+          "value": 20,
+          "time_collected": "2026-02-22T13:19:08.62303121-05:00"
+        },
+        {
+          "value": 24,
+          "time_collected": "2026-02-22T13:19:10.547962647-05:00"
+        },
+        {
+          "value": 16,
+          "time_collected": "2026-02-22T13:19:11.250155487-05:00"
+        },
+        {
+          "value": 13,
+          "time_collected": "2026-02-22T13:19:14.064088656-05:00"
+        }
+      ]
+    }
+  },
+  "cache_strategy": "flush",
+  "k": 64,
+  "noise_rate": 1,
+  "orla_url": "http://localhost:8081",
+  "story": "...in a faraway land, there lived a young Princess named Elara. She was known for her kindness and her love for adventure. Despite her royal status, Elara preferred the company of the common folk and the beautiful landscapes outside the castle walls.\n\nOne day, while exploring the forest, she stumbled upon a hidden path, leading further than she had ever ventured before. Intrigued, she decided to follow it, leaving the familiar sounds of the forest behind.\n\nAs she walked, the path grew narrow and twisty, vines and flowers tangling around her legs. The sun began to sink Below, the shadows lengthened, painting the forest floor in hues of deep emerald and rich umber. Elara's heart pounded with an exhilarating mix of fear and anticipation. The air was thick with an otherworldly silence, broken only by the occasional rustle of leaves and the distant hoot of an owl. Elara's footsteps echoed in the stillness, her heartbeat the only sound that seemed to penetrate the dense silence.\n\nThe path led her to a clearing where a majestic tree stood, its branches reaching for the star-studded sky like the fingers of an ancient, wise being. At its base, a small, ornate door was hidden amongst the roots, covered in intricate carvings of creatures and plant life that seemed to dance and writhe in the dim light.\n\nElara hesitated for a moment, her heart pounding Notable carvings on the door mirrored the flora and fauna of her kingdom, but with an uncanny vitality that seemed to come alive under her gaze. The princess reached out, the cool metal of the handle fitting perfectly into her hand.\n\nWith a deep breath, she pushed the door open, revealing a dimly lit tunnel that extended into the heart of the tree. Elara hesitated for a moment, then stepped inside, the door closing behind her with a soft thud.\n\nThe tunnel was narrow and winding, lined with luminescent crystals that cast a soft, ethere glowing light on the walls. Elara felt a sense of wonder as she walked deeper into the tree, the air cool and fresh. The tunnel opened up into a large chamber, filled with books and scrolls, maps and mysterious artifacts. In the center of the chamber stood a weary-looking old man Clad in tattered robes and leaning on a gnarled staff, the old man looked up as Elara entered the chamber. His eyes glowed with wisdom and a touch of sadness. He approached her, his movements slow but not ungraceful.\n\n\"Ah, a traveler,\" he said, his voice like the whisper of leaves in the wind. \"I've been waiting for someone with a heart as brave as wildfire and a mind as vast as the cosmos. You are the Princess Elara, I presume?\"\n\nElara nodded, her eyes wide with curiosity and a sense of awe. The old man smiled, his eyes twinkling.\n\n\"I have a quest for you, Princess,\" he began, his voice echoing slightly in the large chamber. \"A quest that will test your strength and your courage, but will also reveal the true extent of your wisdom and compassion. My dear princess, deep within this enchanted forest lies a mystical crystal. This crystal holds the power to heal the sick, mend broken hearts, and restore peace to the troubled lands of your kingdom. But it is guarded by the Witch of Shadows, a malevolent sor sorceress who seeks to harbors her powers and keep the crystal trapped forever.\n\nIf you, princess Elara, can retrieve the crystal and return it to the heart of your kingdom, peace and prosperity shall be restored, and you will be remembered as a heroine among the ages. However, the task is not without danger. The Witch of Shadows guards the crystal with unthinkable darkness and cunning. She has enslaved the very creatures of the forest to do her bidding, making them dangerous to even approach.\n\nBut fear not, for you are strong and wise beyond your years, Princess Elara. I have chosen you for this quest because I believe in your ability to overcome any obstacle and bring light to the darkest corners.\n\nIn the heart of the Witch of Shadows' lair, you will find a magic mirror that can reveal her location. To find the magic mirror, you must first navigate the twisted and treacherous paths of the enchanted forest. The creatures that dwell within will be wary of your presence, for they have been tainted by the darkness of the Witch.\n\nBut do not fear, for you have the heart of a leader and the courage of a warrior. you will need to use your wits and your kindness to turn these creatures back towards the light.\n\nAs you journey deeper into the forest, you will encounter various trials and riddles that must be solved to progress. The answers to these riddles can be found in the books and scrolls that line the chamber you stand in now. Be sure to study them carefully, for they hold the secrets to unlocking the mysteries of the forest and defeating the Witch of Shadows.\n\nAs you venture forth, remember that kindness and understanding are your greatest weapons against the dark The old man nodded, his eyes sensing the resolve in Elara's gaze. \"I have given you the tools, now it's up to you to use them wisely. The mirror leading to the Witch's lair is concealed within the heart of a ancient, dying willow tree In the heart of the enchanted forest, a path of intertwined vines and shimmering flowers leads the way.\n\nAs Elara approaches the ancient willow tree, a chill runs through her, the air heavy with an oppressive silence. She hesitates, her heart pounding as she takes a deep breath, steadying herself. The tree's branches sway gently, the leaves rustling, like whispers of ancient secrets. With a mix of fear and determination, Elara edges closer to the tree, her heart pounding in her chest.\n\nAs she nears the heart of the tree, the ground beneath her feet trembles, and she hears the faintest whisper of a song, a melody as ancient as the tree itself. The song grows louder, urging her to seek the mirror hidden within.\n\nElara reaches out, her hand gently grasping the rough bark of the tree. As she does, the branches part, revealing a hidden alcove within the tree. Inside, a small, ornate mirror reflects her face, its surface shimmering with an otherworldly light. As she approaches the mirror, her reflection wavers, blurring and shifting. Suddenly, the mirror shatters, revealing a darkness so deep it seems to swallow the light. A cold, malevolent voice echoes from within, taunting and mocking Elara's attempts to retrieve the mirror.\n\nBut Elara stands her ground, her eyes never wavering from the darkness. She whispers a prayer for guidance, her voice echoing through the chamber and reverberating within the tree. The darkness snarls in response, but Elara's resolve only strengthens. With a swift movement, she reaches into the darkness and grasps the mirror fragments, pulling them together with a determined grace. The mirror reforms, its shimmering surface now reflecting the Witch of Shadows' lair. Elara takes a deep breath, the air thick with anticipation. She steps forward, her heart pounding in time with the pulse of the enchanted forest.\n\nThe path before her leads to a dark and foreboding castle, its towers spiraling into the clouds like skeletal fingers reaching for the heavens. As she approaches, the castle walls seem to pulse with an unnatural life, shrouded in shadows that twist and writhe like living tendrils. Elara pauses, her breath catching in her throat. She squares her shoulders, drawing on the strength that has carried her this far. With a resolute stride, she steps onto the cobbled path leading to the castle, her footsteps echoing hollowly in the silence.\n\nThe castle gates loom before her, black iron bars altering the light, casting a ghostly pallor on the surrounding landscape. As she approaches, the gates creak open, revealing the dark interior of the castle. Elara hesitates for a moment, her heart pounding. She takes a deep breath, steeling herself for what lies ahead. With a determined stride, she enters the castle, her eyes adjusting to the dim light within. The walls are adorned with twisted, gnarled remnants of what once were beautiful tapestries, their colors now faded and muted. The air is thick with the scent of",
+  "story_length_chars": 8106,
+  "total_time_sec": 48.331571982,
+  "turns": 30
+}

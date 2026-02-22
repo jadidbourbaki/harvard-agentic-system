@@ -1,0 +1,393 @@
+{
+  "agents": {
+    "agent_1": {
+      "latency_ms": [
+        {
+          "value": 25498,
+          "time_collected": "2026-02-22T13:05:12.439644145-05:00"
+        },
+        {
+          "value": 726,
+          "time_collected": "2026-02-22T13:05:13.894881298-05:00"
+        },
+        {
+          "value": 731,
+          "time_collected": "2026-02-22T13:05:15.354539526-05:00"
+        },
+        {
+          "value": 728,
+          "time_collected": "2026-02-22T13:05:16.811642592-05:00"
+        },
+        {
+          "value": 734,
+          "time_collected": "2026-02-22T13:05:18.280439543-05:00"
+        },
+        {
+          "value": 734,
+          "time_collected": "2026-02-22T13:05:19.747143966-05:00"
+        },
+        {
+          "value": 733,
+          "time_collected": "2026-02-22T13:05:21.212963002-05:00"
+        },
+        {
+          "value": 736,
+          "time_collected": "2026-02-22T13:05:22.687383391-05:00"
+        },
+        {
+          "value": 739,
+          "time_collected": "2026-02-22T13:05:24.176061867-05:00"
+        },
+        {
+          "value": 737,
+          "time_collected": "2026-02-22T13:05:25.651605038-05:00"
+        },
+        {
+          "value": 738,
+          "time_collected": "2026-02-22T13:05:27.128310143-05:00"
+        },
+        {
+          "value": 741,
+          "time_collected": "2026-02-22T13:05:28.609872165-05:00"
+        },
+        {
+          "value": 741,
+          "time_collected": "2026-02-22T13:05:30.090957645-05:00"
+        },
+        {
+          "value": 739,
+          "time_collected": "2026-02-22T13:05:31.570474508-05:00"
+        },
+        {
+          "value": 743,
+          "time_collected": "2026-02-22T13:05:33.063201994-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:12.439643655-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:13.894880408-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:15.354538606-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:16.811641832-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:18.280438793-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:19.747143496-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:21.212962322-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:22.687382841-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:24.176060857-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:25.651604518-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:27.128309413-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:28.609871615-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:30.090956775-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:31.570473658-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:33.063201424-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24236,
+          "time_collected": "2026-02-22T13:05:12.439642465-05:00"
+        },
+        {
+          "value": 16,
+          "time_collected": "2026-02-22T13:05:13.894879228-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:05:15.354528246-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:05:16.811641182-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:05:18.280418363-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:05:19.747142796-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:05:21.212961702-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:22.687382051-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:24.176043387-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:25.651603918-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:27.128308733-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:28.609870815-05:00"
+        },
+        {
+          "value": 19,
+          "time_collected": "2026-02-22T13:05:30.090956085-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:31.570472828-05:00"
+        },
+        {
+          "value": 19,
+          "time_collected": "2026-02-22T13:05:33.063200814-05:00"
+        }
+      ]
+    },
+    "agent_2": {
+      "latency_ms": [
+        {
+          "value": 728,
+          "time_collected": "2026-02-22T13:05:13.168432459-05:00"
+        },
+        {
+          "value": 728,
+          "time_collected": "2026-02-22T13:05:14.623397627-05:00"
+        },
+        {
+          "value": 728,
+          "time_collected": "2026-02-22T13:05:16.08335518-05:00"
+        },
+        {
+          "value": 733,
+          "time_collected": "2026-02-22T13:05:17.545470091-05:00"
+        },
+        {
+          "value": 731,
+          "time_collected": "2026-02-22T13:05:19.012475149-05:00"
+        },
+        {
+          "value": 732,
+          "time_collected": "2026-02-22T13:05:20.479451708-05:00"
+        },
+        {
+          "value": 737,
+          "time_collected": "2026-02-22T13:05:21.951018929-05:00"
+        },
+        {
+          "value": 749,
+          "time_collected": "2026-02-22T13:05:23.436470602-05:00"
+        },
+        {
+          "value": 737,
+          "time_collected": "2026-02-22T13:05:24.913668529-05:00"
+        },
+        {
+          "value": 737,
+          "time_collected": "2026-02-22T13:05:26.38933195-05:00"
+        },
+        {
+          "value": 739,
+          "time_collected": "2026-02-22T13:05:27.868105114-05:00"
+        },
+        {
+          "value": 739,
+          "time_collected": "2026-02-22T13:05:29.349491089-05:00"
+        },
+        {
+          "value": 739,
+          "time_collected": "2026-02-22T13:05:30.830529859-05:00"
+        },
+        {
+          "value": 748,
+          "time_collected": "2026-02-22T13:05:32.319245665-05:00"
+        },
+        {
+          "value": 745,
+          "time_collected": "2026-02-22T13:05:33.809058125-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:13.168432189-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:14.623396957-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:16.08335415-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:17.545469411-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:19.012474409-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:20.479451108-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:21.951018319-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:23.436469922-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:24.913667799-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:26.38933144-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:27.868104254-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:29.349490499-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:30.830529409-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:32.319245115-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:05:33.809057635-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 16,
+          "time_collected": "2026-02-22T13:05:13.168431549-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:05:14.623396117-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:05:16.08334461-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:05:17.545468471-05:00"
+        },
+        {
+          "value": 17,
+          "time_collected": "2026-02-22T13:05:19.012473299-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:20.479450378-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:21.951017939-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:23.436469213-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:24.913666679-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:26.38933055-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:27.868103504-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:29.349489809-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:30.830528889-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:32.319244485-05:00"
+        },
+        {
+          "value": 18,
+          "time_collected": "2026-02-22T13:05:33.809056995-05:00"
+        }
+      ]
+    },
+    "agent_3": {
+      "latency_ms": [],
+      "tpot_ms": [],
+      "ttft_ms": []
+    }
+  },
+  "cache_strategy": "preserve",
+  "k": 64,
+  "noise_rate": 0,
+  "orla_url": "http://localhost:8081",
+  "story": "...in a land far, far away, there was a young girl named Elara. She lived in a small, humble cottage with her mother and father. Despite their meager means, they were content and loved each other deeply.\n\nOne day, a mysterious old woman visited their home. She carried a silver candlestick wrapped in a velvet cloak, and her eyes shimmered like the stars. The old woman introduced herself as Morrigan, a seer from the enchanted forest. She said she had a prophecy for Elara, that she would embark on a grand adventure and unlock hidden powers within herself. The enchanted forest, Morrigan explained, was in grave danger, and Elara was the key to its salvation. With a heavy heart, Elara's parents agreed to send her on this perilous journey.\n\nThe following morning, Elara set out on her journey, clutching the silver candlestick given by Morrigan. As she walked through the familiar fields and forests, she couldn't help but feel a sense of apprehension. She had never been beyond the borders of her homeland, and the world beyond was shrouded in mysteries and uncertainties. With every step she took, the terrain changed, from the lush, green meadows to the dense, dark forests, filled with the melody of unknown birds and the rustling of unseen creatures.\n\nAs night fell, Elara found herself lost in a grove of ancient, towering trees that stood silhouetted against the eerie glow of the moon. The air was thick with an otherworldly scent, and a strange, ethereal light emanated from the silver candlestick, illuminating her path.\n\nSuddenly a creature emerged from the shadows, its eyes glowing with an otherworldly light. It was a snake-like entity with a human face, adorned in jewelry that seemed to pulsate with an otherworldly energy. The entity introduced itself as Kazrar, a guardian of the enchanted forest Kazrar, with a voice that echoed through the grove, revealed that the silver candlestick was an artifact imbued with the power to navigate the forest's labyrinthine paths. Elara, he said, was destined to use this power to find the Heart of the Forest Elara, with a confused heart but a newfound sense of determination, approached Kazrar, who continued to speak. \"The Heart of the Forest is the central pulsating essence of this mystical land,\" he explained. \"It has been taken by the darkness that now threatens the forest's existence. To restore the Heart of the Forest and save the enchanted forest, you must travel to the Dark Waters, a mystical body of water hidden deep within the forest. The Heart of the Forest is guarded by the Siren Sisters, three powerful enchantresses who possess the key to the Heart Elara, with a resolve now burning within her, listened intently as Kazrar provided further guidance. \"The Dark Waters are shrouded in a perpetual twilight,\" he said. \"The silver candlestick's glow will be your only light in the darkness. As you near the Waters, you will encounter a series of trials designed to test your courage and wisdom. Do not falter, for each trial you conquer brings you closer to the Siren Sisters and the Heart of the Forest.\n\nRemember, the candlestick's light will guide your way, but may also attract unwanted attention. Be vigilant and use its light wisely. As you journey deeper into the forest, you will encounter various enchanted creatures, some friendly, others not so much. Trust your instincts and treat all beings with kindness and respect, but be prepared to defend yourself Elara, with a resolve now burning within her, murmured a quiet thank you to Kazrar before continuing on her journey. The ethereal light from the silver candlestick guided her through the dense, moonlit forest, casting long, dancing shadows on the forest floor. She walked for hours, the silence breaks only with the hoot of owls and the distant hymn of nighttime creatures. As Elara ventures deeper into the wood, she encounters a clearing illuminated by a mesmerizing dance of fireflies. In the center of the clearing stands a magnificent tree, its branches ad intertwined as if embracing the sky. At the base of the tree, there was an old, worn stepping stone, beckoning Elara to approach. As she stepped onto the stone, she felt a surge of energy coursing through her, and the fireflies swarmed around her, their lights brighter and more vibrant than ever before. The air around her hummed with an energy not of this world, and the silver candlestick pulsed in response. Elara, filled with a sense of awe and wonder, continued forward, the fireflies lighting her path through the clearing and into the next part of the forest, where the trees grew denser and the ground beneath her feet was covered in a thick, mossy carpet. The air was damp and heavy, and the scent of decay lingered in the air.\n\nAs she walked, she heard strange noises coming from the darkness: whispers, hushed and eerie, as if the very trees themselves were sharing secrets. The branches above became gnarled and twisted, seeming to reach out to her with ancient, grasping fingers. The ground beneath Elara's feet started to shift, and she found herself traversing narrow, tre treacherous paths between towering roots. Panic began to rise within her as the shadows seemed to close in, the whispers growing louder and more insistent.\n\nSuddenly, a beast emerged from the darkness, its eyes burning with an unholy light. It was a monstrous creature with countless eyes that glowed like embers, its body covered in sharp, twisted spines. The air around it crackled with electricity, and it let out a terrifying roar that shook the very earth beneath Elara's feet.\n\nElara stood frozen in fear, her heart pounding In that moment of terror, Elara remembered Kazrar's words. She dug deep, finding a wellspring of courage that she didn't know she possessed. With a swift motion, she raised the silver candlestick, its light illuminating the dark forest around her.\n\nThe beast rec illed at the light, its eyes dimming, and it retreated into the shadows from which it came. Elara, vulnerable and yet victorious, breathed a sigh of relief. As she continued her journey, the forest seemed to ease, the twisted branches and gnarled roots giving way to a path leading her through a tranquil, moonlit glade. Here, the undergrowth was a carpet of vibrant, bioluminescent flowers, their petals shimmering with iridescent hues. The glade was alive with the gentle hum of fireflies and the soft songs of creatures unknown, their melodies mingling with the whispers of the breeze. In the center of the glade stood an ancient, majestic tree, its roots intertwined in an intricate dance that spoke of countless years.\n\nAs Elara approached the tree, she felt a sense of peace wash over her, as if the trees themselves were whispering words of encouragement. In the center of the tree's base, there was an ornate, silver bowl, half-filled with shimmering, glowing liquid. Elara, entranced by its beauty, reached out and gently touched the bowl, feeling an immediate connection to the power within. In that moment, a vision flooded her mind, revealing a series of trials that lay ahead. She saw images of treacherous terrains, hidden traps, and fierce beasts. But she also saw herself, strong and resilient, overcoming each obstacle with determination and grace. As the vision faded, Elara felt a renewed sense of purpose and strength. With the silver candlestick held high, she continued her journey, the illuminated path leading her through the heart of the enchanted forest.\n\nThe trials mentioned in her vision approached swiftly.\n\nThe first trial presented a towering cliff, its face smooth and slick with moisture. Elara stood near a narrow ledge, the abyss yawning below. A wheat-colored path, hardly visible, zigzagged its way up the precipice. As Elara approached the path, she hesitantly placed one foot onto the first step, her heart pounding in her chest. With each step, the path narrowed and the drop below grew more treacherous, but Elara's resolve never wavered. The silver candlestick's",
+  "story_length_chars": 7994,
+  "total_time_sec": 46.868442172,
+  "turns": 30
+}

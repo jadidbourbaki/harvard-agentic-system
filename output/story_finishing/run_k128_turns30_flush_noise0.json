@@ -1,0 +1,393 @@
+{
+  "agents": {
+    "agent_1": {
+      "latency_ms": [
+        {
+          "value": 26294,
+          "time_collected": "2026-02-22T13:30:51.978402197-05:00"
+        },
+        {
+          "value": 1447,
+          "time_collected": "2026-02-22T13:30:54.86444179-05:00"
+        },
+        {
+          "value": 1469,
+          "time_collected": "2026-02-22T13:30:57.790653396-05:00"
+        },
+        {
+          "value": 1486,
+          "time_collected": "2026-02-22T13:31:00.750606563-05:00"
+        },
+        {
+          "value": 1503,
+          "time_collected": "2026-02-22T13:31:03.753912056-05:00"
+        },
+        {
+          "value": 1521,
+          "time_collected": "2026-02-22T13:31:06.785494066-05:00"
+        },
+        {
+          "value": 1537,
+          "time_collected": "2026-02-22T13:31:09.855104273-05:00"
+        },
+        {
+          "value": 1552,
+          "time_collected": "2026-02-22T13:31:12.951880139-05:00"
+        },
+        {
+          "value": 1580,
+          "time_collected": "2026-02-22T13:31:16.096113094-05:00"
+        },
+        {
+          "value": 1602,
+          "time_collected": "2026-02-22T13:31:19.29052507-05:00"
+        },
+        {
+          "value": 1622,
+          "time_collected": "2026-02-22T13:31:22.520709972-05:00"
+        },
+        {
+          "value": 1644,
+          "time_collected": "2026-02-22T13:31:25.799726495-05:00"
+        },
+        {
+          "value": 1666,
+          "time_collected": "2026-02-22T13:31:29.127724906-05:00"
+        },
+        {
+          "value": 1691,
+          "time_collected": "2026-02-22T13:31:32.494948389-05:00"
+        },
+        {
+          "value": 1703,
+          "time_collected": "2026-02-22T13:31:35.89703783-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:30:51.978401867-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:30:54.86444083-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:30:57.790652676-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:31:00.750605283-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:31:03.753910367-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:06.785493466-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:09.855103153-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:12.951879499-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:16.096111874-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:19.29052401-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:22.520708792-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:25.799725445-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:29.127723976-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:32.494947469-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:35.89703671-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24320,
+          "time_collected": "2026-02-22T13:30:51.978400737-05:00"
+        },
+        {
+          "value": 28,
+          "time_collected": "2026-02-22T13:30:54.86443947-05:00"
+        },
+        {
+          "value": 45,
+          "time_collected": "2026-02-22T13:30:57.790643546-05:00"
+        },
+        {
+          "value": 60,
+          "time_collected": "2026-02-22T13:31:00.750604393-05:00"
+        },
+        {
+          "value": 70,
+          "time_collected": "2026-02-22T13:31:03.753896637-05:00"
+        },
+        {
+          "value": 87,
+          "time_collected": "2026-02-22T13:31:06.785492436-05:00"
+        },
+        {
+          "value": 96,
+          "time_collected": "2026-02-22T13:31:09.855102223-05:00"
+        },
+        {
+          "value": 108,
+          "time_collected": "2026-02-22T13:31:12.951878439-05:00"
+        },
+        {
+          "value": 129,
+          "time_collected": "2026-02-22T13:31:16.096102624-05:00"
+        },
+        {
+          "value": 142,
+          "time_collected": "2026-02-22T13:31:19.29052314-05:00"
+        },
+        {
+          "value": 151,
+          "time_collected": "2026-02-22T13:31:22.520708122-05:00"
+        },
+        {
+          "value": 167,
+          "time_collected": "2026-02-22T13:31:25.799724425-05:00"
+        },
+        {
+          "value": 185,
+          "time_collected": "2026-02-22T13:31:29.127723077-05:00"
+        },
+        {
+          "value": 207,
+          "time_collected": "2026-02-22T13:31:32.494946569-05:00"
+        },
+        {
+          "value": 222,
+          "time_collected": "2026-02-22T13:31:35.89703579-05:00"
+        }
+      ]
+    },
+    "agent_2": {
+      "latency_ms": [
+        {
+          "value": 1438,
+          "time_collected": "2026-02-22T13:30:53.416514273-05:00"
+        },
+        {
+          "value": 1456,
+          "time_collected": "2026-02-22T13:30:56.321312116-05:00"
+        },
+        {
+          "value": 1473,
+          "time_collected": "2026-02-22T13:30:59.264425297-05:00"
+        },
+        {
+          "value": 1499,
+          "time_collected": "2026-02-22T13:31:02.249943571-05:00"
+        },
+        {
+          "value": 1509,
+          "time_collected": "2026-02-22T13:31:05.263506743-05:00"
+        },
+        {
+          "value": 1531,
+          "time_collected": "2026-02-22T13:31:08.317483189-05:00"
+        },
+        {
+          "value": 1544,
+          "time_collected": "2026-02-22T13:31:11.399669024-05:00"
+        },
+        {
+          "value": 1563,
+          "time_collected": "2026-02-22T13:31:14.515920853-05:00"
+        },
+        {
+          "value": 1591,
+          "time_collected": "2026-02-22T13:31:17.687715332-05:00"
+        },
+        {
+          "value": 1607,
+          "time_collected": "2026-02-22T13:31:20.898466029-05:00"
+        },
+        {
+          "value": 1634,
+          "time_collected": "2026-02-22T13:31:24.154840924-05:00"
+        },
+        {
+          "value": 1661,
+          "time_collected": "2026-02-22T13:31:27.461524363-05:00"
+        },
+        {
+          "value": 1675,
+          "time_collected": "2026-02-22T13:31:30.803246137-05:00"
+        },
+        {
+          "value": 1698,
+          "time_collected": "2026-02-22T13:31:34.193503632-05:00"
+        },
+        {
+          "value": 1729,
+          "time_collected": "2026-02-22T13:31:37.626636423-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:30:53.416513553-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:30:56.321311426-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:30:59.264424747-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-22T13:31:02.249942871-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:05.263505913-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:08.317482599-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:11.399668384-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:14.515920333-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:17.687714302-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:20.898465549-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:24.154840524-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:27.461523623-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:30.803245597-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:34.193502762-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-22T13:31:37.626635703-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 20,
+          "time_collected": "2026-02-22T13:30:53.416512613-05:00"
+        },
+        {
+          "value": 35,
+          "time_collected": "2026-02-22T13:30:56.321310066-05:00"
+        },
+        {
+          "value": 49,
+          "time_collected": "2026-02-22T13:30:59.264423037-05:00"
+        },
+        {
+          "value": 63,
+          "time_collected": "2026-02-22T13:31:02.249941621-05:00"
+        },
+        {
+          "value": 74,
+          "time_collected": "2026-02-22T13:31:05.263504163-05:00"
+        },
+        {
+          "value": 93,
+          "time_collected": "2026-02-22T13:31:08.317481649-05:00"
+        },
+        {
+          "value": 101,
+          "time_collected": "2026-02-22T13:31:11.399667484-05:00"
+        },
+        {
+          "value": 117,
+          "time_collected": "2026-02-22T13:31:14.515919443-05:00"
+        },
+        {
+          "value": 133,
+          "time_collected": "2026-02-22T13:31:17.687711252-05:00"
+        },
+        {
+          "value": 144,
+          "time_collected": "2026-02-22T13:31:20.898464349-05:00"
+        },
+        {
+          "value": 159,
+          "time_collected": "2026-02-22T13:31:24.154839494-05:00"
+        },
+        {
+          "value": 180,
+          "time_collected": "2026-02-22T13:31:27.461522643-05:00"
+        },
+        {
+          "value": 192,
+          "time_collected": "2026-02-22T13:31:30.803244317-05:00"
+        },
+        {
+          "value": 212,
+          "time_collected": "2026-02-22T13:31:34.193498522-05:00"
+        },
+        {
+          "value": 226,
+          "time_collected": "2026-02-22T13:31:37.626634473-05:00"
+        }
+      ]
+    },
+    "agent_3": {
+      "latency_ms": [],
+      "tpot_ms": [],
+      "ttft_ms": []
+    }
+  },
+  "cache_strategy": "flush",
+  "k": 128,
+  "noise_rate": 0,
+  "orla_url": "http://localhost:8081",
+  "story": "...in a land far, far away, there was a young girl named Elara. She lived in a small, humble cottage with her mother and father. Despite their meager means, they were content and loved each other deeply.\n\nOne day, a mysterious old woman visited their home. She carried a silver wand and wore a robe of shimmering, iridescent fabric. Elara's parents, though wary, invited the woman in.\n\n\"I have trekked far and wide to meet you, young Elara,\" the old woman said. \"I have been watching you from af far, observing your kind heart and enchanted by your spirit. I have a gift for you, a gift that will change your destiny. It's a magic spell, a gift that can make one wish come true. But be warned, this gift must be used wisely, as its power is greater than you can imagine.\"\n\nElara, overwhelmed and unsure, looked at her parents for guidance. Her father, with a relieved sigh, spoke up, \"If this is truly a gift and not some trick, then let Elara's wish be for the safety and happiness of her family.\" \"The old woman nodded solemnly, her eyes twinkling with an otherworldly wisdom. She extended her silver wand and uttered a spell, its words in a language unknown to mere mortals. A soft, warm glow enveloped Elara, and her parents felt a surge of comfort and love.\n\n\"Your wish is granted, young Elara,\" the old woman said. \"From this day forward, your family shall be blessed with an abundance of happiness and protection from harm. However, remember, this spell extends only to you and those you hold dear. Choose your next wish carefully, for it may impact not only yourself but the lives of those closest to you. Pausing, Elara pondered the possibilities. Should she wish for wealth, for fame, for power? She thought of her family's contentment, of the love that filled their small cottage, and of the joy they shared.\n\n\"I wish,\" Elara began, her voice steady and sure, \"for my family to always be together, to never be separated by distance or danger. I wish for our love to grow stronger with each passing day, and for our home to be a sanctuary, a place where we can find sol comfort, peace, and joy no matter what challenges we face. The old woman nodded once again, a soft smile playing on her lips. She extended her silver wand and uttered another spell, its words echoing with the power of a binding promise. A warm, golden light enveloped Elara, her parents, and their humble cottage, weaving an unbreakable bond between them.\n\nIn the years that followed, Elara grew into a wise and compassionate young woman. Her family remained united, their love for each other only growing stronger with time. Elara used her magic wisely, always putting her family's needs before her own, and her wish brought them immense happiness and prosperity. They lived in harmony with the land, and Elara's fame as a wise and benevolent sorceress spread far and wide.\n\nBut with fame came danger, as some coveted her power for their own selfish desires. Yet, Elara never wavered from her original wish, always prioritizing her family's safety over her own ambition.\n\nOne day, a dark sorcerer, seeking to gain control over Elara's magic, launched a fierce attack on their cottage. Elara fought valiantly, using her magic to protect her family and home. Despite the dark sorcerer's powerful spells, Elara's love for her family and the power of her original wish gave her strength. With a final burst of energy, she cast a spell that sent the dark sorcerer fleeing, vowing to return another day.\n\nExhausted but victorious, Elara collapsed, her parents and loved ones rushing to her side. As they tended to her wounds, Elara felt a profound sense of gratitude for the old woman who had given her the gift of the magic spell. In the days following the battle, Elara's wounds healed quickly, thanks to the strong protective magic enveloping her family. The dark sorcerer, despite his vow, never returned, for he realized that Elara's love and determination were stronger than any dark spell he could cast.\n\nElara continued to live a life filled with love, wisdom, and compassion. She became a beacon of hope for her people, using her magic to heal, protect, and guide them. Her fame continued to grow, but she never lost sight of her original wish, always putting her family first. \"And so, Elara continued to live a life of peace and prosperity, always cherishing the bond that united her family. The years passed, and her wisdom grew. She shared her knowledge with others, helping those in need and spreading the love that filled her heart.\n\nOne day, a group of travelers arrived at their cottage, seeking help. They spoke of a terrible drought that had befallen their homeland, causing widespread suffering. Elara, with her compassionate heart, decided to use her magic to bring rain to their land.\n\nShe journeyed to the drought-stricken land \"With a determined stride, Elara, now a revered figure, ventured forth to the parched and despairing land. The dilapidated villages she passed through spoke volumes of the desperate need for relief. As she reached the heart of the drought, the sun beat down relentlessly.\n\nElara raised her silver wand and closed her eyes, remembering the old woman and the wise words she had once spoken. She drew upon the power of her original wish, the magic that protected her family, and channeled it into the land.\n\nAs her magic flowed, the clouds began to gather high Above, the sky transformed, darkening with a promise of relief. The wind picked up, rustling the dried, lifeless fields. Elara's heart swelled with hope as the first drops of rain fell, landing gently on her skin. The rainfall grew stronger, soaking the earth, revitalizing it with each precious drop.\n\nThe ground absorb the water gratefully, the plants began to shimmer with the return of life. The people, long suffering under the scorching sun, emerged from their homes, their faces filled with surprise and joy. Elara's magic had worked, and brought a much-needed respite to the drought-stricken land. The villagers, filled with gratitude, hailed Elara as a hero, but she humbly deflected the praise, reminding them that it was the power of her original wish that had granted her the ability to help.\n\nElara's fame spread far and wide, but she remained grounded, always prioritizing her family and her love for the land. She continued to use her magic to help those in need, healing the sick, guiding the lost, and protecting the weak.\n\nYears passed, and Elara, now an elderly woman, sat in her humble cottage, surrounded by her loving family. The years had been kind to them, and their home remained a sanctuary of peace and contentment. Her silver wand, now etched with the passage of time, lay beside her, a constant reminder of the magic that had changed her destiny.\n\nOne day, a young girl, much like Elara had been, approached the cottage. She was desperate, her eyes filled with fear and hope. She spoke of a dark sorcerer who had taken over her village,Inflicting suffering and misery upon the innocent. \"Fear not, my child,\" Elara said, her voice gentle yet filled with determination. \"If you seek help, I will do all I can to aid you in your time of need.\"\n\nWith her family's support, Elara journeyed to the young girl's village, ready to face the dark sorcerer and bring peace to the troubled land. The journey was perilous, but Elara's love for her family and the power of her original wish gave her the strength to carry on.\n\nUpon reaching the village, Elara found it in a state of chaos and despair. The dark sorcerer had indeed taken control, casting a dark shadow over the once vibrant village. Elara's heart filled with anger, but she realized that hatred would lead nowhere. Instead, she focused on her love for her family and the village's innocent inhabitants.\n\nWith a deep breath, she approached the dark sorcerer, who was cackling manically atop a tower. His eyes, cold and unfeeling, met hers. \"You dare trespass here, child?\" he sneered, his voice echoing ominously.\n\nElara, unwa phased, replied with courage, \"I am here to help the villagers and put an end to your tyranny. I will not stand by and watch you cause harm to the innocent.\"\n\nThe dark sorcerer, taking a step closer, challenged her, \"Very well, let us see your power. Summon your mightiest spell and show me what you are capable of.\"\n\nWith the love for her family and the villagers surgecing through her veins, Elara drew upon the power of her original wish. The magic coursed through her, filling her with a sense of warmth and determination. She extended her silver wand towards the dark sorcerer and uttered a spell, its words echoing with the power of love and protection. A warm, golden light enveloped Elara, the dark sorcerer, and the village, weaving an unbreakable bond between them.\n\nThe dark sorcerer recoiled in shock, his dark magic momentarily weakened by Elara's power. He lashed out, casting a powerful curse, but the magical bond held strong. Elara felt a surge of energy, her love for her family and the villagers fueling her defenses. The dark sorcerer, caught off guard by Elara's power, stumbled, his curse fading as it reached her. Elara's family, sensing her distress, sent their love and strength to her, their bond connecting them across great distances.\n\nWith renewed determination, Elara raised her silver wand and countered the dark sorcerer's attack, her magic resonating with the power of love, unity, and protection. The dark sorcerer, realizing his power was no match for Elara's, attempted to flee, but the golden light entwined around him, preventing escape. The dark sorcerer's dark magic was broken, and he was defeated. With a final, defiant cry, he vanished, leaving the village in peace.\n\nElara, victorious, descended from the tower, her family and the villagers cheering for her. She returned to her cottage, her silver wand slightly worn but still gleaming with power.\n\nIn the years that followed, Elara continued to use her magic to heal, guide, and protect the land she loved. She had learned that the true power lay not in the spells she could cast, but in the love that filled her heart. Elara's legend grew, not for her powerful spells, but for her unwavering dedication to helping others. Her family continued to be her greatest source of strength, their love for each other a beacon of hope in a world often shrouded in darkness.\n\nOne day, as the years caught up with Elara, she called her family around her. Her eyes, still filled with the wisdom and compassion that had made her a true hero, looked upon them with a gentle smile.\n\n\"My dearest family,\" she began, her voice steadier than ever, \" \"You have stood by me through every challenge, and I could not be more grateful for your love, support, and unwavering faith in me. Our bond has grown stronger with each passing day, and it has been my greatest treasure.\n\nAs I look to the future, I see a world that continues to need those who are willing to help, guide, and protect. I want to ensure that the magic I was given continues to spread kindness, healing, and happiness long after I am gone.\n\nWith this in mind, I have decided to pass on my magic to one of you. It is a tremendous responsibility, but I believe that one of you will use it wisely to continue the work I have started. Choose the one who you believe will carry on this legacy with love and compassion.\n\nHer parents, moved by her selflessness, exchanged a knowing look. They knew that Elara's magic was a gift she had cherished and used wisely throughout her life. They knew that whoever she chose would be worthy of the responsibility.\n\nElara looked at her parents, her siblings, and her extended family, her heart swelling with love. She took a deep breath, her eyes shining with wisdom, and spoke, \"I bestow this gift upon my youngest sister, Amara. She has always been loving and kind, just like our mother, and I believe she will use this magic wisely to help and protect those in need. Amara, you must never forget the power that this gift holds and use it for the greater good. Remember, this magic is not just yours, but a part of us all. Together, we have formed an unbreakable bond, and I have no doubt that you will continue to spread love, kindness, and protection throughout our land.\"\n\nAmara, moved by Elara's words As Amara stood before her family, tears of joy streaming down her face, she felt an indescribable connection to her sister and the magic that bonded them. She took a deep breath, her heart pounding with the weight of the responsibility now upon her shoulders.\n\n\"I accept this gift with gratitude and humility,\" Amara whispered, her voice trembling slightly. \"I will carry out the legacy my dear sister has started, using this magic to spread love, kindness, and protection throughout our land. I will honor our bond and our family's legacy, striving to live up to the wisdom and compassion with which Elara has guided our people. Together, we will continue to be a beacon of hope, united in love and strength.\"\n\nThe years that followed were filled with joy and prosperity for Elara's family. Amara, now a respected sorceress in her own right, used her magic to heal the sick, guide the lost, and protect the weak, just as Elara had done. She carried on Elara's legacy, always remembering the power of love and unity that had become their family's greatest treasure.\n\nAs for Elara, she continued to live a life of peace and wisdom, dedicating her days to sharing her knowledge with others, helping those in need, and guiding her people with love and compassion. Although she was no longer able to cast spells, the love and bond she had forged with her family and the villagers remained, strengthening their community and bringing hope to all who met her.\n\nAs the years passed, Elara grew old, her silver wand now a cherished relic passed down through generations, reminding everyone of the amazing story of a young girl, her family, and the mysterious old woman who had changed their lives forever. Her legacy lived on As Elara reached the twilight of her years, her family, Amara, now a wise and compassionate sorceress, gathered around her. They shared stories, laughter, and tears, as they celebrated a life well-lived.\n\n\"My dearest family,\" Elara, her voice now soft yet profound, began. \"You have been the compass that guided me through life's storms, the light that illumined my path, and the joy that filled my heart with purpose. I am grateful for the love, unity, and protection we have shared, and I am comforted knowing that my magic, my legacy, and our bond will continue to flourish through you, Amara, and all who come after us. As the sun sets on my journey, I ask that you remember the power of love, unity, and wisdom. Keep these values at the heart of everything you do, and let them guide you as you carry on the work we have started.\n\nFear not, for darkness will always seek to encroach upon our world. But remember, even the darkest night must give way to dawn. The power of love and unity can overcome any obstacle, and together, we will continue to In the years to come, Amara grew into a wise and compassionate sorceress, just like Elara. She honored her sister's legacy, using her magic to help and protect the land and its people.\n\nOne day, a dark sorcerer, powerful and ruthless, threatened the peace of the land. He sought to take control, spreading fear and suffering wherever he went. Amara, sensing the danger, decided it was time to use the full extent of her power to defend her people.\n\nAmara journeyed to the heart of the dark sorcerer's stronghold Amara, determined and resolute, advanced on the dark sorcerer's fortress. The towering walls loomed dark and foreboding, but she felt the unbreakable bond that connected her to her family and the land, filling her with courage.\n\nShe climbed the towering walls, her silver wand glinting in the moonlight. As she reached the top, the dark sorcerer's laughter echoed menacingly through the air. He stood atop a higher tower, sneering down at her.\n\n\"You dare to challenge me, child?\" he spat, his eyes",
+  "story_length_chars": 16055,
+  "total_time_sec": 71.942753227,
+  "turns": 30
+}
