@@ -10,7 +10,7 @@
 services:
   vllm:
     image: vllm/vllm-openai:latest
-    container_name: has-vllm
+    container_name: vllm
     ports:
       - "8000:8000"
     volumes:
@@ -19,7 +19,7 @@ services:
       - "--model"
       - "${VLLM_MODEL:-mistralai/Mistral-7B-Instruct-v0.3}"
       - "--gpu-memory-utilization"
-      - "${VLLM_GPU_MEMORY_UTIL:-0.15}"
+      - "${VLLM_GPU_MEMORY_UTIL:-0.2}"
     ipc: host
     restart: unless-stopped
     healthcheck:
@@ -40,7 +40,7 @@ services:
     build:
       context: ${ORLA_REPO_PATH:-../orla}
       dockerfile: Dockerfile
-    container_name: has-orla
+    container_name: orla
     command: ["serve", "--config", "/config/orla.yaml"]
     ports:
       - "8081:8081"
