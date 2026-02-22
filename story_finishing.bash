@@ -4,8 +4,8 @@
 set -e
 
 # Grid dimensions (same as experiment defaults)
-K_VALS="8 16 32"
-TURNS_VALS="10 20"
+K_VALS="32 64 128"
+TURNS_VALS="30"
 CACHE_STRATEGY_VALS="preserve flush"
 NOISE_RATE_VALS="0 0.5 1"
 OUT_DIR="output/story_finishing"
