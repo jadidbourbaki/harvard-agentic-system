@@ -1,0 +1,55 @@
+# vLLM + Orla for story-finishing tests. Run: docker compose up -d
+# Requires GPU. Orla API: http://localhost:8081. The test registers the vLLM backend via API.
+# Build Orla from sibling repo: ORLA_REPO_PATH=../orla (default when run from harvard-agentic-system).
+#
+# Constrain vLLM GPU memory to see KV cache fill with fewer agents.
+# vLLM only supports a fraction (no absolute GB limit). Approximate: util = desired_GB / total_GPU_GB.
+# Example on a 24GB GPU: 4GB → 0.17, 6GB → 0.25, 8GB → 0.33.
+#   VLLM_GPU_MEMORY_UTIL=0.25 docker compose up -d
+
+services:
+  vllm:
+    image: vllm/vllm-openai:latest
+    container_name: has-vllm
+    ports:
+      - "8000:8000"
+    volumes:
+      - vllm_cache:/root/.cache/huggingface
+    command:
+      - "--model"
+      - "${VLLM_MODEL:-mistralai/Mistral-7B-Instruct-v0.3}"
+      - "--gpu-memory-utilization"
+      - "${VLLM_GPU_MEMORY_UTIL:-0.15}"
+    ipc: host
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 120s
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  orla:
+    build:
+      context: ${ORLA_REPO_PATH:-../orla}
+      dockerfile: Dockerfile
+    container_name: has-orla
+    command: ["serve", "--config", "/config/orla.yaml"]
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./deploy/orla.yaml:/config/orla.yaml:ro
+    depends_on:
+      vllm:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  vllm_cache: {}
