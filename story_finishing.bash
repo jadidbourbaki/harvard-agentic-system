@@ -4,10 +4,10 @@
 set -e
 
 # Grid dimensions (same as experiment defaults)
-K_VALS="32 64 128"
-TURNS_VALS="30"
+K_VALS="8 16 32 64 128"
+TURNS_VALS="50"
 CACHE_STRATEGY_VALS="preserve flush"
-NOISE_RATE_VALS="0 0.5 1"
+NOISE_RATE_VALS="10 20 30 40 50"
 OUT_DIR="output/story_finishing"
 
 # Safe filename segment for noise rate (e.g. 0.5 -> 0_5)
