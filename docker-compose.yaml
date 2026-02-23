@@ -19,7 +19,7 @@ services:
       - "--model"
       - "${VLLM_MODEL:-mistralai/Mistral-7B-Instruct-v0.3}"
       - "--gpu-memory-utilization"
-      - "${VLLM_GPU_MEMORY_UTIL:-0.2}"
+      - "${VLLM_GPU_MEMORY_UTIL:-0.18}"
     ipc: host
     restart: unless-stopped
     healthcheck:
