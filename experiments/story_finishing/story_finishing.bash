@@ -1,13 +1,17 @@
 #!/bin/bash
 # Story finishing grid: for each (k, turns, cache-strategy, noise-rate) run up -> run-story-finishing -> down.
+# Run from repo root: ./experiments/story_finishing/story_finishing.bash (or from anywhere; script cd's to root).
 
 set -e
 
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+cd "$REPO_ROOT"
+
 # Grid dimensions (same as experiment defaults)
-K_VALS="8 16 32 64 128"
+K_VALS="128"
 TURNS_VALS="50"
 CACHE_STRATEGY_VALS="preserve flush"
-NOISE_RATE_VALS="10 20 30 40 50"
+NOISE_RATE_VALS="30"
 OUT_DIR="output/story_finishing"
 
 # Safe filename segment for noise rate (e.g. 0.5 -> 0_5)

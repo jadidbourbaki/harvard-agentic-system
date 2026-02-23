@@ -27,7 +27,7 @@ help:
 build:
 	@echo "Building story_finishing..."
 	@mkdir -p bin
-	@cd experiments/story_finishing && go build -o ../../bin/story_finishing .
+	@go build -o bin/story_finishing ./experiments/story_finishing
 
 DOCKER := sudo docker
 

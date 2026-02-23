@@ -2,14 +2,12 @@
 package main
 
 import (
-	"bufio"
 	"context"
 	"encoding/json"
 	"flag"
 	"fmt"
 	"log"
 	"math/rand"
-	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
@@ -17,9 +15,8 @@ import (
 	"time"
 
 	orla "github.com/dorcha-inc/orla/pkg/api"
+	"github.com/harvard-agentic-system/pkg/dolly"
 )
-
-const dolly15kURL = "https://huggingface.co/datasets/databricks/databricks-dolly-15k/resolve/main/databricks-dolly-15k.jsonl"
 
 const (
 	orlaBackendName = "vllm"
@@ -57,46 +54,6 @@ func (c *MeasurementCollector) Samples() []Measurement {
 	return out
 }
 
-func loadDollyInstructions() ([]string, error) {
-	req, err := http.NewRequestWithContext(context.Background(), http.MethodGet, dolly15kURL, nil)
-	if err != nil {
-		return nil, fmt.Errorf("dolly request: %w", err)
-	}
-	resp, err := http.DefaultClient.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("dolly fetch: %w", err)
-	}
-	defer resp.Body.Close()
-	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("dolly fetch: HTTP %s", resp.Status)
-	}
-	var prompts []string
-	scanner := bufio.NewScanner(resp.Body)
-	for scanner.Scan() {
-		line := strings.TrimSpace(scanner.Text())
-		if line == "" {
-			continue
-		}
-		var row struct {
-			Instruction string `json:"instruction"`
-		}
-		if err := json.Unmarshal([]byte(line), &row); err != nil {
-			continue
-		}
-		if row.Instruction != "" {
-			prompts = append(prompts, row.Instruction)
-		}
-	}
-	if err := scanner.Err(); err != nil {
-		return nil, fmt.Errorf("dolly read: %w", err)
-	}
-	if len(prompts) == 0 {
-		return nil, fmt.Errorf("dolly: no instructions found")
-	}
-	log.Printf("Loaded %d Dolly instructions from %s", len(prompts), dolly15kURL)
-	return prompts, nil
-}
-
 type AgentMetrics struct {
 	ttft    *MeasurementCollector
 	tpot    *MeasurementCollector
@@ -111,53 +68,45 @@ func NewAgentMetrics() *AgentMetrics {
 	}
 }
 
-func RunBackgroundNoiseAgent(ctx context.Context, agent *orla.Agent, rate float64, bg *AgentMetrics, prompts []string) {
-	if len(prompts) == 0 {
-		log.Fatalf("no prompts provided")
-	}
+var dollyManager *dolly.InstructionsManager
 
+func RunBackgroundNoiseAgent(ctx context.Context, agent *orla.Agent, rate float64, bg *AgentMetrics) {
 	rng := rand.New(rand.NewSource(42))
 
 	for {
-		// Generate a random inter-arrival time based on the Poisson distribution.
+		// Poisson inter-arrival: wait this long before *starting* the next request.
 		interArrival := time.Duration(rng.ExpFloat64() / rate * float64(time.Second))
 
 		select {
 		case <-ctx.Done():
 			log.Printf("Background noise agent context done")
 			return
-		// Wait for the inter-arrival time.
 		case <-time.After(interArrival):
 		}
 
-		// Generate a random prompt from the list of prompts, now that we have the inter-arrival time.
-		prompt := prompts[rng.Intn(len(prompts))]
-		agent.SetPrompt(prompt)
+		// Fire each request asynchronously
+		go func() {
+			prompt := dollyManager.RandomPrompt()
+			start := time.Now()
+			resp, err := agent.ExecuteStream(ctx, prompt)
+			if err != nil {
+				log.Fatalf("Background noise ExecuteStream: %v", err)
+			}
 
-		start := time.Now()
-		resp, err := agent.ExecuteStream(ctx)
+			inferenceResp, err := agent.ConsumeStream(ctx, resp, nil)
+			if err != nil {
+				log.Fatalf("Background noise ConsumeStream: %v", err)
+			}
 
-		if err != nil {
-			log.Printf("Background noise ExecuteStream: %v", err)
-			continue
-		}
+			if inferenceResp.Metrics == nil {
+				log.Fatalf("Background noise Metrics is nil, this should never happen")
+			}
 
-		inferenceResp, err := agent.ConsumeStream(ctx, resp, nil)
-		if err != nil {
-			log.Printf("Background noise ConsumeStream: %v", err)
-			continue
-		}
-
-		if inferenceResp.Metrics == nil {
-			log.Printf("Background noise Metrics is nil, skipping sample")
-			continue
-		}
-
-		elapsedMs := float64(time.Since(start).Milliseconds())
-
-		bg.ttft.AddSample(float64(inferenceResp.Metrics.TTFTMs), time.Now())
-		bg.tpot.AddSample(float64(inferenceResp.Metrics.TPOTMs), time.Now())
-		bg.latency.AddSample(elapsedMs, time.Now())
+			elapsedMs := float64(time.Since(start).Milliseconds())
+			bg.ttft.AddSample(float64(inferenceResp.Metrics.TTFTMs), time.Now())
+			bg.tpot.AddSample(float64(inferenceResp.Metrics.TPOTMs), time.Now())
+			bg.latency.AddSample(elapsedMs, time.Now())
+		}()
 	}
 }
 
@@ -209,21 +158,25 @@ func main() {
 	if *noiseRate > 0 {
 		log.Printf("Starting background noise agent: %.2f req/s (Poisson)", *noiseRate)
 		log.Printf("Loading Dolly 15K prompts")
-		prompts, err := loadDollyInstructions()
 
+		dollyManager = dolly.NewInstructionsManager()
+		err := dollyManager.LoadFromHuggingFace()
 		if err != nil {
-			log.Fatalf("load Dolly 15K prompts: %v", err)
+			log.Fatalf("load Dolly 15K prompts from Hugging Face: %v", err)
 		}
 
-		if len(prompts) == 0 {
-			log.Fatalf("no prompts loaded")
+		err = dollyManager.Validate()
+		if err != nil {
+			log.Fatalf("validate Dolly 15K prompts: %v", err)
 		}
 
 		noiseCtx, cancel := context.WithCancel(ctx)
 		noiseCancel = cancel
+
 		noiseAgent := orla.NewAgent(client, backend)
 		noiseAgent.SetMaxTokens(*noiseMaxTokens)
-		go RunBackgroundNoiseAgent(noiseCtx, noiseAgent, *noiseRate, agent3Metrics, prompts)
+
+		go RunBackgroundNoiseAgent(noiseCtx, noiseAgent, *noiseRate, agent3Metrics)
 		log.Printf("Background noise agent started: %.2f req/s (Poisson), Dolly 15K prompts (third agent)", *noiseRate)
 	}
 
@@ -245,10 +198,8 @@ func main() {
 			prompt = fmt.Sprintf("Request %d.\n\n", turn) + prompt
 		}
 
-		agent.SetPrompt(prompt)
-
 		turnStart := time.Now()
-		resp, err := agent.ExecuteStream(ctx)
+		resp, err := agent.ExecuteStream(ctx, prompt)
 
 		if err != nil {
 			log.Fatalf("turn %d execute stream: %v", turn+1, err)

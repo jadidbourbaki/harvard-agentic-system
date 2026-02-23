@@ -62,7 +62,7 @@ This runs `make build`, `docker compose up -d`, waits 60s, runs story finishing,
 2. The **story_finishing** binary:
    - Waits for Orla health at `http://localhost:8081`
    - Registers the vLLM backend with Orla (endpoint `http://vllm:8000/v1` so the Orla container can reach vLLM)
-   - Uses Orla’s **agent API**: `NewOrlaClient`, `RegisterBackend`, `NewAgent`, `SetMaxTokens`, `SetPrompt`, `Execute`
+   - Uses Orla’s **agent API**: `NewOrlaClient`, `RegisterBackend`, `NewAgent`, `SetMaxTokens`, `Execute(ctx, prompt)` / `ExecuteStream(ctx, prompt)`
    - Runs **turns** iterations; each turn sends a prompt (“story so far, give next k tokens”), gets the response, appends to the story, and records TTFT/TPOT from the response metrics
 
 3. Output JSON includes `turns`, `k`, `total_time_sec`, `avg_ttft_ms`, `avg_tpot_ms`, per-turn arrays, and the final `story`.
@@ -84,4 +84,5 @@ This runs `make build`, `docker compose up -d`, waits 60s, runs story finishing,
 - `docker-compose.yaml` – vLLM + Orla services
 - `deploy/orla.yaml` – Minimal Orla server config (listen only; backends via API)
 - `experiments/story_finishing/main.go` – Story finishing using Orla agent API
+- `experiments/story_finishing/story_finishing.bash` – Grid over (k, turns, cache, noise-rate); run from repo root: `./experiments/story_finishing/story_finishing.bash`
 - `Makefile` – Build, compose, and run targets
