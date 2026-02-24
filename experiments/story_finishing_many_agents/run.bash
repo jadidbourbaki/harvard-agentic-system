@@ -12,7 +12,7 @@ cd "$REPO_ROOT"
 K_VALS="128"
 TURNS_VALS="50"
 CACHE_STRATEGY_VALS="preserve flush"
-BACKGROUND_AGENTS_VALS="5"
+BACKGROUND_AGENTS_VALS="15"
 OUT_DIR="output/story_finishing_many_agents"
 
 single_experiment() {
