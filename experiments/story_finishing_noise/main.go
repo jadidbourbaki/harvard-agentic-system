@@ -11,11 +11,11 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"sync"
 	"time"
 
 	orla "github.com/dorcha-inc/orla/pkg/api"
 	"github.com/harvard-agentic-system/pkg/dolly"
+	"github.com/harvard-agentic-system/pkg/metrics"
 )
 
 const (
@@ -29,48 +29,9 @@ var storyPromptTemplate = `We are playing a story finishing game. It is your tur
 
 Once upon a time %s`
 
-type Measurement struct {
-	Value         float64   `json:"value"`
-	TimeCollected time.Time `json:"time_collected"`
-}
-
-// MeasurementCollector is a thread-safe collector for measurement samples.
-type MeasurementCollector struct {
-	mu      sync.Mutex
-	samples []Measurement
-}
-
-func (c *MeasurementCollector) AddSample(value float64, timeCollected time.Time) {
-	c.mu.Lock()
-	defer c.mu.Unlock()
-	c.samples = append(c.samples, Measurement{Value: value, TimeCollected: timeCollected})
-}
-
-func (c *MeasurementCollector) Samples() []Measurement {
-	c.mu.Lock()
-	defer c.mu.Unlock()
-	out := make([]Measurement, len(c.samples))
-	copy(out, c.samples)
-	return out
-}
-
-type AgentMetrics struct {
-	ttft    *MeasurementCollector
-	tpot    *MeasurementCollector
-	latency *MeasurementCollector
-}
-
-func NewAgentMetrics() *AgentMetrics {
-	return &AgentMetrics{
-		ttft:    &MeasurementCollector{},
-		tpot:    &MeasurementCollector{},
-		latency: &MeasurementCollector{},
-	}
-}
-
 var dollyManager *dolly.InstructionsManager
 
-func RunBackgroundNoiseAgent(ctx context.Context, agent *orla.Agent, rate float64, bg *AgentMetrics) {
+func RunBackgroundNoiseAgent(ctx context.Context, agent *orla.Agent, rate float64, bg *metrics.AgentMetrics) {
 	rng := rand.New(rand.NewSource(42))
 
 	for {
@@ -103,9 +64,9 @@ func RunBackgroundNoiseAgent(ctx context.Context, agent *orla.Agent, rate float6
 			}
 
 			elapsedMs := float64(time.Since(start).Milliseconds())
-			bg.ttft.AddSample(float64(inferenceResp.Metrics.TTFTMs), time.Now())
-			bg.tpot.AddSample(float64(inferenceResp.Metrics.TPOTMs), time.Now())
-			bg.latency.AddSample(elapsedMs, time.Now())
+			bg.TTFTMilliseconds.AddSample(float64(inferenceResp.Metrics.TTFTMs), time.Now())
+			bg.TPOTMilliseconds.AddSample(float64(inferenceResp.Metrics.TPOTMs), time.Now())
+			bg.LatencyMilliseconds.AddSample(elapsedMs, time.Now())
 		}()
 	}
 }
@@ -153,7 +114,7 @@ func main() {
 	agent.SetMaxTokens(*k)
 
 	var noiseCancel context.CancelFunc
-	agent3Metrics := NewAgentMetrics()
+	agent3Metrics := metrics.NewAgentMetrics()
 
 	if *noiseRate > 0 {
 		log.Printf("Starting background noise agent: %.2f req/s (Poisson)", *noiseRate)
@@ -180,8 +141,8 @@ func main() {
 		log.Printf("Background noise agent started: %.2f req/s (Poisson), Dolly 15K prompts (third agent)", *noiseRate)
 	}
 
-	agent1Metrics := NewAgentMetrics()
-	agent2Metrics := NewAgentMetrics()
+	agent1Metrics := metrics.NewAgentMetrics()
+	agent2Metrics := metrics.NewAgentMetrics()
 
 	storyContext := ""
 	startTotal := time.Now()
@@ -229,9 +190,9 @@ func main() {
 			agentToAdd = agent2Metrics
 		}
 
-		agentToAdd.ttft.AddSample(float64(inferenceResp.Metrics.TTFTMs), time.Now())
-		agentToAdd.tpot.AddSample(float64(inferenceResp.Metrics.TPOTMs), time.Now())
-		agentToAdd.latency.AddSample(float64(time.Since(turnStart).Milliseconds()), time.Now())
+		agentToAdd.TTFTMilliseconds.AddSample(float64(inferenceResp.Metrics.TTFTMs), time.Now())
+		agentToAdd.TPOTMilliseconds.AddSample(float64(inferenceResp.Metrics.TPOTMs), time.Now())
+		agentToAdd.LatencyMilliseconds.AddSample(float64(time.Since(turnStart).Milliseconds()), time.Now())
 
 		log.Printf("[Turn %d/%d] +%q  ttft=%.1fms tpot=%.1fms", turn+1, *turns, content, float64(inferenceResp.Metrics.TTFTMs), float64(inferenceResp.Metrics.TPOTMs))
 	}
@@ -242,19 +203,19 @@ func main() {
 
 	totalTime := time.Since(startTotal)
 	agent1 := map[string]any{
-		"ttft_ms":    agent1Metrics.ttft.Samples(),
-		"tpot_ms":    agent1Metrics.tpot.Samples(),
-		"latency_ms": agent1Metrics.latency.Samples(),
+		"ttft_ms":    agent1Metrics.TTFTMilliseconds.Samples(),
+		"tpot_ms":    agent1Metrics.TPOTMilliseconds.Samples(),
+		"latency_ms": agent1Metrics.LatencyMilliseconds.Samples(),
 	}
 	agent2 := map[string]any{
-		"ttft_ms":    agent2Metrics.ttft.Samples(),
-		"tpot_ms":    agent2Metrics.tpot.Samples(),
-		"latency_ms": agent2Metrics.latency.Samples(),
+		"ttft_ms":    agent2Metrics.TTFTMilliseconds.Samples(),
+		"tpot_ms":    agent2Metrics.TPOTMilliseconds.Samples(),
+		"latency_ms": agent2Metrics.LatencyMilliseconds.Samples(),
 	}
 	agent3 := map[string]any{
-		"ttft_ms":    agent3Metrics.ttft.Samples(),
-		"tpot_ms":    agent3Metrics.tpot.Samples(),
-		"latency_ms": agent3Metrics.latency.Samples(),
+		"ttft_ms":    agent3Metrics.TTFTMilliseconds.Samples(),
+		"tpot_ms":    agent3Metrics.TPOTMilliseconds.Samples(),
+		"latency_ms": agent3Metrics.LatencyMilliseconds.Samples(),
 	}
 
 	results := map[string]any{

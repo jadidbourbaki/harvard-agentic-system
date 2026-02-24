@@ -1,6 +1,6 @@
 .ONESHELL:
 
-.PHONY: help build up down test run-story-finishing clean source-env check-env print-env connect setup-lambda sync-repo sync-orla sync-experiments
+.PHONY: help build up down test run-story-finishing run-story-finishing-many-agents clean source-env check-env print-env connect setup-lambda sync-repo sync-orla sync-experiments
 
 # Story finishing defaults
 STORY_TURNS ?= 20
@@ -8,6 +8,7 @@ STORY_K ?= 32
 STORY_OUTPUT ?= output/story_finishing/run.json
 STORY_CACHE_STRATEGY ?= preserve
 STORY_NOISE_RATE ?= 0
+STORY_BACKGROUND_AGENTS ?= 0
 
 # Orla repo path for building the Orla image (sibling repo by default)
 ORLA_REPO_PATH ?= ../orla
@@ -45,6 +46,13 @@ down:
 run-story-finishing: build
 	@mkdir -p output/story_finishing
 	@./bin/story_finishing --turns $(STORY_TURNS) --k $(STORY_K) --output $(STORY_OUTPUT) --cache-strategy $(STORY_CACHE_STRATEGY) --noise-rate $(STORY_NOISE_RATE)
+
+## Build and run story finishing many agents (writes to output/story_finishing_many_agents/<unique>.json)
+run-story-finishing-many-agents:
+	@echo "Building story_finishing_many_agents..."
+	@mkdir -p bin output/story_finishing_many_agents
+	@go build -o bin/story_finishing_many_agents ./experiments/story_finishing_many_agents
+	@./bin/story_finishing_many_agents --turns $(STORY_TURNS) --k $(STORY_K) --cache-strategy $(STORY_CACHE_STRATEGY) --background-agents $(STORY_BACKGROUND_AGENTS)
 
 ## Remove bin/ and output/
 clean:
