@@ -28,15 +28,12 @@ type StoryAgent struct {
 
 func NewStoryAgent(client *orla.OrlaClient, backend *orla.LLMBackend, tokensPerTurn int) *StoryAgent {
 	agent := orla.NewAgent(client, backend)
+	agent.SetMaxTokens(tokensPerTurn)
 	return &StoryAgent{agent: agent, tokensPerTurn: tokensPerTurn, cacheStrategy: "flush", agentMetrics: metrics.NewAgentMetrics()}
 }
 
 func (a *StoryAgent) TokensPerTurn() int {
 	return a.tokensPerTurn
-}
-
-func (a *StoryAgent) SetMaxTokens(maxTokens int) {
-	a.agent.SetMaxTokens(maxTokens)
 }
 
 func (a *StoryAgent) SetCacheStrategy(cacheStrategy string) error {

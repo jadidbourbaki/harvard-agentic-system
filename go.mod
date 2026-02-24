@@ -3,7 +3,7 @@ module github.com/harvard-agentic-system
 go 1.25.0
 
 require (
-	github.com/dorcha-inc/orla v1.2.1
+	github.com/dorcha-inc/orla v1.2.2
 	github.com/stretchr/testify v1.11.1
 	go.mills.io/jsonlines v0.0.0-20211103061136-4304f35d60a8
 )

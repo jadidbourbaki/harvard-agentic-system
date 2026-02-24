@@ -10,9 +10,9 @@ cd "$REPO_ROOT"
 
 # Grid dimensions
 K_VALS="128"
-TURNS_VALS="50"
+TURNS_VALS="32"
 CACHE_STRATEGY_VALS="preserve flush"
-BACKGROUND_AGENTS_VALS="15"
+BACKGROUND_AGENTS_VALS="0 8 16 32 64"
 OUT_DIR="output/story_finishing_many_agents"
 
 single_experiment() {

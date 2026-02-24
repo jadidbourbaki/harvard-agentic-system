@@ -8,6 +8,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"strings"
 	"sync"
 	"time"
 
@@ -51,22 +52,24 @@ func ParseFlags() error {
 	return nil
 }
 
-func StoryFinishing(ctx context.Context, leftAgent *agents.StoryAgent, rightAgent *agents.StoryAgent) error {
+func StoryFinishing(ctx context.Context, agent *agents.StoryAgent) error {
+	prevStoryContext := ""
+
 	for turn := 0; turn < experimentConfig.Turns; turn++ {
-		sendingAgent := leftAgent
-		receivingAgent := rightAgent
+		fmt.Printf("turn %d starting\n", turn)
 
-		if turn%2 == 1 {
-			sendingAgent = rightAgent
-			receivingAgent = leftAgent
-		}
-
-		err := sendingAgent.NextStoryTurn(ctx)
+		err := agent.NextStoryTurn(ctx)
 		if err != nil {
 			return fmt.Errorf("turn %d failed to finish story: %v", turn, err)
 		}
 
-		receivingAgent.SetStoryContext(sendingAgent.StoryContext())
+		fmt.Printf("turn %d finished\n", turn)
+
+		currentStoryContext := agent.StoryContext()
+		addedContent := strings.TrimPrefix(currentStoryContext, prevStoryContext)
+		prevStoryContext = currentStoryContext
+
+		fmt.Printf("addition to the story context: %q\n", addedContent)
 	}
 
 	return nil
@@ -74,6 +77,8 @@ func StoryFinishing(ctx context.Context, leftAgent *agents.StoryAgent, rightAgen
 
 // runBackgroundStoryAgent runs a single story agent in a loop (NextStoryTurn repeatedly) until ctx is cancelled.
 func runBackgroundStoryAgent(ctx context.Context, agent *agents.StoryAgent) {
+	currentTurn := 0
+
 	for ctx.Err() == nil {
 		err := agent.NextStoryTurn(ctx)
 
@@ -83,7 +88,14 @@ func runBackgroundStoryAgent(ctx context.Context, agent *agents.StoryAgent) {
 		}
 
 		if err != nil {
-			log.Fatalf("background story agent error: %v", err)
+			log.Printf("background story agent error: %v", err)
+		}
+
+		currentTurn++
+
+		if currentTurn == experimentConfig.Turns {
+			agent.SetStoryContext("")
+			currentTurn = 0
 		}
 	}
 }
@@ -113,16 +125,10 @@ func main() {
 		log.Fatalf("failed to create orla client with vllm backend: %v", err)
 	}
 
-	leftAgent := agents.NewStoryAgent(client, backend, experimentConfig.K)
-	err = leftAgent.SetCacheStrategy(experimentConfig.CacheStrategy)
+	mainAgent := agents.NewStoryAgent(client, backend, experimentConfig.K)
+	err = mainAgent.SetCacheStrategy(experimentConfig.CacheStrategy)
 	if err != nil {
-		log.Fatalf("failed to set cache strategy for left agent: %v", err)
-	}
-
-	rightAgent := agents.NewStoryAgent(client, backend, experimentConfig.K)
-	err = rightAgent.SetCacheStrategy(experimentConfig.CacheStrategy)
-	if err != nil {
-		log.Fatalf("failed to set cache strategy for right agent: %v", err)
+		log.Fatalf("failed to set cache strategy for agent: %v", err)
 	}
 
 	ctx, cancel := context.WithCancel(context.Background())
@@ -150,7 +156,7 @@ func main() {
 
 	log.Printf("starting main story finishing agent loop")
 	startTotal := time.Now()
-	err = StoryFinishing(ctx, leftAgent, rightAgent)
+	err = StoryFinishing(ctx, mainAgent)
 	if err != nil {
 		log.Fatalf("failed to finish story: %v", err)
 	}
@@ -169,10 +175,9 @@ func main() {
 	for i := range experimentConfig.BackgroundAgents {
 		agentsMetricsMap[fmt.Sprintf("background_agent_%d", i)] = backgroundAgentsMetrics[i].ToMap()
 	}
-	agentsMetricsMap["left_agent"] = leftAgent.AgentMetrics().ToMap()
-	agentsMetricsMap["right_agent"] = rightAgent.AgentMetrics().ToMap()
+	agentsMetricsMap["main_agent"] = mainAgent.AgentMetrics().ToMap()
 
-	storyContext := leftAgent.StoryContext()
+	storyContext := mainAgent.StoryContext()
 	results := map[string]any{
 		"turns":              experimentConfig.Turns,
 		"k":                  experimentConfig.K,

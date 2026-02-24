@@ -1,0 +1,403 @@
+{
+  "agents": {
+    "main_agent": {
+      "latency_ms": [
+        {
+          "value": 26506,
+          "time_collected": "2026-02-24T14:23:50.909623976-05:00"
+        },
+        {
+          "value": 1443,
+          "time_collected": "2026-02-24T14:23:52.352914459-05:00"
+        },
+        {
+          "value": 1452,
+          "time_collected": "2026-02-24T14:23:53.805384167-05:00"
+        },
+        {
+          "value": 1458,
+          "time_collected": "2026-02-24T14:23:55.263738549-05:00"
+        },
+        {
+          "value": 1470,
+          "time_collected": "2026-02-24T14:23:56.734623456-05:00"
+        },
+        {
+          "value": 1479,
+          "time_collected": "2026-02-24T14:23:58.213801411-05:00"
+        },
+        {
+          "value": 1492,
+          "time_collected": "2026-02-24T14:23:59.706524355-05:00"
+        },
+        {
+          "value": 1499,
+          "time_collected": "2026-02-24T14:24:01.206200538-05:00"
+        },
+        {
+          "value": 1507,
+          "time_collected": "2026-02-24T14:24:02.713629877-05:00"
+        },
+        {
+          "value": 1524,
+          "time_collected": "2026-02-24T14:24:04.238211831-05:00"
+        },
+        {
+          "value": 1533,
+          "time_collected": "2026-02-24T14:24:05.77144454-05:00"
+        },
+        {
+          "value": 1539,
+          "time_collected": "2026-02-24T14:24:07.311736943-05:00"
+        },
+        {
+          "value": 1544,
+          "time_collected": "2026-02-24T14:24:08.856370324-05:00"
+        },
+        {
+          "value": 1552,
+          "time_collected": "2026-02-24T14:24:10.408772959-05:00"
+        },
+        {
+          "value": 1564,
+          "time_collected": "2026-02-24T14:24:11.973569902-05:00"
+        },
+        {
+          "value": 1574,
+          "time_collected": "2026-02-24T14:24:13.548587664-05:00"
+        },
+        {
+          "value": 1591,
+          "time_collected": "2026-02-24T14:24:15.140110803-05:00"
+        },
+        {
+          "value": 1597,
+          "time_collected": "2026-02-24T14:24:16.738112436-05:00"
+        },
+        {
+          "value": 1606,
+          "time_collected": "2026-02-24T14:24:18.344887171-05:00"
+        },
+        {
+          "value": 1616,
+          "time_collected": "2026-02-24T14:24:19.961909774-05:00"
+        },
+        {
+          "value": 1625,
+          "time_collected": "2026-02-24T14:24:21.587433252-05:00"
+        },
+        {
+          "value": 1636,
+          "time_collected": "2026-02-24T14:24:23.224260854-05:00"
+        },
+        {
+          "value": 1646,
+          "time_collected": "2026-02-24T14:24:24.871155606-05:00"
+        },
+        {
+          "value": 1661,
+          "time_collected": "2026-02-24T14:24:26.532528736-05:00"
+        },
+        {
+          "value": 1672,
+          "time_collected": "2026-02-24T14:24:28.205459605-05:00"
+        },
+        {
+          "value": 1679,
+          "time_collected": "2026-02-24T14:24:29.885353302-05:00"
+        },
+        {
+          "value": 1699,
+          "time_collected": "2026-02-24T14:24:31.584606503-05:00"
+        },
+        {
+          "value": 1711,
+          "time_collected": "2026-02-24T14:24:33.295841498-05:00"
+        },
+        {
+          "value": 1716,
+          "time_collected": "2026-02-24T14:24:35.011973641-05:00"
+        },
+        {
+          "value": 1724,
+          "time_collected": "2026-02-24T14:24:36.736373912-05:00"
+        },
+        {
+          "value": 1741,
+          "time_collected": "2026-02-24T14:24:38.477586635-05:00"
+        },
+        {
+          "value": 1746,
+          "time_collected": "2026-02-24T14:24:40.224281647-05:00"
+        }
+      ],
+      "tpot_ms": [
+        {
+          "value": 10,
+          "time_collected": "2026-02-24T14:23:50.909623976-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-24T14:23:52.352914459-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-24T14:23:53.805384167-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-24T14:23:55.263738549-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-24T14:23:56.734623456-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-24T14:23:58.213801411-05:00"
+        },
+        {
+          "value": 10,
+          "time_collected": "2026-02-24T14:23:59.706524355-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:01.206200538-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:02.713629877-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:04.238211831-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:05.77144454-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:07.311736943-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:08.856370324-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:10.408772959-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:11.973569902-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:13.548587664-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:15.140110803-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:16.738112436-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:18.344887171-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:19.961909774-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:21.587433252-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:23.224260854-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:24.871155606-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:26.532528736-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:28.205459605-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:29.885353302-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:31.584606503-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:33.295841498-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:35.011973641-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:36.736373912-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:38.477586635-05:00"
+        },
+        {
+          "value": 11,
+          "time_collected": "2026-02-24T14:24:40.224281647-05:00"
+        }
+      ],
+      "ttft_ms": [
+        {
+          "value": 24520,
+          "time_collected": "2026-02-24T14:23:50.909623976-05:00"
+        },
+        {
+          "value": 23,
+          "time_collected": "2026-02-24T14:23:52.352914459-05:00"
+        },
+        {
+          "value": 29,
+          "time_collected": "2026-02-24T14:23:53.805384167-05:00"
+        },
+        {
+          "value": 34,
+          "time_collected": "2026-02-24T14:23:55.263738549-05:00"
+        },
+        {
+          "value": 46,
+          "time_collected": "2026-02-24T14:23:56.734623456-05:00"
+        },
+        {
+          "value": 49,
+          "time_collected": "2026-02-24T14:23:58.213801411-05:00"
+        },
+        {
+          "value": 60,
+          "time_collected": "2026-02-24T14:23:59.706524355-05:00"
+        },
+        {
+          "value": 63,
+          "time_collected": "2026-02-24T14:24:01.206200538-05:00"
+        },
+        {
+          "value": 71,
+          "time_collected": "2026-02-24T14:24:02.713629877-05:00"
+        },
+        {
+          "value": 74,
+          "time_collected": "2026-02-24T14:24:04.238211831-05:00"
+        },
+        {
+          "value": 89,
+          "time_collected": "2026-02-24T14:24:05.77144454-05:00"
+        },
+        {
+          "value": 94,
+          "time_collected": "2026-02-24T14:24:07.311736943-05:00"
+        },
+        {
+          "value": 95,
+          "time_collected": "2026-02-24T14:24:08.856370324-05:00"
+        },
+        {
+          "value": 101,
+          "time_collected": "2026-02-24T14:24:10.408772959-05:00"
+        },
+        {
+          "value": 109,
+          "time_collected": "2026-02-24T14:24:11.973569902-05:00"
+        },
+        {
+          "value": 118,
+          "time_collected": "2026-02-24T14:24:13.548587664-05:00"
+        },
+        {
+          "value": 129,
+          "time_collected": "2026-02-24T14:24:15.140110803-05:00"
+        },
+        {
+          "value": 132,
+          "time_collected": "2026-02-24T14:24:16.738112436-05:00"
+        },
+        {
+          "value": 141,
+          "time_collected": "2026-02-24T14:24:18.344887171-05:00"
+        },
+        {
+          "value": 145,
+          "time_collected": "2026-02-24T14:24:19.961909774-05:00"
+        },
+        {
+          "value": 152,
+          "time_collected": "2026-02-24T14:24:21.587433252-05:00"
+        },
+        {
+          "value": 159,
+          "time_collected": "2026-02-24T14:24:23.224260854-05:00"
+        },
+        {
+          "value": 168,
+          "time_collected": "2026-02-24T14:24:24.871155606-05:00"
+        },
+        {
+          "value": 180,
+          "time_collected": "2026-02-24T14:24:26.532528736-05:00"
+        },
+        {
+          "value": 186,
+          "time_collected": "2026-02-24T14:24:28.205459605-05:00"
+        },
+        {
+          "value": 193,
+          "time_collected": "2026-02-24T14:24:29.885353302-05:00"
+        },
+        {
+          "value": 208,
+          "time_collected": "2026-02-24T14:24:31.584606503-05:00"
+        },
+        {
+          "value": 214,
+          "time_collected": "2026-02-24T14:24:33.295841498-05:00"
+        },
+        {
+          "value": 224,
+          "time_collected": "2026-02-24T14:24:35.011973641-05:00"
+        },
+        {
+          "value": 229,
+          "time_collected": "2026-02-24T14:24:36.736373912-05:00"
+        },
+        {
+          "value": 237,
+          "time_collected": "2026-02-24T14:24:38.477586635-05:00"
+        },
+        {
+          "value": 248,
+          "time_collected": "2026-02-24T14:24:40.224281647-05:00"
+        }
+      ]
+    }
+  },
+  "background_agents": 0,
+  "cache_strategy": "flush",
+  "k": 128,
+  "story": " ...in a land far, far away, there was a young girl named Elara. She lived in a small, humble cottage with her mother and father. Despite their meager means, they were content and loved each other deeply.\n\nOne day, a mysterious old woman visited their home. She carried a silver wand and wore a robe of shimmering, iridescent fabric. Elara's parents, though wary, invited the woman in.\n\n\"I have trekked far and wide to meet you, young Elara,\" the old woman said. \"I have been watching you from af far, and I see greatness within you. You possess a heart full of kindness and a spirit unbroken by adversity. I have brought you a gift, a magic spell that will allow you to achieve your wildest dreams.\"\n\nThe old woman extended her hand, and a small, glowing orb floated from her palm into Elara's outstretched hand. \"This is the spell of the Starseeker's Heart. It will grant you the ability to find the lost and guide the lost home. But beware, Elara, the journey will be long and arduous, and you will encounter many challenges along the way. The Starseeker's Heart will guide you, but only if you trust in yourself and your ability to navigate the uncharted paths.\n\nWith the orb in her hand, Elara felt a surge of energy. She looked at the old woman, who nodded and vanished in a swirl of shimmering dust. Elara's parents looked on in awe, but Elara knew she had a mission.\n\nThe next day, Elara left her home and ventured out into the unknown. She walked for days, facing scorching deserts, treacher ous mountains, and dense forests. But with the Starseeker's Heart guiding her, she never lost her way.\n\nOne day, she came upon a small village besieged by a fearsome dragon. The villagers pleaded with Elara to help them. Without hesitation, she approached the dragon and, with a calm and steady voice, spoke the words of the Starseeker's Heart.\n\nThe dragon, taken aback by Elara's courage and purity, released its grip on the village and soared away into the sky. The villagers cheered and hailed Elara as their savior. Overjoyed, they showered her with gifts and gratitude, but Elara knew there was more work to be done. With the Starseeker's Heart guiding her, she continued on her journey, helping those in need and finding lost souls.\n\nMonths turned into years, and Elara grew into a wise and compassionate woman. She faced countless challenges and hardships, but the Starseeker's Heart never faltered. With each victory, her reputation grew, and she became known as the Light of Hope, a beacon of kindness and guidance in a world often darkness-ridden.\n\nAs years passed, stories of Elara's deeds reached the farthest corners of the land, inspiring others to follow in her footsteps. Some joined her quest to help the lost and guide the wayward, while others learned from her example and became beacons of hope in their own communities.\n\nYet, the journey was not without its heartaches. Elara lost count of the number of souls she had tried to save but could not reach due to their own fear or despair. The weight of their unrealized potential saddened her, but she never let it deter her from her mission. Instead, she drew strength from the successes she had, the lives she had touched, and the hearts she had healed.\n\nOne day, she reached the edge of a vast, uncharted wilderness. An invisible barrier seemed to surround it, enshrouding it in a perpetual twilight. Elara felt a chill run down her spine as she approached. The Starseeker's Heart pulsed in her hand, urging her forward.\n\n\"I must go,\" she whispered, turning to face her companions. \"I must cross this wilderness, find those lost in its depths, and bring them home. I cannot say when I'll return, as the path ahead is uncertain and treacherous. But I promise to carry the light of the Starseeker's Heart with me always, guiding me and those whom I help.\n\nGather supplies, my friends, for I will need them on this journey. And remember, the journey you take does not have to be far or arduous to be impactful. However small your actions may seem, they can ripple out and touch the lives of others in ways you never imagine. \"As the twilight enveloped the uncharted wilderness, Elara took a deep breath and stepped forward. With her companions' blessings, she ventured into the unknown, her confident stride shadowed by the vague specter of fear.\n\nThe landscape morphed and shifted, challenging her at every turn. The Starseeker's Heart pulsed with each challenge, illuminating her path forward, slowly moving her deeper into the wilds.\n\nShe encountered creatures that were horrifying and strange, and yet, with compassion and bravery in her heart, Elara turned those enc meetings into opportunities for understanding and alliance. The once-feared beasts became guardians, protectors of those who sought Elara's guidance.\n\nShe passed through desolate valleys and towering mountain ranges, her resolve never wavering. The Starseeker's Heart continued to pulse with a rhythmic beat, guiding her through the twists and turns of the uncharted wilderness.\n\nOne evening, wrapped in a storm, Elara found herself trapped beneath a fallen tree. As the hours passed, her hopes began to fade, the cold and hunger taking their toll. But the Starseeker's Heart would not let her give in. With a renewed strength, Elara struggled to free herself, the pulsations of the orb burning brightly in her hand. The storm raged overhead, the wind howling, but the Starseeker's Heart remained a beacon of hope in the dark night.\n\nAs the first rays of dawn broke through the clouds, Elara managed to free herself, bruised and exhausted but alive. The Starseeker's Heart shuddered in her hand, vibrating with a sense of urgency. It was then that Elara saw them rising from the shadows, a group of lost souls, their eyes glowing with desperation. \"Elara, the Starseeker's Heart has led us here,\" one spoke, her voice trembling with emotion. \"We have been wandering for so long, seeking a way home.\"\n\nWith renewed focus, Elara set out to guide them through the uncharted wilderness, using the Starseeker's Heart to navigate the treacherous terrain. The journey was arduous, but Elara's determination was unwavering.\n\nDay by day, they encountered more lost souls As the days blurred together, Elara and the lost souls trudged through the uncharted wilderness, their journey fraught with danger and uncertainty. But the Starseeker's Heart never faltered. It guided them, illuminating their path in the darkest corners of the wilderness.\n\nOne night, as they huddled together for warmth, a chilling wind swept through the area, stirring up old memories and fears. Elara could sense the despair weighing heavily on the lost souls, their spirits drooping. She gathered them around her, her voice firm and reassuring as she spoke words of comfort and encouragement, reminding them of the light within them and the hope the Starseeker's Heart represented. Empowered by her words, they pressed on, their faith in Elara growing stronger.\n\nDays turned into weeks, and the lost souls began to regain their strength, their spirits lifting as they drew closer to their homes. Elara, too, felt a sense of triumph as she guided them through the wilderness.\n\nOne day, as the sun began to set, they arrived at the edge of a dense forest. The forest seemed familiar, and Elara felt a sense of deja vu wash over her. The Starseeker's Heart pulsed in her hand, its rhythm syncing with her heartbeat. She looked at the lost souls gathered around her, their eyes filled with hope and gratitude.\n\n\"This is where our journey began,\" Elara whispered, remembering the day the mysterious old woman had visited her home. \"And now, our journey comes full circle.\"\n\nOne by one, the lost souls stepped forward and ventured into the green expanse of the forest. Elara watched them disappear into the trees, their spirits brighter than they had been in a long time. The distance between them and Elara gradually increased, each soul finding their way home. As the last soul disappeared, a sense of tranquility washed over Elara. The mission she embarked upon years ago had finally come to a close, but her journey was far from over.\n\nWith a grateful heart, Elara began her own journey back home. The once unfamiliar landscape now held precious memories, reminders of the lives she had touched and the souls she had guided. As she walked, she felt a deep sense of accomplishment, but also a renewed sense of purpose.\n\nDespite the long and arduous journey, Elara knew that there were more lost souls out in the world who needed her help. She held onto the Starseeker's Heart, determined to continue her mission.\n\nWhen she arrived home, she found her parents waiting for her, their faces filled with relief and joy. They embraced her, grateful for her safety but saddened by her long absence. Elara told them of her journey, of the challenges she faced and the lives she touched. Her parents listened intently, their hearts swelling with pride.\n\n\"We are proud of you, Elara,\" her father said, his voice choked with emotion. \"You have done great things, and your courage and compassion have brought hope to many. But remember, our home and our love will always be here for you, no matter where your journey takes you.\"\n\nElara nodded, her heart filled with gratitude. As she settled back into her routine, she couldn't help but feel a sense of restlessness. The Starseeker's Heart still pulsed in her hand, a constant reminder of her mission.\n\nMonths turned into years, and Elara continued to help those in need, her journey taking her far and wide across the land. She met countless lost souls and guided them home, her reputation growing as the Light of Hope. Yet, the uncharted wilderness lingered in her memories, calling out to her.\n\nOne day, Elara felt the Starseeker's Heart pulsating more intensely than ever before. She closed her eyes, and in her mind, she felt its call pulling her towards the twilight-enshrouded wilderness. With a heavy heart, she bade farewell to her family, knowing that she must return to the uncharted land.\n\nHer journey took her through treacherous landscapes, but the Starseeker's Heart guided her with an ever-burning light. She reencountered creatures she had met previously, their faces lighting up at the sight of her. They recognized her as a friend, a guiding force, and eagerly followed her.\n\nElara continued to help those lost in the wilderness, healing the brokenhearted and giving hope to the hopeless. She faced new challenges and dangers, but the Starseeker's Heart never faltered. Its pulsating rhythm kept time with her heart, reminding her of her mission and the hope it represented. As the years passed, Elara's reputation grew, and she became known as a legend among the lost souls, a beacon of hope in the darkest corners of the uncharted wilderness.\n\nOne day, as she ventured deeper into the wilderness, she stumbled upon a group of lost souls who were unlike any she had encountered before. They were encamped around a worn, tattered book, their eyes glazed over as they recited strange incantations. Elara approached cautiously, her gaze following the movements of their hands and the booming chants that filled the air. As she drew near, she could sense an otherworldly energy emanating from the group. The Starseeker's Heart pulsed sharply in her hand, warning her of potential danger yet also guiding her towards this enigmatic gathering.\n\nElara approached the circle of lost souls, her initial distrust giving way to curiosity and a desire to understand this unfamiliar situation. \"I am Elara, the Light of Hope,\" she said, extending her arms in a gesture of peace. \"I have come to help those lost and guide them home. Can you tell me what you are doing and why you are here, gathered around this book?\n\nThe leader of the group looked up from the book, her eyes glistening with tears. \"We are seeking truth, Elara. We lost our way long ago, and we have been wandering, searching for answers. We believe that this ancient tome holds the key to unlocking our destiny.\"\n\nElara approached the book, taking in its intricate illustrations and weathered pages. As she ran her fingers over the words, a feeling of eerie familiarity washed over her. It was a feeling that the Starseeker's Heart Had echoed many times during her journey. \"This is an old and powerful tome, but it is not the Starseeker's Heart,\" Elara said, her voice filled with a sense of awe. \"However, it seems our paths are intertwined in some mysterious way.\"\n\nThe leader of the lost souls looked at Elara, her eyes filled with a mix of curiosity and reverence. \"What connection could there be between this book and the Starseeker's Heart?\"\n\nElara, lost in thought, could feel the Starseeker's Heart pulsating more intensely in her hand, as if urging her to uncover the truth. Some of the lost souls fell silent, their gazes following hers, their own hearts swelling with anticipation.\n\n\"This book,\" Elara began, her voice resonating softly through the air, \"is the Tome of the Starseeker. It is a sacred artifact containing the history of the Starseeker's Heart, the very spell that was given to me by the mysterious old woman. It is said that this tome was used to guide lost souls across the land, long before the time of the first Light of Hope.\" The Starseeker's Heart spoke, its voice echoing through the air, \"To unite with the Tome, you must face the ultimate test, my chosen one. The test will challenge your resolve, your spirit, and your understanding of the world. Only by completing the test can you unlock the secret to guiding lost souls on the grandest scale.\"\n\nElara looked around at the lost souls gathered before her. The air seemed to crackle with anticipation. \"Together, we shall face this test, and uncover the truth hidden within the Tome of the Starseeker.\"\n\nAs As Elara and the lost souls embarked on the test, they found themselves transported to a realm of dreams, a vast and shifting world where the boundaries between reality and imagination blurred. In this realm, they encountered surreal landscapes and bizarre beings, each a manifestation of the deepest desires and darkest fears of the lost souls.\n\nThe Starseeker's Heart guided them through this bewildering world, helping them navigate through trials and tribulations. Elara, with her compassion and bravery, encouraged the lost souls as they faced their greatest fears and embraced the challenges set before them As the group made their way through the Dream Realm, they encountered confrontations that tested their resolve and curiosity. The realm reflected their deepest hopes, fears, and desires, creating puzzles that required creativity and teamwork to solve.\n\nSome lost souls faced their deepest regrets, confronting specters that represented their past mistakes. Meanwhile, others experienced incredible joy as they reconnected with loved ones, their bonds restored in the dream world. Elara stayed close, offering comfort and support to all who needed it, while keeping in mind the guidance provided by the Starseeker's Heart.\n\nThe test continued As the lost souls progressed through the Dream Realm, they discovered the root cause of their wanderings: a powerful sorceress who had manipulated their emotions and desires, leading them astray in order to prolong her own corruption. The sorceress's power came from a malevolent energy source that threatened to engulf the entire land, destroying all hope and spreading despair.\n\nDetermined to stop the sorceress and her influence, Elara and the lost souls joined forces to confront her. The battle was fierce, as the sorceress conjured dangerous and fantastical creatures to fight against them. Elara's courage and determination shone through, rallying her allies and pushing back the sorceress's dark army. With the Starseeker's Heart guiding her, Elara unleashed potent, ancient spells to counter the sorceress's dark magic, slowly chipping away at her power.\n\nAs the battle reached its climax, the lost souls displayed their newfound strength, facing their fears and utilizing their unique abilities to strike at the sorceress's defenses. The Dream Realm trembled beneath their combined efforts, and Elara called upon the T it's power of the Tome of the Starseeker, igniting a final, devastating blow that sent the sorceress reeling. With a final shriek, the sorceress crumbled into dust, her power dispersed throughout the realm.\n\nAs the dust settled, the lost souls found themselves back in the uncharted wilderness. Elara, her heart pounding with relief, looked around at her newfound allies. \"We've done it,\" she said, her voice trembling with emotion. \"We have faced the ultimate test, and we have prevailed!\"\n\nThe lost souls cheered, their eyes shining with tears of joy and relief. \"We could not have done it without you, Elara,\" said the leader, her voice filled with gratitude. \"You have shown us the power of hope and the strength of unity.\"\n\nElara smiled, her heart swelling with pride. \"Together, we have uncovered the secret of the Tome of the Starseeker. With our newfound knowledge and the power of the Starseeker's Heart, we will continue to help those lost and guide them home.\"\n\nWith newfound purpose and determination, the group returned to",
+  "story_length_chars": 17232,
+  "total_time_sec": 75.82154716,
+  "turns": 32
+}
