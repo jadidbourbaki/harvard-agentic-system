@@ -1,6 +1,6 @@
 .ONESHELL:
 
-.PHONY: help build up down test run-story-finishing run-story-finishing-many-agents clean source-env check-env print-env connect setup-lambda sync-repo sync-orla sync-experiments
+.PHONY: help build up down test run-story-finishing run-story-finishing-many-agents clean source-env check-env print-env connect setup-lambda sync-repo sync-orla sync-experiments sync-demo
 
 # Story finishing defaults
 STORY_TURNS ?= 20
@@ -107,3 +107,8 @@ sync-orla: check-env
 sync-experiments: check-env
 	@$(SOURCE_ENV_CMD); \
 	./infra/sync_experiments.sh $(LAMBDA_HOST)
+
+## Sync Orla demo.mp4 from Lambda to local (output/demo.mp4)
+sync-demo: check-env
+	@$(SOURCE_ENV_CMD); \
+	./infra/sync_demo.sh $(LAMBDA_HOST)
